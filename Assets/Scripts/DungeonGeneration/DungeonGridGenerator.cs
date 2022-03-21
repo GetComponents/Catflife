@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class DungeonGridGenerator : MonoBehaviour
 {
@@ -13,9 +14,13 @@ public class DungeonGridGenerator : MonoBehaviour
 
     [SerializeField]
     private float cellSpawnChance = 0.5f;
+
+    [SerializeField]
+    private Transform canvas;
     public Cell[,] DungeonGrid;
 
     private List<Cell> unonnectedCells = new List<Cell>();
+    public List<EncounterCell> SelectableCells = new List<EncounterCell>();
 
     [SerializeField]
     GameObject cellPrefab;
@@ -49,12 +54,15 @@ public class DungeonGridGenerator : MonoBehaviour
                 DungeonGrid[x, y] = new Cell();
                 if (Random.Range(0f, 1f) <= cellSpawnChance)
                 {
+                    if (x == 0 && y == 0)
+                        continue;
                     Cell currentCell = DungeonGrid[x, y];
                     unonnectedCells.Add(currentCell);
                     currentCell.ContainsEncounter = true;
 
-                    currentCell.MyView = Instantiate(cellPrefab);
-                    currentCell.MyView.transform.position = new Vector3(x, 0, y) * nodeSpacing;
+                    currentCell.MyView = Instantiate(cellPrefab, canvas);
+                    currentCell.MyView.transform.position = (new Vector3((x - (int)(GridWidth * 0.5f)) * cellPrefab.transform.localScale.x, y * cellPrefab.transform.localScale.y, 0)
+                        * nodeSpacing) + new Vector3(Screen.width * 0.5f, Screen.height * 0.1f);
                     cellSpawned = true;
                 }
             }
@@ -69,6 +77,29 @@ public class DungeonGridGenerator : MonoBehaviour
     {
         ConnectBottomToTop();
         ConnectTopToBottom();
+        UIColourChange();
+    }
+
+    private void UIColourChange()
+    {
+        for (int y = 0; y < GridHeight; y++)
+        {
+            for (int x = 0; x < GridWidth; x++)
+            {
+                if (DungeonGrid[x, y].MyView != null)
+                    if (y == 0)
+                    {
+                        DungeonGrid[x, y].MyView.GetComponent<Image>().color = Color.white;
+                        DungeonGrid[x, y].MyView.GetComponent<EncounterCell>().Clickable = true;
+                        SelectableCells.Add(DungeonGrid[x, y].MyView.GetComponent<EncounterCell>());
+                    }
+                    else
+                    {
+                        DungeonGrid[x, y].MyView.GetComponent<Image>().color = Color.black;
+                        DungeonGrid[x, y].MyView.GetComponent<EncounterCell>().Clickable = false;
+                    }
+            }
+        }
     }
 
     private void ConnectBottomToTop()
@@ -83,9 +114,13 @@ public class DungeonGridGenerator : MonoBehaviour
                     Cell connectedCell = FindClosestTopCell(x, y);
                     if (connectedCell.MyView != null)
                     {
-                        currentCell.MyView.GetComponent<EncounterCell>().NextCells.Add(connectedCell.MyView.GetComponent<EncounterCell>());
-                        unonnectedCells.Remove(connectedCell);
-                        connectedCell.MyView.GetComponent<EncounterCell>().IsConnected = true;
+                        if (connectedCell.MyView != null && currentCell.MyView != null)
+                        {
+
+                            currentCell.MyView.GetComponent<EncounterCell>().NextCells.Add(connectedCell.MyView.GetComponent<EncounterCell>());
+                            unonnectedCells.Remove(connectedCell);
+                            connectedCell.MyView.GetComponent<EncounterCell>().IsConnected = true;
+                        }
                     }
                 }
             }
@@ -162,5 +197,20 @@ public class DungeonGridGenerator : MonoBehaviour
         }
         Debug.Log($"Cell[{xPos},{yPos}] Bottom Cell is null");
         return null;
+    }
+
+    private void OnDrawGizmos()
+    {
+        if (Application.isPlaying)
+            foreach (Cell cell in DungeonGrid)
+            {
+                if (cell.MyView != null)
+                {
+                    foreach (EncounterCell nextCell in cell.MyView.GetComponent<EncounterCell>().NextCells)
+                    {
+                        Gizmos.DrawLine(cell.MyView.transform.position, nextCell.gameObject.transform.position);
+                    }
+                }
+            }
     }
 }

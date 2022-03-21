@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class PlayerController : MonoBehaviour
 {
@@ -10,6 +11,8 @@ public class PlayerController : MonoBehaviour
     float speed, maxSpeed, dashCooldown;
     public float currentDashCooldown;
 
+    Vector2 m_moveDir = new Vector2();
+
     void Start()
     {
         rb = GetComponent<Rigidbody>();
@@ -18,51 +21,39 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Movement();
         Dash();
     }
 
-    private void Movement()
+    private void FixedUpdate()
     {
-        AddedForce = Vector3.zero;
-        if (Input.GetKey(KeyCode.W))
-        {
-            if (rb.velocity.z < maxSpeed)
-                AddedForce.z += speed;
-        }
-        if (Input.GetKey(KeyCode.A))
-        {
-            if (rb.velocity.x > -maxSpeed)
-                AddedForce.x += -speed;
-        }
-        if (Input.GetKey(KeyCode.S))
-        {
-            if (rb.velocity.z > -maxSpeed)
-                AddedForce.z += -speed;
-        }
-        if (Input.GetKey(KeyCode.D))
-        {
-            if (rb.velocity.x < maxSpeed)
-                AddedForce.x += speed;
-        }
-        transform.TransformDirection(AddedForce);
-        rb.AddForce(AddedForce);
+        rb.AddForce(new Vector3((m_moveDir.y * -0.66f) + (m_moveDir.x * 0.66f), 0, (m_moveDir.y * 0.66f) + (m_moveDir.x * 0.66f)) * speed, ForceMode.Force);
+    }
+
+    public void Movement(InputAction.CallbackContext context)
+    {
+        m_moveDir = context.ReadValue<Vector2>();
+    }
+
+    public void MouseDown(InputAction.CallbackContext context)
+    {
+        
+    }
+
+    public void Interact(InputAction.CallbackContext context)
+    {
+
     }
 
     private void Dash()
     {
         currentDashCooldown -= Time.deltaTime;
-        if (Input.GetButtonDown("Jump") && currentDashCooldown <= 0)
-        {
-            currentDashCooldown = dashCooldown;
-        }
     }
 
     private void OnTriggerStay(Collider other)
     {
-        if (Input.GetKeyDown(KeyCode.E) && other.transform.tag == "Interactable")
-        {
-            other.GetComponent<Interactable>().StartInteraction();
-        }
+        //if (Input.GetKeyDown(KeyCode.E) && other.transform.tag == "Interactable")
+        //{
+        //    other.GetComponent<Interactable>().StartInteraction();
+        //}
     }
 }

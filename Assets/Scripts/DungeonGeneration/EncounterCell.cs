@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class EncounterCell : MonoBehaviour
 {
@@ -11,9 +12,20 @@ public class EncounterCell : MonoBehaviour
 
     public void StartEncounter()
     {
-        foreach (EncounterCell cell in NextCells)
+        if (Clickable == true)
         {
-            cell.Clickable = true;
+            foreach (EncounterCell cell in DungeonGridGenerator.Instance.SelectableCells)
+            {
+                cell.gameObject.GetComponent<Image>().color = Color.black;
+                cell.Clickable = false;
+            }
+            DungeonGridGenerator.Instance.SelectableCells.Clear();
+            foreach (EncounterCell cell in NextCells)
+            {
+                cell.gameObject.GetComponent<Image>().color = Color.white;
+                cell.Clickable = true;
+                DungeonGridGenerator.Instance.SelectableCells.Add(cell);
+            }
         }
     }
 }
