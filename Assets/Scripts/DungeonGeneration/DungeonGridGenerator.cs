@@ -16,14 +16,14 @@ public class DungeonGridGenerator : MonoBehaviour
     private float cellSpawnChance = 0.5f;
 
     [SerializeField]
-    private Transform canvas;
+    private Transform map;
     public Cell[,] DungeonGrid;
 
     private List<Cell> unonnectedCells = new List<Cell>();
     public List<EncounterCell> SelectableCells = new List<EncounterCell>();
 
     [SerializeField]
-    GameObject cellPrefab;
+    GameObject cellPrefab, cellLinePrefab;
 
     private void Awake()
     {
@@ -60,7 +60,7 @@ public class DungeonGridGenerator : MonoBehaviour
                     unonnectedCells.Add(currentCell);
                     currentCell.ContainsEncounter = true;
 
-                    currentCell.MyView = Instantiate(cellPrefab, canvas);
+                    currentCell.MyView = Instantiate(cellPrefab, map);
                     currentCell.MyView.transform.position = (new Vector3((x - (int)(GridWidth * 0.5f)) * cellPrefab.transform.localScale.x, y * cellPrefab.transform.localScale.y, 0)
                         * nodeSpacing) + new Vector3(Screen.width * 0.5f, Screen.height * 0.1f);
                     cellSpawned = true;
@@ -112,16 +112,27 @@ public class DungeonGridGenerator : MonoBehaviour
                 if (currentCell.ContainsEncounter)
                 {
                     Cell connectedCell = FindClosestTopCell(x, y);
-                    if (connectedCell.MyView != null)
-                    {
-                        if (connectedCell.MyView != null && currentCell.MyView != null)
-                        {
 
-                            currentCell.MyView.GetComponent<EncounterCell>().NextCells.Add(connectedCell.MyView.GetComponent<EncounterCell>());
-                            unonnectedCells.Remove(connectedCell);
-                            connectedCell.MyView.GetComponent<EncounterCell>().IsConnected = true;
-                        }
+                    if (connectedCell.MyView != null && currentCell.MyView != null)
+                    {
+
+                        currentCell.MyView.GetComponent<EncounterCell>().NextCells.Add(connectedCell.MyView.GetComponent<EncounterCell>());
+                        unonnectedCells.Remove(connectedCell);
+                        connectedCell.MyView.GetComponent<EncounterCell>().IsConnected = true;
+
+                        //Instantiate(cellLinePrefab, currentCell.MyView.transform);
+                        //Transform tmp1 = currentCell.MyView.transform;
+                        //Transform tmp2 = connectedCell.MyView.transform;
+                        //cellLinePrefab.GetComponent<UILineRenderer>().points = new List<Vector2>
+                        //{
+                        //    new Vector2(0,0),
+                        //    new Vector2((tmp2.position.x / tmp2.localScale.x) - (tmp1.position.x / tmp1.localScale.x),
+                        //    (tmp2.position.y / tmp2.localScale.y) - (tmp1.position.y / tmp1.localScale.y)) * 0.1f
+                        //    //(connectedCell.MyView.transform.position / cellPrefab.transform.localScale) - currentCell.MyView.transform.position
+                        //};
+                        //Debug.Log(cellLinePrefab.GetComponent<UILineRenderer>().points[1]);
                     }
+
                 }
             }
         }
@@ -141,6 +152,21 @@ public class DungeonGridGenerator : MonoBehaviour
                         connectedCell.MyView.GetComponent<EncounterCell>().NextCells.Add(currentCell.MyView.GetComponent<EncounterCell>());
                     unonnectedCells.Remove(currentCell);
                     currentCell.MyView.GetComponent<EncounterCell>().IsConnected = true;
+
+                    //Instantiate(cellLinePrefab, currentCell.MyView.transform);
+                    //Transform tmp2 = currentCell.MyView.transform;
+                    //Transform tmp1 = null;
+                    //if (connectedCell.MyView != null)
+                    //{
+                    //    tmp1 = connectedCell.MyView.transform;
+                    //}
+                    //    cellLinePrefab.GetComponent<UILineRenderer>().points = new List<Vector2>
+                    //    {
+                    //        new Vector2(0,0),
+                    //        new Vector2((tmp2.position.x / tmp2.localScale.x) - (tmp1.position.x / tmp1.localScale.x),
+                    //        (tmp2.position.y / tmp2.localScale.y)- tmp1.position.y / tmp1.localScale.y) * 0.1f,
+                    //        //(connectedCell.MyView.transform.position / cellPrefab.transform.localScale) - currentCell.MyView.transform.position
+                    //    };
                 }
             }
         }
@@ -197,6 +223,11 @@ public class DungeonGridGenerator : MonoBehaviour
         }
         Debug.Log($"Cell[{xPos},{yPos}] Bottom Cell is null");
         return null;
+    }
+
+    public void MoveMap(float amount)
+    {
+        map.position = new Vector3(map.position.x, map.position.y - (amount * nodeSpacing));
     }
 
     private void OnDrawGizmos()

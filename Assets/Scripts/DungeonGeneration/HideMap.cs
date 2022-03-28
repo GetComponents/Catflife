@@ -5,11 +5,24 @@ using TMPro;
 
 public class HideMap : MonoBehaviour
 {
+    public static HideMap Instance;
     bool isOn = true;
     [SerializeField]
     GameObject map;
     [SerializeField]
     TextMeshProUGUI tmp;
+
+    private void Start()
+    {
+        if (!Instance)
+        {
+            Instance = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+    }
     public void ChangeMapState()
     {
         if (isOn)
