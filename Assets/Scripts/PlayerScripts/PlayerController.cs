@@ -31,9 +31,10 @@ public class PlayerController : MonoBehaviour
         get => m_healthPoints;
         set
         {
-            if (value < 0)
+            if (value <= 0)
             {
                 m_healthPoints = 0;
+                Debug.Log("Dead A Hell");
             }
             else if (value < m_healthPoints)
             {
@@ -57,7 +58,8 @@ public class PlayerController : MonoBehaviour
 
     Vector3 dashDirection;
 
-    bool dashing;
+    [HideInInspector]
+    public bool dashing, dashStarted, swinging;
 
 
     void Awake()
@@ -103,6 +105,12 @@ public class PlayerController : MonoBehaviour
     {
         if (!dashing)
             rb.AddForce(new Vector3((m_moveDir.y * -0.66f) + (m_moveDir.x * 0.66f), 0, (m_moveDir.y * 0.66f) + (m_moveDir.x * 0.66f)) * speed, ForceMode.VelocityChange);
+        else if (dashStarted)
+        {
+            dashDirection = new Vector3((m_moveDir.y * -0.66f) + (m_moveDir.x * 0.66f), 0, (m_moveDir.y * 0.66f) + (m_moveDir.x * 0.66f)) * dashSpeed;
+            rb.AddForce(dashDirection, ForceMode.VelocityChange);
+            dashStarted = false;
+        }
     }
 
     #region InputMethods
@@ -175,24 +183,23 @@ public class PlayerController : MonoBehaviour
     #region AnimatorMethods
     private void StartSwing()
     {
-
+        swinging = true;
     }
 
     private void EndSwing()
     {
         myAnimator.SetBool("isSwinging", false);
+        swinging = false;
     }
 
 
     private void StartDash()
     {
-        dashDirection = new Vector3((m_moveDir.y * -0.66f) + (m_moveDir.x * 0.66f), 0, (m_moveDir.y * 0.66f) + (m_moveDir.x * 0.66f)) * dashSpeed;
-        rb.AddForce(dashDirection, ForceMode.VelocityChange);
+        dashStarted = true;
     }
 
     private void EndDash()
     {
-        //rb.AddForce(-dashDirection, ForceMode.Force);
         myAnimator.SetBool("isDashing", false);
         dashing = false;
     }

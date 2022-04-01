@@ -12,6 +12,7 @@ namespace EnemyAI
         NavMeshAgent thisEnemy;
         public float maxMoveCounter, MaxStopCounter, JumpingDistance;
         float moveCounter, stopCounter;
+
         void Start()
         {
             //stopCounter = Random.Range(0f, 3f);
