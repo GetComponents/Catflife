@@ -7,22 +7,61 @@ using UnityEngine.SceneManagement;
 public class PlayerController : MonoBehaviour
 {
     public static PlayerController Instance;
-    Rigidbody rb;
-    Vector3 AddedForce;
-    [SerializeField]
-    float speed, maxSpeed, dashCooldown;
+
+    [Header("Movement")]
     public float currentDashCooldown;
+    [SerializeField]
+    float speed, maxSpeed, dashCooldown, dashSpeed;
     PlayerInput input;
     public LayerMask mask;
 
+    [Space]
     [SerializeField]
-    Transform cube;
+    Camera mainCam;
+    [SerializeField]
+    MeshRenderer myMeshRenderer;
+
+    [Header("Health And Collision")]
+    [SerializeField]
+    Rigidbody rb;
+    [SerializeField]
+    Transform playerHitBox;
+    public int HealthPoints
+    {
+        get => m_healthPoints;
+        set
+        {
+            if (value < 0)
+            {
+                m_healthPoints = 0;
+            }
+            else if (value < m_healthPoints)
+            {
+                StartCoroutine(TurnInvincible());
+                m_healthPoints = value;
+            }
+        }
+    }
+    [SerializeField]
+    private int m_healthPoints;
+    [SerializeField]
+    Material hurtMaterial;
+    Material normalMaterial;
+    public bool isInvincible;
+
+    [Space]
+    [SerializeField]
+    Animator myAnimator;
 
     Vector2 m_moveDir = new Vector2();
 
+    Vector3 dashDirection;
+
+    bool dashing;
+
+
     void Awake()
     {
-        rb = GetComponent<Rigidbody>();
         if (!Instance)
         {
             Instance = this;
@@ -32,6 +71,8 @@ public class PlayerController : MonoBehaviour
             Destroy(gameObject);
         }
         DontDestroyOnLoad(this.gameObject);
+        HealthPoints = m_healthPoints;
+        normalMaterial = myMeshRenderer.material;
         //input = new PlayerInput();
         //input.Player.Enable();
         //input.Player.Interact.performed += ChangeScene;
@@ -40,25 +81,31 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Dash();
-        Vector3 mousePos = Camera.main.ScreenToViewportPoint(Mouse.current.position.ReadValue());
-        Ray cameraRay = Camera.main.ScreenPointToRay(mousePos);
+        ReduceDashCooldown();
+        Ray cameraRay = mainCam.ScreenPointToRay(Mouse.current.position.ReadValue());
         RaycastHit hit;
 
-        if (Physics.Raycast(cameraRay,out hit, 200))
+        if (Physics.Raycast(cameraRay, out hit, 200))
         {
             Vector3 pointToLook = hit.point;
-            //transform.LookAt(new Vector3(pointToLook.x, transform.position.y, pointToLook.z),Vector3.up);
-            //transform.rotation = Quaternion.LookRotation(transform.position - pointToLook);
-            cube.position = pointToLook;
+            playerHitBox.transform.LookAt(new Vector3(pointToLook.x, playerHitBox.transform.position.y, pointToLook.z), Vector3.up);
+            //parent.transform.rotation = Quaternion.LookRotation(pointToLook - transform.position);
+            //cube.position = pointToLook;
         }
+    }
+
+    private void Start()
+    {
+        mainCam = Camera.main;
     }
 
     private void FixedUpdate()
     {
-        rb.AddForce(new Vector3((m_moveDir.y * -0.66f) + (m_moveDir.x * 0.66f), 0, (m_moveDir.y * 0.66f) + (m_moveDir.x * 0.66f)) * speed, ForceMode.Force);
+        if (!dashing)
+            rb.AddForce(new Vector3((m_moveDir.y * -0.66f) + (m_moveDir.x * 0.66f), 0, (m_moveDir.y * 0.66f) + (m_moveDir.x * 0.66f)) * speed, ForceMode.VelocityChange);
     }
 
+    #region InputMethods
     public void Movement(InputAction.CallbackContext context)
     {
         m_moveDir = context.ReadValue<Vector2>();
@@ -66,17 +113,29 @@ public class PlayerController : MonoBehaviour
 
     public void MouseDown(InputAction.CallbackContext context)
     {
-        
+        myAnimator.SetBool("isSwinging", false);
+        myAnimator.SetBool("isSwinging", true);
     }
 
     public void Interact(InputAction.CallbackContext context)
     {
         //Debug.Log(context.ReadValue<float>());
-        if(context.started)
+        if (context.started)
         {
             ChangeScene(context);
         }
     }
+
+    public void Dash(InputAction.CallbackContext context)
+    {
+        if (currentDashCooldown < 0)
+        {
+            dashing = true;
+            currentDashCooldown = dashCooldown;
+            myAnimator.SetBool("isDashing", true);
+        }
+    }
+    #endregion
 
     private void ChangeScene(InputAction.CallbackContext context)
     {
@@ -91,16 +150,51 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    private void Dash()
+    private void ReduceDashCooldown()
     {
         currentDashCooldown -= Time.deltaTime;
     }
 
-    private void OnTriggerStay(Collider other)
+    public void HurtPlayer(int damage)
     {
-        //if (Input.GetKeyDown(KeyCode.E) && other.transform.tag == "Interactable")
-        //{
-        //    other.GetComponent<Interactable>().StartInteraction();
-        //}
+        if (!isInvincible)
+        {
+            HealthPoints -= damage;
+        }
     }
+
+    IEnumerator TurnInvincible()
+    {
+        myMeshRenderer.material = hurtMaterial;
+        isInvincible = true;
+        yield return new WaitForSeconds(1);
+        myMeshRenderer.material = normalMaterial;
+        isInvincible = false;
+    }
+
+    #region AnimatorMethods
+    private void StartSwing()
+    {
+
+    }
+
+    private void EndSwing()
+    {
+        myAnimator.SetBool("isSwinging", false);
+    }
+
+
+    private void StartDash()
+    {
+        dashDirection = new Vector3((m_moveDir.y * -0.66f) + (m_moveDir.x * 0.66f), 0, (m_moveDir.y * 0.66f) + (m_moveDir.x * 0.66f)) * dashSpeed;
+        rb.AddForce(dashDirection, ForceMode.VelocityChange);
+    }
+
+    private void EndDash()
+    {
+        //rb.AddForce(-dashDirection, ForceMode.Force);
+        myAnimator.SetBool("isDashing", false);
+        dashing = false;
+    }
+    #endregion
 }

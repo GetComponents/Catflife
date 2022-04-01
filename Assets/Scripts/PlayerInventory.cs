@@ -22,7 +22,7 @@ public class PlayerInventory : MonoBehaviour
         {
             if (value != m_energy)
             {
-                energyUI.text = $"Energy: {value}";
+                //energyUI.text = $"Energy: {value}";
                 m_energy = value;
             }
         }
