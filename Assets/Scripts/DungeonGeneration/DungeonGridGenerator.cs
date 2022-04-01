@@ -23,7 +23,7 @@ public class DungeonGridGenerator : MonoBehaviour
     public List<EncounterCell> SelectableCells = new List<EncounterCell>();
 
     [SerializeField]
-    GameObject cellPrefab, cellLinePrefab;
+    GameObject cellPrefab, cellLinePrefab, debugPoint;
 
     private void Awake()
     {
