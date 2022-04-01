@@ -1,68 +1,200 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
-    Rigidbody rb;
-    Vector3 AddedForce;
-    [SerializeField]
-    float speed, maxSpeed, dashCooldown;
-    public float currentDashCooldown;
+    public static PlayerController Instance;
 
-    void Start()
+    [Header("Movement")]
+    public float currentDashCooldown;
+    [SerializeField]
+    float speed, maxSpeed, dashCooldown, dashSpeed;
+    PlayerInput input;
+    public LayerMask mask;
+
+    [Space]
+    [SerializeField]
+    Camera mainCam;
+    [SerializeField]
+    MeshRenderer myMeshRenderer;
+
+    [Header("Health And Collision")]
+    [SerializeField]
+    Rigidbody rb;
+    [SerializeField]
+    Transform playerHitBox;
+    public int HealthPoints
     {
-        rb = GetComponent<Rigidbody>();
+        get => m_healthPoints;
+        set
+        {
+            if (value < 0)
+            {
+                m_healthPoints = 0;
+            }
+            else if (value < m_healthPoints)
+            {
+                StartCoroutine(TurnInvincible());
+                m_healthPoints = value;
+            }
+        }
+    }
+    [SerializeField]
+    private int m_healthPoints;
+    [SerializeField]
+    Material hurtMaterial;
+    Material normalMaterial;
+    public bool isInvincible;
+
+    [Space]
+    [SerializeField]
+    Animator myAnimator;
+
+    Vector2 m_moveDir = new Vector2();
+
+    Vector3 dashDirection;
+
+    bool dashing;
+
+
+    void Awake()
+    {
+        if (!Instance)
+        {
+            Instance = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+        DontDestroyOnLoad(this.gameObject);
+        HealthPoints = m_healthPoints;
+        normalMaterial = myMeshRenderer.material;
+        //input = new PlayerInput();
+        //input.Player.Enable();
+        //input.Player.Interact.performed += ChangeScene;
     }
 
     // Update is called once per frame
     void Update()
     {
-        Movement();
-        Dash();
+        ReduceDashCooldown();
+        Ray cameraRay = mainCam.ScreenPointToRay(Mouse.current.position.ReadValue());
+        RaycastHit hit;
+
+        if (Physics.Raycast(cameraRay, out hit, 200))
+        {
+            Vector3 pointToLook = hit.point;
+            playerHitBox.transform.LookAt(new Vector3(pointToLook.x, playerHitBox.transform.position.y, pointToLook.z), Vector3.up);
+            //parent.transform.rotation = Quaternion.LookRotation(pointToLook - transform.position);
+            //cube.position = pointToLook;
+        }
     }
 
-    private void Movement()
+    private void Start()
     {
-        AddedForce = Vector3.zero;
-        if (Input.GetKey(KeyCode.W))
-        {
-            if (rb.velocity.z < maxSpeed)
-                AddedForce.z += speed;
-        }
-        if (Input.GetKey(KeyCode.A))
-        {
-            if (rb.velocity.x > -maxSpeed)
-                AddedForce.x += -speed;
-        }
-        if (Input.GetKey(KeyCode.S))
-        {
-            if (rb.velocity.z > -maxSpeed)
-                AddedForce.z += -speed;
-        }
-        if (Input.GetKey(KeyCode.D))
-        {
-            if (rb.velocity.x < maxSpeed)
-                AddedForce.x += speed;
-        }
-        transform.TransformDirection(AddedForce);
-        rb.AddForce(AddedForce);
+        mainCam = Camera.main;
     }
 
-    private void Dash()
+    private void FixedUpdate()
+    {
+        if (!dashing)
+            rb.AddForce(new Vector3((m_moveDir.y * -0.66f) + (m_moveDir.x * 0.66f), 0, (m_moveDir.y * 0.66f) + (m_moveDir.x * 0.66f)) * speed, ForceMode.VelocityChange);
+    }
+
+    #region InputMethods
+    public void Movement(InputAction.CallbackContext context)
+    {
+        m_moveDir = context.ReadValue<Vector2>();
+    }
+
+    public void MouseDown(InputAction.CallbackContext context)
+    {
+        myAnimator.SetBool("isSwinging", false);
+        myAnimator.SetBool("isSwinging", true);
+    }
+
+    public void Interact(InputAction.CallbackContext context)
+    {
+        //Debug.Log(context.ReadValue<float>());
+        if (context.started)
+        {
+            ChangeScene(context);
+        }
+    }
+
+    public void Dash(InputAction.CallbackContext context)
+    {
+        if (currentDashCooldown < 0)
+        {
+            dashing = true;
+            currentDashCooldown = dashCooldown;
+            myAnimator.SetBool("isDashing", true);
+        }
+    }
+    #endregion
+
+    private void ChangeScene(InputAction.CallbackContext context)
+    {
+        if (SceneManager.GetActiveScene().name == "SampleScene")
+        {
+            SceneManager.LoadScene("EncounterSelection");
+        }
+        else
+        {
+            HideMap.Instance.ChangeMapState();
+            SceneManager.UnloadSceneAsync("Combat");
+        }
+    }
+
+    private void ReduceDashCooldown()
     {
         currentDashCooldown -= Time.deltaTime;
-        if (Input.GetButtonDown("Jump") && currentDashCooldown <= 0)
+    }
+
+    public void HurtPlayer(int damage)
+    {
+        if (!isInvincible)
         {
-            currentDashCooldown = dashCooldown;
+            HealthPoints -= damage;
         }
     }
 
-    private void OnTriggerStay(Collider other)
+    IEnumerator TurnInvincible()
     {
-        if (Input.GetKeyDown(KeyCode.E) && other.transform.tag == "Interactable")
-        {
-            other.GetComponent<Interactable>().StartInteraction();
-        }
+        myMeshRenderer.material = hurtMaterial;
+        isInvincible = true;
+        yield return new WaitForSeconds(1);
+        myMeshRenderer.material = normalMaterial;
+        isInvincible = false;
     }
+
+    #region AnimatorMethods
+    private void StartSwing()
+    {
+
+    }
+
+    private void EndSwing()
+    {
+        myAnimator.SetBool("isSwinging", false);
+    }
+
+
+    private void StartDash()
+    {
+        dashDirection = new Vector3((m_moveDir.y * -0.66f) + (m_moveDir.x * 0.66f), 0, (m_moveDir.y * 0.66f) + (m_moveDir.x * 0.66f)) * dashSpeed;
+        rb.AddForce(dashDirection, ForceMode.VelocityChange);
+    }
+
+    private void EndDash()
+    {
+        //rb.AddForce(-dashDirection, ForceMode.Force);
+        myAnimator.SetBool("isDashing", false);
+        dashing = false;
+    }
+    #endregion
 }
