@@ -8,7 +8,7 @@ public class CombatSceneChange : MonoBehaviour
 {
     private void Start()
     {
-        PlayerController.Instance.transform.position = new Vector3(0, 2, 0);
+        PlayerController.Instance.transform.GetChild(0).position = new Vector3(0, 2, 0);
     }
     public void Interact(InputAction.CallbackContext context)
     {
