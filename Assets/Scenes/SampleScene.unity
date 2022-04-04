@@ -993,6 +993,11 @@ MonoBehaviour:
   m_AreaLightEmissiveMeshShadowCastingMode: 0
   m_AreaLightEmissiveMeshMotionVectorGenerationMode: 0
   m_AreaLightEmissiveMeshLayer: -1
+--- !u!23 &706820026 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 7586108171222350268, guid: c92ea285e74c27e47b16115bffc08f1e, type: 3}
+  m_PrefabInstance: {fileID: 7586108171907003302}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &726731292 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7586108171222350266, guid: c92ea285e74c27e47b16115bffc08f1e, type: 3}
@@ -2269,19 +2274,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e577676798a3294a904a7938b5145a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rb: {fileID: 0}
+  currentDashCooldown: 0
   speed: 0
   maxSpeed: 0
   dashCooldown: 0
   dashSpeed: 0
-  currentDashCooldown: 0
   mask:
     serializedVersion: 2
     m_Bits: 0
   mainCam: {fileID: 0}
+  myMeshRenderer: {fileID: 0}
+  rb: {fileID: 0}
   playerHitBox: {fileID: 0}
-  cube: {fileID: 0}
+  m_healthPoints: 0
+  hurtMaterial: {fileID: 0}
+  isInvincible: 0
   myAnimator: {fileID: 0}
+  dashing: 0
+  dashStarted: 0
+  swinging: 0
 --- !u!114 &1570661337
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3330,6 +3341,14 @@ PrefabInstance:
       propertyPath: m_ActionEvents.Array.data[14].m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 7586108171418440739, guid: c92ea285e74c27e47b16115bffc08f1e, type: 3}
+      propertyPath: mainCam
+      value: 
+      objectReference: {fileID: 963194227}
+    - target: {fileID: 7586108171418440739, guid: c92ea285e74c27e47b16115bffc08f1e, type: 3}
+      propertyPath: myMeshRenderer
+      value: 
+      objectReference: {fileID: 706820026}
     - target: {fileID: 7586108171418440740, guid: c92ea285e74c27e47b16115bffc08f1e, type: 3}
       propertyPath: m_Name
       value: PlayerParent

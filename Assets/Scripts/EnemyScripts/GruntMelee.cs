@@ -8,16 +8,15 @@ namespace EnemyAI
 {
     public class GruntMelee : Enemy
     {
+        [Space]
         Vector3 playerPosition;
-        NavMeshAgent thisEnemy;
         public float maxMoveCounter, MaxStopCounter, JumpingDistance;
         float moveCounter, stopCounter;
 
         void Start()
         {
-            //stopCounter = Random.Range(0f, 3f);
             playerPosition = PlayerController.Instance.transform.GetChild(0).position;
-            thisEnemy = GetComponent<NavMeshAgent>();
+            enemyNavMesh = GetComponent<NavMeshAgent>();
         }
 
         void Update()
@@ -32,12 +31,12 @@ namespace EnemyAI
         {
             if (moveCounter >= 0)
             {
-                thisEnemy.SetDestination(playerPosition);
+                enemyNavMesh.SetDestination(playerPosition);
                 moveCounter -= Time.deltaTime;
             }
             else if (stopCounter >= 0)
             {
-                thisEnemy.SetDestination(transform.position);
+                enemyNavMesh.SetDestination(transform.position);
                 stopCounter -= Time.deltaTime;
             }
             else
@@ -45,7 +44,7 @@ namespace EnemyAI
                 moveCounter = maxMoveCounter;
                 stopCounter = MaxStopCounter;
                 playerPosition = PlayerController.Instance.transform.GetChild(0).position;
-                playerPosition = ((playerPosition - transform.position).normalized * JumpingDistance) + playerPosition;
+                playerPosition = ((playerPosition - transform.position).normalized * JumpingDistance) + transform.position;
             }
         }
 
@@ -53,7 +52,7 @@ namespace EnemyAI
         {
             if (collision.gameObject.tag == "Player")
             {
-                PlayerController.Instance.HurtPlayer(damage);
+                PlayerController.Instance.TakeDamage(damage);
             }
         }
     }

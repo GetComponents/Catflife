@@ -163,7 +163,7 @@ public class PlayerController : MonoBehaviour
         currentDashCooldown -= Time.deltaTime;
     }
 
-    public void HurtPlayer(int damage)
+    public void TakeDamage(int damage)
     {
         if (!isInvincible)
         {
