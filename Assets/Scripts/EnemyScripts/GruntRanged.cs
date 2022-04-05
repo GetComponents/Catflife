@@ -26,6 +26,7 @@ public class GruntRanged : Enemy
         playerPosition = PlayerController.Instance.transform.GetChild(0).position;
         navmeshDestination = playerPosition;
         enemyNavMesh = GetComponent<NavMeshAgent>();
+        isAggro = true;
     }
     void Update()
     {
@@ -65,7 +66,6 @@ public class GruntRanged : Enemy
             GameObject tmp = Instantiate(Projectile, transform.position, Quaternion.identity);
             tmp.GetComponent<GruntProjectile>().MyDamage = damage;
             tmp.GetComponent<Rigidbody>().AddForce(((playerPosition - transform.position).normalized * projectileSpeed), ForceMode.Impulse);
-            Debug.Log((playerPosition - transform.position).normalized * projectileSpeed);
             currentShotCooldown = timeForEachShot;
         }
         else

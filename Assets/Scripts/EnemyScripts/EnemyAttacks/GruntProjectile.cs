@@ -16,7 +16,7 @@ public class GruntProjectile : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        if (other.tag == player.transform.tag)
+        if (other.tag == "Player")
         {
             player.TakeDamage(MyDamage);
             Destroy(this.gameObject);

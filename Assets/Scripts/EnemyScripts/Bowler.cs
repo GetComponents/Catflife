@@ -10,15 +10,18 @@ public class Bowler : Enemy
     float timeToAttack;
     [SerializeField]
     float timeStunned;
+    [SerializeField]
+    float rollSpeed;
+
+    Rigidbody rb;
 
     public float timeUntilAttack;
     bool isAttacking;
-    Vector3 attackDirection;
 
     private void Start()
     {
-        enemyNavMesh = GetComponent<NavMeshAgent>();
         player = PlayerController.Instance;
+        rb = GetComponent<Rigidbody>();
     }
 
     void Update()
@@ -27,45 +30,33 @@ public class Bowler : Enemy
         {
             StartAttack();
         }
-        if (!isAttacking)
+        else if (!isAttacking)
         {
             timeUntilAttack -= Time.deltaTime;
         }
-        else
-        {
-            Attack();
-        }
+
     }
 
     private void StartAttack()
     {
         isAttacking = true;
         timeUntilAttack = timeToAttack;
-        attackDirection = ((player.transform.GetChild(0).position - transform.position).normalized);
+        rb.AddForce((player.transform.GetChild(0).position - transform.position).normalized * rollSpeed, ForceMode.Impulse);
     }
 
     IEnumerator Stunned()
     {
         Debug.Log("IM AM SO STUNNED OMG");
-        enemyNavMesh.SetDestination(transform.position);
+        rb.velocity = Vector3.zero;
         yield return new WaitForSeconds(timeStunned);
         isAttacking = false;
     }
 
-    private void Attack()
-    {
-        enemyNavMesh.SetDestination(attackDirection + transform.position);
-    }
-
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.transform.tag == "Wall")
+        if (collision.transform.tag == "Wall" || collision.transform.tag == "Player" || collision.transform.tag == "Enemy")
         {
             StartCoroutine(Stunned());
-        }
-        else
-        {
-            Debug.Log(collision.transform.tag);
         }
     }
 }

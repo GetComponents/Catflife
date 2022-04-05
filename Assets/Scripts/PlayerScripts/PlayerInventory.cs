@@ -41,4 +41,5 @@ public class PlayerInventory : MonoBehaviour
         }
         Energy = startEnergy;
     }
+
 }
