@@ -108,7 +108,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f759f195f2fcc64e9f1cb13d0c9f6f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Strength: 10
 --- !u!1 &7586108171222350257
 GameObject:
   m_ObjectHideFlags: 0
@@ -296,14 +295,30 @@ MonoBehaviour:
   mask:
     serializedVersion: 2
     m_Bits: 23
+  mySword: {fileID: 8226274612851557438}
+  SwordDamage: 10
+  SpinAttackDamageMultiplier: 2
   mainCam: {fileID: 0}
-  myMeshRenderer: {fileID: 0}
+  myMeshRenderer: {fileID: 7586108171222350268}
   rb: {fileID: 7586108171222350270}
   playerHitBox: {fileID: 7586108171222350266}
-  m_healthPoints: 0
-  hurtMaterial: {fileID: 0}
+  m_healthPoints: 10
+  hurtMaterial: {fileID: 2100000, guid: 04bf84b2400b7654d80e5efd04229323, type: 2}
   isInvincible: 0
   myAnimator: {fileID: 4273982829685808946}
+  maxMana: 100
+  unlockedSpinMove: 1
+  unlockedReflect: 1
+  unlockedProjectile: 1
+  spinMoveManaCost: 10
+  projectileManaCost: 10
+  projectile: {fileID: 1669813210728635002, guid: 5e3afbfd0bffb1b4488d150700415bf3, type: 3}
+  ProjectileDamage: 20
+  ProjectileSpeed: 30
+  IsDashing: 0
+  DashStarted: 0
+  IsSwinging: 0
+  IsSpinning: 0
 --- !u!114 &7586108171418440738
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -422,9 +437,37 @@ MonoBehaviour:
     m_ActionId: 3fabdb1d-75f0-4936-aa3e-d8f6af4a17d0
     m_ActionName: Player/Interact[/Keyboard/e]
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 7586108171418440739}
+        m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
+        m_MethodName: Dash
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: 31f508fe-cba8-4d16-99f7-8948f996e727
     m_ActionName: Player/Dash[/Keyboard/shift]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 7586108171418440739}
+        m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
+        m_MethodName: Cast
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: a966a73a-5ad9-4788-b797-d02ff1736ca1
+    m_ActionName: Player/Cast[/Keyboard/q,/Mouse/rightButton]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: Keyboard&Mouse
   m_DefaultActionMap: Player

@@ -10,21 +10,26 @@ public class Mage : Enemy
     [SerializeField]
     float AOEExplosionTime, AOEFadeTime;
 
+
     [SerializeField]
     float timeToAttack;
     float timeUntilAttack;
 
     float targetPointDistance = 1;
-
-
     bool isAttacking;
 
     [SerializeField]
     Animator myAnimator;
 
+    [Space]
+    [SerializeField]
+    Vector2 EliteRandomCastTimer, EliteCastDistance;
+
     private void Start()
     {
         enemyNavMesh = GetComponent<NavMeshAgent>();
+        if (isElite)
+            StartCoroutine(CastRandomly());
     }
 
     private void Update()
@@ -69,6 +74,31 @@ public class Mage : Enemy
 
     private void EndCast()
     {
+        if (isElite)
+        {
+            MageCast tmp = Instantiate(AOEAttack, PlayerController.Instance.transform.GetChild(0).position, Quaternion.identity).GetComponent<MageCast>();
+            tmp.MyDamage = damage;
+            tmp.TimeUntilExplosion = AOEExplosionTime;
+            tmp.TimeUntilFaded = AOEFadeTime;
+        }
         myAnimator.SetBool("isAttacking", false);
+    }
+
+    IEnumerator CastRandomly()
+    {
+        while (true)
+        {
+            yield return new WaitForSeconds(Random.Range(EliteRandomCastTimer.x, EliteRandomCastTimer.y));
+            if (!isAggro)
+            {
+                MageCast tmp = Instantiate(AOEAttack,
+                    PlayerController.Instance.transform.GetChild(0).position +
+                    new Vector3(Random.Range(-1f, 1f), 0, Random.Range(-1f, 1f)).normalized * Random.Range(EliteCastDistance.x, EliteCastDistance.y),
+                    Quaternion.identity).GetComponent<MageCast>();
+                tmp.MyDamage = damage;
+                tmp.TimeUntilExplosion = AOEExplosionTime;
+                tmp.TimeUntilFaded = AOEFadeTime;
+            }
+        }
     }
 }

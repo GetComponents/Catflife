@@ -14,6 +14,7 @@ public class Enemy : MonoBehaviour
             {
                 Die();
             }
+            m_healthPoints = value;
         }
     }
     [SerializeField]
@@ -21,6 +22,8 @@ public class Enemy : MonoBehaviour
     public bool isAggro;
     [SerializeField]
     protected int damage;
+    [SerializeField]
+    protected bool isElite;
     protected NavMeshAgent enemyNavMesh;
 
     private void Start()
@@ -31,7 +34,7 @@ public class Enemy : MonoBehaviour
     public void TakeDamage(float amount)
     {
         HealthPoints -= amount;
-        Debug.Log("ouchhhhh");
+        //Debug.Log($"{gameObject.name} took {amount} dmg / ({HealthPoints} hp)");
     }
 
     private void Die()
