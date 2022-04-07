@@ -9,12 +9,43 @@ public class EncounterCell : MonoBehaviour
     public List<EncounterCell> NextCells = new List<EncounterCell>();
     public List<UILineRenderer> CellConnection = new List<UILineRenderer>();
     public bool IsConnected = false;
-    public EEncounterType MyEncounter;
+    public EEncounterType MyEncounter
+    {
+        get => m_myEncounter;
+        set
+        {
+            switch (value)
+            {
+                case EEncounterType.NONE:
+                    break;
+                case EEncounterType.FIGHTEASY:
+                    GetComponent<Image>().sprite = easyEncounter;
+                    break;
+                case EEncounterType.FIGHTMEDIUM:
+                    GetComponent<Image>().sprite = mediumEncounter;
+                    break;
+                case EEncounterType.FIGHTHARD:
+                    GetComponent<Image>().sprite = hardEncounter;
+                    break;
+                case EEncounterType.BOSS:
+                    break;
+                case EEncounterType.HEAL:
+                    break;
+                default:
+                    break;
+            }
+            m_myEncounter = value;
+        }
+    }
+    [SerializeField]
+    private EEncounterType m_myEncounter;
     public bool Clickable;
+    //public Image myImage;
+    [SerializeField]
+    Sprite easyEncounter, mediumEncounter, hardEncounter;
 
     private void Start()
     {
-        
     }
 
     public void StartEncounter()
@@ -23,7 +54,7 @@ public class EncounterCell : MonoBehaviour
         {
             foreach (EncounterCell cell in DungeonGridGenerator.Instance.SelectableCells)
             {
-                cell.gameObject.GetComponent<Image>().color = Color.black;
+                //cell.gameObject.GetComponent<Image>().color = Color.black;
                 cell.Clickable = false;
             }
             DungeonGridGenerator.Instance.SelectableCells.Clear();
@@ -43,7 +74,9 @@ public class EncounterCell : MonoBehaviour
 public enum EEncounterType
 {
     NONE,
-    FIGHT,
+    FIGHTEASY,
+    FIGHTMEDIUM,
+    FIGHTHARD,
     BOSS,
     HEAL
 }

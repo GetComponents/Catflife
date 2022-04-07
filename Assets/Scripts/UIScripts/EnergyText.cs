@@ -14,7 +14,6 @@ public class EnergyText : MonoBehaviour
 
     private void ChangeEnergyText()
     {
-        Debug.Log(PlayerInventory.Instance.Energy);
         text.text = $"Energy: {PlayerInventory.Instance.Energy}";
     }
 
