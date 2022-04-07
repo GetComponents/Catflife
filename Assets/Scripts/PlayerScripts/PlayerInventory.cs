@@ -1,20 +1,114 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using TMPro;
 
 public class PlayerInventory : MonoBehaviour
 {
     public static PlayerInventory Instance;
 
+    public UnityEvent OnEnergyChange;
+
+    public int DashUpgrades
+    {
+        get => m_dashUpgrades;
+        set
+        {
+            switch (value)
+            {
+                case 1:
+                    PlayerController.Instance.Speed = speedProgression.x;
+                    PlayerController.Instance.DashSpeed = dashProgression.x;
+                    break;
+                case 2:
+                    PlayerController.Instance.Speed = speedProgression.y;
+                    PlayerController.Instance.DashSpeed = dashProgression.y;
+                    break;
+                case 3:
+                    PlayerController.Instance.Speed = speedProgression.z;
+                    PlayerController.Instance.DashSpeed = dashProgression.z;
+                    break;
+                default:
+                    break;
+            }
+            m_dashUpgrades = value;
+        }
+    }
+    public int AttackUpgrades
+    {
+        get => m_attackUpgrades;
+        set
+        {
+            switch (value)
+            {
+                case 1:
+                    PlayerController.Instance.SwordDamage = attackProgression.x;
+                    break;
+                case 2:
+                    PlayerController.Instance.SwordDamage = attackProgression.y;
+                    break;
+                case 3:
+                    PlayerController.Instance.SwordDamage = attackProgression.z;
+                    break;
+                default:
+                    break;
+            }
+            m_attackUpgrades = value;
+        }
+    }
+    public int HPUpgrades
+    {
+        get => m_hpUpgrades;
+        set
+        {
+            switch (value)
+            {
+                case 1:
+                    PlayerController.Instance.MaxHP = (int)hpProgression.x;
+                    break;
+                case 2:
+                    PlayerController.Instance.MaxHP = (int)hpProgression.y;
+                    break;
+                case 3:
+                    PlayerController.Instance.MaxHP = (int)hpProgression.z;
+                    break;
+                default:
+                    break;
+            }
+            m_hpUpgrades = value;
+        }
+    }
+    public int ManaUpgrades
+    {
+        get => m_manaUpgrades;
+        set
+        {
+            switch (value)
+            {
+                case 1:
+                    PlayerController.Instance.maxMana = (int)maxManaProgression.x;
+                    PlayerController.Instance.ManaGain = (int)manaGainProgression.x;
+                    break;
+                case 2:
+                    PlayerController.Instance.maxMana = (int)maxManaProgression.y;
+                    PlayerController.Instance.ManaGain = (int)manaGainProgression.y;
+                    break;
+                case 3:
+                    PlayerController.Instance.maxMana = (int)maxManaProgression.z;
+                    PlayerController.Instance.ManaGain = (int)manaGainProgression.z;
+                    break;
+                default:
+                    break;
+            }
+            m_manaUpgrades = value;
+        }
+    }
     [SerializeField]
-    private TextMeshProUGUI energyUI;
-
-    public int DashUpgrades, AttackUpgrades, HPUpgrades, ManaUpgrades;
+    private int m_dashUpgrades, m_attackUpgrades, m_hpUpgrades, m_manaUpgrades;
 
     [SerializeField]
-    private int startEnergy;
-
+    Vector3 dashProgression, speedProgression, attackProgression, hpProgression, maxManaProgression, manaGainProgression;
     public int Energy
     {
         get => m_energy;
@@ -22,11 +116,12 @@ public class PlayerInventory : MonoBehaviour
         {
             if (value != m_energy)
             {
-                //energyUI.text = $"Energy: {value}";
                 m_energy = value;
+                OnEnergyChange?.Invoke();
             }
         }
     }
+    [SerializeField]
     private int m_energy;
 
     void Awake()
@@ -39,7 +134,18 @@ public class PlayerInventory : MonoBehaviour
         {
             Destroy(gameObject);
         }
-        Energy = startEnergy;
     }
 
+    public void GainEnergy(int _amount)
+    {
+        Energy += _amount;
+    }
+
+    private void Start()
+    {
+        DashUpgrades = m_dashUpgrades;
+        AttackUpgrades = m_attackUpgrades;
+        HPUpgrades = m_hpUpgrades;
+        ManaUpgrades = m_manaUpgrades;
+    }
 }

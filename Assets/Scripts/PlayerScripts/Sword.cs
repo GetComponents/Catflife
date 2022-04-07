@@ -9,6 +9,7 @@ public class Sword : MonoBehaviour
         if (other.tag == "Enemy" && PlayerController.Instance.IsSwinging)
         {
             other.GetComponent<Enemy>().TakeDamage(PlayerController.Instance.SwordDamage);
+            PlayerController.Instance.CurrentMana += PlayerController.Instance.ManaGain;
         }
         else if (other.tag == "Enemy" && PlayerController.Instance.IsSpinning)
         {

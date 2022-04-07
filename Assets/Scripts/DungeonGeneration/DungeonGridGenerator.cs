@@ -18,6 +18,7 @@ public class DungeonGridGenerator : MonoBehaviour
     [SerializeField]
     private Transform map;
     public Cell[,] DungeonGrid;
+    private Cell FinalCell;
 
     private List<Cell> unonnectedCells = new List<Cell>();
     public List<EncounterCell> SelectableCells = new List<EncounterCell>();
@@ -71,6 +72,20 @@ public class DungeonGridGenerator : MonoBehaviour
                 y--;
             }
         }
+        GenerateEnd();
+    }
+
+    private void GenerateEnd()
+    {
+        FinalCell = new Cell();
+        FinalCell.MyView = Instantiate(cellPrefab, map);
+        FinalCell.MyView.transform.position = (new Vector3(cellPrefab.transform.localScale.x, (GridHeight + 1) * cellPrefab.transform.localScale.y, 0)
+                        * nodeSpacing) + new Vector3(Screen.width * 0.5f, Screen.height * 0.1f);
+    }
+
+    private void GenerateSeed()
+    {
+        //
     }
 
     private void ConnectCells()
@@ -131,6 +146,10 @@ public class DungeonGridGenerator : MonoBehaviour
                         //    //(connectedCell.MyView.transform.position / cellPrefab.transform.localScale) - currentCell.MyView.transform.position
                         //};
                         //Debug.Log(cellLinePrefab.GetComponent<UILineRenderer>().points[1]);
+                    }
+                    else if (y == GridHeight - 1 && currentCell.MyView != null)
+                    {
+                        currentCell.MyView.GetComponent<EncounterCell>().NextCells.Add(FinalCell.MyView.GetComponent<EncounterCell>());
                     }
 
                 }

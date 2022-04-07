@@ -235,12 +235,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15d7bae8d5c779240acbbcb17f3520c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  energyUI: {fileID: 0}
-  DashUpgrades: 0
-  AttackUpgrades: 0
-  HPUpgrades: 0
-  ManaUpgrades: 0
-  startEnergy: 100
+  OnEnergyChange:
+    m_PersistentCalls:
+      m_Calls: []
+  m_dashUpgrades: 0
+  m_attackUpgrades: 0
+  m_hpUpgrades: 0
+  m_manaUpgrades: 0
+  dashProgression: {x: 10, y: 15, z: 20}
+  speedProgression: {x: 0.3, y: 0.35, z: 0.4}
+  attackProgression: {x: 10, y: 15, z: 20}
+  hpProgression: {x: 6, y: 8, z: 10}
+  maxManaProgression: {x: 8, y: 12, z: 16}
+  manaGainProgression: {x: 2, y: 3, z: 4}
+  m_energy: 0
 --- !u!1 &7586108171418440740
 GameObject:
   m_ObjectHideFlags: 0
@@ -288,10 +296,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentDashCooldown: 0
-  speed: 0.3
   maxSpeed: 10
   dashCooldown: 0
-  dashSpeed: 10
+  Speed: 0.25
+  DashSpeed: 5
   mask:
     serializedVersion: 2
     m_Bits: 23
@@ -302,16 +310,18 @@ MonoBehaviour:
   myMeshRenderer: {fileID: 7586108171222350268}
   rb: {fileID: 7586108171222350270}
   playerHitBox: {fileID: 7586108171222350266}
-  m_healthPoints: 10
+  m_healthPoints: 6
+  MaxHP: 6
   hurtMaterial: {fileID: 2100000, guid: 04bf84b2400b7654d80e5efd04229323, type: 2}
   isInvincible: 0
   myAnimator: {fileID: 4273982829685808946}
-  maxMana: 100
+  maxMana: 4
+  ManaGain: 1
   unlockedSpinMove: 1
   unlockedReflect: 1
   unlockedProjectile: 1
-  spinMoveManaCost: 10
-  projectileManaCost: 10
+  spinMoveManaCost: 4
+  projectileManaCost: 4
   projectile: {fileID: 1669813210728635002, guid: 5e3afbfd0bffb1b4488d150700415bf3, type: 3}
   ProjectileDamage: 20
   ProjectileSpeed: 30
@@ -319,6 +329,9 @@ MonoBehaviour:
   DashStarted: 0
   IsSwinging: 0
   IsSpinning: 0
+  OnManaChange:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &7586108171418440738
 MonoBehaviour:
   m_ObjectHideFlags: 0

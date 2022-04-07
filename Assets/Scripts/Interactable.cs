@@ -220,5 +220,6 @@ public class Interactable : MonoBehaviour
     private void Sleep()
     {
         SceneManager.LoadSceneAsync("EncounterSelection");
+        PlayerController.Instance.HealFull();
     }
 }

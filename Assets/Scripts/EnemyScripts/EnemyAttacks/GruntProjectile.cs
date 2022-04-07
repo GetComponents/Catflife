@@ -5,7 +5,6 @@ using UnityEngine;
 public class GruntProjectile : MonoBehaviour
 {
     public float selfDestructTime;
-    [HideInInspector]
     public int MyDamage;
     PlayerController player;
 

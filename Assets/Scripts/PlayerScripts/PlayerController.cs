@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 
@@ -11,7 +12,8 @@ public class PlayerController : MonoBehaviour
     [Header("Movement")]
     public float currentDashCooldown;
     [SerializeField]
-    float speed, maxSpeed, dashCooldown, dashSpeed;
+    float maxSpeed, dashCooldown;
+    public float Speed, DashSpeed;
     public LayerMask mask;
 
     [Header("Attacks")]
@@ -40,17 +42,21 @@ public class PlayerController : MonoBehaviour
             if (value <= 0)
             {
                 m_healthPoints = 0;
-                //Debug.Log("Dead A Hell");
             }
             else if (value < m_healthPoints)
             {
                 StartCoroutine(TurnInvincible());
                 m_healthPoints = value;
             }
+            else if(value > MaxHP)
+            {
+                m_healthPoints = MaxHP;
+            }
         }
     }
     [SerializeField]
     private int m_healthPoints;
+    public int MaxHP;
     [SerializeField]
     Material hurtMaterial;
     Material normalMaterial;
@@ -61,23 +67,33 @@ public class PlayerController : MonoBehaviour
     Animator myAnimator;
 
     [Header("Mana and Abilities")]
-    [SerializeField]
-    private int maxMana;
-    private int currentMana;
-    [SerializeField]
-    bool unlockedSpinMove, unlockedReflect, unlockedProjectile;
+    public int maxMana;
+    public int ManaGain;
+    [HideInInspector]
+    public int CurrentMana
+    {
+        get => m_currentMana;
+        set
+        {
+            m_currentMana = value;
+            OnManaChange?.Invoke();
+        }
+    }
+    int m_currentMana;
+    public bool unlockedSpinMove, unlockedReflect, unlockedProjectile;
     [SerializeField]
     int spinMoveManaCost, projectileManaCost;
     [SerializeField]
     GameObject projectile;
     public float ProjectileDamage, ProjectileSpeed;
-
     Vector2 m_moveDir = new Vector2();
 
     Vector3 dashDirection;
 
     [HideInInspector]
     public bool IsDashing, DashStarted, IsSwinging, IsSpinning;
+    [HideInInspector]
+    public UnityEvent OnManaChange;
 
     float mouseContext;
 
@@ -113,16 +129,16 @@ public class PlayerController : MonoBehaviour
     private void Start()
     {
         mainCam = Camera.main;
-        currentMana = maxMana;
+        CurrentMana = maxMana;
     }
 
     private void FixedUpdate()
     {
         if (!IsDashing)
-            rb.AddForce(new Vector3((m_moveDir.y * -0.66f) + (m_moveDir.x * 0.66f), 0, (m_moveDir.y * 0.66f) + (m_moveDir.x * 0.66f)) * speed, ForceMode.VelocityChange);
+            rb.AddForce(new Vector3((m_moveDir.y * -0.66f) + (m_moveDir.x * 0.66f), 0, (m_moveDir.y * 0.66f) + (m_moveDir.x * 0.66f)) * Speed, ForceMode.VelocityChange);
         else if (DashStarted)
         {
-            dashDirection = new Vector3((m_moveDir.y * -0.66f) + (m_moveDir.x * 0.66f), 0, (m_moveDir.y * 0.66f) + (m_moveDir.x * 0.66f)) * dashSpeed;
+            dashDirection = new Vector3((m_moveDir.y * -0.66f) + (m_moveDir.x * 0.66f), 0, (m_moveDir.y * 0.66f) + (m_moveDir.x * 0.66f)) * DashSpeed;
             rb.AddForce(dashDirection, ForceMode.VelocityChange);
             DashStarted = false;
         }
@@ -168,8 +184,9 @@ public class PlayerController : MonoBehaviour
 
     public void Cast(InputAction.CallbackContext context)
     {
-        if (myAnimator.GetCurrentAnimatorStateInfo(0).IsName("Idle") && context.started && unlockedProjectile)
+        if (myAnimator.GetCurrentAnimatorStateInfo(0).IsName("Idle") && context.started && unlockedProjectile && CurrentMana >= projectileManaCost)
         {
+            CurrentMana -= projectileManaCost;
             myAnimator.SetBool("isCasting", true);
         }
     }
@@ -181,7 +198,7 @@ public class PlayerController : MonoBehaviour
         {
             SceneManager.LoadScene("EncounterSelection");
         }
-        else if (SceneManager.GetActiveScene().name == "Combat")
+        else 
         {
             HideMap.Instance.ChangeMapState();
             SceneManager.UnloadSceneAsync("Combat");
@@ -212,9 +229,19 @@ public class PlayerController : MonoBehaviour
 
     private void SpinAttack()
     {
-        currentMana -= spinMoveManaCost;
+        CurrentMana -= spinMoveManaCost;
         myAnimator.SetBool("isSpinAttacking", true);
         myAnimator.SetBool("isCharging", false);
+    }
+
+    public void HealFull()
+    {
+        HealthPoints = MaxHP;
+    }
+
+    public void Heal(int _amount)
+    {
+        HealthPoints += _amount;
     }
 
     #region AnimatorMethods
@@ -226,7 +253,7 @@ public class PlayerController : MonoBehaviour
     private void EndSwing()
     {
         IsSwinging = false;
-        if (mouseContext != 0 && unlockedSpinMove && currentMana >= spinMoveManaCost)
+        if (mouseContext != 0 && unlockedSpinMove && CurrentMana >= spinMoveManaCost)
         {
             myAnimator.SetBool("isCharging", true);
         }
