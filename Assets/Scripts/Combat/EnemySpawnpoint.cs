@@ -10,5 +10,6 @@ public class EnemySpawnpoint : MonoBehaviour
     private void Start()
     {
         Instantiate(Enemy, transform.position, Quaternion.identity);
+        CombatSceneChange.Instance.AddEnemy();
     }
 }

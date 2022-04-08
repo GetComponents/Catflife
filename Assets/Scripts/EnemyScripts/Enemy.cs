@@ -42,7 +42,9 @@ public class Enemy : MonoBehaviour
 
     private void Die()
     {
-        PickupEnergy energyPickup = Instantiate(PickupEnergy, transform.position, Quaternion.identity).GetComponent<PickupEnergy>();
+        PickupEnergy energyPickup = Instantiate(PickupEnergy,
+            new Vector3(transform.position.x, PlayerInventory.Instance.transform.position.y, transform.position.z),
+            Quaternion.identity).GetComponent<PickupEnergy>();
         if (isElite)
         {
             energyPickup.EnergyGainAmount = BaseEnergyPickupAmount * 2;
@@ -51,7 +53,10 @@ public class Enemy : MonoBehaviour
         {
             energyPickup.EnergyGainAmount = BaseEnergyPickupAmount;
         }
-        Instantiate(PickupHP, transform.position, Quaternion.identity);
+        Instantiate(PickupHP,
+            new Vector3(transform.position.x, PlayerInventory.Instance.transform.position.y, transform.position.z),
+            Quaternion.identity);
+        CombatSceneChange.Instance.RemoveEnemy();
         Destroy(gameObject);
     }
 }

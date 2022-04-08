@@ -89,7 +89,9 @@ public class Bowler : Enemy
         Vector3 playerDirection = new Vector3(player.transform.GetChild(0).position.x - transform.position.x, 0, player.transform.GetChild(0).position.z - transform.position.z).normalized;
         for (int i = -45; i <= 45; i += 30)
         {
-            GameObject tmp = Instantiate(projectile, transform.position, Quaternion.identity);
+            GameObject tmp = Instantiate(projectile,
+                new Vector3(transform.position.x, PlayerInventory.Instance.transform.position.y, transform.position.z),
+                Quaternion.identity);
             tmp.GetComponent<Rigidbody>().AddForce(Quaternion.Euler(0, i, 0) * playerDirection * projectileSpeed, ForceMode.Impulse);
             tmp.GetComponent<BowlerProjectile>().myDamage = projectileDamage;
         }

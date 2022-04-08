@@ -41,17 +41,22 @@ public class PlayerController : MonoBehaviour
         {
             if (value <= 0)
             {
-                m_healthPoints = 0;
+                Die();
             }
             else if (value < m_healthPoints)
             {
                 StartCoroutine(TurnInvincible());
                 m_healthPoints = value;
             }
-            else if(value > MaxHP)
+            else if (value > MaxHP)
             {
                 m_healthPoints = MaxHP;
             }
+            else
+            {
+                m_healthPoints = value;
+            }
+            OnHealthChange?.Invoke();
         }
     }
     [SerializeField]
@@ -75,7 +80,14 @@ public class PlayerController : MonoBehaviour
         get => m_currentMana;
         set
         {
-            m_currentMana = value;
+            if (value > maxMana)
+            {
+                m_currentMana = maxMana;
+            }
+            else
+            {
+                m_currentMana = value;
+            }
             OnManaChange?.Invoke();
         }
     }
@@ -93,7 +105,7 @@ public class PlayerController : MonoBehaviour
     [HideInInspector]
     public bool IsDashing, DashStarted, IsSwinging, IsSpinning;
     [HideInInspector]
-    public UnityEvent OnManaChange;
+    public UnityEvent OnManaChange, OnHealthChange;
 
     float mouseContext;
 
@@ -142,6 +154,12 @@ public class PlayerController : MonoBehaviour
             rb.AddForce(dashDirection, ForceMode.VelocityChange);
             DashStarted = false;
         }
+    }
+
+    public void Die()
+    {
+        HealthPoints = MaxHP;
+        SceneManager.LoadScene("SampleScene");
     }
 
     #region InputMethods
@@ -198,7 +216,7 @@ public class PlayerController : MonoBehaviour
         {
             SceneManager.LoadScene("EncounterSelection");
         }
-        else 
+        else
         {
             HideMap.Instance.ChangeMapState();
             SceneManager.UnloadSceneAsync("Combat");

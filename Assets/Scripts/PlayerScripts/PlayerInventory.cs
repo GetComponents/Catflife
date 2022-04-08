@@ -8,6 +8,7 @@ public class PlayerInventory : MonoBehaviour
 {
     public static PlayerInventory Instance;
 
+    [HideInInspector]
     public UnityEvent OnEnergyChange;
 
     public int DashUpgrades
@@ -32,6 +33,11 @@ public class PlayerInventory : MonoBehaviour
                 default:
                     break;
             }
+            if (value > 3)
+            {
+                PlayerController.Instance.Speed = speedProgression.z;
+                PlayerController.Instance.DashSpeed = dashProgression.z;
+            }
             m_dashUpgrades = value;
         }
     }
@@ -54,6 +60,10 @@ public class PlayerInventory : MonoBehaviour
                 default:
                     break;
             }
+            if (value > 3)
+            {
+                PlayerController.Instance.SwordDamage = attackProgression.z;
+            }
             m_attackUpgrades = value;
         }
     }
@@ -75,6 +85,10 @@ public class PlayerInventory : MonoBehaviour
                     break;
                 default:
                     break;
+            }
+            if (value > 3)
+            {
+                PlayerController.Instance.MaxHP = (int)hpProgression.z;
             }
             m_hpUpgrades = value;
         }
@@ -100,6 +114,11 @@ public class PlayerInventory : MonoBehaviour
                     break;
                 default:
                     break;
+            }
+            if (value > 3)
+            {
+                PlayerController.Instance.maxMana = (int)maxManaProgression.z;
+                PlayerController.Instance.ManaGain = (int)manaGainProgression.z;
             }
             m_manaUpgrades = value;
         }

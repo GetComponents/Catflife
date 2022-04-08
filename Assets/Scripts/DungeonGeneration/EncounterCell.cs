@@ -9,6 +9,7 @@ public class EncounterCell : MonoBehaviour
     public List<EncounterCell> NextCells = new List<EncounterCell>();
     public List<UILineRenderer> CellConnection = new List<UILineRenderer>();
     public bool IsConnected = false;
+    public int MyEncounterIndex;
     public EEncounterType MyEncounter
     {
         get => m_myEncounter;
@@ -40,34 +41,62 @@ public class EncounterCell : MonoBehaviour
     [SerializeField]
     private EEncounterType m_myEncounter;
     public bool Clickable;
-    //public Image myImage;
     [SerializeField]
     Sprite easyEncounter, mediumEncounter, hardEncounter;
 
-    private void Start()
-    {
-    }
 
     public void StartEncounter()
     {
         if (Clickable == true)
         {
-            foreach (EncounterCell cell in DungeonGridGenerator.Instance.SelectableCells)
-            {
-                //cell.gameObject.GetComponent<Image>().color = Color.black;
-                cell.Clickable = false;
-            }
-            DungeonGridGenerator.Instance.SelectableCells.Clear();
-            foreach (EncounterCell cell in NextCells)
-            {
-                cell.gameObject.GetComponent<Image>().color = Color.white;
-                cell.Clickable = true;
-                DungeonGridGenerator.Instance.SelectableCells.Add(cell);
-            }
-            DungeonGridGenerator.Instance.MoveMap(gameObject.transform.localScale.y);
-            SceneManager.LoadScene("Combat", LoadSceneMode.Additive);
-            HideMap.Instance.ChangeMapState();
+            DisableOtherCells();
+            GenerateEncounter();
         }
+    }
+    private void DisableOtherCells()
+    {
+        foreach (EncounterCell cell in DungeonGridGenerator.Instance.SelectableCells)
+        {
+            cell.gameObject.GetComponent<Image>().color = Color.red;
+            cell.Clickable = false;
+        }
+        DungeonGridGenerator.Instance.SelectableCells.Clear();
+        foreach (EncounterCell cell in NextCells)
+        {
+            cell.gameObject.GetComponent<Image>().color = Color.white;
+            cell.Clickable = true;
+            DungeonGridGenerator.Instance.SelectableCells.Add(cell);
+        }
+        DungeonGridGenerator.Instance.MoveMap(gameObject.transform.localScale.y);
+        HideMap.Instance.ChangeMapState();
+    }
+
+    private void GenerateEncounter()
+    {
+        switch (MyEncounter)
+        {
+            case EEncounterType.NONE:
+                break;
+            case EEncounterType.FIGHTEASY:
+                SceneManager.LoadScene("Combat", LoadSceneMode.Additive);
+                break;
+            case EEncounterType.FIGHTMEDIUM:
+                SceneManager.LoadScene("Combat", LoadSceneMode.Additive);
+                break;
+            case EEncounterType.FIGHTHARD:
+                SceneManager.LoadScene("Combat", LoadSceneMode.Additive);
+                break;
+            case EEncounterType.BOSS:
+                PlayerController.Instance.Die();
+                break;
+            case EEncounterType.HEAL:
+                break;
+            default:
+                break;
+        }
+        DungeonGridGenerator.Instance.CurrentEncounter = MyEncounter;
+        DungeonGridGenerator.Instance.CurrentEncounterIndex = MyEncounterIndex;
+
     }
 }
 

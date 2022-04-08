@@ -18,7 +18,7 @@ public class DungeonGridGenerator : MonoBehaviour
     [SerializeField]
     private Transform map;
     public Cell[,] DungeonGrid;
-    private Cell FinalCell;
+    private Cell finalCell;
 
     private List<Cell> unonnectedCells = new List<Cell>();
     public List<EncounterCell> SelectableCells = new List<EncounterCell>();
@@ -28,6 +28,11 @@ public class DungeonGridGenerator : MonoBehaviour
 
     [SerializeField]
     Vector3 SectionOneEncounters, SectionTwoEncounters, SectionThreeEncounters;
+
+    public List<GameObject> EasyEncounters, MediumEncounters, HardEncounters;
+
+    public EEncounterType CurrentEncounter;
+    public int CurrentEncounterIndex;
 
     private void Awake()
     {
@@ -141,14 +146,30 @@ public class DungeonGridGenerator : MonoBehaviour
             default:
                 break;
         }
+        switch (_cell.MyEncounter)
+        {
+            case EEncounterType.FIGHTEASY:
+                _cell.MyEncounterIndex = Random.Range(0, EasyEncounters.Count - 1);
+                break;
+            case EEncounterType.FIGHTMEDIUM:
+                _cell.MyEncounterIndex = Random.Range(0, MediumEncounters.Count - 1);
+                break;
+            case EEncounterType.FIGHTHARD:
+                _cell.MyEncounterIndex = Random.Range(0, HardEncounters.Count - 1);
+                break;
+            default:
+                break;
+        }
     }
 
     private void GenerateEnd()
     {
-        FinalCell = new Cell();
-        FinalCell.MyView = Instantiate(cellPrefab, map);
-        FinalCell.MyView.transform.position = (new Vector3(cellPrefab.transform.localScale.x, (GridHeight + 1) * cellPrefab.transform.localScale.y, 0)
+        finalCell = new Cell();
+        finalCell.MyView = Instantiate(cellPrefab, map);
+        finalCell.MyView.transform.position = (new Vector3(cellPrefab.transform.localScale.x, (GridHeight + 1) * cellPrefab.transform.localScale.y, 0)
                         * nodeSpacing) + new Vector3(Screen.width * 0.5f, Screen.height * 0.1f);
+        SelectableCells.Add(finalCell.MyView.GetComponent<EncounterCell>());
+        finalCell.MyView.GetComponent<EncounterCell>().MyEncounter = EEncounterType.BOSS;
     }
 
     private void GenerateSeed()
@@ -178,7 +199,7 @@ public class DungeonGridGenerator : MonoBehaviour
                     }
                     else
                     {
-                        //DungeonGrid[x, y].MyView.GetComponent<Image>().color = Color.black;
+                        DungeonGrid[x, y].MyView.GetComponent<Image>().color = Color.red;
                         DungeonGrid[x, y].MyView.GetComponent<EncounterCell>().Clickable = false;
                     }
             }
@@ -217,7 +238,7 @@ public class DungeonGridGenerator : MonoBehaviour
                     }
                     else if (y == GridHeight - 1 && currentCell.MyView != null)
                     {
-                        currentCell.MyView.GetComponent<EncounterCell>().NextCells.Add(FinalCell.MyView.GetComponent<EncounterCell>());
+                        currentCell.MyView.GetComponent<EncounterCell>().NextCells.Add(finalCell.MyView.GetComponent<EncounterCell>());
                     }
 
                 }
@@ -269,11 +290,6 @@ public class DungeonGridGenerator : MonoBehaviour
 
         for (int x = 0; x < GridWidth; x++)
         {
-            //if (xPos + x < GridWidth && xPos - x >= 0)
-            //{
-
-            //    Debug.Log($"{xPos + x} / {yPos + 1} is in Bounds of {GridWidth} / {GridHeight}");
-            //}
             if (xPos + x < GridWidth && DungeonGrid[xPos + x, yPos + 1].ContainsEncounter)
             {
                 return DungeonGrid[xPos + x, yPos + 1];

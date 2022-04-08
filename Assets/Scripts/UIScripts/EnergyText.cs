@@ -10,6 +10,7 @@ public class EnergyText : MonoBehaviour
     {
         PlayerInventory.Instance.OnEnergyChange.AddListener(ChangeEnergyText);
         text = GetComponent<TextMeshProUGUI>();
+        ChangeEnergyText();
     }
 
     private void ChangeEnergyText()
