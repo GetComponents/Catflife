@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class EnemyAggroRange : MonoBehaviour
 {
+    PlayerController player;
     [SerializeField]
     Enemy enemyController;
     [SerializeField]
@@ -16,17 +17,24 @@ public class EnemyAggroRange : MonoBehaviour
     private void Start()
     {
         oldMaterial = meshRenderer.material;
+        player = PlayerController.Instance;
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        enemyController.isAggro = true;
-        meshRenderer.material = aggroMaterial;
+        if (other.transform == player.transform.GetChild(0))
+        {
+            enemyController.isAggro = true;
+            meshRenderer.material = aggroMaterial;
+        }
     }
 
     private void OnTriggerExit(Collider other)
     {
-        enemyController.isAggro = false;
-        meshRenderer.material = oldMaterial;
+        if (other.transform == player.transform.GetChild(0))
+        {
+            enemyController.isAggro = false;
+            meshRenderer.material = oldMaterial;
+        }
     }
 }

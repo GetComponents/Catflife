@@ -5,13 +5,14 @@ using Cinemachine;
 
 public class CombatCinemachine : MonoBehaviour
 {
-    public CinemachineVirtualCamera myCinemachine;
     public static CombatCinemachine Instance;
+
+    public CinemachineVirtualCamera myCinemachine;
     public Camera myCam;
 
     private void Awake()
     {
-        if (!Instance)
+        if (Instance == null)
         {
             Instance = this;
             DontDestroyOnLoad(gameObject);

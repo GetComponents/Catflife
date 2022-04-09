@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 
@@ -11,9 +12,16 @@ public class PlayerController : MonoBehaviour
     [Header("Movement")]
     public float currentDashCooldown;
     [SerializeField]
-    float speed, maxSpeed, dashCooldown, dashSpeed;
-    PlayerInput input;
+    float maxSpeed, dashCooldown;
+    public float Speed, DashSpeed;
     public LayerMask mask;
+
+    [Header("Attacks")]
+    [SerializeField]
+    Sword mySword;
+    public float SwordDamage;
+    public float SpinAttackDamageMultiplier;
+
 
     [Space]
     [SerializeField]
@@ -33,18 +41,27 @@ public class PlayerController : MonoBehaviour
         {
             if (value <= 0)
             {
-                m_healthPoints = 0;
-                Debug.Log("Dead A Hell");
+                Die();
             }
             else if (value < m_healthPoints)
             {
                 StartCoroutine(TurnInvincible());
                 m_healthPoints = value;
             }
+            else if (value > MaxHP)
+            {
+                m_healthPoints = MaxHP;
+            }
+            else
+            {
+                m_healthPoints = value;
+            }
+            OnHealthChange?.Invoke();
         }
     }
     [SerializeField]
     private int m_healthPoints;
+    public int MaxHP;
     [SerializeField]
     Material hurtMaterial;
     Material normalMaterial;
@@ -54,12 +71,43 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     Animator myAnimator;
 
+    [Header("Mana and Abilities")]
+    public int maxMana;
+    public int ManaGain;
+    [HideInInspector]
+    public int CurrentMana
+    {
+        get => m_currentMana;
+        set
+        {
+            if (value > maxMana)
+            {
+                m_currentMana = maxMana;
+            }
+            else
+            {
+                m_currentMana = value;
+            }
+            OnManaChange?.Invoke();
+        }
+    }
+    int m_currentMana;
+    public bool unlockedSpinMove, unlockedReflect, unlockedProjectile;
+    [SerializeField]
+    int spinMoveManaCost, projectileManaCost;
+    [SerializeField]
+    GameObject projectile;
+    public float ProjectileDamage, ProjectileSpeed;
     Vector2 m_moveDir = new Vector2();
 
     Vector3 dashDirection;
 
     [HideInInspector]
-    public bool dashing, dashStarted, swinging;
+    public bool IsDashing, DashStarted, IsSwinging, IsSpinning;
+    [HideInInspector]
+    public UnityEvent OnManaChange, OnHealthChange;
+
+    float mouseContext;
 
 
     void Awake()
@@ -75,12 +123,8 @@ public class PlayerController : MonoBehaviour
         DontDestroyOnLoad(this.gameObject);
         HealthPoints = m_healthPoints;
         normalMaterial = myMeshRenderer.material;
-        //input = new PlayerInput();
-        //input.Player.Enable();
-        //input.Player.Interact.performed += ChangeScene;
     }
 
-    // Update is called once per frame
     void Update()
     {
         ReduceDashCooldown();
@@ -91,26 +135,31 @@ public class PlayerController : MonoBehaviour
         {
             Vector3 pointToLook = hit.point;
             playerHitBox.transform.LookAt(new Vector3(pointToLook.x, playerHitBox.transform.position.y, pointToLook.z), Vector3.up);
-            //parent.transform.rotation = Quaternion.LookRotation(pointToLook - transform.position);
-            //cube.position = pointToLook;
         }
     }
 
     private void Start()
     {
         mainCam = Camera.main;
+        CurrentMana = maxMana;
     }
 
     private void FixedUpdate()
     {
-        if (!dashing)
-            rb.AddForce(new Vector3((m_moveDir.y * -0.66f) + (m_moveDir.x * 0.66f), 0, (m_moveDir.y * 0.66f) + (m_moveDir.x * 0.66f)) * speed, ForceMode.VelocityChange);
-        else if (dashStarted)
+        if (!IsDashing)
+            rb.AddForce(new Vector3((m_moveDir.y * -0.66f) + (m_moveDir.x * 0.66f), 0, (m_moveDir.y * 0.66f) + (m_moveDir.x * 0.66f)) * Speed, ForceMode.VelocityChange);
+        else if (DashStarted)
         {
-            dashDirection = new Vector3((m_moveDir.y * -0.66f) + (m_moveDir.x * 0.66f), 0, (m_moveDir.y * 0.66f) + (m_moveDir.x * 0.66f)) * dashSpeed;
+            dashDirection = new Vector3((m_moveDir.y * -0.66f) + (m_moveDir.x * 0.66f), 0, (m_moveDir.y * 0.66f) + (m_moveDir.x * 0.66f)) * DashSpeed;
             rb.AddForce(dashDirection, ForceMode.VelocityChange);
-            dashStarted = false;
+            DashStarted = false;
         }
+    }
+
+    public void Die()
+    {
+        HealthPoints = MaxHP;
+        SceneManager.LoadScene("SampleScene");
     }
 
     #region InputMethods
@@ -121,13 +170,19 @@ public class PlayerController : MonoBehaviour
 
     public void MouseDown(InputAction.CallbackContext context)
     {
-        myAnimator.SetBool("isSwinging", false);
-        myAnimator.SetBool("isSwinging", true);
+        mouseContext = context.ReadValue<float>();
+        if (myAnimator.GetCurrentAnimatorStateInfo(0).IsName("Idle") && context.started)
+        {
+            myAnimator.SetBool("isSwinging", true);
+        }
+        else if (mouseContext == 0 && myAnimator.GetBool("isCharging"))
+        {
+            SpinAttack();
+        }
     }
 
     public void Interact(InputAction.CallbackContext context)
     {
-        //Debug.Log(context.ReadValue<float>());
         if (context.started)
         {
             ChangeScene(context);
@@ -136,11 +191,21 @@ public class PlayerController : MonoBehaviour
 
     public void Dash(InputAction.CallbackContext context)
     {
-        if (currentDashCooldown < 0)
+        if (currentDashCooldown < 0 && context.started && myAnimator.GetCurrentAnimatorStateInfo(0).IsName("Idle"))
         {
-            dashing = true;
+            IsDashing = true;
             currentDashCooldown = dashCooldown;
+            isInvincible = true;
             myAnimator.SetBool("isDashing", true);
+        }
+    }
+
+    public void Cast(InputAction.CallbackContext context)
+    {
+        if (myAnimator.GetCurrentAnimatorStateInfo(0).IsName("Idle") && context.started && unlockedProjectile && CurrentMana >= projectileManaCost)
+        {
+            CurrentMana -= projectileManaCost;
+            myAnimator.SetBool("isCasting", true);
         }
     }
     #endregion
@@ -163,7 +228,7 @@ public class PlayerController : MonoBehaviour
         currentDashCooldown -= Time.deltaTime;
     }
 
-    public void HurtPlayer(int damage)
+    public void TakeDamage(int damage)
     {
         if (!isInvincible)
         {
@@ -180,28 +245,92 @@ public class PlayerController : MonoBehaviour
         isInvincible = false;
     }
 
+    private void SpinAttack()
+    {
+        CurrentMana -= spinMoveManaCost;
+        myAnimator.SetBool("isSpinAttacking", true);
+        myAnimator.SetBool("isCharging", false);
+    }
+
+    public void HealFull()
+    {
+        HealthPoints = MaxHP;
+    }
+
+    public void Heal(int _amount)
+    {
+        HealthPoints += _amount;
+    }
+
     #region AnimatorMethods
     private void StartSwing()
     {
-        swinging = true;
+        IsSwinging = true;
     }
 
     private void EndSwing()
     {
-        myAnimator.SetBool("isSwinging", false);
-        swinging = false;
+        IsSwinging = false;
+        if (mouseContext != 0 && unlockedSpinMove && CurrentMana >= spinMoveManaCost)
+        {
+            myAnimator.SetBool("isCharging", true);
+        }
+        else
+        {
+            myAnimator.SetBool("isSwinging", false);
+        }
     }
-
 
     private void StartDash()
     {
-        dashStarted = true;
+        DashStarted = true;
     }
 
     private void EndDash()
     {
         myAnimator.SetBool("isDashing", false);
-        dashing = false;
+        IsDashing = false;
+        isInvincible = false;
+    }
+
+    private void StartSpinAttack()
+    {
+        IsSpinning = true;
+    }
+
+    private void EndSpinAttack()
+    {
+        IsSpinning = false;
+        myAnimator.SetBool("isSwinging", false);
+        myAnimator.SetBool("isSpinAttacking", false);
+    }
+
+    private void StartCast()
+    {
+        GameObject tmp = Instantiate(projectile, transform.GetChild(0).position, Quaternion.identity);
+        tmp.GetComponent<Rigidbody>().AddForce(transform.GetChild(0).forward.normalized * ProjectileSpeed, ForceMode.Impulse);
+        tmp.GetComponent<PlayerProjectile>().MyDamage = ProjectileDamage;
+    }
+
+    public bool ReturnEnemyProjectile(Transform projectileTransform)
+    {
+        if (unlockedReflect)
+        {
+            GameObject tmp = Instantiate(projectile, projectileTransform.position, Quaternion.identity);
+            tmp.transform.localScale = projectileTransform.localScale;
+            tmp.GetComponent<Rigidbody>().AddForce(transform.GetChild(0).forward.normalized * ProjectileSpeed, ForceMode.Impulse);
+            tmp.GetComponent<PlayerProjectile>().MyDamage = ProjectileDamage;
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+
+    private void EndCast()
+    {
+        myAnimator.SetBool("isCasting", false);
     }
     #endregion
 }

@@ -8,9 +8,8 @@ public class PlayerUnlock : MonoBehaviour
     {
         NONE,
         SPINMOVE,
-        TEST,
-        TMP,
-        FOO
+        PROJECTILE,
+        REFLECT,
     }
 
     [SerializeField]
@@ -23,13 +22,13 @@ public class PlayerUnlock : MonoBehaviour
             case EUnlockType.NONE:
                 break;
             case EUnlockType.SPINMOVE:
-                Debug.Log("spIiIiIiiIiiInnNNn");
+                PlayerController.Instance.unlockedSpinMove = true;
                 break;
-            case EUnlockType.TEST:
+            case EUnlockType.PROJECTILE:
+                PlayerController.Instance.unlockedProjectile = true;
                 break;
-            case EUnlockType.TMP:
-                break;
-            case EUnlockType.FOO:
+            case EUnlockType.REFLECT:
+                PlayerController.Instance.unlockedReflect = true;
                 break;
             default:
                 break;

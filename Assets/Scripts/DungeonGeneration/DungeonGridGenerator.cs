@@ -18,12 +18,21 @@ public class DungeonGridGenerator : MonoBehaviour
     [SerializeField]
     private Transform map;
     public Cell[,] DungeonGrid;
+    private Cell finalCell;
 
     private List<Cell> unonnectedCells = new List<Cell>();
     public List<EncounterCell> SelectableCells = new List<EncounterCell>();
 
     [SerializeField]
     GameObject cellPrefab, cellLinePrefab, debugPoint;
+
+    [SerializeField]
+    Vector3 SectionOneEncounters, SectionTwoEncounters, SectionThreeEncounters;
+
+    public List<GameObject> EasyEncounters, MediumEncounters, HardEncounters;
+
+    public EEncounterType CurrentEncounter;
+    public int CurrentEncounterIndex;
 
     private void Awake()
     {
@@ -64,6 +73,19 @@ public class DungeonGridGenerator : MonoBehaviour
                     currentCell.MyView.transform.position = (new Vector3((x - (int)(GridWidth * 0.5f)) * cellPrefab.transform.localScale.x, y * cellPrefab.transform.localScale.y, 0)
                         * nodeSpacing) + new Vector3(Screen.width * 0.5f, Screen.height * 0.1f);
                     cellSpawned = true;
+
+                    if ((float)y/(float)GridHeight <= 1f/3f)
+                    {
+                        GenerateEncounterType(currentCell.MyView.GetComponent<EncounterCell>(), 1);
+                    }
+                    else if((float)y/(float)GridHeight <= 2f/3f)
+                    {
+                        GenerateEncounterType(currentCell.MyView.GetComponent<EncounterCell>(), 2);
+                    }
+                    else
+                    {
+                        GenerateEncounterType(currentCell.MyView.GetComponent<EncounterCell>(), 3);
+                    }
                 }
             }
             if (!cellSpawned)
@@ -71,6 +93,88 @@ public class DungeonGridGenerator : MonoBehaviour
                 y--;
             }
         }
+        GenerateEnd();
+    }
+
+    private void GenerateEncounterType(EncounterCell _cell, int _modifier)
+    {
+        float tmp = Random.Range(0f, 1f);
+        switch (_modifier)
+        {
+            case 1:
+                if (tmp <= SectionOneEncounters.x)
+                {
+                    _cell.MyEncounter = EEncounterType.FIGHTEASY;
+                }
+                else if (tmp <= SectionOneEncounters.y)
+                {
+                    _cell.MyEncounter = EEncounterType.FIGHTMEDIUM;
+                }
+                else if (tmp <= SectionOneEncounters.z)
+                {
+                    _cell.MyEncounter = EEncounterType.FIGHTHARD;
+                }
+                break;
+            case 2:
+                if (tmp <= SectionTwoEncounters.x)
+                {
+                    _cell.MyEncounter = EEncounterType.FIGHTEASY;
+                }
+                else if (tmp <= SectionTwoEncounters.y)
+                {
+                    _cell.MyEncounter = EEncounterType.FIGHTMEDIUM;
+                }
+                else if (tmp <= SectionTwoEncounters.z)
+                {
+                    _cell.MyEncounter = EEncounterType.FIGHTHARD;
+                }
+                break;
+            case 3:
+                if (tmp <= SectionThreeEncounters.x)
+                {
+                    _cell.MyEncounter = EEncounterType.FIGHTEASY;
+                }
+                else if (tmp <= SectionThreeEncounters.y)
+                {
+                    _cell.MyEncounter = EEncounterType.FIGHTMEDIUM;
+                }
+                else if (tmp <= SectionThreeEncounters.z)
+                {
+                    _cell.MyEncounter = EEncounterType.FIGHTHARD;
+                }
+                break;
+            default:
+                break;
+        }
+        switch (_cell.MyEncounter)
+        {
+            case EEncounterType.FIGHTEASY:
+                _cell.MyEncounterIndex = Random.Range(0, EasyEncounters.Count - 1);
+                break;
+            case EEncounterType.FIGHTMEDIUM:
+                _cell.MyEncounterIndex = Random.Range(0, MediumEncounters.Count - 1);
+                break;
+            case EEncounterType.FIGHTHARD:
+                _cell.MyEncounterIndex = Random.Range(0, HardEncounters.Count - 1);
+                break;
+            default:
+                break;
+        }
+    }
+
+    private void GenerateEnd()
+    {
+        finalCell = new Cell();
+        finalCell.MyView = Instantiate(cellPrefab, map);
+        finalCell.MyView.transform.position = (new Vector3(cellPrefab.transform.localScale.x, (GridHeight + 1) * cellPrefab.transform.localScale.y, 0)
+                        * nodeSpacing) + new Vector3(Screen.width * 0.5f, Screen.height * 0.1f);
+        SelectableCells.Add(finalCell.MyView.GetComponent<EncounterCell>());
+        finalCell.MyView.GetComponent<EncounterCell>().MyEncounter = EEncounterType.BOSS;
+    }
+
+    private void GenerateSeed()
+    {
+        //
     }
 
     private void ConnectCells()
@@ -95,7 +199,7 @@ public class DungeonGridGenerator : MonoBehaviour
                     }
                     else
                     {
-                        DungeonGrid[x, y].MyView.GetComponent<Image>().color = Color.black;
+                        DungeonGrid[x, y].MyView.GetComponent<Image>().color = Color.red;
                         DungeonGrid[x, y].MyView.GetComponent<EncounterCell>().Clickable = false;
                     }
             }
@@ -131,6 +235,10 @@ public class DungeonGridGenerator : MonoBehaviour
                         //    //(connectedCell.MyView.transform.position / cellPrefab.transform.localScale) - currentCell.MyView.transform.position
                         //};
                         //Debug.Log(cellLinePrefab.GetComponent<UILineRenderer>().points[1]);
+                    }
+                    else if (y == GridHeight - 1 && currentCell.MyView != null)
+                    {
+                        currentCell.MyView.GetComponent<EncounterCell>().NextCells.Add(finalCell.MyView.GetComponent<EncounterCell>());
                     }
 
                 }
@@ -182,11 +290,6 @@ public class DungeonGridGenerator : MonoBehaviour
 
         for (int x = 0; x < GridWidth; x++)
         {
-            //if (xPos + x < GridWidth && xPos - x >= 0)
-            //{
-
-            //    Debug.Log($"{xPos + x} / {yPos + 1} is in Bounds of {GridWidth} / {GridHeight}");
-            //}
             if (xPos + x < GridWidth && DungeonGrid[xPos + x, yPos + 1].ContainsEncounter)
             {
                 return DungeonGrid[xPos + x, yPos + 1];
