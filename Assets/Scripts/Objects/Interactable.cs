@@ -110,7 +110,12 @@ public class Interactable : MonoBehaviour
 
     private void ChangeUIText()
     {
-        costUI.text = costOfInteraction.ToString();
+        if (costOfInteraction > 0)
+            costUI.text = costOfInteraction.ToString();
+        else
+        {
+            costUI.text = "Yes";
+        }
         switch (myAction)
         {
             case EActionType.NONE:
