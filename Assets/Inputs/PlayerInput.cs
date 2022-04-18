@@ -291,7 +291,7 @@ public class @PlayerInput : IInputActionCollection, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""f29906f9-f1fa-4d7b-b9bd-0b69ec51dedc"",
-                    ""path"": ""<Keyboard>/e"",
+                    ""path"": ""<Keyboard>/enter"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",

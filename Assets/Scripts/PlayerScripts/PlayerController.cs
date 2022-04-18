@@ -185,7 +185,18 @@ public class PlayerController : MonoBehaviour
     {
         if (context.started)
         {
-            ChangeScene(context);
+            //ChangeScene(context);
+            if (DebugConsole.Instance != null)
+            {
+                if (!DebugConsole.Instance.myCanvas.activeInHierarchy)
+                {
+                    DebugConsole.Instance.OpenConsole();
+                }
+                else
+                {
+                    DebugInput.Instance.ConfirmInput();
+                }
+            }
         }
     }
 
