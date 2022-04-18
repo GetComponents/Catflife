@@ -20,6 +20,7 @@ public class CombatCinemachine : MonoBehaviour
         }
         else
         {
+            Destroy(myCam.gameObject);
             Destroy(gameObject);
         }
     }
