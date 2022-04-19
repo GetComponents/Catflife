@@ -155,6 +155,11 @@ public class PlayerInventory : MonoBehaviour
         }
     }
 
+    //private void OnCollisionEnter(Collision collision)
+    //{
+    //    Debug.Log(collision.transform.name);
+    //}
+
     public void GainEnergy(int _amount)
     {
         Energy += _amount;

@@ -6,6 +6,7 @@ public class BedRespawn : MonoBehaviour
 {
     void Start()
     {
-        PlayerInventory.Instance.transform.position = transform.position;
+        //Debug.Log(transform.position);
+        PlayerInventory.Instance.transform.position = new Vector3(transform.position.x, transform.position.y +2, transform.position.z);
     }
 }
