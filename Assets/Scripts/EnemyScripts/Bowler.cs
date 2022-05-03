@@ -19,6 +19,7 @@ public class Bowler : Enemy
 
     public float timeUntilAttack;
     bool isAttacking;
+    //Vector3 lastPlayerPos;
 
     [SerializeField]
     GameObject projectile;
@@ -34,17 +35,21 @@ public class Bowler : Enemy
         rb = GetComponent<Rigidbody>();
     }
 
-    void Update()
+    new void Update()
     {
+        base.Update();
+        //if (seesPlayer)
+        //{
+        //    lastPlayerPos = player.transform.position;
+        //}
         if (timeUntilAttack < 0)
         {
             StartAttack();
         }
         else if (!isAttacking)
         {
-            timeUntilAttack -= Time.deltaTime;
+            timeUntilAttack -= Time.deltaTime * slowedSpeed;
         }
-
     }
 
     private void StartAttack()
@@ -52,7 +57,24 @@ public class Bowler : Enemy
         myAnimator.SetBool("isAttacking", true);
         isAttacking = true;
         timeUntilAttack = timeToAttack;
-        rb.AddForce((player.transform.GetChild(0).position - transform.position).normalized * rollSpeed, ForceMode.Impulse);
+        if (seesPlayer)
+        {
+            rb.AddForce((player.transform.GetChild(0).position - transform.position).normalized * rollSpeed * slowedSpeed, ForceMode.Impulse);
+        }
+        else
+        {
+            //RaycastHit hit;
+            //float degreeChange;
+            //do
+            //{
+            //    Physics.Raycast(transform.position, (PlayerController.Instance.transform.position - transform.position), out hit);
+
+            //}
+
+            //if ()
+            //while ((hit.transform.position - transform.position).magnitude < (lastPlayerPos - transform.position).magnitude);
+            rb.AddForce((player.transform.GetChild(0).position - transform.position).normalized * rollSpeed * slowedSpeed, ForceMode.Impulse);
+        }
     }
 
     private void StunnedStart()
@@ -69,7 +91,7 @@ public class Bowler : Enemy
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.transform.tag == "Wall" ||collision.transform.tag == "Enemy")
+        if (collision.transform.tag == "Wall" || collision.transform.tag == "Enemy")
         {
             myAnimator.SetBool("isStunned", true);
             if (isElite)
@@ -92,7 +114,7 @@ public class Bowler : Enemy
             GameObject tmp = Instantiate(projectile,
                 new Vector3(transform.position.x, PlayerInventory.Instance.transform.position.y, transform.position.z),
                 Quaternion.identity);
-            tmp.GetComponent<Rigidbody>().AddForce(Quaternion.Euler(0, i, 0) * playerDirection * projectileSpeed, ForceMode.Impulse);
+            tmp.GetComponent<Rigidbody>().AddForce(Quaternion.Euler(0, i, 0) * playerDirection * projectileSpeed * slowedSpeed, ForceMode.Impulse);
             tmp.GetComponent<BowlerProjectile>().myDamage = projectileDamage;
         }
     }

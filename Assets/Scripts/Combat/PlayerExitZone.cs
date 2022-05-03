@@ -6,19 +6,20 @@ using UnityEngine.SceneManagement;
 public class PlayerExitZone : MonoBehaviour
 {
     public bool IsAbleToLeave;
-    public static PlayerExitZone Instance;
+    public bool IsExit;
+    //public static PlayerExitZone Instance;
 
     private void Awake()
     {
-        if (Instance == null)
-        {
-            Instance = this;
-        }
-        else
-        {
-            Destroy(gameObject);
-            return;
-        }
+        //if (Instance == null)
+        //{
+        //    Instance = this;
+        //}
+        //else
+        //{
+        //    Destroy(gameObject);
+        //    return;
+        //}
         IsAbleToLeave = false;
     }
 
@@ -26,8 +27,9 @@ public class PlayerExitZone : MonoBehaviour
     {
         if (other.tag == "Player" && IsAbleToLeave)
         {
-            HideMap.Instance.ChangeMapState();
+            MapManager.Instance.ChangeMapState(true);
             SceneManager.UnloadSceneAsync("Combat");
+            MapManager.Instance.PlayerTookExit = IsExit;
         }
     }
 }

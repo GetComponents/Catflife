@@ -10,6 +10,7 @@ public class Mage : Enemy
     [SerializeField]
     float AOEExplosionTime, AOEFadeTime;
 
+    bool hasSeenPlayer;
 
     [SerializeField]
     float timeToAttack;
@@ -32,24 +33,25 @@ public class Mage : Enemy
             StartCoroutine(CastRandomly());
     }
 
-    private void Update()
+    new void Update()
     {
         if (isAggro)
         {
             Move();
         }
-        else
+        else if (seesPlayer || hasSeenPlayer)
         {
+            hasSeenPlayer = true;
             if (timeUntilAttack < 0)
             {
                 StartAttack();
             }
             else if (!isAttacking)
             {
-                timeUntilAttack -= Time.deltaTime;
+                timeUntilAttack -= Time.deltaTime * slowedSpeed;
             }
         }
-
+        base.Update();
     }
 
     private void StartAttack()
@@ -60,6 +62,7 @@ public class Mage : Enemy
 
     private void Move()
     {
+        myAnimator.SetBool("isAttacking", false);
         enemyNavMesh.SetDestination((-(PlayerController.Instance.transform.GetChild(0).position - transform.position).normalized
             * targetPointDistance) + transform.position);
     }
@@ -88,8 +91,8 @@ public class Mage : Enemy
     {
         while (true)
         {
-            yield return new WaitForSeconds(Random.Range(EliteRandomCastTimer.x, EliteRandomCastTimer.y));
-            if (!isAggro)
+            yield return new WaitForSeconds(Random.Range(EliteRandomCastTimer.x, EliteRandomCastTimer.y) / slowedSpeed);
+            if (!isAggro && seesPlayer)
             {
                 MageCast tmp = Instantiate(AOEAttack,
                     PlayerController.Instance.transform.GetChild(0).position +

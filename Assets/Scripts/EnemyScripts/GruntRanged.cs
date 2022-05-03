@@ -27,13 +27,14 @@ public class GruntRanged : Enemy
         navmeshDestination = playerPosition;
         enemyNavMesh = GetComponent<NavMeshAgent>();
     }
-    void Update()
+    new void Update()
     {
         if (isAggro)
         {
             Move();
             Attack();
         }
+        base.Update();
     }
 
     private void Move()
@@ -41,12 +42,12 @@ public class GruntRanged : Enemy
         if (moveCounter >= 0)
         {
             enemyNavMesh.SetDestination(navmeshDestination);
-            moveCounter -= Time.deltaTime;
+            moveCounter -= Time.deltaTime * slowedSpeed;
         }
         else if (stopCounter >= 0)
         {
             enemyNavMesh.SetDestination(transform.position);
-            stopCounter -= Time.deltaTime;
+            stopCounter -= Time.deltaTime * slowedSpeed;
         }
         else
         {
@@ -64,12 +65,12 @@ public class GruntRanged : Enemy
             playerPosition = PlayerController.Instance.transform.GetChild(0).position;
             GameObject tmp = Instantiate(Projectile, transform.position, Quaternion.identity);
             tmp.GetComponent<GruntProjectile>().MyDamage = damage;
-            tmp.GetComponent<Rigidbody>().AddForce(((playerPosition - transform.position).normalized * projectileSpeed), ForceMode.Impulse);
+            tmp.GetComponent<Rigidbody>().AddForce(((playerPosition - transform.position).normalized * projectileSpeed * slowedSpeed), ForceMode.Impulse);
             currentShotCooldown = timeForEachShot;
         }
         else
         {
-            currentShotCooldown -= Time.deltaTime;
+            currentShotCooldown -= Time.deltaTime * slowedSpeed;
         }
     }
 }

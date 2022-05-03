@@ -300,9 +300,9 @@ MonoBehaviour:
   dashCooldown: 0
   Speed: 0.25
   DashSpeed: 5
-  mask:
+  GroundMask:
     serializedVersion: 2
-    m_Bits: 23
+    m_Bits: 0
   mySword: {fileID: 8226274612851557438}
   SwordDamage: 10
   SpinAttackDamageMultiplier: 2
@@ -320,6 +320,7 @@ MonoBehaviour:
   unlockedSpinMove: 1
   unlockedReflect: 1
   unlockedProjectile: 1
+  UnlockedStatue: 0
   spinMoveManaCost: 4
   projectileManaCost: 4
   projectile: {fileID: 1669813210728635002, guid: 5e3afbfd0bffb1b4488d150700415bf3, type: 3}
@@ -332,6 +333,10 @@ MonoBehaviour:
   OnManaChange:
     m_PersistentCalls:
       m_Calls: []
+  OnHealthChange:
+    m_PersistentCalls:
+      m_Calls: []
+  LavalampColor: 0
 --- !u!114 &7586108171418440738
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -481,6 +486,22 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: a966a73a-5ad9-4788-b797-d02ff1736ca1
     m_ActionName: Player/Cast[/Keyboard/q,/Mouse/rightButton]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 7586108171418440739}
+        m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
+        m_MethodName: PauseGame
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 82cccb3a-dba4-417a-842b-14b0270cb351
+    m_ActionName: Player/PauseGame[/Keyboard/escape]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: Keyboard&Mouse
   m_DefaultActionMap: Player

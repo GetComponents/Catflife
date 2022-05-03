@@ -24,7 +24,8 @@ public class GruntElite : Enemy
         playerPosition = PlayerController.Instance.transform.GetChild(0).position;
         enemyNavMesh = GetComponent<NavMeshAgent>();
     }
-    void Update()
+
+    new void Update()
     {
         if (isAggro)
         {
@@ -34,6 +35,7 @@ public class GruntElite : Enemy
         {
             Attack();
         }
+        base.Update();
     }
 
     private void MoveTowardsPlayer()
@@ -41,12 +43,12 @@ public class GruntElite : Enemy
         if (moveCounter >= 0)
         {
             enemyNavMesh.SetDestination(playerPosition);
-            moveCounter -= Time.deltaTime;
+            moveCounter -= Time.deltaTime * slowedSpeed;
         }
         else if (stopCounter >= 0)
         {
             enemyNavMesh.SetDestination(transform.position);
-            stopCounter -= Time.deltaTime;
+            stopCounter -= Time.deltaTime * slowedSpeed;
         }
         else
         {
@@ -64,13 +66,13 @@ public class GruntElite : Enemy
             playerPosition = PlayerController.Instance.transform.GetChild(0).position;
             GameObject tmp = Instantiate(Projectile, transform.position, Quaternion.identity);
             tmp.GetComponent<GruntEliteProjectile>().MyDamage = damage;
-            tmp.GetComponent<GruntEliteProjectile>().mySpeed = projectileSpeed;
-            tmp.GetComponent<Rigidbody>().AddForce(((playerPosition - transform.position).normalized * projectileSpeed), ForceMode.Impulse);
+            tmp.GetComponent<GruntEliteProjectile>().mySpeed = projectileSpeed * slowedSpeed;
+            tmp.GetComponent<Rigidbody>().AddForce(((playerPosition - transform.position).normalized * projectileSpeed * slowedSpeed), ForceMode.Impulse);
             currentShotCooldown = timeForEachShot;
         }
         else
         {
-            currentShotCooldown -= Time.deltaTime;
+            currentShotCooldown -= Time.deltaTime * slowedSpeed;
         }
     }
 

@@ -19,12 +19,13 @@ namespace EnemyAI
             enemyNavMesh = GetComponent<NavMeshAgent>();
         }
 
-        void Update()
+        new void Update()
         {
             if (isAggro)
             {
                 MoveTowardsPlayer();                
             }
+            base.Update();
         }
 
         private void MoveTowardsPlayer()
@@ -32,12 +33,12 @@ namespace EnemyAI
             if (moveCounter >= 0)
             {
                 enemyNavMesh.SetDestination(playerPosition);
-                moveCounter -= Time.deltaTime;
+                moveCounter -= Time.deltaTime * slowedSpeed;
             }
             else if (stopCounter >= 0)
             {
                 enemyNavMesh.SetDestination(transform.position);
-                stopCounter -= Time.deltaTime;
+                stopCounter -= Time.deltaTime * slowedSpeed;
             }
             else
             {

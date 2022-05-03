@@ -14,7 +14,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     float maxSpeed, dashCooldown;
     public float Speed, DashSpeed;
-    public LayerMask mask;
+    public LayerMask GroundMask;
 
     [Header("Attacks")]
     [SerializeField]
@@ -92,7 +92,7 @@ public class PlayerController : MonoBehaviour
         }
     }
     int m_currentMana;
-    public bool unlockedSpinMove, unlockedReflect, unlockedProjectile;
+    public bool unlockedSpinMove, unlockedReflect, unlockedProjectile, UnlockedStatue;
     [SerializeField]
     int spinMoveManaCost, projectileManaCost;
     [SerializeField]
@@ -108,6 +108,10 @@ public class PlayerController : MonoBehaviour
     public UnityEvent OnManaChange, OnHealthChange;
 
     float mouseContext;
+
+    [Space]
+    public int LavalampColor;
+    private bool gameIsPaused;
 
 
     void Awake()
@@ -127,14 +131,17 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-        ReduceDashCooldown();
-        Ray cameraRay = mainCam.ScreenPointToRay(Mouse.current.position.ReadValue());
-        RaycastHit hit;
-
-        if (Physics.Raycast(cameraRay, out hit, 200))
+        if (!gameIsPaused)
         {
-            Vector3 pointToLook = hit.point;
-            playerHitBox.transform.LookAt(new Vector3(pointToLook.x, playerHitBox.transform.position.y, pointToLook.z), Vector3.up);
+            ReduceDashCooldown();
+            Ray cameraRay = mainCam.ScreenPointToRay(Mouse.current.position.ReadValue());
+            RaycastHit hit;
+
+            if (Physics.Raycast(cameraRay, out hit, 200, GroundMask))
+            {
+                Vector3 pointToLook = hit.point;
+                playerHitBox.transform.LookAt(new Vector3(pointToLook.x, playerHitBox.transform.position.y, pointToLook.z), Vector3.up);
+            }
         }
     }
 
@@ -170,14 +177,17 @@ public class PlayerController : MonoBehaviour
 
     public void MouseDown(InputAction.CallbackContext context)
     {
-        mouseContext = context.ReadValue<float>();
-        if (myAnimator.GetCurrentAnimatorStateInfo(0).IsName("Idle") && context.started)
+        if (!gameIsPaused)
         {
-            myAnimator.SetBool("isSwinging", true);
-        }
-        else if (mouseContext == 0 && myAnimator.GetBool("isCharging"))
-        {
-            SpinAttack();
+            mouseContext = context.ReadValue<float>();
+            if (myAnimator.GetCurrentAnimatorStateInfo(0).IsName("Idle") && context.started)
+            {
+                myAnimator.SetBool("isSwinging", true);
+            }
+            else if (mouseContext == 0 && myAnimator.GetBool("isCharging"))
+            {
+                SpinAttack();
+            }
         }
     }
 
@@ -219,6 +229,33 @@ public class PlayerController : MonoBehaviour
             myAnimator.SetBool("isCasting", true);
         }
     }
+
+    public void PauseGame(InputAction.CallbackContext context)
+    {
+        if (context.started)
+        {
+            bool pausescreenIsOpen = false;
+            for (int i = 0; i < SceneManager.sceneCount; i++)
+            {
+                if (SceneManager.GetSceneAt(i).name == "PauseScreen")
+                {
+                    pausescreenIsOpen = true;
+                }
+            }
+            if (!pausescreenIsOpen)
+            {
+                SceneManager.LoadSceneAsync("PauseScreen", LoadSceneMode.Additive);
+                gameIsPaused = true;
+                Time.timeScale = 0;
+            }
+            else
+            {
+                SceneManager.UnloadSceneAsync("PauseScreen");
+                gameIsPaused = false;
+                Time.timeScale = 1;
+            }
+        }
+    }
     #endregion
 
     private void ChangeScene(InputAction.CallbackContext context)
@@ -229,7 +266,7 @@ public class PlayerController : MonoBehaviour
         }
         else
         {
-            HideMap.Instance.ChangeMapState();
+            MapManager.Instance.ChangeMapState(true);
             SceneManager.UnloadSceneAsync("Combat");
         }
     }

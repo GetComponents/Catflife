@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.UI;
 
 public class DungeonGridGenerator : MonoBehaviour
@@ -34,6 +35,11 @@ public class DungeonGridGenerator : MonoBehaviour
     public EEncounterType CurrentEncounter;
     public int CurrentEncounterIndex;
 
+    [SerializeField]
+    public Light myLight;
+    private Camera gameCamera;
+    private InputAction click;
+
     private void Awake()
     {
         if (Instance == null)
@@ -43,13 +49,36 @@ public class DungeonGridGenerator : MonoBehaviour
         else
         {
             Destroy(gameObject);
+            return;
         }
+        gameCamera = FindObjectOfType<Camera>();
+        click = new InputAction(binding: "<Mouse>/leftButton");
+        click.performed += ctx => {
+            RaycastHit hit;
+            Vector3 coor = Mouse.current.position.ReadValue();
+            if (Physics.Raycast(gameCamera.ScreenPointToRay(coor), out hit))
+            {
+                EncounterCell tmp = hit.transform.GetComponent<EncounterCell>();
+                if (tmp != null)
+                {
+                    tmp.StartEncounter();
+                }
+            }
+        };
+        click.Enable();
     }
 
     private void Start()
     {
+        MapManager.Instance.ChangeMapState(true);
         GenerateGrid();
         ConnectCells();
+        RotateMap();
+    }
+
+    private void RotateMap()
+    {
+        map.transform.eulerAngles = new Vector3(0, -45, 0);
     }
 
     private void GenerateGrid()
@@ -70,8 +99,10 @@ public class DungeonGridGenerator : MonoBehaviour
                     currentCell.ContainsEncounter = true;
 
                     currentCell.MyView = Instantiate(cellPrefab, map);
-                    currentCell.MyView.transform.position = (new Vector3((x - (int)(GridWidth * 0.5f)) * cellPrefab.transform.localScale.x, y * cellPrefab.transform.localScale.y, 0)
-                        * nodeSpacing) + new Vector3(Screen.width * 0.5f, Screen.height * 0.1f);
+                    //currentCell.MyView.transform.position = (new Vector3((x - (int)(GridWidth * 0.5f)) * cellPrefab.transform.localScale.x, y * cellPrefab.transform.localScale.y, 0)
+                    //    * nodeSpacing) + new Vector3(Screen.width * 0.5f, Screen.height * 0.1f);
+                    currentCell.MyView.transform.position = (new Vector3((x - (int)(GridWidth * 0.5f)) * cellPrefab.transform.localScale.x, 0, y * cellPrefab.transform.localScale.y)
+                        * nodeSpacing);
                     cellSpawned = true;
 
                     if ((float)y/(float)GridHeight <= 1f/3f)
@@ -166,8 +197,10 @@ public class DungeonGridGenerator : MonoBehaviour
     {
         finalCell = new Cell();
         finalCell.MyView = Instantiate(cellPrefab, map);
-        finalCell.MyView.transform.position = (new Vector3(cellPrefab.transform.localScale.x, (GridHeight + 1) * cellPrefab.transform.localScale.y, 0)
-                        * nodeSpacing) + new Vector3(Screen.width * 0.5f, Screen.height * 0.1f);
+        //finalCell.MyView.transform.position = (new Vector3(cellPrefab.transform.localScale.x, (GridHeight + 1) * cellPrefab.transform.localScale.y, 0)
+        //                * nodeSpacing) + new Vector3(Screen.width * 0.5f, Screen.height * 0.1f);
+        finalCell.MyView.transform.position = (new Vector3(cellPrefab.transform.localScale.x,0, (GridHeight + 1) * cellPrefab.transform.localScale.y)
+                        * nodeSpacing);
         SelectableCells.Add(finalCell.MyView.GetComponent<EncounterCell>());
         finalCell.MyView.GetComponent<EncounterCell>().MyEncounter = EEncounterType.BOSS;
     }
@@ -193,13 +226,13 @@ public class DungeonGridGenerator : MonoBehaviour
                 if (DungeonGrid[x, y].MyView != null)
                     if (y == 0)
                     {
-                        DungeonGrid[x, y].MyView.GetComponent<Image>().color = Color.white;
+                        //DungeonGrid[x, y].MyView.GetComponent<Image>().color = Color.white;
                         DungeonGrid[x, y].MyView.GetComponent<EncounterCell>().Clickable = true;
                         SelectableCells.Add(DungeonGrid[x, y].MyView.GetComponent<EncounterCell>());
                     }
                     else
                     {
-                        DungeonGrid[x, y].MyView.GetComponent<Image>().color = Color.red;
+                        //DungeonGrid[x, y].MyView.GetComponent<Image>().color = Color.red;
                         DungeonGrid[x, y].MyView.GetComponent<EncounterCell>().Clickable = false;
                     }
             }
@@ -330,7 +363,7 @@ public class DungeonGridGenerator : MonoBehaviour
 
     public void MoveMap(float amount)
     {
-        map.position = new Vector3(map.position.x, map.position.y - (amount * nodeSpacing));
+        //map.position = new Vector3(map.position.x, map.position.y - (amount * nodeSpacing));
     }
 
     private void OnDrawGizmos()

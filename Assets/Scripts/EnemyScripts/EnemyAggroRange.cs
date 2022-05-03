@@ -22,9 +22,9 @@ public class EnemyAggroRange : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.transform == player.transform.GetChild(0))
+        if (other.transform == PlayerInventory.Instance.transform)
         {
-            enemyController.isAggro = true;
+            enemyController.isInRange = true;
             meshRenderer.material = aggroMaterial;
         }
     }
@@ -33,7 +33,7 @@ public class EnemyAggroRange : MonoBehaviour
     {
         if (other.transform == player.transform.GetChild(0))
         {
-            enemyController.isAggro = false;
+            enemyController.isInRange = false;
             meshRenderer.material = oldMaterial;
         }
     }

@@ -8,7 +8,7 @@ using UnityEngine.AI;
 public class CombatSceneChange : MonoBehaviour
 {
     public static CombatSceneChange Instance;
-    private int enemyAmount
+    public int enemyAmount
     {
         get => m_enemyAmount;
         set
@@ -79,6 +79,10 @@ public class CombatSceneChange : MonoBehaviour
 
     public void EndCombat()
     {
-        PlayerExitZone.Instance.IsAbleToLeave = true;
+        foreach (var _exit in FindObjectsOfType<PlayerExitZone>())
+        {
+            _exit.IsAbleToLeave = true;
+        }
+        //PlayerExitZone.Instance.IsAbleToLeave = true;
     }
 }

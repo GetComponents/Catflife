@@ -111,12 +111,18 @@ public class DebugConsole : MonoBehaviour
                         break;
                 }
                 break;
+            case "infiniteMana":
+                PlayerController.Instance.maxMana = 10000000;
+                PlayerController.Instance.CurrentMana = PlayerController.Instance.maxMana;
+                setDebugText("You Have Gained Enough Wisdom For A Lifetime");
+                break;
             case "help":
                 setDebugText(@"Possible Commands:
 giveEnergy *amount*
 killEnemies
 turnInvincible
-setUpgrade attack/health/mana/speed *upgrade level*");
+setUpgrade attack/health/mana/speed *upgrade level*
+infiniteMana");
                 break;
             default:
                 giveErrorMessage();

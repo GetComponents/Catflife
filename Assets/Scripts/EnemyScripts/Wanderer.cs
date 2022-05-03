@@ -26,14 +26,14 @@ public class Wanderer : Enemy
         myArm.GetComponent<WandererArm>().myDamage = damage;
     }
 
-    private void Update()
+    new void Update()
     {
-        if (isAggro && !isAttacking)
+        if (isInRange && !isAttacking)
         {
             myAnimator.SetBool("isAttacking", true);
             isAttacking = true;
         }
-        destinationChangeTimer -= Time.deltaTime;
+        destinationChangeTimer -= Time.deltaTime * slowedSpeed;
         CreateNewDestination();
         Vector3 tmp = (PlayerController.Instance.transform.GetChild(0).position - transform.position).normalized;
         transform.forward = new Vector3(tmp.x, 0, tmp.z);
@@ -41,7 +41,7 @@ public class Wanderer : Enemy
 
     private void CreateNewDestination()
     {
-        if (!isAggro && destinationChangeTimer < 0)
+        if (!isInRange && destinationChangeTimer < 0)
         {
         enemyNavMesh.SetDestination(transform.position + new Vector3(Random.Range(-1f, 1f),0,Random.Range(-1f, 1f)).normalized * destinationDistance);
             destinationChangeTimer = timeToChangeDirection;
@@ -62,7 +62,7 @@ public class Wanderer : Enemy
 
     private IEnumerator AttackCooldown()
     {
-        yield return new WaitForSeconds(attackCooldown);
+        yield return new WaitForSeconds(attackCooldown / slowedSpeed);
         isAttacking = false;
     }
 }

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.AI;
 
 public class Enemy : MonoBehaviour
@@ -12,27 +13,57 @@ public class Enemy : MonoBehaviour
         {
             if (value <= 0)
             {
-                Die();
+                m_healthPoints = 0;
+                OnDeath.Invoke();
+                Destroy(gameObject);
             }
             m_healthPoints = value;
         }
     }
     [SerializeField]
     private float m_healthPoints;
-    public bool isAggro;
+    public bool isAggro, isInRange;
     [SerializeField]
     protected int damage;
     [SerializeField]
-    protected bool isElite;
+    protected bool isElite, needsToSeePlayer;
+    protected bool seesPlayer;
     protected NavMeshAgent enemyNavMesh;
     [SerializeField]
     GameObject PickupHP, PickupEnergy;
     public int BaseEnergyPickupAmount = 10;
-    
+    [HideInInspector]
+    public float originalNavMeshSpeed, slowedSpeed = 1;
 
-    private void Start()
+    public UnityEvent OnDeath;
+
+    [SerializeField]
+    public LayerMask raycastLayerMask;
+
+    private void Awake()
     {
+        OnDeath.AddListener(Die);
         HealthPoints = m_healthPoints;
+        if (GetComponent<NavMeshAgent>())
+            originalNavMeshSpeed = GetComponent<NavMeshAgent>().speed;
+    }
+
+    public void Update()
+    {
+        RaycastHit hit;
+        if (Physics.Raycast(transform.position, (PlayerInventory.Instance.transform.position - transform.position).normalized,
+            out hit, Mathf.Infinity, raycastLayerMask) && (hit.transform.gameObject.tag == "Player"))
+        {
+            seesPlayer = true;
+            if (isInRange)
+            {
+                isAggro = true;
+            }
+        }
+        else
+        {
+            seesPlayer = false;
+        }
     }
 
     public void TakeDamage(float amount)
@@ -56,7 +87,6 @@ public class Enemy : MonoBehaviour
         Instantiate(PickupHP,
             new Vector3(transform.position.x, PlayerInventory.Instance.transform.position.y, transform.position.z),
             Quaternion.identity);
-        CombatSceneChange.Instance.RemoveEnemy();
-        Destroy(gameObject);
+        CombatSceneChange.Instance?.RemoveEnemy();
     }
 }
