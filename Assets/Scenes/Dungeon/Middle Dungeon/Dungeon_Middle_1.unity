@@ -241,10 +241,10 @@ MonoBehaviour:
   m_PointlightHDType: 0
   m_SpotLightShape: 0
   m_AreaLightShape: 0
-  m_Intensity: 80000
+  m_Intensity: 90000
   m_EnableSpotReflector: 1
   m_LuxAtDistance: 1
-  m_InnerSpotPercent: 72.3
+  m_InnerSpotPercent: 39.1
   m_SpotIESCutoffPercent: 100
   m_LightDimmer: 2.48
   m_VolumetricDimmer: 1
@@ -355,7 +355,7 @@ Light:
   m_Type: 0
   m_Shape: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 61614.32
+  m_Intensity: 69316.11
   m_Range: 20
   m_SpotAngle: 75
   m_InnerSpotAngle: 21.80208
@@ -2770,7 +2770,7 @@ Light:
   m_Type: 1
   m_Shape: 0
   m_Color: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
-  m_Intensity: 8501.038
+  m_Intensity: 15888.059
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -2813,7 +2813,7 @@ Light:
   m_LightShadowCasterMode: 2
   m_AreaSize: {x: 0.5, y: 0.5}
   m_BounceIntensity: 1
-  m_ColorTemperature: 9493
+  m_ColorTemperature: 10274
   m_UseColorTemperature: 1
   m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
   m_UseBoundingSphereOverride: 0
@@ -2854,7 +2854,7 @@ MonoBehaviour:
   m_PointlightHDType: 0
   m_SpotLightShape: 0
   m_AreaLightShape: 0
-  m_Intensity: 8501.038
+  m_Intensity: 15888.059
   m_EnableSpotReflector: 1
   m_LuxAtDistance: 1
   m_InnerSpotPercent: 0
@@ -2925,10 +2925,10 @@ MonoBehaviour:
     m_UseOverride: 0
     m_Level: 1
   m_RayTracedContactShadow: 0
-  m_ShadowTint: {r: 0, g: 0, b: 0, a: 1}
+  m_ShadowTint: {r: 0.1086618, g: 0.09170523, b: 0.1509434, a: 1}
   m_PenumbraTint: 0
-  m_NormalBias: 0.75
-  m_SlopeBias: 0.5
+  m_NormalBias: 0.43
+  m_SlopeBias: 0.436
   m_ShadowUpdateMode: 0
   m_AlwaysDrawDynamicShadows: 0
   m_UpdateShadowOnLightMovement: 0
@@ -2952,7 +2952,7 @@ MonoBehaviour:
   useOldInspector: 0
   useVolumetric: 1
   featuresFoldout: 1
-  showAdditionalSettings: 0
+  showAdditionalSettings: 8
   m_AreaLightEmissiveMeshShadowCastingMode: 0
   m_AreaLightEmissiveMeshMotionVectorGenerationMode: 0
   m_AreaLightEmissiveMeshLayer: -1
@@ -4673,10 +4673,10 @@ MonoBehaviour:
   m_PointlightHDType: 0
   m_SpotLightShape: 0
   m_AreaLightShape: 0
-  m_Intensity: 200000
+  m_Intensity: 400000
   m_EnableSpotReflector: 1
   m_LuxAtDistance: 1
-  m_InnerSpotPercent: 72.3
+  m_InnerSpotPercent: 25.7
   m_SpotIESCutoffPercent: 100
   m_LightDimmer: 2.48
   m_VolumetricDimmer: 1
@@ -4787,7 +4787,7 @@ Light:
   m_Type: 0
   m_Shape: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 154035.8
+  m_Intensity: 308071.6
   m_Range: 20
   m_SpotAngle: 75
   m_InnerSpotAngle: 21.80208
@@ -6532,7 +6532,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5337500713159856934, guid: 22e4b40c33cca35448d7208b2a1269b6, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 5.45
+      value: 5.26
       objectReference: {fileID: 0}
     - target: {fileID: 5337500713159856934, guid: 22e4b40c33cca35448d7208b2a1269b6, type: 3}
       propertyPath: m_LocalPosition.y
@@ -6540,7 +6540,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5337500713159856934, guid: 22e4b40c33cca35448d7208b2a1269b6, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 4.98
+      value: 4.48
       objectReference: {fileID: 0}
     - target: {fileID: 5337500713159856934, guid: 22e4b40c33cca35448d7208b2a1269b6, type: 3}
       propertyPath: m_LocalRotation.w
@@ -6982,13 +6982,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 999259343}
-  m_LocalRotation: {x: -0.21389772, y: 0.67860794, z: -0.21721312, w: -0.66824967}
+  m_LocalRotation: {x: -0.22363423, y: 0.64724696, z: -0.20717482, w: -0.6986686}
   m_LocalPosition: {x: 15.74, y: 4.14, z: -7.8}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 173850744}
   m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 35.498, y: 269.11902, z: 0}
+  m_LocalEulerAnglesHint: {x: 35.498, y: 274.376, z: 0}
 --- !u!114 &999259345
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7012,7 +7012,7 @@ MonoBehaviour:
   m_Intensity: 200000
   m_EnableSpotReflector: 1
   m_LuxAtDistance: 1
-  m_InnerSpotPercent: 72.3
+  m_InnerSpotPercent: 31
   m_SpotIESCutoffPercent: 100
   m_LightDimmer: 2.48
   m_VolumetricDimmer: 1
@@ -9769,7 +9769,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5337500713159856934, guid: 22e4b40c33cca35448d7208b2a1269b6, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 4.5699997
+      value: 8.91
       objectReference: {fileID: 0}
     - target: {fileID: 5337500713159856934, guid: 22e4b40c33cca35448d7208b2a1269b6, type: 3}
       propertyPath: m_LocalPosition.y
@@ -9777,7 +9777,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5337500713159856934, guid: 22e4b40c33cca35448d7208b2a1269b6, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -4.13
+      value: -1.69
       objectReference: {fileID: 0}
     - target: {fileID: 5337500713159856934, guid: 22e4b40c33cca35448d7208b2a1269b6, type: 3}
       propertyPath: m_LocalRotation.w
@@ -12888,10 +12888,10 @@ MonoBehaviour:
   m_PointlightHDType: 0
   m_SpotLightShape: 0
   m_AreaLightShape: 0
-  m_Intensity: 100000
+  m_Intensity: 300000
   m_EnableSpotReflector: 1
   m_LuxAtDistance: 1
-  m_InnerSpotPercent: 72.3
+  m_InnerSpotPercent: 29.3
   m_SpotIESCutoffPercent: 100
   m_LightDimmer: 2.48
   m_VolumetricDimmer: 1
@@ -13002,7 +13002,7 @@ Light:
   m_Type: 0
   m_Shape: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 77017.9
+  m_Intensity: 231053.7
   m_Range: 20
   m_SpotAngle: 75
   m_InnerSpotAngle: 21.80208
@@ -13401,7 +13401,7 @@ MonoBehaviour:
   m_Intensity: 200000
   m_EnableSpotReflector: 1
   m_LuxAtDistance: 1
-  m_InnerSpotPercent: 72.3
+  m_InnerSpotPercent: 36.2
   m_SpotIESCutoffPercent: 100
   m_LightDimmer: 2.48
   m_VolumetricDimmer: 1
