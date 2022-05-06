@@ -6,38 +6,38 @@ using UnityEngine.SceneManagement;
 
 #if UNITY_EDITOR
 using UnityEditor;
-[CanEditMultipleObjects]
-[CustomEditor(typeof(Interactable))]
-[System.Serializable]
-public class InteractableCI : Editor
-{
-    public override void OnInspectorGUI()
-    {
-        Interactable script = (Interactable)target;
+//[CanEditMultipleObjects]
+//[CustomEditor(typeof(Interactable))]
+//[System.Serializable]
+//public class InteractableCI : Editor
+//{
+//    public override void OnInspectorGUI()
+//    {
+//        Interactable script = (Interactable)target;
 
-        script.Name = EditorGUILayout.TextField("Object Name", script.Name);
-        script.myAction = (EActionType)EditorGUILayout.EnumPopup("My Action", script.myAction);
-        script.costOfInteraction = EditorGUILayout.IntField("Interaction Cost", script.costOfInteraction);
+//        script.Name = EditorGUILayout.TextField("Object Name", script.Name);
+//        script.myAction = (EActionType)EditorGUILayout.EnumPopup("My Action", script.myAction);
+//        script.costOfInteraction = EditorGUILayout.IntField("Interaction Cost", script.costOfInteraction);
 
-        if (script.myAction == EActionType.UNPACK)
-        {
-            script.objectToUnpack = (GameObject)EditorGUILayout.ObjectField("Contained Object", script.objectToUnpack, typeof(GameObject), true);
-            script.objectPosition = (Transform)EditorGUILayout.ObjectField("Final Position", script.objectPosition, typeof(Transform), true);
-            script.UnlockContent = EditorGUILayout.Toggle("Unlocks Something", script.UnlockContent);
-            script.timeForObjectMovement = EditorGUILayout.FloatField("Time for Movement (seconds)", script.timeForObjectMovement);
-        }
-        else if (script.myAction == EActionType.WATER)
-        {
-            script.myUpgradeType = (ETypeOfUpgrade)EditorGUILayout.EnumPopup("Type of Upgrade", script.myUpgradeType);
-        }
-        else if (script.myAction == EActionType.SLEEP)
-        {
+//        if (script.myAction == EActionType.UNPACK)
+//        {
+//            script.objectToUnpack = (GameObject)EditorGUILayout.ObjectField("Contained Object", script.objectToUnpack, typeof(GameObject), true);
+//            script.objectPosition = (Transform)EditorGUILayout.ObjectField("Final Position", script.objectPosition, typeof(Transform), true);
+//            script.UnlockContent = EditorGUILayout.Toggle("Unlocks Something", script.UnlockContent);
+//            script.timeForObjectMovement = EditorGUILayout.FloatField("Time for Movement (seconds)", script.timeForObjectMovement);
+//        }
+//        else if (script.myAction == EActionType.WATER)
+//        {
+//            script.myUpgradeType = (ETypeOfUpgrade)EditorGUILayout.EnumPopup("Type of Upgrade", script.myUpgradeType);
+//        }
+//        else if (script.myAction == EActionType.SLEEP)
+//        {
 
-        }
+//        }
 
-        EditorUtility.SetDirty(script);
-    }
-}
+//        EditorUtility.SetDirty(script);
+//    }
+//}
 #endif
 public enum ETypeOfUpgrade
 {
@@ -197,6 +197,7 @@ public class Interactable : MonoBehaviour
     {
         Destroy(interactionCanvas);
         isUnpacking = true;
+        GetComponent<Animator>().SetBool("OpenBox", true);
         StartCoroutine(MoveObject());
     }
 
