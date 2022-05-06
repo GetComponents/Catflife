@@ -82,9 +82,9 @@ public class Interactable : MonoBehaviour
 
     public GameObject objectToUnpack;
 
-    public Transform objectPosition;
+    public Transform objectPosition, objectMoveUpPosition;
 
-    public float timeForObjectMovement;
+    public float timeForObjectMovement = 1;
 
     private void Start()
     {
@@ -204,18 +204,33 @@ public class Interactable : MonoBehaviour
     private IEnumerator MoveObject()
     {
         GameObject movingObject = Instantiate(objectToUnpack, transform.position, transform.rotation);
+        //movingObject.transform.localScale = new Vector3(0.1f, 0.1f, 0.1f);
+        objectMoveUpPosition = Instantiate(new GameObject(), transform).transform;
+        objectMoveUpPosition.position += new Vector3(0, 2, 0);
+        objectMoveUpPosition.eulerAngles += new Vector3(0, 180, 0);
+        objectMoveUpPosition.localScale *= 2;//Temporär
         for (float i = 0; i <= 1; i += 0.01f)
         {
             movingObject.transform.position = new Vector3(
-                Mathf.Lerp(transform.position.x, objectPosition.position.x, i),
-                Mathf.Lerp(transform.position.y, objectPosition.position.y, i),
-                Mathf.Lerp(transform.position.z, objectPosition.position.z, i));
+                Mathf.Lerp(transform.position.x, objectMoveUpPosition.position.x, i),
+                Mathf.Lerp(transform.position.y, objectMoveUpPosition.position.y, i),
+                Mathf.Lerp(transform.position.z, objectMoveUpPosition.position.z, i));
+            movingObject.transform.localScale = new Vector3(
+                Mathf.Lerp(0, objectMoveUpPosition.localScale.x, i),
+                Mathf.Lerp(0, objectMoveUpPosition.localScale.y, i),
+                Mathf.Lerp(0, objectMoveUpPosition.localScale.z, i));
             movingObject.transform.eulerAngles = new Vector3(
-                Mathf.Lerp(transform.eulerAngles.x, objectPosition.eulerAngles.x, i),
-                Mathf.Lerp(transform.eulerAngles.y, objectPosition.eulerAngles.y, i),
-                Mathf.Lerp(transform.eulerAngles.z, objectPosition.eulerAngles.z, i));
+                Mathf.Lerp(transform.eulerAngles.x, objectMoveUpPosition.eulerAngles.x, i),
+                Mathf.Lerp(transform.eulerAngles.y, objectMoveUpPosition.eulerAngles.y, i),
+                Mathf.Lerp(transform.eulerAngles.z, objectMoveUpPosition.eulerAngles.z, i));
             yield return new WaitForSeconds((float)(timeForObjectMovement) / 100);
         }
+        //movingObject.transform.position = objectPosition.position;
+        //movingObject.transform.rotation = objectPosition.rotation;
+        yield return new WaitForSeconds(1);
+        Destroy(movingObject);
+        yield return new WaitForSeconds(1);
+        objectPosition.gameObject.SetActive(true);
         if (UnlockContent)
         {
             GetComponent<PlayerUnlock>().UnlockMyContent();
