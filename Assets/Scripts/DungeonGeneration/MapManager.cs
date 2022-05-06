@@ -10,6 +10,8 @@ public class MapManager : MonoBehaviour
     GameObject map;
     [SerializeField]
     TextMeshProUGUI tmp;
+    [SerializeField]
+    Light directionalLight;
 
     public bool PlayerTookExit;
     public Vector3 StagePos;
@@ -39,15 +41,13 @@ public class MapManager : MonoBehaviour
             {
                 PlayerInventory.Instance.transform.position = StagePos + new Vector3(1, 1, -1);
             }
-            //PlayerController.Instance.gameObject.SetActive(false);
-            DungeonGridGenerator.Instance.myLight.enabled = true;
             map.SetActive(true);
+            directionalLight.enabled = true;
         }
         else
         {
+            directionalLight.enabled = false;
             map.SetActive(false);
-            PlayerController.Instance.gameObject.SetActive(true);
-            DungeonGridGenerator.Instance.myLight.enabled = false;
         }
     }
 }

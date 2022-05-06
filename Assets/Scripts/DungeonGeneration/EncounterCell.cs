@@ -8,7 +8,7 @@ public class EncounterCell : MonoBehaviour
 {
     public List<EncounterCell> NextCells = new List<EncounterCell>();
     //public List<UILineRenderer> CellConnection = new List<UILineRenderer>();
-    public bool IsConnected = false;
+    public bool IsConnected = false, IsDeadEnd = true, IsCleared;
     public int MyEncounterIndex;
     public EEncounterType MyEncounter
     {

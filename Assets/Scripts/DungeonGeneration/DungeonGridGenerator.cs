@@ -7,8 +7,7 @@ using UnityEngine.UI;
 public class DungeonGridGenerator : MonoBehaviour
 {
     public static DungeonGridGenerator Instance;
-    [SerializeField]
-    private int GridWidth, GridHeight;
+    public int GridWidth, GridHeight;
 
     [SerializeField]
     float nodeSpacing;
@@ -66,14 +65,14 @@ public class DungeonGridGenerator : MonoBehaviour
             }
         };
         click.Enable();
+        GenerateGrid();
+        ConnectCells();
+        RotateMap();
     }
 
     private void Start()
     {
         MapManager.Instance.ChangeMapState(true);
-        GenerateGrid();
-        ConnectCells();
-        RotateMap();
     }
 
     private void RotateMap()
