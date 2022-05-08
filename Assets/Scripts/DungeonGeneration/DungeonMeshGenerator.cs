@@ -5,23 +5,28 @@ using UnityEngine;
 public class DungeonMeshGenerator : MonoBehaviour
 {
     public Mesh DungeonMesh;
+    [SerializeField]
+    private Material wallMaterial;
     public List<Vector3> meshVertices;
     public Vector2[] meshUVs;
-    public int[] meshIndices;
+    public List<int> meshIndices;
     private EncounterCell[] allEncounterCells;
     private Cell[,] allCells;
     public int gridWidth, gridHeight;
+    int wallVertices;
 
     private void Start()
     {
         //DungeonMesh = GetComponent<MeshFilter>().mesh;
         DungeonMesh = gameObject.AddComponent<MeshFilter>().mesh;
         gameObject.AddComponent<MeshRenderer>();
+        GetComponent<MeshRenderer>().material = wallMaterial;
         copyDungeonInformation();
         createVertices();
         createUVs();
         createIndices();
         DrawMesh();
+        DungeonMesh.RecalculateNormals();
     }
 
     private void copyDungeonInformation()
@@ -59,10 +64,17 @@ public class DungeonMeshGenerator : MonoBehaviour
 
     private void DrawWall(Cell _leftCell, Cell _rightCell)
     {
-        meshVertices.Add(_leftCell.MyView.transform.position - new Vector3(0, 1, 0));
-        meshVertices.Add(_leftCell.MyView.transform.position + new Vector3(0, 1, 0));
-        meshVertices.Add(_rightCell.MyView.transform.position - new Vector3(-1, 1, 0));
-        meshVertices.Add(_rightCell.MyView.transform.position + new Vector3(1, 1, 0));
+        meshVertices.Add(_leftCell.MyView.GetComponent<EncounterCell>().RightWallPos - new Vector3(0, 3, 0));
+        meshVertices.Add(_leftCell.MyView.GetComponent<EncounterCell>().RightWallPos + new Vector3(0, 3, 0));
+        meshVertices.Add(_rightCell.MyView.GetComponent<EncounterCell>().LeftWallPos - new Vector3(0, 3, 0));
+        meshVertices.Add(_rightCell.MyView.GetComponent<EncounterCell>().LeftWallPos + new Vector3(0, 3, 0));
+        meshIndices.Add(wallVertices + 0);
+        meshIndices.Add(wallVertices + 1);
+        meshIndices.Add(wallVertices + 3);
+        meshIndices.Add(wallVertices + 0);
+        meshIndices.Add(wallVertices + 3);
+        meshIndices.Add(wallVertices + 2);
+        wallVertices += 4;
     }
 
     private void createUVs()
@@ -79,22 +91,24 @@ public class DungeonMeshGenerator : MonoBehaviour
 
     private void createIndices()
     {
-        meshIndices = new int[((int)(meshVertices.Count / 2) * 3) - 6];
-        for (int i = 0; i < meshIndices.Length; i += 6)
-        {
-            meshIndices[i + 0] = i + 0;
-            meshIndices[i + 1] = i + 1;
-            meshIndices[i + 2] = i + 3;
-            meshIndices[i + 3] = i + 1;
-            meshIndices[i + 4] = i + 2;
-            meshIndices[i + 5] = i + 3;
-        }
+        //meshIndices = new int[((int)(meshVertices.Count / 2) * 3) - 6];
+        //for (int i = 0; i < meshIndices.Length; i += 6)
+        //{
+
+            
+        //    //meshIndices[i + 0] = i + 0;
+        //    //meshIndices[i + 1] = i + 1;
+        //    //meshIndices[i + 2] = i + 3;
+        //    //meshIndices[i + 3] = i + 0;
+        //    //meshIndices[i + 5] = i + 3;
+        //    //meshIndices[i + 4] = i + 2;
+        //}
     }
 
     private void DrawMesh()
     {
         DungeonMesh.vertices = meshVertices.ToArray();
         DungeonMesh.uv = meshUVs;
-        DungeonMesh.triangles = meshIndices;
+        DungeonMesh.triangles = meshIndices.ToArray();
     }
 }

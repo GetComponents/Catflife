@@ -113,6 +113,9 @@ public class PlayerController : MonoBehaviour
     public int LavalampColor;
     private bool gameIsPaused;
 
+    //[SerializeField]
+    //Animator displayPlayer;
+
 
     void Awake()
     {
@@ -149,6 +152,7 @@ public class PlayerController : MonoBehaviour
     {
         mainCam = Camera.main;
         CurrentMana = maxMana;
+        //displayPlayer = GameObject.Find("Test").GetComponent<Animator>();
     }
 
     private void FixedUpdate()
@@ -173,6 +177,9 @@ public class PlayerController : MonoBehaviour
     public void Movement(InputAction.CallbackContext context)
     {
         m_moveDir = context.ReadValue<Vector2>();
+        //Debug.Log(m_moveDir);
+        //displayPlayer.SetFloat("ForwardBlend", m_moveDir.y);
+        //displayPlayer.SetFloat("RightBlend", m_moveDir.x);
     }
 
     public void MouseDown(InputAction.CallbackContext context)

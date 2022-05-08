@@ -47,6 +47,14 @@ public class EncounterCell : MonoBehaviour
     [SerializeField]
     Sprite easyEncounter, mediumEncounter, hardEncounter;
 
+    public Vector3 LeftWallPos, RightWallPos;
+
+    private void Start()
+    {
+        LeftWallPos = new Vector3(transform.position.x, transform.position.y, transform.position.z);
+        RightWallPos = new Vector3(transform.position.x, transform.position.y, transform.position.z);
+    }
+
 
     public void StartEncounter()
     {
