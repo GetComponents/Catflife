@@ -1160,7 +1160,10 @@ MonoBehaviour:
   UnlockContent: 0
   objectToUnpack: {fileID: 6609576085724858206, guid: 18188c24ab5ff8140b3cc858cdc78a51, type: 3}
   objectPosition: {fileID: 0}
+  objectMoveUpPosition: {fileID: 0}
   timeForObjectMovement: 1
+  UnlockIndex: 5
+  FollowUpBoxes: []
 --- !u!95 &111113607
 Animator:
   serializedVersion: 3
@@ -1382,7 +1385,10 @@ MonoBehaviour:
   UnlockContent: 0
   objectToUnpack: {fileID: 6609576085724858206, guid: 18188c24ab5ff8140b3cc858cdc78a51, type: 3}
   objectPosition: {fileID: 0}
+  objectMoveUpPosition: {fileID: 0}
   timeForObjectMovement: 1
+  UnlockIndex: 5
+  FollowUpBoxes: []
 --- !u!95 &114220216
 Animator:
   serializedVersion: 3
@@ -1862,7 +1868,10 @@ MonoBehaviour:
   UnlockContent: 0
   objectToUnpack: {fileID: 6609576085724858206, guid: 18188c24ab5ff8140b3cc858cdc78a51, type: 3}
   objectPosition: {fileID: 0}
+  objectMoveUpPosition: {fileID: 0}
   timeForObjectMovement: 1
+  UnlockIndex: 4
+  FollowUpBoxes: []
 --- !u!95 &164719760
 Animator:
   serializedVersion: 3
@@ -2891,7 +2900,10 @@ MonoBehaviour:
   UnlockContent: 0
   objectToUnpack: {fileID: 6609576085724858206, guid: 18188c24ab5ff8140b3cc858cdc78a51, type: 3}
   objectPosition: {fileID: 0}
+  objectMoveUpPosition: {fileID: 0}
   timeForObjectMovement: 1
+  UnlockIndex: 9
+  FollowUpBoxes: []
 --- !u!95 &300917341
 Animator:
   serializedVersion: 3
@@ -3506,7 +3518,10 @@ MonoBehaviour:
   UnlockContent: 0
   objectToUnpack: {fileID: 6609576085724858206, guid: 18188c24ab5ff8140b3cc858cdc78a51, type: 3}
   objectPosition: {fileID: 0}
+  objectMoveUpPosition: {fileID: 0}
   timeForObjectMovement: 1
+  UnlockIndex: 3
+  FollowUpBoxes: []
 --- !u!95 &330307863
 Animator:
   serializedVersion: 3
@@ -3867,7 +3882,11 @@ MonoBehaviour:
   UnlockContent: 0
   objectToUnpack: {fileID: 6609576085724858206, guid: 18188c24ab5ff8140b3cc858cdc78a51, type: 3}
   objectPosition: {fileID: 0}
+  objectMoveUpPosition: {fileID: 0}
   timeForObjectMovement: 1
+  UnlockIndex: 7
+  FollowUpBoxes:
+  - {fileID: 1562716647}
 --- !u!95 &353045321
 Animator:
   serializedVersion: 3
@@ -4704,7 +4723,11 @@ MonoBehaviour:
   UnlockContent: 0
   objectToUnpack: {fileID: 6609576085724858206, guid: 18188c24ab5ff8140b3cc858cdc78a51, type: 3}
   objectPosition: {fileID: 0}
+  objectMoveUpPosition: {fileID: 0}
   timeForObjectMovement: 1
+  UnlockIndex: 3
+  FollowUpBoxes:
+  - {fileID: 1931179698}
 --- !u!95 &460427702
 Animator:
   serializedVersion: 3
@@ -4926,7 +4949,12 @@ MonoBehaviour:
   UnlockContent: 0
   objectToUnpack: {fileID: 6609576085724858206, guid: 18188c24ab5ff8140b3cc858cdc78a51, type: 3}
   objectPosition: {fileID: 0}
+  objectMoveUpPosition: {fileID: 0}
   timeForObjectMovement: 1
+  UnlockIndex: 2
+  FollowUpBoxes:
+  - {fileID: 2010261384}
+  - {fileID: 519313152}
 --- !u!95 &496464526
 Animator:
   serializedVersion: 3
@@ -5416,7 +5444,10 @@ MonoBehaviour:
   UnlockContent: 0
   objectToUnpack: {fileID: 6609576085724858206, guid: 18188c24ab5ff8140b3cc858cdc78a51, type: 3}
   objectPosition: {fileID: 0}
+  objectMoveUpPosition: {fileID: 0}
   timeForObjectMovement: 1
+  UnlockIndex: 3
+  FollowUpBoxes: []
 --- !u!95 &519313153
 Animator:
   serializedVersion: 3
@@ -7813,7 +7844,30 @@ MonoBehaviour:
   UnlockContent: 0
   objectToUnpack: {fileID: 6609576085724858206, guid: 18188c24ab5ff8140b3cc858cdc78a51, type: 3}
   objectPosition: {fileID: 0}
+  objectMoveUpPosition: {fileID: 0}
   timeForObjectMovement: 1
+  UnlockIndex: 1
+  FollowUpBoxes:
+  - {fileID: 1512705945}
+  - {fileID: 977122375}
+  - {fileID: 496464525}
+  - {fileID: 1931179698}
+  - {fileID: 519313152}
+  - {fileID: 164719759}
+  - {fileID: 114220215}
+  - {fileID: 460427701}
+  - {fileID: 1208957524}
+  - {fileID: 2010261384}
+  - {fileID: 1562716647}
+  - {fileID: 353045320}
+  - {fileID: 1193722446}
+  - {fileID: 1640341225}
+  - {fileID: 1339006041}
+  - {fileID: 330307862}
+  - {fileID: 111113606}
+  - {fileID: 300917340}
+  - {fileID: 1388710794}
+  - {fileID: 1727006490}
 --- !u!95 &868360499
 Animator:
   serializedVersion: 3
@@ -9604,7 +9658,11 @@ MonoBehaviour:
   UnlockContent: 0
   objectToUnpack: {fileID: 6609576085724858206, guid: 18188c24ab5ff8140b3cc858cdc78a51, type: 3}
   objectPosition: {fileID: 0}
+  objectMoveUpPosition: {fileID: 0}
   timeForObjectMovement: 1
+  UnlockIndex: 3
+  FollowUpBoxes:
+  - {fileID: 164719759}
 --- !u!95 &977122376
 Animator:
   serializedVersion: 3
@@ -11083,7 +11141,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1174909743}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 35}
+  m_LocalPosition: {x: 11.7, y: 0, z: 0.1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1927318900}
@@ -11483,7 +11541,10 @@ MonoBehaviour:
   UnlockContent: 0
   objectToUnpack: {fileID: 6609576085724858206, guid: 18188c24ab5ff8140b3cc858cdc78a51, type: 3}
   objectPosition: {fileID: 0}
+  objectMoveUpPosition: {fileID: 0}
   timeForObjectMovement: 1
+  UnlockIndex: 2
+  FollowUpBoxes: []
 --- !u!95 &1193722447
 Animator:
   serializedVersion: 3
@@ -11705,7 +11766,11 @@ MonoBehaviour:
   UnlockContent: 0
   objectToUnpack: {fileID: 6609576085724858206, guid: 18188c24ab5ff8140b3cc858cdc78a51, type: 3}
   objectPosition: {fileID: 0}
+  objectMoveUpPosition: {fileID: 0}
   timeForObjectMovement: 1
+  UnlockIndex: 3
+  FollowUpBoxes:
+  - {fileID: 114220215}
 --- !u!95 &1208957525
 Animator:
   serializedVersion: 3
@@ -13222,7 +13287,13 @@ MonoBehaviour:
   UnlockContent: 0
   objectToUnpack: {fileID: 6609576085724858206, guid: 18188c24ab5ff8140b3cc858cdc78a51, type: 3}
   objectPosition: {fileID: 0}
+  objectMoveUpPosition: {fileID: 0}
   timeForObjectMovement: 1
+  UnlockIndex: 2
+  FollowUpBoxes:
+  - {fileID: 111113606}
+  - {fileID: 330307862}
+  - {fileID: 1640341225}
 --- !u!95 &1339006042
 Animator:
   serializedVersion: 3
@@ -13684,7 +13755,30 @@ MonoBehaviour:
   UnlockContent: 0
   objectToUnpack: {fileID: 6609576085724858206, guid: 18188c24ab5ff8140b3cc858cdc78a51, type: 3}
   objectPosition: {fileID: 0}
+  objectMoveUpPosition: {fileID: 0}
   timeForObjectMovement: 1
+  UnlockIndex: 0
+  FollowUpBoxes:
+  - {fileID: 868360498}
+  - {fileID: 1512705945}
+  - {fileID: 977122375}
+  - {fileID: 496464525}
+  - {fileID: 1931179698}
+  - {fileID: 519313152}
+  - {fileID: 164719759}
+  - {fileID: 114220215}
+  - {fileID: 460427701}
+  - {fileID: 1208957524}
+  - {fileID: 2010261384}
+  - {fileID: 1562716647}
+  - {fileID: 353045320}
+  - {fileID: 1193722446}
+  - {fileID: 1640341225}
+  - {fileID: 1339006041}
+  - {fileID: 330307862}
+  - {fileID: 111113606}
+  - {fileID: 300917340}
+  - {fileID: 1727006490}
 --- !u!95 &1388710795
 Animator:
   serializedVersion: 3
@@ -14617,7 +14711,12 @@ MonoBehaviour:
   UnlockContent: 0
   objectToUnpack: {fileID: 6609576085724858206, guid: 18188c24ab5ff8140b3cc858cdc78a51, type: 3}
   objectPosition: {fileID: 0}
+  objectMoveUpPosition: {fileID: 0}
   timeForObjectMovement: 1
+  UnlockIndex: 2
+  FollowUpBoxes:
+  - {fileID: 164719759}
+  - {fileID: 977122375}
 --- !u!95 &1512705946
 Animator:
   serializedVersion: 3
@@ -15680,7 +15779,10 @@ MonoBehaviour:
   UnlockContent: 0
   objectToUnpack: {fileID: 6609576085724858206, guid: 18188c24ab5ff8140b3cc858cdc78a51, type: 3}
   objectPosition: {fileID: 0}
+  objectMoveUpPosition: {fileID: 0}
   timeForObjectMovement: 1
+  UnlockIndex: 3
+  FollowUpBoxes: []
 --- !u!95 &1562716648
 Animator:
   serializedVersion: 3
@@ -16348,7 +16450,10 @@ MonoBehaviour:
   UnlockContent: 0
   objectToUnpack: {fileID: 6609576085724858206, guid: 18188c24ab5ff8140b3cc858cdc78a51, type: 3}
   objectPosition: {fileID: 0}
+  objectMoveUpPosition: {fileID: 0}
   timeForObjectMovement: 1
+  UnlockIndex: 3
+  FollowUpBoxes: []
 --- !u!95 &1640341226
 Animator:
   serializedVersion: 3
@@ -17173,7 +17278,10 @@ MonoBehaviour:
   UnlockContent: 0
   objectToUnpack: {fileID: 6609576085724858206, guid: 18188c24ab5ff8140b3cc858cdc78a51, type: 3}
   objectPosition: {fileID: 0}
+  objectMoveUpPosition: {fileID: 0}
   timeForObjectMovement: 1
+  UnlockIndex: 2
+  FollowUpBoxes: []
 --- !u!95 &1727006491
 Animator:
   serializedVersion: 3
@@ -18436,7 +18544,13 @@ MonoBehaviour:
   UnlockContent: 0
   objectToUnpack: {fileID: 6609576085724858206, guid: 18188c24ab5ff8140b3cc858cdc78a51, type: 3}
   objectPosition: {fileID: 0}
+  objectMoveUpPosition: {fileID: 0}
   timeForObjectMovement: 1
+  UnlockIndex: 2
+  FollowUpBoxes:
+  - {fileID: 1208957524}
+  - {fileID: 460427701}
+  - {fileID: 114220215}
 --- !u!95 &1931179699
 Animator:
   serializedVersion: 3
@@ -19245,7 +19359,10 @@ MonoBehaviour:
   UnlockContent: 0
   objectToUnpack: {fileID: 6609576085724858206, guid: 18188c24ab5ff8140b3cc858cdc78a51, type: 3}
   objectPosition: {fileID: 0}
+  objectMoveUpPosition: {fileID: 0}
   timeForObjectMovement: 1
+  UnlockIndex: 3
+  FollowUpBoxes: []
 --- !u!95 &2010261385
 Animator:
   serializedVersion: 3

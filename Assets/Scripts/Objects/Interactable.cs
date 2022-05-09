@@ -86,6 +86,11 @@ public class Interactable : MonoBehaviour
 
     public float timeForObjectMovement = 1;
 
+    public int UnlockIndex;
+
+    [SerializeField]
+    private List<Interactable> FollowUpBoxes = new List<Interactable>();
+
     private void Start()
     {
         player = PlayerInventory.Instance;
@@ -94,7 +99,7 @@ public class Interactable : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "Player")
+        if (other.tag == "Player" && UnlockIndex <= 0)
         {
             EnableUI(true);
         }
@@ -141,6 +146,10 @@ public class Interactable : MonoBehaviour
             player = PlayerInventory.Instance;
             processInteraction();
             player.Energy -= costOfInteraction;
+            foreach (Interactable box in FollowUpBoxes)
+            {
+                box.UnlockIndex--;
+            }
         }
     }
 
