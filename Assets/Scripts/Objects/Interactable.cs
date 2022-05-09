@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.SceneManagement;
+using UnityEngine.Serialization;
 
 #if UNITY_EDITOR
 using UnityEditor;
@@ -86,7 +87,24 @@ public class Interactable : MonoBehaviour
 
     public float timeForObjectMovement = 1;
 
-    public int UnlockIndex;
+    public int UnlockIndex
+    {
+        get => m_unlockIndex;
+        set
+        {
+            if (value == 0 && myAction == EActionType.UNPACK)
+            {
+                GetComponentInChildren<SkinnedMeshRenderer>().material = interactableBoxMaterial;
+            }
+            m_unlockIndex = value;
+        }
+    }
+    [SerializeField]
+    [FormerlySerializedAs("UnlockIndex")]
+    private int m_unlockIndex;
+
+    [SerializeField]
+    Material interactableBoxMaterial;
 
     [SerializeField]
     private List<Interactable> FollowUpBoxes = new List<Interactable>();
@@ -146,10 +164,7 @@ public class Interactable : MonoBehaviour
             player = PlayerInventory.Instance;
             processInteraction();
             player.Energy -= costOfInteraction;
-            foreach (Interactable box in FollowUpBoxes)
-            {
-                box.UnlockIndex--;
-            }
+            
         }
     }
 
@@ -239,11 +254,20 @@ public class Interactable : MonoBehaviour
         yield return new WaitForSeconds(1);
         Destroy(movingObject);
         yield return new WaitForSeconds(1);
-        objectPosition.gameObject.SetActive(true);
+        OpenMyBox();
         if (UnlockContent)
         {
             GetComponent<PlayerUnlock>().UnlockMyContent();
         }
+    }
+
+    public void OpenMyBox()
+    {
+        foreach (Interactable box in FollowUpBoxes)
+        {
+            box.UnlockIndex--;
+        }
+        objectPosition.gameObject.SetActive(true);
         Destroy(gameObject);
     }
 

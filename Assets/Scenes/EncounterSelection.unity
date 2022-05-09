@@ -212,12 +212,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 288513008}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 5, y: 1, z: 5}
-  m_Children: []
+  m_Children:
+  - {fileID: 1699955886}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &414465381
 GameObject:
@@ -243,7 +244,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 414465381}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 837a11f9f18365b4bb555ab6ce948f14, type: 3}
   m_Name: 
@@ -267,7 +268,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &426528922
 GameObject:
@@ -1274,12 +1275,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1699955885}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.2, y: 1, z: 0.2}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_Father: {fileID: 288513012}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1994418371
 GameObject:
@@ -1561,6 +1562,38 @@ PrefabInstance:
       propertyPath: nodeSpacing
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 325346080422720562, guid: 48dd24de1c279dd488f921c8fb672efc, type: 3}
+      propertyPath: EasyEncounters.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 325346080422720562, guid: 48dd24de1c279dd488f921c8fb672efc, type: 3}
+      propertyPath: MediumEncounters.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 325346080422720562, guid: 48dd24de1c279dd488f921c8fb672efc, type: 3}
+      propertyPath: EasyEncounters.Array.data[0]
+      value: 
+      objectReference: {fileID: 7760877964784966070, guid: d04a6db7557d4904598c880f72351367, type: 3}
+    - target: {fileID: 325346080422720562, guid: 48dd24de1c279dd488f921c8fb672efc, type: 3}
+      propertyPath: EasyEncounters.Array.data[1]
+      value: 
+      objectReference: {fileID: 8150423045547554783, guid: f84f17bfe555b1d4788e81115da60634, type: 3}
+    - target: {fileID: 325346080422720562, guid: 48dd24de1c279dd488f921c8fb672efc, type: 3}
+      propertyPath: EasyEncounters.Array.data[2]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 325346080422720562, guid: 48dd24de1c279dd488f921c8fb672efc, type: 3}
+      propertyPath: HardEncounters.Array.data[0]
+      value: 
+      objectReference: {fileID: 8850917308622044812, guid: 7e4ffa44c47bc5144aee8db8b81ae4b7, type: 3}
+    - target: {fileID: 325346080422720562, guid: 48dd24de1c279dd488f921c8fb672efc, type: 3}
+      propertyPath: MediumEncounters.Array.data[0]
+      value: 
+      objectReference: {fileID: 9006765695563474562, guid: 01e016d93a0e5ed459e9046f96e8fadd, type: 3}
+    - target: {fileID: 325346080422720562, guid: 48dd24de1c279dd488f921c8fb672efc, type: 3}
+      propertyPath: MediumEncounters.Array.data[1]
+      value: 
+      objectReference: {fileID: 2964214316257737840, guid: 4b001e1534df09a46b8b3391bcb33f3b, type: 3}
     - target: {fileID: 325346080422720563, guid: 48dd24de1c279dd488f921c8fb672efc, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -1628,7 +1661,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4bdb528ac8bc8a148ad9c75c21c1aaaf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  map: {fileID: 644396802}
+  map: {fileID: 288513008}
   tmp: {fileID: 1257998144}
   directionalLight: {fileID: 589993617}
   PlayerTookExit: 0

@@ -50,13 +50,13 @@ public class CombatSceneChange : MonoBehaviour
             case EEncounterType.NONE:
                 break;
             case EEncounterType.FIGHTEASY:
-                Instantiate(tmp.EasyEncounters[tmp.CurrentEncounterIndex], transform.position, Quaternion.identity);
+                Instantiate(tmp.EasyEncounters[tmp.CurrentEncounterIndex], transform.position, Quaternion.Euler(0, -90f, 0));
                 break;
             case EEncounterType.FIGHTMEDIUM:
-                Instantiate(tmp.MediumEncounters[tmp.CurrentEncounterIndex], transform.position, Quaternion.identity);
+                Instantiate(tmp.MediumEncounters[tmp.CurrentEncounterIndex], transform.position, Quaternion.Euler(0, -90f, 0));
                 break;
             case EEncounterType.FIGHTHARD:
-                Instantiate(tmp.HardEncounters[tmp.CurrentEncounterIndex], transform.position, Quaternion.identity);
+                Instantiate(tmp.HardEncounters[tmp.CurrentEncounterIndex], transform.position, Quaternion.Euler(0, -90f, 0));
                 break;
             case EEncounterType.BOSS:
                 break;
