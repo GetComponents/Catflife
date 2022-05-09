@@ -8,7 +8,7 @@ public class EncounterCell : MonoBehaviour
 {
     public List<EncounterCell> NextCells = new List<EncounterCell>();
     //public List<UILineRenderer> CellConnection = new List<UILineRenderer>();
-    public bool IsConnected = false;
+    public bool IsConnected = false, IsDeadEnd = true, IsCleared;
     public int MyEncounterIndex;
     public EEncounterType MyEncounter
     {
@@ -46,6 +46,14 @@ public class EncounterCell : MonoBehaviour
     public bool Clickable;
     [SerializeField]
     Sprite easyEncounter, mediumEncounter, hardEncounter;
+
+    public Vector3 LeftWallPos, RightWallPos;
+
+    private void Start()
+    {
+        LeftWallPos = new Vector3(transform.position.x, transform.position.y, transform.position.z);
+        RightWallPos = new Vector3(transform.position.x, transform.position.y, transform.position.z);
+    }
 
 
     public void StartEncounter()
