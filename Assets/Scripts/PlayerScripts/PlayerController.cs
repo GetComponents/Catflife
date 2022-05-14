@@ -26,8 +26,8 @@ public class PlayerController : MonoBehaviour
     [Space]
     [SerializeField]
     Camera mainCam;
-    [SerializeField]
-    MeshRenderer myMeshRenderer;
+    //[SerializeField]
+    //MeshRenderer myMeshRenderer;
 
     [Header("Health And Collision")]
     [SerializeField]
@@ -62,9 +62,9 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     private int m_healthPoints;
     public int MaxHP;
-    [SerializeField]
-    Material hurtMaterial;
-    Material normalMaterial;
+    //[SerializeField]
+    //Material hurtMaterial;
+    //Material normalMaterial;
     public bool isInvincible;
 
     [Space]
@@ -129,7 +129,7 @@ public class PlayerController : MonoBehaviour
         }
         DontDestroyOnLoad(this.gameObject);
         HealthPoints = m_healthPoints;
-        normalMaterial = myMeshRenderer.material;
+        //normalMaterial = myMeshRenderer.material;
     }
 
     void Update()
@@ -293,10 +293,10 @@ public class PlayerController : MonoBehaviour
 
     IEnumerator TurnInvincible()
     {
-        myMeshRenderer.material = hurtMaterial;
+        //myMeshRenderer.material = hurtMaterial;
         isInvincible = true;
         yield return new WaitForSeconds(1);
-        myMeshRenderer.material = normalMaterial;
+        //myMeshRenderer.material = normalMaterial;
         isInvincible = false;
     }
 
@@ -318,12 +318,12 @@ public class PlayerController : MonoBehaviour
     }
 
     #region AnimatorMethods
-    private void StartSwing()
+    public void StartSwing()
     {
         IsSwinging = true;
     }
 
-    private void EndSwing()
+    public void EndSwing()
     {
         IsSwinging = false;
         if (mouseContext != 0 && unlockedSpinMove && CurrentMana >= spinMoveManaCost)
@@ -336,31 +336,31 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    private void StartDash()
+    public void StartDash()
     {
         DashStarted = true;
     }
 
-    private void EndDash()
+    public void EndDash()
     {
         myAnimator.SetBool("isDashing", false);
         IsDashing = false;
         isInvincible = false;
     }
 
-    private void StartSpinAttack()
+    public void StartSpinAttack()
     {
         IsSpinning = true;
     }
 
-    private void EndSpinAttack()
+    public void EndSpinAttack()
     {
         IsSpinning = false;
         myAnimator.SetBool("isSwinging", false);
         myAnimator.SetBool("isSpinAttacking", false);
     }
 
-    private void StartCast()
+    public void StartCast()
     {
         GameObject tmp = Instantiate(projectile, transform.GetChild(0).position, Quaternion.identity);
         tmp.GetComponent<Rigidbody>().AddForce(transform.GetChild(0).forward.normalized * ProjectileSpeed, ForceMode.Impulse);
@@ -383,7 +383,7 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    private void EndCast()
+    public void EndCast()
     {
         myAnimator.SetBool("isCasting", false);
     }

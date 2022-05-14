@@ -5,7 +5,7 @@ using UnityEngine;
 public class BoxManager : MonoBehaviour
 {
     public static BoxManager Instance;
-    public List<Interactable> OpenedBoxes;
+    public List<int> OpenedBoxesIndex;
 
     private void Awake()
     {
@@ -23,5 +23,12 @@ public class BoxManager : MonoBehaviour
 
     public void LoadProgress()
     {
+        foreach (Interactable box in FindObjectsOfType<Interactable>())
+        {
+            if (OpenedBoxesIndex.Contains(box.BoxNumber) && box.myAction == EActionType.UNPACK)
+            {
+                box.OpenMyBox();
+            }
+        }
     }
 }

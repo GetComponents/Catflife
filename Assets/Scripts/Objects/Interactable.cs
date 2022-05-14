@@ -103,6 +103,8 @@ public class Interactable : MonoBehaviour
     [FormerlySerializedAs("UnlockIndex")]
     private int m_unlockIndex;
 
+    public int BoxNumber;
+
     [SerializeField]
     Material interactableBoxMaterial;
 
@@ -254,6 +256,7 @@ public class Interactable : MonoBehaviour
         yield return new WaitForSeconds(1);
         Destroy(movingObject);
         yield return new WaitForSeconds(1);
+        BoxManager.Instance.OpenedBoxesIndex.Add(BoxNumber);
         OpenMyBox();
         if (UnlockContent)
         {
