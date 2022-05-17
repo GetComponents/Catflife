@@ -9,8 +9,7 @@ public class DungeonGridGenerator : MonoBehaviour
     public static DungeonGridGenerator Instance;
     public int GridWidth, GridHeight;
 
-    [SerializeField]
-    float nodeSpacing;
+    public float nodeSpacing;
 
     [SerializeField]
     private float cellSpawnChance = 0.5f;
@@ -24,7 +23,7 @@ public class DungeonGridGenerator : MonoBehaviour
     public List<EncounterCell> SelectableCells = new List<EncounterCell>();
 
     [SerializeField]
-    GameObject cellPrefab, cellLinePrefab, debugPoint;
+    GameObject cellPrefab, cellLinePrefab, debugPoint, emptyCell;
 
     [SerializeField]
     Vector3 SectionOneEncounters, SectionTwoEncounters, SectionThreeEncounters;
@@ -117,6 +116,11 @@ public class DungeonGridGenerator : MonoBehaviour
                         GenerateEncounterType(currentCell.MyView.GetComponent<EncounterCell>(), 3);
                     }
                 }
+                else
+                {
+                    DungeonGrid[x, y].MyView = Instantiate(emptyCell, map);
+                    DungeonGrid[x, y].ContainsEncounter = false;
+                }
             }
             if (!cellSpawned)
             {
@@ -179,13 +183,13 @@ public class DungeonGridGenerator : MonoBehaviour
         switch (_cell.MyEncounter)
         {
             case EEncounterType.FIGHTEASY:
-                _cell.MyEncounterIndex = Random.Range(0, EasyEncounters.Count - 1);
+                _cell.MyEncounterIndex = Random.Range(0, EasyEncounters.Count);
                 break;
             case EEncounterType.FIGHTMEDIUM:
-                _cell.MyEncounterIndex = Random.Range(0, MediumEncounters.Count - 1);
+                _cell.MyEncounterIndex = Random.Range(0, MediumEncounters.Count);
                 break;
             case EEncounterType.FIGHTHARD:
-                _cell.MyEncounterIndex = Random.Range(0, HardEncounters.Count - 1);
+                _cell.MyEncounterIndex = Random.Range(0, HardEncounters.Count);
                 break;
             default:
                 break;
@@ -222,7 +226,7 @@ public class DungeonGridGenerator : MonoBehaviour
         {
             for (int x = 0; x < GridWidth; x++)
             {
-                if (DungeonGrid[x, y].MyView != null)
+                if (DungeonGrid[x, y].MyView.GetComponent<EncounterCell>() != null)
                     if (y == 0)
                     {
                         //DungeonGrid[x, y].MyView.GetComponent<Image>().color = Color.white;
@@ -248,8 +252,15 @@ public class DungeonGridGenerator : MonoBehaviour
                 if (currentCell.ContainsEncounter)
                 {
                     Cell connectedCell = FindClosestTopCell(x, y);
-
-                    if (connectedCell.MyView != null && currentCell.MyView != null)
+                    if (connectedCell.MyView == null)
+                    {
+                        Debug.Log("cell was null");
+                    }
+                    if (currentCell.MyView == null)
+                    {
+                        Debug.Log("cell was null");
+                    }
+                    if (connectedCell.MyView.GetComponent<EncounterCell>() != null && currentCell.MyView.GetComponent<EncounterCell>() != null)
                     {
 
                         currentCell.MyView.GetComponent<EncounterCell>().NextCells.Add(connectedCell.MyView.GetComponent<EncounterCell>());
@@ -268,7 +279,7 @@ public class DungeonGridGenerator : MonoBehaviour
                         //};
                         //Debug.Log(cellLinePrefab.GetComponent<UILineRenderer>().points[1]);
                     }
-                    else if (y == GridHeight - 1 && currentCell.MyView != null)
+                    else if (y == GridHeight - 1 && currentCell.MyView.GetComponent<EncounterCell>() != null)
                     {
                         currentCell.MyView.GetComponent<EncounterCell>().NextCells.Add(finalCell.MyView.GetComponent<EncounterCell>());
                     }
@@ -288,7 +299,7 @@ public class DungeonGridGenerator : MonoBehaviour
                 if (currentCell.ContainsEncounter && !currentCell.MyView.GetComponent<EncounterCell>().IsConnected)
                 {
                     Cell connectedCell = FindClosestBottomCell(x, y);
-                    if (connectedCell.MyView != null)
+                    if (connectedCell.MyView.GetComponent<EncounterCell>() != null)
                         connectedCell.MyView.GetComponent<EncounterCell>().NextCells.Add(currentCell.MyView.GetComponent<EncounterCell>());
                     unonnectedCells.Remove(currentCell);
                     currentCell.MyView.GetComponent<EncounterCell>().IsConnected = true;

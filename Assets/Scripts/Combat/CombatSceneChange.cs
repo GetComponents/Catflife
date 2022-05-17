@@ -13,7 +13,7 @@ public class CombatSceneChange : MonoBehaviour
         get => m_enemyAmount;
         set
         {
-            if (value < m_enemyAmount && value == 0)
+            if (value == 0)
             {
                 Debug.Log("The Gates Open");
                 EndCombat();
@@ -37,15 +37,15 @@ public class CombatSceneChange : MonoBehaviour
     }
     private void Start()
     {
-        SceneManager.SetActiveScene(SceneManager.GetSceneByName("Combat"));
+        //SceneManager.SetActiveScene(SceneManager.GetSceneByName("Combat"));
         SpawnArena();
         //Instantiate(AllArenaPrefabs[Random.Range(0, AllArenaPrefabs.Count - 1)], transform.position, Quaternion.identity);
     }
 
     private void SpawnArena()
     {
-        DungeonGridGenerator tmp = DungeonGridGenerator.Instance;
-        switch (DungeonGridGenerator.Instance.CurrentEncounter)
+        NewDungeonGridGenerator tmp = NewDungeonGridGenerator.Instance;
+        switch (tmp.CurrentEncounter)
         {
             case EEncounterType.NONE:
                 break;

@@ -9,7 +9,14 @@ public class EnemySpawnpoint : MonoBehaviour
 
     private void Start()
     {
-        Instantiate(Enemy, transform.position, Quaternion.identity);
-        CombatSceneChange.Instance.AddEnemy();
+        if (!NewDungeonGridGenerator.Instance.ClearedArena)
+        {
+            Instantiate(Enemy, transform.position, Quaternion.identity);
+            CombatSceneChange.Instance.AddEnemy();
+        }
+        else
+        {
+            CombatSceneChange.Instance.EndCombat();
+        }
     }
 }

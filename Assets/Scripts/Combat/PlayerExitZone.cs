@@ -7,19 +7,9 @@ public class PlayerExitZone : MonoBehaviour
 {
     public bool IsAbleToLeave;
     public bool IsExit;
-    //public static PlayerExitZone Instance;
 
     private void Awake()
     {
-        //if (Instance == null)
-        //{
-        //    Instance = this;
-        //}
-        //else
-        //{
-        //    Destroy(gameObject);
-        //    return;
-        //}
         IsAbleToLeave = false;
     }
 
@@ -27,9 +17,9 @@ public class PlayerExitZone : MonoBehaviour
     {
         if (other.tag == "Player" && IsAbleToLeave)
         {
+            MapManager.Instance.PlayerTookExit = IsExit;
             MapManager.Instance.ChangeMapState(true);
             SceneManager.UnloadSceneAsync("Combat");
-            MapManager.Instance.PlayerTookExit = IsExit;
         }
     }
 }
