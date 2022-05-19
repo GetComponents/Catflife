@@ -113,10 +113,6 @@ public class PlayerController : MonoBehaviour
     public int LavalampColor;
     private bool gameIsPaused;
 
-    //[SerializeField]
-    //Animator displayPlayer;
-
-
     void Awake()
     {
         if (!Instance)
@@ -129,7 +125,6 @@ public class PlayerController : MonoBehaviour
         }
         DontDestroyOnLoad(this.gameObject);
         HealthPoints = m_healthPoints;
-        //normalMaterial = myMeshRenderer.material;
     }
 
     void Update()
@@ -152,7 +147,6 @@ public class PlayerController : MonoBehaviour
     {
         mainCam = Camera.main;
         CurrentMana = maxMana;
-        //displayPlayer = GameObject.Find("Test").GetComponent<Animator>();
     }
 
     private void FixedUpdate()
@@ -170,6 +164,7 @@ public class PlayerController : MonoBehaviour
     public void Die()
     {
         HealthPoints = MaxHP;
+        //PlaySound PlayerDeath
         SceneManager.LoadScene("SampleScene");
     }
 
@@ -225,6 +220,8 @@ public class PlayerController : MonoBehaviour
             currentDashCooldown = dashCooldown;
             isInvincible = true;
             myAnimator.SetBool("isDashing", true);
+            // TODO PUT IN THE RIGHT PLACE
+            //AkSoundEngine.PostEvent("Play_Step", this.gameObject);
         }
     }
 
@@ -287,16 +284,15 @@ public class PlayerController : MonoBehaviour
     {
         if (!isInvincible)
         {
+            //PlaySound Hurt
             HealthPoints -= damage;
         }
     }
 
     IEnumerator TurnInvincible()
     {
-        //myMeshRenderer.material = hurtMaterial;
         isInvincible = true;
         yield return new WaitForSeconds(1);
-        //myMeshRenderer.material = normalMaterial;
         isInvincible = false;
     }
 
@@ -321,6 +317,7 @@ public class PlayerController : MonoBehaviour
     public void StartSwing()
     {
         IsSwinging = true;
+        //PlaySound Swordswing
     }
 
     public void EndSwing()
@@ -339,6 +336,7 @@ public class PlayerController : MonoBehaviour
     public void StartDash()
     {
         DashStarted = true;
+        //PlaySound Dash
     }
 
     public void EndDash()
@@ -351,6 +349,7 @@ public class PlayerController : MonoBehaviour
     public void StartSpinAttack()
     {
         IsSpinning = true;
+        //PlaySound Spinmove
     }
 
     public void EndSpinAttack()
@@ -365,6 +364,7 @@ public class PlayerController : MonoBehaviour
         GameObject tmp = Instantiate(projectile, transform.GetChild(0).position, Quaternion.identity);
         tmp.GetComponent<Rigidbody>().AddForce(transform.GetChild(0).forward.normalized * ProjectileSpeed, ForceMode.Impulse);
         tmp.GetComponent<PlayerProjectile>().MyDamage = ProjectileDamage;
+        //PlaySound FireballCast
     }
 
     public bool ReturnEnemyProjectile(Transform projectileTransform)

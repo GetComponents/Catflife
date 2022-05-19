@@ -7,7 +7,7 @@ public class MenuUI : MonoBehaviour
 {
     public void StartGame()
     {
-        SceneManager.LoadScene("SampleScene");
+        SceneManager.LoadScene("MainRoom");
     }
 
     public void Continue()
