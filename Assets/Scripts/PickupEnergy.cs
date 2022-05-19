@@ -29,6 +29,7 @@ public class PickupEnergy : MonoBehaviour
     {
         if (other.tag == "Player")
         {
+            //PlaySound EnergyPickup (wahrscheinlich eintönig)
             player.GainEnergy(EnergyGainAmount);
             Destroy(gameObject);
         }

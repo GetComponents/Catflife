@@ -10,6 +10,7 @@ public class GruntProjectile : MonoBehaviour
 
     private void Start()
     {
+        //PlaySound EnemyProjectileAmbient ?
         player = PlayerController.Instance;
         StartCoroutine(DieAfterTime());
     }
@@ -17,11 +18,13 @@ public class GruntProjectile : MonoBehaviour
     {
         if (other.tag == "Player")
         {
+            //PlaySound EnemyProjectileExplode
             player.TakeDamage(MyDamage);
             Destroy(this.gameObject);
         }
         else if (other.tag == "Wall")
         {
+            //PlaySound EnemyProjectileExplode
             Destroy(gameObject);
         }
     }
@@ -29,6 +32,7 @@ public class GruntProjectile : MonoBehaviour
     IEnumerator DieAfterTime()
     {
         yield return new WaitForSeconds(selfDestructTime);
+        //PlaySound EnemyProjectileExplode
         Destroy(gameObject);
     }
 }

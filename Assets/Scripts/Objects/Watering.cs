@@ -27,7 +27,7 @@ public class Watering : MonoBehaviour
         click.started += ctx => {
             if (IsWatering)
             {
-                wateringCan.transform.eulerAngles = new Vector3(45, 0, 0);
+                //PlaySound Watering
                 myAnimator.SetBool("IsWatering", true);
             }
         };
@@ -49,15 +49,4 @@ public class Watering : MonoBehaviour
             }
         }
     }
-
-    void StartWatering()
-    {
-        currentWater = Instantiate(watervfx, wateringCan.transform);
-    }
-    void EndWatering ()
-    {
-        Destroy(currentWater);
-        myAnimator.SetBool("IsWatering", false);
-    }
-
 }

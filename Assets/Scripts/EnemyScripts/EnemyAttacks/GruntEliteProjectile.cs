@@ -14,6 +14,7 @@ public class GruntEliteProjectile : MonoBehaviour
 
     private void Start()
     {
+        //PlaySound EnemyProjectileAmbient ?
         player = PlayerController.Instance;
         playerCollision = player.transform.GetChild(0);
         rb = GetComponent<Rigidbody>();
@@ -29,11 +30,13 @@ public class GruntEliteProjectile : MonoBehaviour
     {
         if (other.tag == "Player")
         {
+            //PlaySound EnemyProjectileExplode
             player.TakeDamage(MyDamage);
             Destroy(this.gameObject);
         }
         else if (other.tag == "Wall")
         {
+            //PlaySound EnemyProjectileExplode
             Destroy(gameObject);
         }
     }

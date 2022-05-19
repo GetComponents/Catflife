@@ -18,12 +18,14 @@ public class MageCast : MonoBehaviour
 
     IEnumerator Cast()
     {
+        //PlaySound MageCast
         yield return new WaitForSeconds(TimeUntilExplosion);
         StartCoroutine(Explode());
     }
 
     IEnumerator Explode()
     {
+        //PlaySound MageCastExplode
         myCollider.enabled = true;
         GetComponent<MeshRenderer>().material.color = Color.blue;
         yield return new WaitForSeconds(TimeUntilFaded);
