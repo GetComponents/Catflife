@@ -225,6 +225,8 @@ public class PlayerController : MonoBehaviour
             currentDashCooldown = dashCooldown;
             isInvincible = true;
             myAnimator.SetBool("isDashing", true);
+            // TODO PUT IN THE RIGHT PLACE
+            AkSoundEngine.PostEvent("Play_Step", this.gameObject);
         }
     }
 
