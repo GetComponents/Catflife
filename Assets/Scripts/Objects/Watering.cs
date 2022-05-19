@@ -9,9 +9,7 @@ public class Watering : MonoBehaviour
     GameObject wateringCan;
     [SerializeField]
     Animator myAnimator;
-    [SerializeField]
-    GameObject watervfx;
-    GameObject currentWater;
+
 
     public bool IsWatering;
 
