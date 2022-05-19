@@ -172,6 +172,10 @@ public class PlayerController : MonoBehaviour
     public void Movement(InputAction.CallbackContext context)
     {
         m_moveDir = context.ReadValue<Vector2>();
+        if (m_moveDir != Vector2.zero)
+        {
+            AkSoundEngine.PostEvent("Play_Step", this.gameObject);
+        }
         //Debug.Log(m_moveDir);
         //displayPlayer.SetFloat("ForwardBlend", m_moveDir.y);
         //displayPlayer.SetFloat("RightBlend", m_moveDir.x);
@@ -220,8 +224,6 @@ public class PlayerController : MonoBehaviour
             currentDashCooldown = dashCooldown;
             isInvincible = true;
             myAnimator.SetBool("isDashing", true);
-            // TODO PUT IN THE RIGHT PLACE
-            //AkSoundEngine.PostEvent("Play_Step", this.gameObject);
         }
     }
 

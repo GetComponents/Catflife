@@ -18,6 +18,32 @@
 						</Event>
 					</ChildrenList>
 				</Folder>
+				<Folder Name="ItemsScene" ID="{2659EB23-8ED5-4684-B9B7-6D33CFA88CF7}" ShortID="33185504">
+					<ChildrenList>
+						<Event Name="Play_PoofCardboard" ID="{D319F707-62DD-4B4D-AF77-FB0870A7066E}">
+							<ChildrenList>
+								<Action Name="" ID="{02A125CE-F5F8-41CB-A28C-F7BDA25396DF}" ShortID="568641629">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Poof" ID="{7DD65333-BF53-4C40-9272-02502DB30E9E}" WorkUnitID="{D02594BD-4199-499F-A2D9-CB65908B02DD}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_ImpactCardboard" ID="{B0E5186E-2D42-43C4-999B-D2EB1BB3CD74}">
+							<ChildrenList>
+								<Action Name="" ID="{BBA0065D-FAAE-4995-9C14-E717A08B5E55}" ShortID="1024987382">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Impact" ID="{200195FC-1D53-41F5-89F3-317AB2FD651B}" WorkUnitID="{D02594BD-4199-499F-A2D9-CB65908B02DD}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

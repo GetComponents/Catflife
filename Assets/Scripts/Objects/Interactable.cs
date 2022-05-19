@@ -233,6 +233,9 @@ public class Interactable : MonoBehaviour
 
     private IEnumerator MoveObject()
     {
+        AkSoundEngine.PostEvent("Play_ImpactCardboard", this.gameObject);
+        //PlaySound CloudPoof
+        AkSoundEngine.PostEvent("Play_PoofCardboard", this.gameObject);
         GameObject movingObject = Instantiate(objectToUnpack, transform.position, transform.rotation);
         objectMoveUpPosition = Instantiate(new GameObject(), transform).transform;
         objectMoveUpPosition.position += new Vector3(0, 2, 0);
@@ -254,11 +257,13 @@ public class Interactable : MonoBehaviour
                 Mathf.Lerp(transform.eulerAngles.z, objectMoveUpPosition.eulerAngles.z, i));
             yield return new WaitForSeconds((float)(timeForObjectMovement) / 100);
         }
+
         yield return new WaitForSeconds(1);
-        //PlaySound CloudPoof
         Destroy(movingObject);
-        yield return new WaitForSeconds(1);
         //PlaySound CloudPoof
+        AkSoundEngine.PostEvent("Play_PoofCardboard", this.gameObject);
+        yield return new WaitForSeconds(1);
+
         BoxManager.Instance.OpenedBoxesIndex.Add(BoxNumber);
         OpenMyBox();
         if (UnlockContent)

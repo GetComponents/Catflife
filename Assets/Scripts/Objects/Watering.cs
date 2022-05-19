@@ -31,7 +31,7 @@ public class Watering : MonoBehaviour
                 myAnimator.SetBool("IsWatering", true);
             }
         };
-        
+
         click.Enable();
     }
 
@@ -45,7 +45,7 @@ public class Watering : MonoBehaviour
 
             if (Physics.Raycast(cameraRay, out hit, 200, layerMask))
             {
-                wateringCan.transform.position =  hit.point; 
+                wateringCan.transform.position =  hit.point;
             }
         }
     }

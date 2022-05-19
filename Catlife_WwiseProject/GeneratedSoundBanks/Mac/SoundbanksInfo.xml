@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SoundBanksInfo Platform="Mac" BasePlatform="Mac" SchemaVersion="12" SoundbankVersion="140">
+	<RootPaths>
+		<ProjectRoot>/Users/luiszoran/Library/Application Support/Wwise2019/Bottles/Wwise2019x64/dosdevices/y:/Documents/UnityProject/Catflife/Catlife_WwiseProject/</ProjectRoot>
+		<SourceFilesRoot>/Users/luiszoran/Library/Application Support/Wwise2019/Bottles/Wwise2019x64/dosdevices/y:/Documents/UnityProject/Catflife/Catlife_WwiseProject/.cache/Mac/</SourceFilesRoot>
+		<SoundBanksRoot>/Users/luiszoran/Library/Application Support/Wwise2019/Bottles/Wwise2019x64/dosdevices/y:/Documents/UnityProject/Catflife/Catlife_WwiseProject/GeneratedSoundBanks/Mac/</SoundBanksRoot>
+		<ExternalSourcesInputFile></ExternalSourcesInputFile>
+		<ExternalSourcesOutputRoot>/Users/luiszoran/Library/Application Support/Wwise2019/Bottles/Wwise2019x64/dosdevices/y:/Documents/UnityProject/Catflife/Catlife_WwiseProject/GeneratedSoundBanks/Mac</ExternalSourcesOutputRoot>
+	</RootPaths>
+	<DialogueEvents/>
+	<StreamedFiles/>
+	<MediaFilesNotInAnyBank/>
+	<SoundBanks>
+		<SoundBank Id="393239870" Language="SFX" Hash="2066896227">
+			<ObjectPath>\SoundBanks\Default Work Unit\SFX</ObjectPath>
+			<ShortName>SFX</ShortName>
+			<Path>SFX.bnk</Path>
+			<IncludedEvents>
+				<Event Id="3010145222" Name="Play_ImpactCardboard" ObjectPath="\Events\Default Work Unit\ItemsScene\Play_ImpactCardboard" DurationType="OneShot" DurationMin="0.239296" DurationMax="0.933365">
+					<IncludedMemoryFiles>
+						<File Id="23732595" Language="SFX">
+							<ShortName>CardboardImpact.wav</ShortName>
+							<Path>SFX/CardboardImpact_EEC90E33.wem</Path>
+						</File>
+						<File Id="394627533" Language="SFX">
+							<ShortName>CardboardImpact.wav</ShortName>
+							<Path>SFX/CardboardImpact_CEF09C6C.wem</Path>
+						</File>
+						<File Id="811632332" Language="SFX">
+							<ShortName>CardboardImpact.wav</ShortName>
+							<Path>SFX/CardboardImpact_33C708BA.wem</Path>
+						</File>
+						<File Id="997870370" Language="SFX">
+							<ShortName>CardboardImpact.wav</ShortName>
+							<Path>SFX/CardboardImpact_9083B01B.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="31596624" Name="Play_PoofCardboard" ObjectPath="\Events\Default Work Unit\ItemsScene\Play_PoofCardboard" DurationType="OneShot" DurationMin="0.441775" DurationMax="2.57134">
+					<IncludedMemoryFiles>
+						<File Id="154705653" Language="SFX">
+							<ShortName>CardboardPoof.wav</ShortName>
+							<Path>SFX/CardboardPoof_2DB66D78.wem</Path>
+						</File>
+						<File Id="750855172" Language="SFX">
+							<ShortName>CardboardPoof.wav</ShortName>
+							<Path>SFX/CardboardPoof_3E29FB15.wem</Path>
+						</File>
+						<File Id="934852199" Language="SFX">
+							<ShortName>CardboardPoof.wav</ShortName>
+							<Path>SFX/CardboardPoof_966C9491.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="99206220" Name="Play_Step" ObjectPath="\Events\Default Work Unit\Character\Play_Step" DurationType="OneShot" DurationMin="0.097353" DurationMax="0.485587">
+					<IncludedMemoryFiles>
+						<File Id="323942138" Language="SFX">
+							<ShortName>Tile1.wav</ShortName>
+							<Path>SFX/Tile1_46AB9349.wem</Path>
+						</File>
+						<File Id="385491676" Language="SFX">
+							<ShortName>Tile1.wav</ShortName>
+							<Path>SFX/Tile1_9D91DD5F.wem</Path>
+						</File>
+						<File Id="431402745" Language="SFX">
+							<ShortName>Tile1.wav</ShortName>
+							<Path>SFX/Tile1_D145568B.wem</Path>
+						</File>
+						<File Id="492770314" Language="SFX">
+							<ShortName>Tile1.wav</ShortName>
+							<Path>SFX/Tile1_DECFB337.wem</Path>
+						</File>
+						<File Id="736235376" Language="SFX">
+							<ShortName>Tile1.wav</ShortName>
+							<Path>SFX/Tile1_99C0194F.wem</Path>
+						</File>
+						<File Id="777566849" Language="SFX">
+							<ShortName>Tile1.wav</ShortName>
+							<Path>SFX/Tile1_0651EECB.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+					<DefaultSwitchValue>{F13EB533-41C9-4F36-B89B-D678BDDAAF47}</DefaultSwitchValue>
+					<SwitchContainers>
+						<SwitchContainer SwitchValue="{F13EB533-41C9-4F36-B89B-D678BDDAAF47}">
+							<Media>
+								<File Id="323942138"/>
+								<File Id="385491676"/>
+								<File Id="431402745"/>
+								<File Id="492770314"/>
+								<File Id="736235376"/>
+								<File Id="777566849"/>
+							</Media>
+						</SwitchContainer>
+					</SwitchContainers>
+				</Event>
+			</IncludedEvents>
+			<SwitchGroups>
+				<SwitchGroup Id="3865314626" Name="Material" ObjectPath="\Switches\Default Work Unit\Material" GUID="{3B231D83-CEB8-4D6E-87F3-B78A280E368F}">
+					<Switches>
+						<Switch Id="782826392" Name="Default" ObjectPath="\Switches\Default Work Unit\Material\Default" GUID="{F13EB533-41C9-4F36-B89B-D678BDDAAF47}"/>
+					</Switches>
+				</SwitchGroup>
+			</SwitchGroups>
+		</SoundBank>
+		<SoundBank Id="1355168291" Language="SFX" Hash="2754342975">
+			<ObjectPath>Init</ObjectPath>
+			<ShortName>Init</ShortName>
+			<Path>Init.bnk</Path>
+		</SoundBank>
+	</SoundBanks>
+</SoundBanksInfo>
