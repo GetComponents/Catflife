@@ -7,11 +7,13 @@ public class MenuUI : MonoBehaviour
 {
     public void StartGame()
     {
+        //PlaySound ButtonPress
         SceneManager.LoadScene("MainRoom");
     }
 
     public void Continue()
     {
+        //PlaySound ButtonPress
         if (Time.timeScale == 0)
         {
             Time.timeScale = 1;
@@ -21,6 +23,7 @@ public class MenuUI : MonoBehaviour
 
     public void StartMenu()
     {
+        //PlaySound ButtonPress
         if (Time.timeScale == 0)
         {
             Time.timeScale = 1;

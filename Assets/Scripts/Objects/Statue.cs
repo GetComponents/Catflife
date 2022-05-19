@@ -25,6 +25,7 @@ public class Statue : MonoBehaviour
         {
             if (!activated)
             {
+                //PlaySound LightUpStatue
                 switch (PlayerController.Instance.LavalampColor)
                 {
                     case 0:
@@ -51,6 +52,7 @@ public class Statue : MonoBehaviour
             yield return new WaitForSeconds(0.5f);
             if (targetEnemy != null)
             {
+                //PlaySound StatueShoot
                 StatueProjectile tmp = Instantiate(projectile, transform.position, Quaternion.identity).GetComponent<StatueProjectile>();
                 tmp.target = targetEnemy;
                 tmp.gameObject.GetComponent<Rigidbody>().velocity = Vector3.zero;

@@ -22,6 +22,7 @@ public class Wanderer : Enemy
 
     private void Start()
     {
+        //PlaySound whistle (loop)
         enemyNavMesh = GetComponent<NavMeshAgent>();
         myArm.GetComponent<WandererArm>().myDamage = damage;
     }
@@ -50,6 +51,7 @@ public class Wanderer : Enemy
 
     private void StartAttack()
     {
+        //PlaySound WandererSwing/Scream
         myArm.SetActive(true);
     }
 

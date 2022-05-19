@@ -37,9 +37,7 @@ public class CombatSceneChange : MonoBehaviour
     }
     private void Start()
     {
-        //SceneManager.SetActiveScene(SceneManager.GetSceneByName("Combat"));
         SpawnArena();
-        //Instantiate(AllArenaPrefabs[Random.Range(0, AllArenaPrefabs.Count - 1)], transform.position, Quaternion.identity);
     }
 
     private void SpawnArena()
@@ -79,10 +77,10 @@ public class CombatSceneChange : MonoBehaviour
 
     public void EndCombat()
     {
+        //PlaySound DoorOpening
         foreach (var _exit in FindObjectsOfType<PlayerExitZone>())
         {
             _exit.IsAbleToLeave = true;
         }
-        //PlayerExitZone.Instance.IsAbleToLeave = true;
     }
 }

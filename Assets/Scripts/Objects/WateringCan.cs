@@ -10,6 +10,7 @@ public class WateringCan : MonoBehaviour
 
     void StartWatering()
     {
+        //PlaySound Watercan
         currentWater = Instantiate(watervfx, this.transform);
     }
     void EndWatering()

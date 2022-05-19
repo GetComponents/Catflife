@@ -52,6 +52,7 @@ public class GruntElite : Enemy
         }
         else
         {
+            //PlaySound GruntJump/Bite
             moveCounter = maxMoveCounter;
             stopCounter = MaxStopCounter;
             playerPosition = PlayerController.Instance.transform.GetChild(0).position;
@@ -63,6 +64,7 @@ public class GruntElite : Enemy
     {
         if (currentShotCooldown < 0)
         {
+            //PlaySound GruntShoot
             playerPosition = PlayerController.Instance.transform.GetChild(0).position;
             GameObject tmp = Instantiate(Projectile, transform.position, Quaternion.identity);
             tmp.GetComponent<GruntEliteProjectile>().MyDamage = damage;

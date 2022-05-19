@@ -201,18 +201,22 @@ public class Interactable : MonoBehaviour
         switch (myUpgradeType)
         {
             case ETypeOfUpgrade.ATTACK:
+                //PlaySound UpgradeJingle
                 player.AttackUpgrades++;
                 Debug.Log($"You Feel Stronger ({player.AttackUpgrades})");
                 break;
             case ETypeOfUpgrade.HP:
+                //PlaySound UpgradeJingle
                 player.HPUpgrades++;
                 Debug.Log($"You Feel Healthier ({player.HPUpgrades})");
                 break;
             case ETypeOfUpgrade.MANA:
+                //PlaySound UpgradeJingle
                 player.ManaUpgrades++;
                 Debug.Log($"You Feel More Resiliant ({player.ManaUpgrades})");
                 break;
             case ETypeOfUpgrade.SPEED:
+                //PlaySound UpgradeJingle
                 player.DashUpgrades++;
                 Debug.Log($"You Feel More Energetic ({player.DashUpgrades})");
                 break;
@@ -230,7 +234,6 @@ public class Interactable : MonoBehaviour
     private IEnumerator MoveObject()
     {
         GameObject movingObject = Instantiate(objectToUnpack, transform.position, transform.rotation);
-        //movingObject.transform.localScale = new Vector3(0.1f, 0.1f, 0.1f);
         objectMoveUpPosition = Instantiate(new GameObject(), transform).transform;
         objectMoveUpPosition.position += new Vector3(0, 2, 0);
         objectMoveUpPosition.eulerAngles += new Vector3(0, 180, 0);
@@ -251,11 +254,11 @@ public class Interactable : MonoBehaviour
                 Mathf.Lerp(transform.eulerAngles.z, objectMoveUpPosition.eulerAngles.z, i));
             yield return new WaitForSeconds((float)(timeForObjectMovement) / 100);
         }
-        //movingObject.transform.position = objectPosition.position;
-        //movingObject.transform.rotation = objectPosition.rotation;
         yield return new WaitForSeconds(1);
+        //PlaySound CloudPoof
         Destroy(movingObject);
         yield return new WaitForSeconds(1);
+        //PlaySound CloudPoof
         BoxManager.Instance.OpenedBoxesIndex.Add(BoxNumber);
         OpenMyBox();
         if (UnlockContent)
@@ -276,6 +279,7 @@ public class Interactable : MonoBehaviour
 
     private void Sleep()
     {
+        //PlaySound SleepJingle
         SceneManager.LoadSceneAsync("EncounterSelection");
         PlayerController.Instance.HealFull();
     }
