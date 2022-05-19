@@ -101,18 +101,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28dd48d1e2bf0a747bf85f1e0b68c7fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 100
+  maxHealth: 10
   timeToAttack: {x: 3, y: 4}
   timeToCast: {x: 6, y: 7}
-  timeToCastRandom: {x: 10, y: 11}
-  randomCastDistance: {x: 2, y: 3}
+  timeToCastRandom: {x: 6, y: 8}
+  randomCastDistance: {x: 4, y: 6}
   projectileSpeed: 0.3
+  spinSpeed: 30
+  selfcastDelay: 2
   fireballPrefab: {fileID: 737495494197295055, guid: bbc2d3a9a158b824784de96937d40f4e, type: 3}
   castPrefab: {fileID: 379002393375379377, guid: 19d2275b263677546ba4b5beb93aeb69, type: 3}
   sword: {fileID: 597996350148780666}
+  selfCastPrefab: {fileID: 379002393375379377, guid: f762a157673da0d4d80add351e87a4db, type: 3}
   handPos: {fileID: 597996350140954933}
   bossAnimator: {fileID: 6423847390135976337}
   bossNavmesh: {fileID: 597996351558564869}
+  movementSpeed: 1
   PlayerIsInRange: 0
 --- !u!195 &597996351558564869
 NavMeshAgent:

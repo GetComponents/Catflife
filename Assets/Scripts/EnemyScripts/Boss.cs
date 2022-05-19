@@ -51,12 +51,15 @@ public class Boss : MonoBehaviour
             {
                 case 1:
                     bossAnimator.SetBool("ChangePhase", true);
+                    //PlaySound BossScream
                     break;
                 case 2:
                     StartCoroutine(CastRandomly());
                     bossAnimator.SetBool("ChangePhase", true);
+                    //Playound BossScream
                     break;
                 case 3:
+                    //PlaySound PlayerDeath
                     Destroy(gameObject);
                     break;
                 default:
@@ -94,8 +97,6 @@ public class Boss : MonoBehaviour
         HealthPoints = maxHealth;
         StartCoroutine(Attack());
         StartCoroutine(TimeToCast());
-
-        StartCoroutine(CastRandomly());
     }
 
     private void Update()
@@ -110,6 +111,7 @@ public class Boss : MonoBehaviour
     public void TakeDamage(float _damage)
     {
         HealthPoints -= _damage;
+        //PlaySound BossHurt
     }
 
     IEnumerator Attack()
@@ -119,12 +121,14 @@ public class Boss : MonoBehaviour
             yield return new WaitForSeconds(Random.Range(timeToAttack.x, timeToAttack.y));
             if (phase >= 1 && Random.Range(0f, 1f) <= 0.33f)
             {
+                //PlaySound BossCharging
                 bossAnimator.SetInteger("AttackType", 4);
                 currentAttack.Add(4);
             }
             else if (PlayerIsInRange)
             {
                 bossAnimator.SetInteger("AttackType", 1);
+                //PlaySound BossSwordSwing (Spieler SwordSwing runtergepitched)
                 currentAttack.Add(1);
             }
             else
@@ -168,6 +172,7 @@ public class Boss : MonoBehaviour
     private void AnimSpin()
     {
         bossAnimator.SetBool("Spinning", true);
+        //PlaySound SpinMove (Loop)
         bossNavmesh.speed = 0;
         spinVector = (PlayerInventory.Instance.transform.position - transform.position).normalized * spinSpeed;
         rb.AddForce(spinVector, ForceMode.VelocityChange);
@@ -181,6 +186,7 @@ public class Boss : MonoBehaviour
     private void AnimFireball()
     {
         GruntEliteProjectile tmp = Instantiate(fireballPrefab, handPos.position, Quaternion.identity).GetComponent<GruntEliteProjectile>();
+        //PlaySound FireballCast (vom Spieler)
         tmp.mySpeed = projectileSpeed;
         tmp.MyDamage = 2;
         tmp.GetComponent<Rigidbody>().AddForce((PlayerInventory.Instance.transform.position - transform.position).normalized * projectileSpeed, ForceMode.Impulse);
