@@ -22,5 +22,14 @@ public class Sword : MonoBehaviour
                 Destroy(other.gameObject);
             }
         }
+        else if (other.tag == "Boss" && PlayerController.Instance.IsSwinging)
+        {
+            other.GetComponent<Boss>().TakeDamage(PlayerController.Instance.SwordDamage);
+            PlayerController.Instance.CurrentMana += PlayerController.Instance.ManaGain;
+        }
+        else if (other.tag == "Boss" && PlayerController.Instance.IsSpinning)
+        {
+            other.GetComponent<Boss>().TakeDamage(PlayerController.Instance.SwordDamage * PlayerController.Instance.SpinAttackDamageMultiplier);
+        }
     }
 }

@@ -23,5 +23,10 @@ public class PlayerProjectile : MonoBehaviour
         {
             Destroy(gameObject);
         }
+        else if (other.tag == "Boss")
+        {
+            other.GetComponent<Boss>().TakeDamage(MyDamage);
+            Destroy(gameObject);
+        }
     }
 }
