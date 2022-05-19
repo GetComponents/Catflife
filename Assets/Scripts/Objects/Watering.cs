@@ -7,6 +7,11 @@ public class Watering : MonoBehaviour
 {
     [SerializeField]
     GameObject wateringCan;
+    [SerializeField]
+    Animator myAnimator;
+    [SerializeField]
+    GameObject watervfx;
+    GameObject currentWater;
 
     public bool IsWatering;
 
@@ -21,25 +26,17 @@ public class Watering : MonoBehaviour
     {
         mainCam = Camera.main;
         click = new InputAction(binding: "<Mouse>/leftButton");
-        click.performed += ctx => {
+        click.started += ctx => {
             if (IsWatering)
             {
                 wateringCan.transform.eulerAngles = new Vector3(45, 0, 0);
+                myAnimator.SetBool("IsWatering", true);
             }
         };
-        click.canceled += ctx =>
-        {
-            if (IsWatering)
-            {
-                wateringCan.transform.eulerAngles = new Vector3(0, 0, 0);
-            }
-        };
+        
         click.Enable();
     }
 
-    private void Start()
-    {
-    }
 
     void Update()
     {
@@ -54,4 +51,15 @@ public class Watering : MonoBehaviour
             }
         }
     }
+
+    void StartWatering()
+    {
+        currentWater = Instantiate(watervfx, wateringCan.transform);
+    }
+    void EndWatering ()
+    {
+        Destroy(currentWater);
+        myAnimator.SetBool("IsWatering", false);
+    }
+
 }
