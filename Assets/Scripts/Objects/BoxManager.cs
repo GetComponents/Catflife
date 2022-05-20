@@ -23,6 +23,7 @@ public class BoxManager : MonoBehaviour
 
     public void LoadProgress()
     {
+        Debug.Log("Progress Loaded");
         foreach (Interactable box in FindObjectsOfType<Interactable>())
         {
             if (OpenedBoxesIndex.Contains(box.BoxNumber) && box.myAction == EActionType.UNPACK)

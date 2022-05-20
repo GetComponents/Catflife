@@ -5,13 +5,15 @@ using UnityEngine.InputSystem;
 
 public class Watering : MonoBehaviour
 {
+    public static Watering Instance;
+
     [SerializeField]
     GameObject wateringCan;
     [SerializeField]
     Animator myAnimator;
 
 
-    public bool IsWatering;
+    public bool HoldsTheCan;
 
     [SerializeField]
     LayerMask layerMask;
@@ -33,12 +35,22 @@ public class Watering : MonoBehaviour
         };
 
         click.Enable();
+        if (Instance == null)
+        {
+            Instance = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+            return;
+        }
+        mainCam = Camera.main;       
     }
 
 
     void Update()
     {
-        if (IsWatering)
+        if (HoldsTheCan)
         {
             Ray cameraRay = mainCam.ScreenPointToRay(Mouse.current.position.ReadValue());
             RaycastHit hit;
@@ -48,5 +60,30 @@ public class Watering : MonoBehaviour
                 wateringCan.transform.position =  hit.point;
             }
         }
+    }
+
+    public void EnableWatering()
+    {
+        click = new InputAction(binding: "<Mouse>/leftButton");
+        click.started += ctx => {
+            if (HoldsTheCan)
+            {
+                myAnimator.SetBool("IsWatering", true);
+            }
+        };
+
+        click.Enable();
+        HoldsTheCan = true;
+    }
+
+    public void DisableWatering()
+    {
+        HoldsTheCan = false;
+        click = null;
+    }
+
+    private void OnDestroy()
+    {
+        click = null;
     }
 }

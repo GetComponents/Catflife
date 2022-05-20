@@ -54,6 +54,7 @@ public enum EActionType
     NONE,
     UNPACK,
     WATER,
+    STARTWATER,
     SLEEP
 }
 
@@ -151,6 +152,9 @@ public class Interactable : MonoBehaviour
             case EActionType.WATER:
                 NameUI.text = "Water " + Name;
                 break;
+            case EActionType.STARTWATER:
+                NameUI.text = "Water " + Name;
+                break;
             case EActionType.SLEEP:
                 NameUI.text = "Sleep in " + Name;
                 break;
@@ -187,6 +191,9 @@ public class Interactable : MonoBehaviour
                 break;
             case EActionType.WATER:
                 UpgradeStat();
+                break;
+            case EActionType.STARTWATER:
+                Watering.Instance.EnableWatering();
                 break;
             case EActionType.SLEEP:
                 Sleep();
