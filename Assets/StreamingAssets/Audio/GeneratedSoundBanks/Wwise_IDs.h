@@ -14,6 +14,11 @@ namespace AK
     namespace EVENTS
     {
         static const AkUniqueID PLAY_BUTTONPRESS = 2652178615U;
+        static const AkUniqueID PLAY_DOORSQUEAKY = 3020861821U;
+        static const AkUniqueID PLAY_GRUNTELITEPROJECTILEEXPLODE = 1927856655U;
+        static const AkUniqueID PLAY_GRUNTELITEPROJECTILETHROW = 3941375504U;
+        static const AkUniqueID PLAY_GRUNTPROJECTILEEXPLODE = 1423843544U;
+        static const AkUniqueID PLAY_GRUNTPROJECTILETHROW = 4218963955U;
         static const AkUniqueID PLAY_IMPACTCARDBOARD = 3010145222U;
         static const AkUniqueID PLAY_LEAVINGFOOTSTEPS = 1438502543U;
         static const AkUniqueID PLAY_POOFCARDBOARD = 31596624U;

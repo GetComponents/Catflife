@@ -165,7 +165,7 @@ public class PlayerController : MonoBehaviour
     {
         HealthPoints = MaxHP;
         //PlaySound PlayerDeath
-        SceneManager.LoadScene("SampleScene");
+        SceneManager.LoadScene("MainRoom");
     }
 
     #region InputMethods
@@ -266,7 +266,7 @@ public class PlayerController : MonoBehaviour
 
     private void ChangeScene(InputAction.CallbackContext context)
     {
-        if (SceneManager.GetActiveScene().name == "SampleScene")
+        if (SceneManager.GetActiveScene().name == "MainRoom")
         {
             SceneManager.LoadScene("EncounterSelection");
         }

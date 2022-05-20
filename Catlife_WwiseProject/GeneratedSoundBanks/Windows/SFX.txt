@@ -1,9 +1,14 @@
 Event	ID	Name			Wwise Object Path	Notes
 	31596624	Play_PoofCardboard			\Default Work Unit\ItemsScene\Play_PoofCardboard	
 	99206220	Play_Step			\Default Work Unit\Character\Play_Step	
+	1423843544	Play_GruntProjectileExplode			\Default Work Unit\Enemies\Play_GruntProjectileExplode	
 	1438502543	Play_LeavingFootsteps			\Default Work Unit\Character\Play_LeavingFootsteps	
+	1927856655	Play_GruntEliteProjectileExplode			\Default Work Unit\Enemies\Play_GruntEliteProjectileExplode	
 	2652178615	Play_ButtonPress			\Default Work Unit\UI\Play_ButtonPress	
 	3010145222	Play_ImpactCardboard			\Default Work Unit\ItemsScene\Play_ImpactCardboard	
+	3020861821	Play_DoorSqueaky			\Default Work Unit\UI\Play_DoorSqueaky	
+	3941375504	Play_GruntEliteProjectileThrow			\Default Work Unit\Enemies\Play_GruntEliteProjectileThrow	
+	4218963955	Play_GruntProjectileThrow			\Default Work Unit\Enemies\Play_GruntProjectileThrow	
 
 Switch Group	ID	Name			Wwise Object Path	Notes
 	3865314626	Material			\Default Work Unit\Material	
@@ -16,18 +21,36 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	17516549	UIButtonPress_04	Y:\Documents\UnityProject\Catflife\Catlife_WwiseProject\.cache\Windows\SFX\UIButtonPress_18BDB122.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\ButtonPress\UIButtonPress_04		74120
 	23732595	CardboardImpact_01	Y:\Documents\UnityProject\Catflife\Catlife_WwiseProject\.cache\Windows\SFX\CardboardImpact_6F26D83E.wem		\Actor-Mixer Hierarchy\Default Work Unit\ItemsScene\Cardboard\Impact\CardboardImpact_01		90320
 	75365945	UIButtonPress_02	Y:\Documents\UnityProject\Catflife\Catlife_WwiseProject\.cache\Windows\SFX\UIButtonPress_38CCF9F7.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\ButtonPress\UIButtonPress_02		50316
+	129928124	ProjectileExplode_06	Y:\Documents\UnityProject\Catflife\Catlife_WwiseProject\.cache\Windows\SFX\ProjectileExplode_B394EDA4.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemies\Grunt\Projectile\Explosion\GruntEliteProjectileExplode\ProjectileExplode_06		306864
 	154705653	CardboardPoof_03	Y:\Documents\UnityProject\Catflife\Catlife_WwiseProject\.cache\Windows\SFX\CardboardPoof_2F1F70CD.wem		\Actor-Mixer Hierarchy\Default Work Unit\ItemsScene\Cardboard\Poof\CardboardPoof_03		254628
+	238543085	ProjectileThrow_04	Y:\Documents\UnityProject\Catflife\Catlife_WwiseProject\.cache\Windows\SFX\ProjectileThrow_2B7498F0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemies\Grunt\Projectile\Throw\Throw\ProjectileThrow_04		162060
 	323942138	Tile_05	Y:\Documents\UnityProject\Catflife\Catlife_WwiseProject\.cache\Windows\SFX\Tile1_46AB9349.wem		\Actor-Mixer Hierarchy\Default Work Unit\Character\Step\Tile\Tile_05		39800
+	345272659	Fire	Y:\Documents\UnityProject\Catflife\Catlife_WwiseProject\.cache\Windows\SFX\Fire_D79FB2B7.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemies\Grunt\Projectile\Throw\Fire		2462720
 	385491676	Tile_01	Y:\Documents\UnityProject\Catflife\Catlife_WwiseProject\.cache\Windows\SFX\Tile1_9D91DD5F.wem		\Actor-Mixer Hierarchy\Default Work Unit\Character\Step\Tile\Tile_01		36876
 	394627533	CardboardImpact_02	Y:\Documents\UnityProject\Catflife\Catlife_WwiseProject\.cache\Windows\SFX\CardboardImpact_3B8A16C1.wem		\Actor-Mixer Hierarchy\Default Work Unit\ItemsScene\Cardboard\Impact\CardboardImpact_02		86020
+	425030932	ProjectileThrow_02	Y:\Documents\UnityProject\Catflife\Catlife_WwiseProject\.cache\Windows\SFX\ProjectileThrow_5970BD41.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemies\Grunt\Projectile\Throw\Throw\ProjectileThrow_02		159744
 	431402745	Tile_04	Y:\Documents\UnityProject\Catflife\Catlife_WwiseProject\.cache\Windows\SFX\Tile1_D145568B.wem		\Actor-Mixer Hierarchy\Default Work Unit\Character\Step\Tile\Tile_04		30660
+	436327313	ProjectileExplode_09	Y:\Documents\UnityProject\Catflife\Catlife_WwiseProject\.cache\Windows\SFX\ProjectileExplode_4702B53F.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemies\Grunt\Projectile\Explosion\GruntEliteProjectileExplode\ProjectileExplode_09		338600
 	492770314	Tile_03	Y:\Documents\UnityProject\Catflife\Catlife_WwiseProject\.cache\Windows\SFX\Tile1_DECFB337.wem		\Actor-Mixer Hierarchy\Default Work Unit\Character\Step\Tile\Tile_03		41260
+	552528663	SqueakyDoor_02	Y:\Documents\UnityProject\Catflife\Catlife_WwiseProject\.cache\Windows\SFX\SqueakyDoor_BEE3B957.wem		\Actor-Mixer Hierarchy\Default Work Unit\ItemsScene\DoorSqueaky\SqueakyDoor_02		232808
 	585672463	UIButtonPress_05	Y:\Documents\UnityProject\Catflife\Catlife_WwiseProject\.cache\Windows\SFX\UIButtonPress_29B87592.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\ButtonPress\UIButtonPress_05		41060
+	684050722	SqueakyDoor_01	Y:\Documents\UnityProject\Catflife\Catlife_WwiseProject\.cache\Windows\SFX\SqueakyDoor_9199D959.wem		\Actor-Mixer Hierarchy\Default Work Unit\ItemsScene\DoorSqueaky\SqueakyDoor_01		197104
+	693424916	ProjectileExplode_10	Y:\Documents\UnityProject\Catflife\Catlife_WwiseProject\.cache\Windows\SFX\ProjectileExplode_726ACF56.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemies\Grunt\Projectile\Explosion\GruntEliteProjectileExplode\ProjectileExplode_10		238100
 	736235376	Tile_02	Y:\Documents\UnityProject\Catflife\Catlife_WwiseProject\.cache\Windows\SFX\Tile1_99C0194F.wem		\Actor-Mixer Hierarchy\Default Work Unit\Character\Step\Tile\Tile_02		48136
+	745176646	ProjectileExplode_05	Y:\Documents\UnityProject\Catflife\Catlife_WwiseProject\.cache\Windows\SFX\ProjectileExplode_7CEFF59D.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemies\Grunt\Projectile\Explosion\GruntEliteProjectileExplode\ProjectileExplode_05		322732
 	750855172	CardboardPoof_02	Y:\Documents\UnityProject\Catflife\Catlife_WwiseProject\.cache\Windows\SFX\CardboardPoof_5F7F731E.wem		\Actor-Mixer Hierarchy\Default Work Unit\ItemsScene\Cardboard\Poof\CardboardPoof_02		138916
 	777566849	Tile_06	Y:\Documents\UnityProject\Catflife\Catlife_WwiseProject\.cache\Windows\SFX\Tile1_0651EECB.wem		\Actor-Mixer Hierarchy\Default Work Unit\Character\Step\Tile\Tile_06		31436
 	811632332	CardboardImpact_03	Y:\Documents\UnityProject\Catflife\Catlife_WwiseProject\.cache\Windows\SFX\CardboardImpact_45969E13.wem		\Actor-Mixer Hierarchy\Default Work Unit\ItemsScene\Cardboard\Impact\CardboardImpact_03		75276
+	854468581	ProjectileExplode_03	Y:\Documents\UnityProject\Catflife\Catlife_WwiseProject\.cache\Windows\SFX\ProjectileExplode_B682017B.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemies\Grunt\Projectile\Explosion\GruntEliteProjectileExplode\ProjectileExplode_03		248680
 	861986732	UIButtonPress_03	Y:\Documents\UnityProject\Catflife\Catlife_WwiseProject\.cache\Windows\SFX\UIButtonPress_7775164E.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\ButtonPress\UIButtonPress_03		55604
 	934852199	CardboardPoof_01	Y:\Documents\UnityProject\Catflife\Catlife_WwiseProject\.cache\Windows\SFX\CardboardPoof_A741EBA1.wem		\Actor-Mixer Hierarchy\Default Work Unit\ItemsScene\Cardboard\Poof\CardboardPoof_01		168672
+	984304702	ProjectileThrow_03	Y:\Documents\UnityProject\Catflife\Catlife_WwiseProject\.cache\Windows\SFX\ProjectileThrow_3E57480F.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemies\Grunt\Projectile\Throw\Throw\ProjectileThrow_03		206032
+	984676907	ProjectileThrow_05	Y:\Documents\UnityProject\Catflife\Catlife_WwiseProject\.cache\Windows\SFX\ProjectileThrow_B7CF1BEC.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemies\Grunt\Projectile\Throw\Throw\ProjectileThrow_05		169004
+	995914859	ProjectileExplode_08	Y:\Documents\UnityProject\Catflife\Catlife_WwiseProject\.cache\Windows\SFX\ProjectileExplode_0E1A68E4.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemies\Grunt\Projectile\Explosion\GruntEliteProjectileExplode\ProjectileExplode_08		328024
+	997698416	ProjectileExplode_01	Y:\Documents\UnityProject\Catflife\Catlife_WwiseProject\.cache\Windows\SFX\ProjectileExplode_295F8A4B.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemies\Grunt\Projectile\Explosion\GruntEliteProjectileExplode\ProjectileExplode_01		227520
 	997870370	CardboardImpact_07	Y:\Documents\UnityProject\Catflife\Catlife_WwiseProject\.cache\Windows\SFX\CardboardImpact_A2C0C5E8.wem		\Actor-Mixer Hierarchy\Default Work Unit\ItemsScene\Cardboard\Impact\CardboardImpact_07		92468
+	1013540231	ProjectileThrow_01	Y:\Documents\UnityProject\Catflife\Catlife_WwiseProject\.cache\Windows\SFX\ProjectileThrow_FE6255E8.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemies\Grunt\Projectile\Throw\Throw\ProjectileThrow_01		166688
+	1018989538	ProjectileExplode_02	Y:\Documents\UnityProject\Catflife\Catlife_WwiseProject\.cache\Windows\SFX\ProjectileExplode_3DCAD84A.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemies\Grunt\Projectile\Explosion\GruntEliteProjectileExplode\ProjectileExplode_02		211648
+	1020300007	ProjectileExplode_07	Y:\Documents\UnityProject\Catflife\Catlife_WwiseProject\.cache\Windows\SFX\ProjectileExplode_A2CD41C8.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemies\Grunt\Projectile\Explosion\GruntEliteProjectileExplode\ProjectileExplode_07		402080
+	1039091598	ProjectileExplode_04	Y:\Documents\UnityProject\Catflife\Catlife_WwiseProject\.cache\Windows\SFX\ProjectileExplode_5B60732A.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemies\Grunt\Projectile\Explosion\GruntEliteProjectileExplode\ProjectileExplode_04		248680
 

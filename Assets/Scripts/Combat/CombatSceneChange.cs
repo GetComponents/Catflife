@@ -77,7 +77,7 @@ public class CombatSceneChange : MonoBehaviour
 
     public void EndCombat()
     {
-        //PlaySound DoorOpening
+        AkSoundEngine.PostEvent("Play_DoorSqueaky", this.gameObject);
         foreach (var _exit in FindObjectsOfType<PlayerExitZone>())
         {
             _exit.IsAbleToLeave = true;
