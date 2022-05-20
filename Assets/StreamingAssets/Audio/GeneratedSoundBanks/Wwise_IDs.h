@@ -13,7 +13,9 @@ namespace AK
 {
     namespace EVENTS
     {
+        static const AkUniqueID PLAY_BUTTONPRESS = 2652178615U;
         static const AkUniqueID PLAY_IMPACTCARDBOARD = 3010145222U;
+        static const AkUniqueID PLAY_LEAVINGFOOTSTEPS = 1438502543U;
         static const AkUniqueID PLAY_POOFCARDBOARD = 31596624U;
         static const AkUniqueID PLAY_STEP = 99206220U;
     } // namespace EVENTS

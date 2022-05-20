@@ -17,7 +17,7 @@ public class PlayerExitZone : MonoBehaviour
     {
         if (other.tag == "Player" && IsAbleToLeave)
         {
-            //PlaySound LeavingFootsteps
+            AkSoundEngine.PostEvent("Play_LeavingFootsteps", this.gameObject);
             MapManager.Instance.PlayerTookExit = IsExit;
             MapManager.Instance.ChangeMapState(true);
             SceneManager.UnloadSceneAsync("Combat");

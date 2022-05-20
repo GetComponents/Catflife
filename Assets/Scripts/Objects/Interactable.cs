@@ -234,7 +234,6 @@ public class Interactable : MonoBehaviour
     private IEnumerator MoveObject()
     {
         AkSoundEngine.PostEvent("Play_ImpactCardboard", this.gameObject);
-        //PlaySound CloudPoof
         AkSoundEngine.PostEvent("Play_PoofCardboard", this.gameObject);
         GameObject movingObject = Instantiate(objectToUnpack, transform.position, transform.rotation);
         objectMoveUpPosition = Instantiate(new GameObject(), transform).transform;
@@ -260,7 +259,6 @@ public class Interactable : MonoBehaviour
 
         yield return new WaitForSeconds(1);
         Destroy(movingObject);
-        //PlaySound CloudPoof
         AkSoundEngine.PostEvent("Play_PoofCardboard", this.gameObject);
         yield return new WaitForSeconds(1);
 

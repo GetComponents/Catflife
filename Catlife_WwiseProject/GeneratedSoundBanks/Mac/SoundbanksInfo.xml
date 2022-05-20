@@ -11,44 +11,96 @@
 	<StreamedFiles/>
 	<MediaFilesNotInAnyBank/>
 	<SoundBanks>
-		<SoundBank Id="393239870" Language="SFX" Hash="2066896227">
+		<SoundBank Id="393239870" Language="SFX" Hash="671772538">
 			<ObjectPath>\SoundBanks\Default Work Unit\SFX</ObjectPath>
 			<ShortName>SFX</ShortName>
 			<Path>SFX.bnk</Path>
 			<IncludedEvents>
-				<Event Id="3010145222" Name="Play_ImpactCardboard" ObjectPath="\Events\Default Work Unit\ItemsScene\Play_ImpactCardboard" DurationType="OneShot" DurationMin="0.239296" DurationMax="0.933365">
+				<Event Id="2652178615" Name="Play_ButtonPress" ObjectPath="\Events\Default Work Unit\UI\Play_ButtonPress" DurationType="OneShot" DurationMin="0.232398" DurationMax="0.419816">
 					<IncludedMemoryFiles>
-						<File Id="23732595" Language="SFX">
-							<ShortName>CardboardImpact.wav</ShortName>
-							<Path>SFX/CardboardImpact_EEC90E33.wem</Path>
+						<File Id="6159929" Language="SFX">
+							<ShortName>UIButtonPress.wav</ShortName>
+							<Path>SFX/UIButtonPress_E4073A26.wem</Path>
 						</File>
-						<File Id="394627533" Language="SFX">
-							<ShortName>CardboardImpact.wav</ShortName>
-							<Path>SFX/CardboardImpact_CEF09C6C.wem</Path>
+						<File Id="17516549" Language="SFX">
+							<ShortName>UIButtonPress.wav</ShortName>
+							<Path>SFX/UIButtonPress_18BDB122.wem</Path>
 						</File>
-						<File Id="811632332" Language="SFX">
-							<ShortName>CardboardImpact.wav</ShortName>
-							<Path>SFX/CardboardImpact_33C708BA.wem</Path>
+						<File Id="75365945" Language="SFX">
+							<ShortName>UIButtonPress.wav</ShortName>
+							<Path>SFX/UIButtonPress_38CCF9F7.wem</Path>
 						</File>
-						<File Id="997870370" Language="SFX">
-							<ShortName>CardboardImpact.wav</ShortName>
-							<Path>SFX/CardboardImpact_9083B01B.wem</Path>
+						<File Id="585672463" Language="SFX">
+							<ShortName>UIButtonPress.wav</ShortName>
+							<Path>SFX/UIButtonPress_29B87592.wem</Path>
+						</File>
+						<File Id="861986732" Language="SFX">
+							<ShortName>UIButtonPress.wav</ShortName>
+							<Path>SFX/UIButtonPress_7775164E.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="31596624" Name="Play_PoofCardboard" ObjectPath="\Events\Default Work Unit\ItemsScene\Play_PoofCardboard" DurationType="OneShot" DurationMin="0.441775" DurationMax="2.57134">
+				<Event Id="3010145222" Name="Play_ImpactCardboard" ObjectPath="\Events\Default Work Unit\ItemsScene\Play_ImpactCardboard" DurationType="OneShot" DurationMin="0.319421" DurationMax="1.245893">
+					<IncludedMemoryFiles>
+						<File Id="23732595" Language="SFX">
+							<ShortName>CardboardImpact.wav</ShortName>
+							<Path>SFX/CardboardImpact_6F26D83E.wem</Path>
+						</File>
+						<File Id="394627533" Language="SFX">
+							<ShortName>CardboardImpact.wav</ShortName>
+							<Path>SFX/CardboardImpact_3B8A16C1.wem</Path>
+						</File>
+						<File Id="811632332" Language="SFX">
+							<ShortName>CardboardImpact.wav</ShortName>
+							<Path>SFX/CardboardImpact_45969E13.wem</Path>
+						</File>
+						<File Id="997870370" Language="SFX">
+							<ShortName>CardboardImpact.wav</ShortName>
+							<Path>SFX/CardboardImpact_A2C0C5E8.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="1438502543" Name="Play_LeavingFootsteps" ObjectPath="\Events\Default Work Unit\Character\Play_LeavingFootsteps" DurationType="OneShot" DurationMin="0.947353" DurationMax="1.385587">
+					<IncludedMemoryFiles>
+						<File Id="323942138" Language="SFX">
+							<ShortName>Tile1.wav</ShortName>
+							<Path>SFX/Tile1_46AB9349.wem</Path>
+						</File>
+						<File Id="385491676" Language="SFX">
+							<ShortName>Tile1.wav</ShortName>
+							<Path>SFX/Tile1_9D91DD5F.wem</Path>
+						</File>
+						<File Id="431402745" Language="SFX">
+							<ShortName>Tile1.wav</ShortName>
+							<Path>SFX/Tile1_D145568B.wem</Path>
+						</File>
+						<File Id="492770314" Language="SFX">
+							<ShortName>Tile1.wav</ShortName>
+							<Path>SFX/Tile1_DECFB337.wem</Path>
+						</File>
+						<File Id="736235376" Language="SFX">
+							<ShortName>Tile1.wav</ShortName>
+							<Path>SFX/Tile1_99C0194F.wem</Path>
+						</File>
+						<File Id="777566849" Language="SFX">
+							<ShortName>Tile1.wav</ShortName>
+							<Path>SFX/Tile1_0651EECB.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="31596624" Name="Play_PoofCardboard" ObjectPath="\Events\Default Work Unit\ItemsScene\Play_PoofCardboard" DurationType="OneShot" DurationMin="0.787154" DurationMax="1.443116">
 					<IncludedMemoryFiles>
 						<File Id="154705653" Language="SFX">
 							<ShortName>CardboardPoof.wav</ShortName>
-							<Path>SFX/CardboardPoof_2DB66D78.wem</Path>
+							<Path>SFX/CardboardPoof_2F1F70CD.wem</Path>
 						</File>
 						<File Id="750855172" Language="SFX">
 							<ShortName>CardboardPoof.wav</ShortName>
-							<Path>SFX/CardboardPoof_3E29FB15.wem</Path>
+							<Path>SFX/CardboardPoof_5F7F731E.wem</Path>
 						</File>
 						<File Id="934852199" Language="SFX">
 							<ShortName>CardboardPoof.wav</ShortName>
-							<Path>SFX/CardboardPoof_966C9491.wem</Path>
+							<Path>SFX/CardboardPoof_A741EBA1.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>

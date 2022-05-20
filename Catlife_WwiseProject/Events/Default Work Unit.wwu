@@ -16,6 +16,94 @@
 								</Action>
 							</ChildrenList>
 						</Event>
+						<Event Name="Play_LeavingFootsteps" ID="{637C4820-9F5A-46AF-8FD5-551C5E291BA9}">
+							<ChildrenList>
+								<Action Name="" ID="{954F41D8-DC2B-4DB8-9C31-889FD63B4486}" ShortID="988638277">
+									<PropertyList>
+										<Property Name="Delay" Type="Real64">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{189EB3BA-21A3-4A0B-A848-F6723F2737D3}">
+														<PropertyList>
+															<Property Name="Enabled" Type="bool" Value="True"/>
+															<Property Name="Min" Type="Real64" Value="-0.05"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Step" ID="{D5B4767E-2832-4D79-91C5-64D1E0F8B7B2}" WorkUnitID="{D02594BD-4199-499F-A2D9-CB65908B02DD}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{DDFF7072-69AB-437A-99FA-C6D6C1BA3613}" ShortID="304640210">
+									<PropertyList>
+										<Property Name="Delay" Type="Real64" Value="0.3">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{6D687BF4-2CAC-4681-955D-E938A929D477}">
+														<PropertyList>
+															<Property Name="Enabled" Type="bool" Value="True"/>
+															<Property Name="Min" Type="Real64" Value="-0.05"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Step" ID="{D5B4767E-2832-4D79-91C5-64D1E0F8B7B2}" WorkUnitID="{D02594BD-4199-499F-A2D9-CB65908B02DD}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{92AD42C8-38A5-4B2F-B0B3-EE7BA2C14182}" ShortID="683994488">
+									<PropertyList>
+										<Property Name="Delay" Type="Real64" Value="0.6">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{D455F1CE-77F2-4A55-8A1D-AE22A7217D2D}">
+														<PropertyList>
+															<Property Name="Enabled" Type="bool" Value="True"/>
+															<Property Name="Min" Type="Real64" Value="-0.05"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Step" ID="{D5B4767E-2832-4D79-91C5-64D1E0F8B7B2}" WorkUnitID="{D02594BD-4199-499F-A2D9-CB65908B02DD}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{12A6E9E8-491C-4B5C-993E-819BFABA5D49}" ShortID="25467985">
+									<PropertyList>
+										<Property Name="Delay" Type="Real64" Value="0.9">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{D71A3E24-6CF3-4821-B358-D9C94F1921C6}">
+														<PropertyList>
+															<Property Name="Enabled" Type="bool" Value="True"/>
+															<Property Name="Min" Type="Real64" Value="-0.05"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Step" ID="{D5B4767E-2832-4D79-91C5-64D1E0F8B7B2}" WorkUnitID="{D02594BD-4199-499F-A2D9-CB65908B02DD}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="ItemsScene" ID="{2659EB23-8ED5-4684-B9B7-6D33CFA88CF7}" ShortID="33185504">
@@ -37,6 +125,21 @@
 									<ReferenceList>
 										<Reference Name="Target">
 											<ObjectRef Name="Impact" ID="{200195FC-1D53-41F5-89F3-317AB2FD651B}" WorkUnitID="{D02594BD-4199-499F-A2D9-CB65908B02DD}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="UI" ID="{197FDC5B-C88E-457E-BD37-7DBAAC4F6174}" ShortID="51399193">
+					<ChildrenList>
+						<Event Name="Play_ButtonPress" ID="{BCA50A0B-AADC-4A2F-9A92-B9888E1F46C0}">
+							<ChildrenList>
+								<Action Name="" ID="{FEF43B29-7CEB-49BA-88CC-8E6FE3151C0E}" ShortID="203712423">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="ButtonPress" ID="{031B5CE4-2D13-4DF9-90CA-398F2C91EFC2}" WorkUnitID="{D02594BD-4199-499F-A2D9-CB65908B02DD}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>

@@ -261,6 +261,10 @@
 					<ObjectLists/>
 				</ActorMixer>
 				<ActorMixer Name="ItemsScene" ID="{FB058BC9-DFEC-42DD-AF81-0262C0399EC7}" ShortID="953827822">
+					<PropertyList>
+						<Property Name="Color" Type="int16" Value="1"/>
+						<Property Name="OverrideColor" Type="bool" Value="True"/>
+					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DA489A64-FA6D-4EEE-B839-F6A4ADB4B7DC}"/>
@@ -682,6 +686,192 @@
 							</ChildrenList>
 							<ObjectLists/>
 						</ActorMixer>
+					</ChildrenList>
+					<ObjectLists/>
+				</ActorMixer>
+				<ActorMixer Name="UI" ID="{CCFE006C-172C-446A-8FCB-0BEA75ECA672}" ShortID="785217616">
+					<PropertyList>
+						<Property Name="Color" Type="int16" Value="6"/>
+						<Property Name="OverrideColor" Type="bool" Value="True"/>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DA489A64-FA6D-4EEE-B839-F6A4ADB4B7DC}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{27CE760E-D39C-41A2-A7AE-4FA0EBDD5634}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<RandomSequenceContainer Name="ButtonPress" ID="{031B5CE4-2D13-4DF9-90CA-398F2C91EFC2}" ShortID="268733464">
+							<PropertyList>
+								<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
+								<Property Name="Pitch" Type="int32">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{EA6F406E-0FA9-4FD9-A786-A58C1B5333E9}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="500"/>
+													<Property Name="Min" Type="Real64" Value="-500"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DA489A64-FA6D-4EEE-B839-F6A4ADB4B7DC}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{27CE760E-D39C-41A2-A7AE-4FA0EBDD5634}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="UIButtonPress_01" ID="{BC531DE4-621B-44A1-9729-666F53CCE9E6}" ShortID="580270552">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DA489A64-FA6D-4EEE-B839-F6A4ADB4B7DC}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{27CE760E-D39C-41A2-A7AE-4FA0EBDD5634}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="UIButtonPress" ID="{D529C891-B7EE-4D3E-BA58-35F6C939415E}">
+											<PropertyList>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.0824638978398377"/>
+												<Property Name="TrimEnd" Type="Real64" Value="0.38233261725743"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>UIButtonPress.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="6159929"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ObjectLists/>
+									<ActiveSourceList>
+										<ActiveSource Name="UIButtonPress" ID="{D529C891-B7EE-4D3E-BA58-35F6C939415E}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="UIButtonPress_02" ID="{061FC720-E00D-465E-BAFD-0B8CD686C776}" ShortID="752308419">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DA489A64-FA6D-4EEE-B839-F6A4ADB4B7DC}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{27CE760E-D39C-41A2-A7AE-4FA0EBDD5634}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="UIButtonPress" ID="{A168E47A-9CA3-49F0-8C0B-602ACAB02873}">
+											<PropertyList>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="1.11701097983053"/>
+												<Property Name="TrimEnd" Type="Real64" Value="1.40188626327724"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>UIButtonPress.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="75365945"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ObjectLists/>
+									<ActiveSourceList>
+										<ActiveSource Name="UIButtonPress" ID="{A168E47A-9CA3-49F0-8C0B-602ACAB02873}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="UIButtonPress_03" ID="{FF42BCA0-4A81-4215-AEB3-4F24C6B3F180}" ShortID="794623449">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DA489A64-FA6D-4EEE-B839-F6A4ADB4B7DC}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{27CE760E-D39C-41A2-A7AE-4FA0EBDD5634}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="UIButtonPress" ID="{9F4609C7-D170-4940-BBB4-27BA48360080}">
+											<PropertyList>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="2.18904165174842"/>
+												<Property Name="TrimEnd" Type="Real64" Value="2.50390380713689"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>UIButtonPress.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="861986732"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ObjectLists/>
+									<ActiveSourceList>
+										<ActiveSource Name="UIButtonPress" ID="{9F4609C7-D170-4940-BBB4-27BA48360080}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="UIButtonPress_04" ID="{F3C52CC7-738B-45CB-A877-72D135BE742C}" ShortID="943857298">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DA489A64-FA6D-4EEE-B839-F6A4ADB4B7DC}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{27CE760E-D39C-41A2-A7AE-4FA0EBDD5634}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="UIButtonPress" ID="{B32EEDA1-214B-40B2-8E3E-3A94BA697676}">
+											<PropertyList>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="3.26856904165175"/>
+												<Property Name="TrimEnd" Type="Real64" Value="3.68838524883638"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>UIButtonPress.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="17516549"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ObjectLists/>
+									<ActiveSourceList>
+										<ActiveSource Name="UIButtonPress" ID="{B32EEDA1-214B-40B2-8E3E-3A94BA697676}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="UIButtonPress_05" ID="{50A260A3-97C0-449A-9731-C9E17A8DD585}" ShortID="722780458">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DA489A64-FA6D-4EEE-B839-F6A4ADB4B7DC}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{27CE760E-D39C-41A2-A7AE-4FA0EBDD5634}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="UIButtonPress" ID="{1B829A9C-5242-4408-99BD-A8164F7AB3F0}">
+											<PropertyList>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="4.31061284162788"/>
+												<Property Name="TrimEnd" Type="Real64" Value="4.54301109917651"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>UIButtonPress.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="585672463"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ObjectLists/>
+									<ActiveSourceList>
+										<ActiveSource Name="UIButtonPress" ID="{1B829A9C-5242-4408-99BD-A8164F7AB3F0}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+							<ObjectLists/>
+						</RandomSequenceContainer>
 					</ChildrenList>
 					<ObjectLists/>
 				</ActorMixer>
