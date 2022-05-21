@@ -27,7 +27,7 @@ public class Watering : MonoBehaviour
         mainCam = Camera.main;
         click = new InputAction(binding: "<Mouse>/leftButton");
         click.started += ctx => {
-            if (IsWatering)
+            if (myAnimator.GetBool("IsWatering"))
             {
                 //PlaySound Watering
                 myAnimator.SetBool("IsWatering", true);
