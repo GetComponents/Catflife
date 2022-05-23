@@ -185,6 +185,77 @@
 								</Action>
 							</ChildrenList>
 						</Event>
+						<Event Name="Play_HPJingle" ID="{688EE876-3F12-49D8-9D59-F97B867261EF}">
+							<ChildrenList>
+								<Action Name="" ID="{55B77256-66D4-4575-AFC2-E1042111A1C0}" ShortID="968153752">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="HPJingle" ID="{FABA11FC-EB70-4C73-A3D6-B13A2388D663}" WorkUnitID="{D02594BD-4199-499F-A2D9-CB65908B02DD}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_EnergyJingle" ID="{888FB9CA-FAC5-4F74-916B-5254780EBD7D}">
+							<ChildrenList>
+								<Action Name="" ID="{3BA4E39A-C864-45C8-A907-918C195F8CC0}" ShortID="465141886">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="EnergyJingle" ID="{6D6DB20F-42C3-4FA7-995B-A7B61847FA9A}" WorkUnitID="{D02594BD-4199-499F-A2D9-CB65908B02DD}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Stop_Watering" ID="{789702E3-2702-4E28-9A6F-E8E1195B516A}">
+							<ChildrenList>
+								<Action Name="" ID="{38AECAB9-BAFA-4AB1-86D0-03724A8DCBEF}" ShortID="922428584">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+										<Property Name="FadeOutCurve" Type="int16" Value="5"/>
+										<Property Name="FadeTime" Type="Real64" Value="1">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{6C9977A2-C0B5-4542-AFF2-416FD454CD03}"/>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Watering" ID="{01AA73A6-6B5C-4E58-8388-6D9CEBFBB463}" WorkUnitID="{D02594BD-4199-499F-A2D9-CB65908B02DD}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_Watering" ID="{22B88C88-6389-4000-929B-43B5CA33F90E}">
+							<ChildrenList>
+								<Action Name="" ID="{13230405-9C0F-4033-9F13-464A56D01F17}" ShortID="593304856">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+										<Property Name="FadeOutCurve" Type="int16" Value="5"/>
+										<Property Name="FadeTime" Type="Real64" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Watering" ID="{01AA73A6-6B5C-4E58-8388-6D9CEBFBB463}" WorkUnitID="{D02594BD-4199-499F-A2D9-CB65908B02DD}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{643FF8C0-9836-485B-BE4E-FD67762335B1}" ShortID="465077646">
+									<PropertyList>
+										<Property Name="FadeInCurve" Type="int16" Value="5"/>
+										<Property Name="FadeTime" Type="Real64" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Watering" ID="{01AA73A6-6B5C-4E58-8388-6D9CEBFBB463}" WorkUnitID="{D02594BD-4199-499F-A2D9-CB65908B02DD}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="UI" ID="{197FDC5B-C88E-457E-BD37-7DBAAC4F6174}" ShortID="51399193">
@@ -281,28 +352,6 @@
 						</Event>
 					</ChildrenList>
 				</Folder>
-				<Event Name="Play_EnergyJingle" ID="{888FB9CA-FAC5-4F74-916B-5254780EBD7D}">
-					<ChildrenList>
-						<Action Name="" ID="{3BA4E39A-C864-45C8-A907-918C195F8CC0}" ShortID="465141886">
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="EnergyJingle" ID="{6D6DB20F-42C3-4FA7-995B-A7B61847FA9A}" WorkUnitID="{D02594BD-4199-499F-A2D9-CB65908B02DD}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-					</ChildrenList>
-				</Event>
-				<Event Name="Play_HPJingle" ID="{688EE876-3F12-49D8-9D59-F97B867261EF}">
-					<ChildrenList>
-						<Action Name="" ID="{55B77256-66D4-4575-AFC2-E1042111A1C0}" ShortID="968153752">
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="HPJingle" ID="{FABA11FC-EB70-4C73-A3D6-B13A2388D663}" WorkUnitID="{D02594BD-4199-499F-A2D9-CB65908B02DD}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-					</ChildrenList>
-				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

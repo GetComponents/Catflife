@@ -11,7 +11,7 @@
 	<StreamedFiles/>
 	<MediaFilesNotInAnyBank/>
 	<SoundBanks>
-		<SoundBank Id="393239870" Language="SFX" Hash="3918127631">
+		<SoundBank Id="393239870" Language="SFX" Hash="2320213403">
 			<ObjectPath>\SoundBanks\Default Work Unit\SFX</ObjectPath>
 			<ShortName>SFX</ShortName>
 			<Path>SFX.bnk</Path>
@@ -52,7 +52,7 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="2028186725" Name="Play_EnergyJingle" ObjectPath="\Events\Default Work Unit\Play_EnergyJingle" DurationType="OneShot" DurationMin="1.281927" DurationMax="1.281927">
+				<Event Id="2028186725" Name="Play_EnergyJingle" ObjectPath="\Events\Default Work Unit\ItemsScene\Play_EnergyJingle" DurationType="OneShot" DurationMin="1.281927" DurationMax="1.281927">
 					<IncludedMemoryFiles>
 						<File Id="629954010" Language="SFX">
 							<ShortName>EnergyJingle.wav</ShortName>
@@ -204,7 +204,7 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="2106862869" Name="Play_HPJingle" ObjectPath="\Events\Default Work Unit\Play_HPJingle" DurationType="OneShot" DurationMin="1.281927" DurationMax="1.281927">
+				<Event Id="2106862869" Name="Play_HPJingle" ObjectPath="\Events\Default Work Unit\ItemsScene\Play_HPJingle" DurationType="OneShot" DurationMin="1.281927" DurationMax="1.281927">
 					<IncludedMemoryFiles>
 						<File Id="365072858" Language="SFX">
 							<ShortName>HPJingle.wav</ShortName>
@@ -397,6 +397,15 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
+				<Event Id="1126284757" Name="Play_Watering" ObjectPath="\Events\Default Work Unit\ItemsScene\Play_Watering" DurationType="Infinite">
+					<IncludedMemoryFiles>
+						<File Id="207199769" Language="SFX">
+							<ShortName>Watering.wav</ShortName>
+							<Path>SFX/Watering_D79FB2B7.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="3226714187" Name="Stop_Watering" ObjectPath="\Events\Default Work Unit\ItemsScene\Stop_Watering" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
 			</IncludedEvents>
 			<SwitchGroups>
 				<SwitchGroup Id="3865314626" Name="Material" ObjectPath="\Switches\Default Work Unit\Material" GUID="{3B231D83-CEB8-4D6E-87F3-B78A280E368F}">

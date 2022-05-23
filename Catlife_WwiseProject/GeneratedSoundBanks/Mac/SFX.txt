@@ -4,15 +4,17 @@ Event	ID	Name			Wwise Object Path	Notes
 	99206220	Play_Step			\Default Work Unit\Character\Play_Step	
 	354571108	Play_SleepJingle			\Default Work Unit\ItemsScene\Play_SleepJingle	
 	383068205	Play_UpgradeJingle			\Default Work Unit\ItemsScene\Play_UpgradeJingle	
+	1126284757	Play_Watering			\Default Work Unit\ItemsScene\Play_Watering	
 	1423843544	Play_GruntProjectileExplode			\Default Work Unit\Enemies\Play_GruntProjectileExplode	
 	1438502543	Play_LeavingFootsteps			\Default Work Unit\Character\Play_LeavingFootsteps	
 	1622429165	Play_LightUpStatue			\Default Work Unit\ItemsScene\Play_LightUpStatue	
 	1927856655	Play_GruntEliteProjectileExplode			\Default Work Unit\Enemies\Play_GruntEliteProjectileExplode	
-	2028186725	Play_EnergyJingle			\Default Work Unit\Play_EnergyJingle	
-	2106862869	Play_HPJingle			\Default Work Unit\Play_HPJingle	
+	2028186725	Play_EnergyJingle			\Default Work Unit\ItemsScene\Play_EnergyJingle	
+	2106862869	Play_HPJingle			\Default Work Unit\ItemsScene\Play_HPJingle	
 	2652178615	Play_ButtonPress			\Default Work Unit\UI\Play_ButtonPress	
 	3010145222	Play_ImpactCardboard			\Default Work Unit\ItemsScene\Play_ImpactCardboard	
 	3020861821	Play_DoorSqueaky			\Default Work Unit\UI\Play_DoorSqueaky	
+	3226714187	Stop_Watering			\Default Work Unit\ItemsScene\Stop_Watering	
 	3450689315	Play_ShootStatue			\Default Work Unit\ItemsScene\Play_ShootStatue	
 	3941375504	Play_GruntEliteProjectileThrow			\Default Work Unit\Enemies\Play_GruntEliteProjectileThrow	
 	4218963955	Play_GruntProjectileThrow			\Default Work Unit\Enemies\Play_GruntProjectileThrow	
@@ -32,6 +34,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	129928124	ProjectileExplode_06	Y:\Documents\UnityProject\Catflife\Catlife_WwiseProject\.cache\Mac\SFX\ProjectileExplode_D31D5985.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemies\Grunt\Projectile\Explosion\GruntProjectileExplode\ProjectileExplode_06		306864
 	154705653	CardboardPoof_03	Y:\Documents\UnityProject\Catflife\Catlife_WwiseProject\.cache\Mac\SFX\CardboardPoof_2DB66D78.wem		\Actor-Mixer Hierarchy\Default Work Unit\ItemsScene\Cardboard\Poof\CardboardPoof_03		254628
 	189741884	StatueShoot_04	Y:\Documents\UnityProject\Catflife\Catlife_WwiseProject\.cache\Mac\SFX\StatueShoot_AAEA5945.wem		\Actor-Mixer Hierarchy\Default Work Unit\ItemsScene\Statue\ShootStatue\Electric\StatueShoot_04		210988
+	207199769	Watering	Y:\Documents\UnityProject\Catflife\Catlife_WwiseProject\.cache\Mac\SFX\Watering_D79FB2B7.wem		\Actor-Mixer Hierarchy\Default Work Unit\ItemsScene\Watering		9362904
 	238543085	ProjectileThrow_04	Y:\Documents\UnityProject\Catflife\Catlife_WwiseProject\.cache\Mac\SFX\ProjectileThrow_7295C13E.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemies\Grunt\Projectile\Throw\Throw\ProjectileThrow_04		162060
 	262470071	StatueShoot_03	Y:\Documents\UnityProject\Catflife\Catlife_WwiseProject\.cache\Mac\SFX\StatueShoot_F246393D.wem		\Actor-Mixer Hierarchy\Default Work Unit\ItemsScene\Statue\ShootStatue\Electric\StatueShoot_03		232812
 	323942138	Tile_05	Y:\Documents\UnityProject\Catflife\Catlife_WwiseProject\.cache\Mac\SFX\Tile1_46AB9349.wem		\Actor-Mixer Hierarchy\Default Work Unit\Character\Step\Tile\Tile_05		39800

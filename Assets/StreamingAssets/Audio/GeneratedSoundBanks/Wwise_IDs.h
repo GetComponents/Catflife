@@ -30,6 +30,8 @@ namespace AK
         static const AkUniqueID PLAY_STEP = 99206220U;
         static const AkUniqueID PLAY_UNLOCKJINGLE = 10982625U;
         static const AkUniqueID PLAY_UPGRADEJINGLE = 383068205U;
+        static const AkUniqueID PLAY_WATERING = 1126284757U;
+        static const AkUniqueID STOP_WATERING = 3226714187U;
     } // namespace EVENTS
 
     namespace SWITCHES
