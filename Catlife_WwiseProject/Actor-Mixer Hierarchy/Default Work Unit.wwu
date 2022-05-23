@@ -925,7 +925,7 @@
 												</Property>
 												<Property Name="Volume" Type="Real64">
 													<ValueList>
-														<Value>-3</Value>
+														<Value>-6</Value>
 													</ValueList>
 												</Property>
 											</PropertyList>
@@ -1077,7 +1077,7 @@
 												</Property>
 												<Property Name="Volume" Type="Real64">
 													<ValueList>
-														<Value>-3</Value>
+														<Value>-6</Value>
 													</ValueList>
 												</Property>
 											</PropertyList>
@@ -1235,6 +1235,18 @@
 										</RandomSequenceContainer>
 									</ChildrenList>
 									<ObjectLists/>
+									<BlendTrackList>
+										<BlendTrack Name="ShootStatueBlend" ID="{00FAF073-104E-4334-B835-8DF01CFCFBA0}" ShortID="987320858">
+											<BlendTrackAssocList>
+												<BlendTrackAssoc>
+													<ItemRef Name="Electric" ID="{F523C84A-8BFB-426C-84E2-09454DD662B1}"/>
+												</BlendTrackAssoc>
+												<BlendTrackAssoc>
+													<ItemRef Name="ThrowElite" ID="{BE5DD996-67B6-4FFE-958B-67A9E69C744E}"/>
+												</BlendTrackAssoc>
+											</BlendTrackAssocList>
+										</BlendTrack>
+									</BlendTrackList>
 								</BlendContainer>
 							</ChildrenList>
 							<ObjectLists/>

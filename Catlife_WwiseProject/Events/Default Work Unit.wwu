@@ -130,6 +130,28 @@
 								</Action>
 							</ChildrenList>
 						</Event>
+						<Event Name="Play_LightUpStatue" ID="{A3ADA9FD-7CB2-416F-978E-C1C99F0006EE}">
+							<ChildrenList>
+								<Action Name="" ID="{2D725EB9-DCB4-43F9-8344-B63E9257E5F3}" ShortID="297156012">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="LightUpStatue" ID="{4F7F554C-F613-49B3-A587-BBBBA2A09FBC}" WorkUnitID="{D02594BD-4199-499F-A2D9-CB65908B02DD}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_ShootStatue" ID="{EC4CFF96-12FF-4923-8E4C-AF130D1D342E}">
+							<ChildrenList>
+								<Action Name="" ID="{9E6D9D84-3779-4256-9033-53A2A1C17366}" ShortID="717502442">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="ShootStatue" ID="{A2D02589-A20A-4BC2-9EB7-48350912669E}" WorkUnitID="{D02594BD-4199-499F-A2D9-CB65908B02DD}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="UI" ID="{197FDC5B-C88E-457E-BD37-7DBAAC4F6174}" ShortID="51399193">
@@ -226,17 +248,6 @@
 						</Event>
 					</ChildrenList>
 				</Folder>
-				<Event Name="Play_LightUpStatue" ID="{A3ADA9FD-7CB2-416F-978E-C1C99F0006EE}">
-					<ChildrenList>
-						<Action Name="" ID="{2D725EB9-DCB4-43F9-8344-B63E9257E5F3}" ShortID="297156012">
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="LightUpStatue" ID="{4F7F554C-F613-49B3-A587-BBBBA2A09FBC}" WorkUnitID="{D02594BD-4199-499F-A2D9-CB65908B02DD}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-					</ChildrenList>
-				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>
