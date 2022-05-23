@@ -226,6 +226,17 @@
 						</Event>
 					</ChildrenList>
 				</Folder>
+				<Event Name="Play_LightUpStatue" ID="{A3ADA9FD-7CB2-416F-978E-C1C99F0006EE}">
+					<ChildrenList>
+						<Action Name="" ID="{2D725EB9-DCB4-43F9-8344-B63E9257E5F3}" ShortID="297156012">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="LightUpStatue" ID="{4F7F554C-F613-49B3-A587-BBBBA2A09FBC}" WorkUnitID="{D02594BD-4199-499F-A2D9-CB65908B02DD}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

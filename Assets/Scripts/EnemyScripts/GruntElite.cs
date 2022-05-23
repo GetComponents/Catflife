@@ -64,7 +64,7 @@ public class GruntElite : Enemy
     {
         if (currentShotCooldown < 0)
         {
-            //PlaySound GruntShoot
+            //PlaySound GruntShoot TODO isn't this already in GruntProjectile and GruntEliteProjectile?
             playerPosition = PlayerController.Instance.transform.GetChild(0).position;
             GameObject tmp = Instantiate(Projectile, transform.position, Quaternion.identity);
             tmp.GetComponent<GruntEliteProjectile>().MyDamage = damage;
