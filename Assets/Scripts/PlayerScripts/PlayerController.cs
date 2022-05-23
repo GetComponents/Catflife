@@ -406,7 +406,7 @@ public class PlayerController : MonoBehaviour
         GameObject tmp = Instantiate(projectile, transform.GetChild(0).position, Quaternion.identity);
         tmp.GetComponent<Rigidbody>().AddForce(transform.GetChild(0).forward.normalized * ProjectileSpeed, ForceMode.Impulse);
         tmp.GetComponent<PlayerProjectile>().MyDamage = ProjectileDamage;
-        //PlaySound FireballCast
+        AkSoundEngine.PostEvent("Play_CharProjectileThrow", this.gameObject);
     }
 
     public bool ReturnEnemyProjectile(Transform projectileTransform)
