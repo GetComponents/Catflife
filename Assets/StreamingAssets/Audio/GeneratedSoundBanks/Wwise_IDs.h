@@ -14,6 +14,9 @@ namespace AK
     namespace EVENTS
     {
         static const AkUniqueID PLAY_BUTTONPRESS = 2652178615U;
+        static const AkUniqueID PLAY_CHARPROJECTILEAMBIENCE = 186625315U;
+        static const AkUniqueID PLAY_CHARPROJECTILEEXPLODE = 125832294U;
+        static const AkUniqueID PLAY_CHARPROJECTILETHROW = 1017112217U;
         static const AkUniqueID PLAY_DOORSQUEAKY = 3020861821U;
         static const AkUniqueID PLAY_ENERGYJINGLE = 2028186725U;
         static const AkUniqueID PLAY_GRUNTELITEPROJECTILEEXPLODE = 1927856655U;
@@ -28,6 +31,8 @@ namespace AK
         static const AkUniqueID PLAY_SHOOTSTATUE = 3450689315U;
         static const AkUniqueID PLAY_SLEEPJINGLE = 354571108U;
         static const AkUniqueID PLAY_STEP = 99206220U;
+        static const AkUniqueID PLAY_SWORDHIT = 598714956U;
+        static const AkUniqueID PLAY_SWORDSWING = 1746766985U;
         static const AkUniqueID PLAY_UNLOCKJINGLE = 10982625U;
         static const AkUniqueID PLAY_UPGRADEJINGLE = 383068205U;
         static const AkUniqueID PLAY_WATERING = 1126284757U;

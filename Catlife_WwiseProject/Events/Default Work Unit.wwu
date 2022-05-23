@@ -104,6 +104,61 @@
 								</Action>
 							</ChildrenList>
 						</Event>
+						<Event Name="Play_CharProjectileExplode" ID="{4CB81268-E0CD-4EDF-BE2A-943DFA48312B}">
+							<ChildrenList>
+								<Action Name="" ID="{D78C9CFE-3793-4E0B-9C9A-AD151F06953C}" ShortID="740004035">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="CharProjectileExplode" ID="{822FF6B9-F34A-4811-9F19-81B7D66462F5}" WorkUnitID="{D02594BD-4199-499F-A2D9-CB65908B02DD}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_CharProjectileThrow" ID="{6801FE84-85BA-4435-9605-4A15AA669139}">
+							<ChildrenList>
+								<Action Name="" ID="{BA06CEBA-538A-47A9-9A92-7ECBA662170E}" ShortID="273671547">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="CharProjectileThrow" ID="{158805C5-94E1-4F25-B764-B9128CCDBE11}" WorkUnitID="{D02594BD-4199-499F-A2D9-CB65908B02DD}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_CharProjectileAmbience" ID="{1BD3B450-C7B4-4C44-B1B9-183706EA35D2}">
+							<ChildrenList>
+								<Action Name="" ID="{B2E88AAA-835D-46E3-9255-AA8607F55140}" ShortID="566165506">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="CharProjectileAmbience" ID="{8A321BB8-FD8C-4415-900B-CB1F50394416}" WorkUnitID="{D02594BD-4199-499F-A2D9-CB65908B02DD}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_SwordHit" ID="{1BE40F31-F579-4179-9A55-0FB7830C51ED}">
+							<ChildrenList>
+								<Action Name="" ID="{A4E581AE-EA2C-4CD2-B275-D02A888B3643}" ShortID="491810836">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Hit" ID="{57775CC3-267E-4F8E-AE0D-DE6D12C93B96}" WorkUnitID="{D02594BD-4199-499F-A2D9-CB65908B02DD}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_SwordSwing" ID="{FDF80154-FF76-44CB-BF78-4DD9E6B03CF7}">
+							<ChildrenList>
+								<Action Name="" ID="{8EA38775-99D6-4237-88E6-DAD72350E9ED}" ShortID="580149057">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Swing" ID="{F777E107-ECC1-4A26-A6E4-B4AE5487C0E5}" WorkUnitID="{D02594BD-4199-499F-A2D9-CB65908B02DD}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="ItemsScene" ID="{2659EB23-8ED5-4684-B9B7-6D33CFA88CF7}" ShortID="33185504">

@@ -359,7 +359,7 @@ public class PlayerController : MonoBehaviour
     public void StartSwing()
     {
         IsSwinging = true;
-        //PlaySound Swordswing
+        AkSoundEngine.PostEvent("Play_SwordSwing", this.gameObject);
     }
 
     public void EndSwing()

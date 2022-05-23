@@ -11,7 +11,7 @@
 	<StreamedFiles/>
 	<MediaFilesNotInAnyBank/>
 	<SoundBanks>
-		<SoundBank Id="393239870" Language="SFX" Hash="2320213403">
+		<SoundBank Id="393239870" Language="SFX" Hash="4248933386">
 			<ObjectPath>\SoundBanks\Default Work Unit\SFX</ObjectPath>
 			<ShortName>SFX</ShortName>
 			<Path>SFX.bnk</Path>
@@ -37,6 +37,82 @@
 						<File Id="861986732" Language="SFX">
 							<ShortName>UIButtonPress.wav</ShortName>
 							<Path>SFX/UIButtonPress_0F0627E1.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="186625315" Name="Play_CharProjectileAmbience" ObjectPath="\Events\Default Work Unit\Character\Play_CharProjectileAmbience" DurationType="Infinite">
+					<IncludedMemoryFiles>
+						<File Id="345272659" Language="SFX">
+							<ShortName>Fire.wav</ShortName>
+							<Path>SFX/Fire_D79FB2B7.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="125832294" Name="Play_CharProjectileExplode" ObjectPath="\Events\Default Work Unit\Character\Play_CharProjectileExplode" DurationType="OneShot" DurationMin="0.673181" DurationMax="4.060711">
+					<IncludedMemoryFiles>
+						<File Id="129928124" Language="SFX">
+							<ShortName>ProjectileExplode.wav</ShortName>
+							<Path>SFX/ProjectileExplode_D31D5985.wem</Path>
+						</File>
+						<File Id="436327313" Language="SFX">
+							<ShortName>ProjectileExplode.wav</ShortName>
+							<Path>SFX/ProjectileExplode_75C7817A.wem</Path>
+						</File>
+						<File Id="693424916" Language="SFX">
+							<ShortName>ProjectileExplode.wav</ShortName>
+							<Path>SFX/ProjectileExplode_E290C6B3.wem</Path>
+						</File>
+						<File Id="745176646" Language="SFX">
+							<ShortName>ProjectileExplode.wav</ShortName>
+							<Path>SFX/ProjectileExplode_F2B8F644.wem</Path>
+						</File>
+						<File Id="854468581" Language="SFX">
+							<ShortName>ProjectileExplode.wav</ShortName>
+							<Path>SFX/ProjectileExplode_A480A54C.wem</Path>
+						</File>
+						<File Id="995914859" Language="SFX">
+							<ShortName>ProjectileExplode.wav</ShortName>
+							<Path>SFX/ProjectileExplode_33BD63AD.wem</Path>
+						</File>
+						<File Id="997698416" Language="SFX">
+							<ShortName>ProjectileExplode.wav</ShortName>
+							<Path>SFX/ProjectileExplode_BFEFFFC6.wem</Path>
+						</File>
+						<File Id="1018989538" Language="SFX">
+							<ShortName>ProjectileExplode.wav</ShortName>
+							<Path>SFX/ProjectileExplode_B7DCDCC9.wem</Path>
+						</File>
+						<File Id="1020300007" Language="SFX">
+							<ShortName>ProjectileExplode.wav</ShortName>
+							<Path>SFX/ProjectileExplode_FB92E4E7.wem</Path>
+						</File>
+						<File Id="1039091598" Language="SFX">
+							<ShortName>ProjectileExplode.wav</ShortName>
+							<Path>SFX/ProjectileExplode_05FA28C3.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="1017112217" Name="Play_CharProjectileThrow" ObjectPath="\Events\Default Work Unit\Character\Play_CharProjectileThrow" DurationType="OneShot" DurationMin="0.678154" DurationMax="1.558575">
+					<IncludedMemoryFiles>
+						<File Id="238543085" Language="SFX">
+							<ShortName>ProjectileThrow.wav</ShortName>
+							<Path>SFX/ProjectileThrow_7295C13E.wem</Path>
+						</File>
+						<File Id="425030932" Language="SFX">
+							<ShortName>ProjectileThrow.wav</ShortName>
+							<Path>SFX/ProjectileThrow_E675D320.wem</Path>
+						</File>
+						<File Id="984304702" Language="SFX">
+							<ShortName>ProjectileThrow.wav</ShortName>
+							<Path>SFX/ProjectileThrow_CCB9D056.wem</Path>
+						</File>
+						<File Id="984676907" Language="SFX">
+							<ShortName>ProjectileThrow.wav</ShortName>
+							<Path>SFX/ProjectileThrow_6FC0092E.wem</Path>
+						</File>
+						<File Id="1013540231" Language="SFX">
+							<ShortName>ProjectileThrow.wav</ShortName>
+							<Path>SFX/ProjectileThrow_C962039C.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -380,6 +456,58 @@
 							</Media>
 						</SwitchContainer>
 					</SwitchContainers>
+				</Event>
+				<Event Id="598714956" Name="Play_SwordHit" ObjectPath="\Events\Default Work Unit\Character\Play_SwordHit" DurationType="OneShot" DurationMin="0.355625" DurationMax="0.603017">
+					<IncludedMemoryFiles>
+						<File Id="202986522" Language="SFX">
+							<ShortName>SwordHit.wav</ShortName>
+							<Path>SFX/SwordHit_60940822.wem</Path>
+						</File>
+						<File Id="318260061" Language="SFX">
+							<ShortName>SwordHit.wav</ShortName>
+							<Path>SFX/SwordHit_C0346C05.wem</Path>
+						</File>
+						<File Id="348566923" Language="SFX">
+							<ShortName>SwordHit.wav</ShortName>
+							<Path>SFX/SwordHit_4F9BE8E7.wem</Path>
+						</File>
+						<File Id="562410588" Language="SFX">
+							<ShortName>SwordHit.wav</ShortName>
+							<Path>SFX/SwordHit_7E9C743F.wem</Path>
+						</File>
+						<File Id="859955218" Language="SFX">
+							<ShortName>SwordHit.wav</ShortName>
+							<Path>SFX/SwordHit_8B9A8C1D.wem</Path>
+						</File>
+						<File Id="898289585" Language="SFX">
+							<ShortName>SwordHit.wav</ShortName>
+							<Path>SFX/SwordHit_6EF55929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="1746766985" Name="Play_SwordSwing" ObjectPath="\Events\Default Work Unit\Character\Play_SwordSwing" DurationType="OneShot" DurationMin="0.233341" DurationMax="0.373142">
+					<IncludedMemoryFiles>
+						<File Id="27174265" Language="SFX">
+							<ShortName>SwordSwing.wav</ShortName>
+							<Path>SFX/SwordSwing_F39D94AD.wem</Path>
+						</File>
+						<File Id="143940415" Language="SFX">
+							<ShortName>SwordSwing.wav</ShortName>
+							<Path>SFX/SwordSwing_740D3E06.wem</Path>
+						</File>
+						<File Id="474341501" Language="SFX">
+							<ShortName>SwordSwing.wav</ShortName>
+							<Path>SFX/SwordSwing_B13C7BA8.wem</Path>
+						</File>
+						<File Id="482311064" Language="SFX">
+							<ShortName>SwordSwing.wav</ShortName>
+							<Path>SFX/SwordSwing_D4415FA2.wem</Path>
+						</File>
+						<File Id="666293255" Language="SFX">
+							<ShortName>SwordSwing.wav</ShortName>
+							<Path>SFX/SwordSwing_D42FFBC3.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
 				</Event>
 				<Event Id="10982625" Name="Play_UnlockJingle" ObjectPath="\Events\Default Work Unit\ItemsScene\Play_UnlockJingle" DurationType="OneShot" DurationMin="1.281927" DurationMax="1.281927">
 					<IncludedMemoryFiles>
