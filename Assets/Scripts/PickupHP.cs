@@ -28,7 +28,7 @@ public class PickupHP : MonoBehaviour
     {
         if (other.tag == "Player")
         {
-            //PlaySound HealPlayer
+            AkSoundEngine.PostEvent("Play_HPJingle", this.gameObject);
             player.Heal(HealAmount);
             Destroy(gameObject);
         }

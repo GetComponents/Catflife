@@ -11,7 +11,7 @@
 	<StreamedFiles/>
 	<MediaFilesNotInAnyBank/>
 	<SoundBanks>
-		<SoundBank Id="393239870" Language="SFX" Hash="267191857">
+		<SoundBank Id="393239870" Language="SFX" Hash="3918127631">
 			<ObjectPath>\SoundBanks\Default Work Unit\SFX</ObjectPath>
 			<ShortName>SFX</ShortName>
 			<Path>SFX.bnk</Path>
@@ -49,6 +49,14 @@
 						<File Id="684050722" Language="SFX">
 							<ShortName>SqueakyDoor.wav</ShortName>
 							<Path>SFX/SqueakyDoor_2EDB9131.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="2028186725" Name="Play_EnergyJingle" ObjectPath="\Events\Default Work Unit\Play_EnergyJingle" DurationType="OneShot" DurationMin="1.281927" DurationMax="1.281927">
+					<IncludedMemoryFiles>
+						<File Id="629954010" Language="SFX">
+							<ShortName>EnergyJingle.wav</ShortName>
+							<Path>SFX/EnergyJingle_10C4C929.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -196,6 +204,14 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
+				<Event Id="2106862869" Name="Play_HPJingle" ObjectPath="\Events\Default Work Unit\Play_HPJingle" DurationType="OneShot" DurationMin="1.281927" DurationMax="1.281927">
+					<IncludedMemoryFiles>
+						<File Id="365072858" Language="SFX">
+							<ShortName>HPJingle.wav</ShortName>
+							<Path>SFX/HPJingle_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
 				<Event Id="3010145222" Name="Play_ImpactCardboard" ObjectPath="\Events\Default Work Unit\ItemsScene\Play_ImpactCardboard" DurationType="OneShot" DurationMin="0.319421" DurationMax="1.245893">
 					<IncludedMemoryFiles>
 						<File Id="23732595" Language="SFX">
@@ -280,7 +296,7 @@
 					<IncludedMemoryFiles>
 						<File Id="189741884" Language="SFX">
 							<ShortName>StatueShoot.wav</ShortName>
-							<Path>SFX/StatueShoot_36B55B69.wem</Path>
+							<Path>SFX/StatueShoot_AAEA5945.wem</Path>
 						</File>
 						<File Id="238543085" Language="SFX">
 							<ShortName>ProjectileThrow.wav</ShortName>
@@ -288,11 +304,11 @@
 						</File>
 						<File Id="262470071" Language="SFX">
 							<ShortName>StatueShoot.wav</ShortName>
-							<Path>SFX/StatueShoot_C8E0291B.wem</Path>
+							<Path>SFX/StatueShoot_F246393D.wem</Path>
 						</File>
 						<File Id="377746266" Language="SFX">
 							<ShortName>StatueShoot.wav</ShortName>
-							<Path>SFX/StatueShoot_02B60996.wem</Path>
+							<Path>SFX/StatueShoot_AD6F295F.wem</Path>
 						</File>
 						<File Id="425030932" Language="SFX">
 							<ShortName>ProjectileThrow.wav</ShortName>
@@ -300,7 +316,7 @@
 						</File>
 						<File Id="787940266" Language="SFX">
 							<ShortName>StatueShoot.wav</ShortName>
-							<Path>SFX/StatueShoot_ECC18EB4.wem</Path>
+							<Path>SFX/StatueShoot_B117C576.wem</Path>
 						</File>
 						<File Id="984304702" Language="SFX">
 							<ShortName>ProjectileThrow.wav</ShortName>

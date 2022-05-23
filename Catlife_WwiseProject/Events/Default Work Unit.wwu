@@ -281,6 +281,28 @@
 						</Event>
 					</ChildrenList>
 				</Folder>
+				<Event Name="Play_EnergyJingle" ID="{888FB9CA-FAC5-4F74-916B-5254780EBD7D}">
+					<ChildrenList>
+						<Action Name="" ID="{3BA4E39A-C864-45C8-A907-918C195F8CC0}" ShortID="465141886">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="EnergyJingle" ID="{6D6DB20F-42C3-4FA7-995B-A7B61847FA9A}" WorkUnitID="{D02594BD-4199-499F-A2D9-CB65908B02DD}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_HPJingle" ID="{688EE876-3F12-49D8-9D59-F97B867261EF}">
+					<ChildrenList>
+						<Action Name="" ID="{55B77256-66D4-4575-AFC2-E1042111A1C0}" ShortID="968153752">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="HPJingle" ID="{FABA11FC-EB70-4C73-A3D6-B13A2388D663}" WorkUnitID="{D02594BD-4199-499F-A2D9-CB65908B02DD}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

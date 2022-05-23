@@ -1330,6 +1330,52 @@
 										<ActiveSource Name="UpgradeJingle" ID="{2F28F5A2-13F4-471D-9B8B-0F2F93579B97}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
+								<Sound Name="EnergyJingle" ID="{6D6DB20F-42C3-4FA7-995B-A7B61847FA9A}" ShortID="528990427">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DA489A64-FA6D-4EEE-B839-F6A4ADB4B7DC}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{27CE760E-D39C-41A2-A7AE-4FA0EBDD5634}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="EnergyJingle" ID="{AA3774E9-2ED1-41B3-BFA0-814EC0CB30E3}">
+											<Language>SFX</Language>
+											<AudioFile>EnergyJingle.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="629954010"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ObjectLists/>
+									<ActiveSourceList>
+										<ActiveSource Name="EnergyJingle" ID="{AA3774E9-2ED1-41B3-BFA0-814EC0CB30E3}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="HPJingle" ID="{FABA11FC-EB70-4C73-A3D6-B13A2388D663}" ShortID="630279959">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DA489A64-FA6D-4EEE-B839-F6A4ADB4B7DC}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{27CE760E-D39C-41A2-A7AE-4FA0EBDD5634}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="HPJingle" ID="{3DECA21D-3372-48E5-A990-5823D9677087}">
+											<Language>SFX</Language>
+											<AudioFile>HPJingle.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="365072858"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ObjectLists/>
+									<ActiveSourceList>
+										<ActiveSource Name="HPJingle" ID="{3DECA21D-3372-48E5-A990-5823D9677087}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
 							</ChildrenList>
 							<ObjectLists/>
 						</ActorMixer>
