@@ -152,6 +152,39 @@
 								</Action>
 							</ChildrenList>
 						</Event>
+						<Event Name="Play_UpgradeJingle" ID="{8C861070-9F2D-40EA-95B0-39AE050EB97E}">
+							<ChildrenList>
+								<Action Name="" ID="{87C9B548-1E82-40B1-A0AC-A0F323BC2319}" ShortID="728943006">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="UpgradeJingle" ID="{36B2D479-6F96-4EA9-801E-BC55305962FB}" WorkUnitID="{D02594BD-4199-499F-A2D9-CB65908B02DD}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_UnlockJingle" ID="{F4F2FE0F-737D-450E-94F6-B7DA1EAFB6E1}">
+							<ChildrenList>
+								<Action Name="" ID="{DC668D82-F984-4EE1-B61E-287B65ED52F3}" ShortID="29890894">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="UnlockJingle" ID="{9A3199EB-8398-47C7-ACA4-B5EBEB3D9607}" WorkUnitID="{D02594BD-4199-499F-A2D9-CB65908B02DD}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_SleepJingle" ID="{54FFA3E5-7C85-45C6-B9F7-14508D069788}">
+							<ChildrenList>
+								<Action Name="" ID="{B3BC32D1-EB59-4524-92BE-C41C89EB2EAA}" ShortID="434007818">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="SleepJingle" ID="{F5F9482B-D1CE-48FA-9D3E-FF94577816F6}" WorkUnitID="{D02594BD-4199-499F-A2D9-CB65908B02DD}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="UI" ID="{197FDC5B-C88E-457E-BD37-7DBAAC4F6174}" ShortID="51399193">

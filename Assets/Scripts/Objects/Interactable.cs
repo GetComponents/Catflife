@@ -211,26 +211,25 @@ public class Interactable : MonoBehaviour
         switch (myUpgradeType)
         {
             case ETypeOfUpgrade.ATTACK:
-
-                //PlaySound UpgradeJingle
+                AkSoundEngine.PostEvent("Play_UpgradeJingle", this.gameObject);
                 player.AttackUpgrades++;
                 wateringCan.MoveWateringCan(transform.position);
                 Debug.Log($"You Feel Stronger ({player.AttackUpgrades})");
                 break;
             case ETypeOfUpgrade.HP:
-                //PlaySound UpgradeJingle
+                AkSoundEngine.PostEvent("Play_UpgradeJingle", this.gameObject);
                 player.HPUpgrades++;
                 wateringCan.MoveWateringCan(transform.position);
                 Debug.Log($"You Feel Healthier ({player.HPUpgrades})");
                 break;
             case ETypeOfUpgrade.MANA:
-                //PlaySound UpgradeJingle
+                AkSoundEngine.PostEvent("Play_UpgradeJingle", this.gameObject);
                 player.ManaUpgrades++;
                 wateringCan.MoveWateringCan(transform.position);
                 Debug.Log($"You Feel More Resiliant ({player.ManaUpgrades})");
                 break;
             case ETypeOfUpgrade.SPEED:
-                //PlaySound UpgradeJingle
+                AkSoundEngine.PostEvent("Play_UpgradeJingle", this.gameObject);
                 player.DashUpgrades++;
                 wateringCan.MoveWateringCan(transform.position);
                 Debug.Log($"You Feel More Energetic ({player.DashUpgrades})");
@@ -298,7 +297,7 @@ public class Interactable : MonoBehaviour
 
     private void Sleep()
     {
-        //PlaySound SleepJingle
+        AkSoundEngine.PostEvent("SleepJingle", this.gameObject);
         SceneTransition.Instance.ChangeScene("EncounterSelection", 0);
         PlayerController.Instance.HealFull();
     }

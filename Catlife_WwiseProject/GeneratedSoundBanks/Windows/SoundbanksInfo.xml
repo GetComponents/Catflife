@@ -11,7 +11,7 @@
 	<StreamedFiles/>
 	<MediaFilesNotInAnyBank/>
 	<SoundBanks>
-		<SoundBank Id="393239870" Language="SFX" Hash="761860571">
+		<SoundBank Id="393239870" Language="SFX" Hash="267191857">
 			<ObjectPath>\SoundBanks\Default Work Unit\SFX</ObjectPath>
 			<ShortName>SFX</ShortName>
 			<Path>SFX.bnk</Path>
@@ -280,7 +280,7 @@
 					<IncludedMemoryFiles>
 						<File Id="189741884" Language="SFX">
 							<ShortName>StatueShoot.wav</ShortName>
-							<Path>SFX/StatueShoot_AAEA5945.wem</Path>
+							<Path>SFX/StatueShoot_36B55B69.wem</Path>
 						</File>
 						<File Id="238543085" Language="SFX">
 							<ShortName>ProjectileThrow.wav</ShortName>
@@ -288,11 +288,11 @@
 						</File>
 						<File Id="262470071" Language="SFX">
 							<ShortName>StatueShoot.wav</ShortName>
-							<Path>SFX/StatueShoot_F246393D.wem</Path>
+							<Path>SFX/StatueShoot_C8E0291B.wem</Path>
 						</File>
 						<File Id="377746266" Language="SFX">
 							<ShortName>StatueShoot.wav</ShortName>
-							<Path>SFX/StatueShoot_AD6F295F.wem</Path>
+							<Path>SFX/StatueShoot_02B60996.wem</Path>
 						</File>
 						<File Id="425030932" Language="SFX">
 							<ShortName>ProjectileThrow.wav</ShortName>
@@ -300,7 +300,7 @@
 						</File>
 						<File Id="787940266" Language="SFX">
 							<ShortName>StatueShoot.wav</ShortName>
-							<Path>SFX/StatueShoot_B117C576.wem</Path>
+							<Path>SFX/StatueShoot_ECC18EB4.wem</Path>
 						</File>
 						<File Id="984304702" Language="SFX">
 							<ShortName>ProjectileThrow.wav</ShortName>
@@ -313,6 +313,14 @@
 						<File Id="1013540231" Language="SFX">
 							<ShortName>ProjectileThrow.wav</ShortName>
 							<Path>SFX/ProjectileThrow_C962039C.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="354571108" Name="Play_SleepJingle" ObjectPath="\Events\Default Work Unit\ItemsScene\Play_SleepJingle" DurationType="OneShot" DurationMin="1.281927" DurationMax="1.281927">
+					<IncludedMemoryFiles>
+						<File Id="1043595354" Language="SFX">
+							<ShortName>SleepJingle.wav</ShortName>
+							<Path>SFX/SleepJingle_10C4C929.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -356,6 +364,22 @@
 							</Media>
 						</SwitchContainer>
 					</SwitchContainers>
+				</Event>
+				<Event Id="10982625" Name="Play_UnlockJingle" ObjectPath="\Events\Default Work Unit\ItemsScene\Play_UnlockJingle" DurationType="OneShot" DurationMin="1.281927" DurationMax="1.281927">
+					<IncludedMemoryFiles>
+						<File Id="741723858" Language="SFX">
+							<ShortName>UnlockJingle.wav</ShortName>
+							<Path>SFX/UnlockJingle_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="383068205" Name="Play_UpgradeJingle" ObjectPath="\Events\Default Work Unit\ItemsScene\Play_UpgradeJingle" DurationType="OneShot" DurationMin="1.281927" DurationMax="1.281927">
+					<IncludedMemoryFiles>
+						<File Id="95700381" Language="SFX">
+							<ShortName>UpgradeJingle.wav</ShortName>
+							<Path>SFX/UpgradeJingle_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
 				</Event>
 			</IncludedEvents>
 			<SwitchGroups>

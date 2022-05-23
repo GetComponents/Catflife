@@ -1251,6 +1251,88 @@
 							</ChildrenList>
 							<ObjectLists/>
 						</ActorMixer>
+						<ActorMixer Name="Jingle" ID="{7904142E-C59C-4E00-B696-04B7F7295879}" ShortID="1028588140">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DA489A64-FA6D-4EEE-B839-F6A4ADB4B7DC}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{27CE760E-D39C-41A2-A7AE-4FA0EBDD5634}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="SleepJingle" ID="{F5F9482B-D1CE-48FA-9D3E-FF94577816F6}" ShortID="152999307">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DA489A64-FA6D-4EEE-B839-F6A4ADB4B7DC}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{27CE760E-D39C-41A2-A7AE-4FA0EBDD5634}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SleepJingle" ID="{7659F0BE-5D40-4983-92D8-EC8107766AE9}">
+											<Language>SFX</Language>
+											<AudioFile>SleepJingle.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="1043595354"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ObjectLists/>
+									<ActiveSourceList>
+										<ActiveSource Name="SleepJingle" ID="{7659F0BE-5D40-4983-92D8-EC8107766AE9}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="UnlockJingle" ID="{9A3199EB-8398-47C7-ACA4-B5EBEB3D9607}" ShortID="401612752">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DA489A64-FA6D-4EEE-B839-F6A4ADB4B7DC}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{27CE760E-D39C-41A2-A7AE-4FA0EBDD5634}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="UnlockJingle" ID="{F3FCD654-5E57-43E7-A5E8-7C717FF7D291}">
+											<Language>SFX</Language>
+											<AudioFile>UnlockJingle.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="741723858"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ObjectLists/>
+									<ActiveSourceList>
+										<ActiveSource Name="UnlockJingle" ID="{F3FCD654-5E57-43E7-A5E8-7C717FF7D291}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="UpgradeJingle" ID="{36B2D479-6F96-4EA9-801E-BC55305962FB}" ShortID="542420734">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DA489A64-FA6D-4EEE-B839-F6A4ADB4B7DC}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{27CE760E-D39C-41A2-A7AE-4FA0EBDD5634}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="UpgradeJingle" ID="{2F28F5A2-13F4-471D-9B8B-0F2F93579B97}">
+											<Language>SFX</Language>
+											<AudioFile>UpgradeJingle.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="95700381"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ObjectLists/>
+									<ActiveSourceList>
+										<ActiveSource Name="UpgradeJingle" ID="{2F28F5A2-13F4-471D-9B8B-0F2F93579B97}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+							<ObjectLists/>
+						</ActorMixer>
 					</ChildrenList>
 					<ObjectLists/>
 				</ActorMixer>

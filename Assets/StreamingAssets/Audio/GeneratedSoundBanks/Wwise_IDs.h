@@ -24,7 +24,10 @@ namespace AK
         static const AkUniqueID PLAY_LIGHTUPSTATUE = 1622429165U;
         static const AkUniqueID PLAY_POOFCARDBOARD = 31596624U;
         static const AkUniqueID PLAY_SHOOTSTATUE = 3450689315U;
+        static const AkUniqueID PLAY_SLEEPJINGLE = 354571108U;
         static const AkUniqueID PLAY_STEP = 99206220U;
+        static const AkUniqueID PLAY_UNLOCKJINGLE = 10982625U;
+        static const AkUniqueID PLAY_UPGRADEJINGLE = 383068205U;
     } // namespace EVENTS
 
     namespace SWITCHES
