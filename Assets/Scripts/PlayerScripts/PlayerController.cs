@@ -176,14 +176,25 @@ public class PlayerController : MonoBehaviour
     {
         HealthPoints = MaxHP;
         //PlaySound PlayerDeath
+<<<<<<< HEAD
         SceneTransition.Instance.ChangeScene("MainRoom", 0);
+=======
+        SceneManager.LoadScene("MainRoom");
+>>>>>>> Script Audio Implementation
     }
 
     #region InputMethods
     public void Movement(InputAction.CallbackContext context)
     {
         m_moveDir = context.ReadValue<Vector2>();
+<<<<<<< HEAD
 
+=======
+        if (m_moveDir != Vector2.zero)
+        {
+            AkSoundEngine.PostEvent("Play_Step", this.gameObject);
+        }
+>>>>>>> Script Audio Implementation
         //Debug.Log(m_moveDir);
         //displayPlayer.SetFloat("ForwardBlend", m_moveDir.y);
         //displayPlayer.SetFloat("RightBlend", m_moveDir.x);
@@ -272,6 +283,22 @@ public class PlayerController : MonoBehaviour
     }
     #endregion
 
+<<<<<<< HEAD
+=======
+    private void ChangeScene(InputAction.CallbackContext context)
+    {
+        if (SceneManager.GetActiveScene().name == "MainRoom")
+        {
+            SceneManager.LoadScene("EncounterSelection");
+        }
+        else
+        {
+            MapManager.Instance.ChangeMapState(true);
+            SceneManager.UnloadSceneAsync("Combat");
+        }
+    }
+
+>>>>>>> Script Audio Implementation
     private void ReduceDashCooldown()
     {
         currentDashCooldown -= Time.deltaTime;

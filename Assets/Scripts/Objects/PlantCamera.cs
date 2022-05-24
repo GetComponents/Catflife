@@ -8,16 +8,15 @@ public class PlantCamera : MonoBehaviour
     [SerializeField]
     CinemachineVirtualCamera plantCamera;
 
-    private void OnTriggerEnter(Collider other)
+    public void EnterPlantView()
     {
-        if (other.tag == "Player")
-        {
             plantCamera.Priority = 11;
-        }
+
     }
 
-    private void OnTriggerExit(Collider other)
+    public void ExitPlantView()
     {
         plantCamera.Priority = 1;
+
     }
 }
