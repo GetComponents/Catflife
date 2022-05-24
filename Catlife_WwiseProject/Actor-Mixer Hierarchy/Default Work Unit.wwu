@@ -2478,6 +2478,13 @@
 							</ReferenceList>
 							<ChildrenList>
 								<Sound Name="SleepJingle" ID="{F5F9482B-D1CE-48FA-9D3E-FF94577816F6}" ShortID="152999307">
+									<PropertyList>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-3</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DA489A64-FA6D-4EEE-B839-F6A4ADB4B7DC}"/>
@@ -2501,6 +2508,13 @@
 									</ActiveSourceList>
 								</Sound>
 								<Sound Name="UnlockJingle" ID="{9A3199EB-8398-47C7-ACA4-B5EBEB3D9607}" ShortID="401612752">
+									<PropertyList>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-3</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DA489A64-FA6D-4EEE-B839-F6A4ADB4B7DC}"/>
@@ -2524,6 +2538,13 @@
 									</ActiveSourceList>
 								</Sound>
 								<Sound Name="UpgradeJingle" ID="{36B2D479-6F96-4EA9-801E-BC55305962FB}" ShortID="542420734">
+									<PropertyList>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-3</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DA489A64-FA6D-4EEE-B839-F6A4ADB4B7DC}"/>
@@ -2547,6 +2568,13 @@
 									</ActiveSourceList>
 								</Sound>
 								<Sound Name="EnergyJingle" ID="{6D6DB20F-42C3-4FA7-995B-A7B61847FA9A}" ShortID="528990427">
+									<PropertyList>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-3</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DA489A64-FA6D-4EEE-B839-F6A4ADB4B7DC}"/>
@@ -2557,6 +2585,11 @@
 									</ReferenceList>
 									<ChildrenList>
 										<AudioFileSource Name="EnergyJingle" ID="{AA3774E9-2ED1-41B3-BFA0-814EC0CB30E3}">
+											<PropertyList>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.590361319966583"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimEnd" Type="Real64" Value="0.811512544588985"/>
+											</PropertyList>
 											<Language>SFX</Language>
 											<AudioFile>EnergyJingle.wav</AudioFile>
 											<MediaIDList>
@@ -2570,6 +2603,13 @@
 									</ActiveSourceList>
 								</Sound>
 								<Sound Name="HPJingle" ID="{FABA11FC-EB70-4C73-A3D6-B13A2388D663}" ShortID="630279959">
+									<PropertyList>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-3</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DA489A64-FA6D-4EEE-B839-F6A4ADB4B7DC}"/>
@@ -2580,6 +2620,11 @@
 									</ReferenceList>
 									<ChildrenList>
 										<AudioFileSource Name="HPJingle" ID="{3DECA21D-3372-48E5-A990-5823D9677087}">
+											<PropertyList>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.749665168211535"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimEnd" Type="Real64" Value="0.850869965920091"/>
+											</PropertyList>
 											<Language>SFX</Language>
 											<AudioFile>HPJingle.wav</AudioFile>
 											<MediaIDList>
