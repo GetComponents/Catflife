@@ -108,6 +108,7 @@ public class PlayerController : MonoBehaviour
     public UnityEvent OnManaChange, OnHealthChange;
 
     float mouseContext;
+    float walkingDistance;
 
     [Space]
     public int LavalampColor;
@@ -145,14 +146,24 @@ public class PlayerController : MonoBehaviour
 
     private void Start()
     {
-        mainCam = Camera.main;
         CurrentMana = maxMana;
     }
 
     private void FixedUpdate()
     {
         if (!IsDashing)
+        {
             rb.AddForce(new Vector3((m_moveDir.y * -0.66f) + (m_moveDir.x * 0.66f), 0, (m_moveDir.y * 0.66f) + (m_moveDir.x * 0.66f)) * Speed, ForceMode.VelocityChange);
+            if (m_moveDir != Vector2.zero)
+            {
+                walkingDistance += Time.deltaTime;
+                if (walkingDistance >= 0.3f)
+                {
+                    AkSoundEngine.PostEvent("Play_Step", this.gameObject);
+                    walkingDistance = 0;
+                }
+            }
+        }
         else if (DashStarted)
         {
             dashDirection = new Vector3((m_moveDir.y * -0.66f) + (m_moveDir.x * 0.66f), 0, (m_moveDir.y * 0.66f) + (m_moveDir.x * 0.66f)) * DashSpeed;
@@ -165,17 +176,14 @@ public class PlayerController : MonoBehaviour
     {
         HealthPoints = MaxHP;
         //PlaySound PlayerDeath
-        SceneManager.LoadScene("MainRoom");
+        SceneTransition.Instance.ChangeScene("MainRoom", 0);
     }
 
     #region InputMethods
     public void Movement(InputAction.CallbackContext context)
     {
         m_moveDir = context.ReadValue<Vector2>();
-        if (m_moveDir != Vector2.zero)
-        {
-            AkSoundEngine.PostEvent("Play_Step", this.gameObject);
-        }
+
         //Debug.Log(m_moveDir);
         //displayPlayer.SetFloat("ForwardBlend", m_moveDir.y);
         //displayPlayer.SetFloat("RightBlend", m_moveDir.x);
@@ -263,19 +271,6 @@ public class PlayerController : MonoBehaviour
         }
     }
     #endregion
-
-    private void ChangeScene(InputAction.CallbackContext context)
-    {
-        if (SceneManager.GetActiveScene().name == "MainRoom")
-        {
-            SceneManager.LoadScene("EncounterSelection");
-        }
-        else
-        {
-            MapManager.Instance.ChangeMapState(true);
-            SceneManager.UnloadSceneAsync("Combat");
-        }
-    }
 
     private void ReduceDashCooldown()
     {

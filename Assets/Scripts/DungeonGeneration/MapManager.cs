@@ -53,6 +53,7 @@ public class MapManager : MonoBehaviour
                 PlayerInventory.Instance.transform.position = CurrentCell.EntrancePos.position;
                 PlayerInventory.Instance.transform.GetComponent<Rigidbody>().velocity = Vector3.zero;
             }
+            Destroy(CurrentCell.gameObject);
             CurrentCell.IsCleared = true;
         }
         else
