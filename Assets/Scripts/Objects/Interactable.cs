@@ -54,6 +54,7 @@ public enum EActionType
     NONE,
     UNPACK,
     WATER,
+    STARTWATER,
     SLEEP
 }
 
@@ -111,6 +112,9 @@ public class Interactable : MonoBehaviour
     [SerializeField]
     private List<Interactable> FollowUpBoxes = new List<Interactable>();
 
+    [SerializeField]
+    private WateringCan wateringCan;
+
     private void Start()
     {
         player = PlayerInventory.Instance;
@@ -151,6 +155,9 @@ public class Interactable : MonoBehaviour
             case EActionType.WATER:
                 NameUI.text = "Water " + Name;
                 break;
+            case EActionType.STARTWATER:
+                NameUI.text = "Water " + Name;
+                break;
             case EActionType.SLEEP:
                 NameUI.text = "Sleep in " + Name;
                 break;
@@ -188,6 +195,9 @@ public class Interactable : MonoBehaviour
             case EActionType.WATER:
                 UpgradeStat();
                 break;
+            case EActionType.STARTWATER:
+                Watering.Instance.EnableWatering();
+                break;
             case EActionType.SLEEP:
                 Sleep();
                 break;
@@ -201,23 +211,28 @@ public class Interactable : MonoBehaviour
         switch (myUpgradeType)
         {
             case ETypeOfUpgrade.ATTACK:
+
                 //PlaySound UpgradeJingle
                 player.AttackUpgrades++;
+                wateringCan.MoveWateringCan(transform.position);
                 Debug.Log($"You Feel Stronger ({player.AttackUpgrades})");
                 break;
             case ETypeOfUpgrade.HP:
                 //PlaySound UpgradeJingle
                 player.HPUpgrades++;
+                wateringCan.MoveWateringCan(transform.position);
                 Debug.Log($"You Feel Healthier ({player.HPUpgrades})");
                 break;
             case ETypeOfUpgrade.MANA:
                 //PlaySound UpgradeJingle
                 player.ManaUpgrades++;
+                wateringCan.MoveWateringCan(transform.position);
                 Debug.Log($"You Feel More Resiliant ({player.ManaUpgrades})");
                 break;
             case ETypeOfUpgrade.SPEED:
                 //PlaySound UpgradeJingle
                 player.DashUpgrades++;
+                wateringCan.MoveWateringCan(transform.position);
                 Debug.Log($"You Feel More Energetic ({player.DashUpgrades})");
                 break;
         }
@@ -233,11 +248,13 @@ public class Interactable : MonoBehaviour
 
     private IEnumerator MoveObject()
     {
+        AkSoundEngine.PostEvent("Play_ImpactCardboard", this.gameObject);
+        AkSoundEngine.PostEvent("Play_PoofCardboard", this.gameObject);
         GameObject movingObject = Instantiate(objectToUnpack, transform.position, transform.rotation);
         objectMoveUpPosition = Instantiate(new GameObject(), transform).transform;
         objectMoveUpPosition.position += new Vector3(0, 2, 0);
         objectMoveUpPosition.eulerAngles += new Vector3(0, 180, 0);
-        objectMoveUpPosition.localScale *= 2;//Temporär
+        objectMoveUpPosition.localScale *= 2;
         for (float i = 0; i <= 1; i += 0.01f)
         {
             movingObject.transform.position = new Vector3(
@@ -254,11 +271,13 @@ public class Interactable : MonoBehaviour
                 Mathf.Lerp(transform.eulerAngles.z, objectMoveUpPosition.eulerAngles.z, i));
             yield return new WaitForSeconds((float)(timeForObjectMovement) / 100);
         }
+
         yield return new WaitForSeconds(1);
-        //PlaySound CloudPoof
         Destroy(movingObject);
+        AkSoundEngine.PostEvent("Play_PoofCardboard", this.gameObject);
         yield return new WaitForSeconds(1);
-        //PlaySound CloudPoof
+        AkSoundEngine.PostEvent("Play_PoofCardboard", this.gameObject);
+
         BoxManager.Instance.OpenedBoxesIndex.Add(BoxNumber);
         OpenMyBox();
         if (UnlockContent)
@@ -280,7 +299,7 @@ public class Interactable : MonoBehaviour
     private void Sleep()
     {
         //PlaySound SleepJingle
-        SceneManager.LoadSceneAsync("EncounterSelection");
+        SceneTransition.Instance.ChangeScene("EncounterSelection", 0);
         PlayerController.Instance.HealFull();
     }
 }

@@ -37,11 +37,19 @@ public class CombatSceneChange : MonoBehaviour
     }
     private void Start()
     {
-        SpawnArena();
+        StartCoroutine(SpawnArena());
     }
 
-    private void SpawnArena()
+    private IEnumerator SpawnArena()
     {
+        while (true)
+        {
+            if (SceneManager.GetActiveScene() == SceneManager.GetSceneByName("Combat"))
+            {
+                break;
+            }
+            yield return new WaitForEndOfFrame();
+        }
         NewDungeonGridGenerator tmp = NewDungeonGridGenerator.Instance;
         switch (tmp.CurrentEncounter)
         {
@@ -77,7 +85,7 @@ public class CombatSceneChange : MonoBehaviour
 
     public void EndCombat()
     {
-        //PlaySound DoorOpening
+        AkSoundEngine.PostEvent("Play_DoorSqueaky", this.gameObject);
         foreach (var _exit in FindObjectsOfType<PlayerExitZone>())
         {
             _exit.IsAbleToLeave = true;

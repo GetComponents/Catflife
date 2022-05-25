@@ -7,10 +7,11 @@ public class GruntProjectile : MonoBehaviour
     public float selfDestructTime;
     public int MyDamage;
     PlayerController player;
+    private uint playingID;
 
     private void Start()
     {
-        //PlaySound EnemyProjectileAmbient ?
+        playingID = AkSoundEngine.PostEvent("Play_GruntProjectileThrow", this.gameObject);
         player = PlayerController.Instance;
         StartCoroutine(DieAfterTime());
     }
@@ -18,13 +19,13 @@ public class GruntProjectile : MonoBehaviour
     {
         if (other.tag == "Player")
         {
-            //PlaySound EnemyProjectileExplode
+            PostImpactEvents();
             player.TakeDamage(MyDamage);
             Destroy(this.gameObject);
         }
         else if (other.tag == "Wall")
         {
-            //PlaySound EnemyProjectileExplode
+            PostImpactEvents();
             Destroy(gameObject);
         }
     }
@@ -32,7 +33,13 @@ public class GruntProjectile : MonoBehaviour
     IEnumerator DieAfterTime()
     {
         yield return new WaitForSeconds(selfDestructTime);
-        //PlaySound EnemyProjectileExplode
+        PostImpactEvents();
         Destroy(gameObject);
+    }
+
+    private void PostImpactEvents()
+    {
+        AkSoundEngine.StopPlayingID(playingID, 200, AkCurveInterpolation.AkCurveInterpolation_Constant);
+        AkSoundEngine.PostEvent("Play_GruntProjectileExplode", this.gameObject);
     }
 }

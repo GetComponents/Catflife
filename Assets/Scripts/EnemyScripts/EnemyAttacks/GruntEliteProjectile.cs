@@ -11,10 +11,11 @@ public class GruntEliteProjectile : MonoBehaviour
     PlayerController player;
     Transform playerCollision;
     Rigidbody rb;
+    private uint playingID;
 
     private void Start()
     {
-        //PlaySound EnemyProjectileAmbient ?
+        playingID = AkSoundEngine.PostEvent("Play_GruntEliteProjectileThrow", this.gameObject);
         player = PlayerController.Instance;
         playerCollision = player.transform.GetChild(0);
         rb = GetComponent<Rigidbody>();
@@ -30,14 +31,20 @@ public class GruntEliteProjectile : MonoBehaviour
     {
         if (other.tag == "Player")
         {
-            //PlaySound EnemyProjectileExplode
+            PostImpactEvents();
             player.TakeDamage(MyDamage);
             Destroy(this.gameObject);
         }
         else if (other.tag == "Wall")
         {
-            //PlaySound EnemyProjectileExplode
+            PostImpactEvents();
             Destroy(gameObject);
         }
+    }
+    
+    private void PostImpactEvents()
+    {
+        AkSoundEngine.StopPlayingID(playingID, 200, AkCurveInterpolation.AkCurveInterpolation_Constant);
+        AkSoundEngine.PostEvent("Play_GruntEliteProjectileExplode", this.gameObject);
     }
 }

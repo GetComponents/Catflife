@@ -23,19 +23,20 @@ public class PlayerProjectile : MonoBehaviour
         {
             other.GetComponent<Enemy>().TakeDamage(MyDamage);
             //PlaySound FirballHit
-            Instantiate(explosionVFX, transform.position, Quaternion.identity);
+            Destroy(Instantiate(explosionVFX, transform.position, Quaternion.identity), 1);
             Destroy(gameObject);
         }
         else if(other.tag == "Wall")
         {
             //PlaySound FirballHit
-            Instantiate(explosionVFX, transform.position, Quaternion.identity);
+            Destroy(Instantiate(explosionVFX, transform.position, Quaternion.identity), 1);
             Destroy(gameObject);
         }
         else if (other.tag == "Boss")
         {
             other.GetComponent<Boss>().TakeDamage(MyDamage);
             //PlaySound FirballHit
+            Destroy(Instantiate(explosionVFX, transform.position, Quaternion.identity), 1);
             Destroy(gameObject);
         }
     }

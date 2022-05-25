@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="12" SoundbankVersion="140">
+	<RootPaths>
+		<ProjectRoot>/Users/luiszoran/Library/Application Support/Wwise2019/Bottles/Wwise2019x64/dosdevices/y:/Documents/UnityProject/Catflife/Catlife_WwiseProject/</ProjectRoot>
+		<SourceFilesRoot>/Users/luiszoran/Library/Application Support/Wwise2019/Bottles/Wwise2019x64/dosdevices/y:/Documents/UnityProject/Catflife/Catlife_WwiseProject/.cache/Windows/</SourceFilesRoot>
+		<SoundBanksRoot>/Users/luiszoran/Library/Application Support/Wwise2019/Bottles/Wwise2019x64/dosdevices/y:/Documents/UnityProject/Catflife/Catlife_WwiseProject/GeneratedSoundBanks/Windows/</SoundBanksRoot>
+		<ExternalSourcesInputFile></ExternalSourcesInputFile>
+		<ExternalSourcesOutputRoot>/Users/luiszoran/Library/Application Support/Wwise2019/Bottles/Wwise2019x64/dosdevices/y:/Documents/UnityProject/Catflife/Catlife_WwiseProject/GeneratedSoundBanks/Windows</ExternalSourcesOutputRoot>
+	</RootPaths>
+	<DialogueEvents/>
+	<StreamedFiles/>
+	<MediaFilesNotInAnyBank/>
+	<SoundBanks>
+		<SoundBank Id="393239870" Language="SFX" Hash="1518485282">
+			<ObjectPath>\SoundBanks\Default Work Unit\SFX</ObjectPath>
+			<ShortName>SFX</ShortName>
+			<Path>SFX.bnk</Path>
+			<IncludedEvents>
+				<Event Id="2652178615" Name="Play_ButtonPress" ObjectPath="\Events\Default Work Unit\UI\Play_ButtonPress" DurationType="OneShot" DurationMin="0.174102" DurationMax="0.560387">
+					<IncludedMemoryFiles>
+						<File Id="6159929" Language="SFX">
+							<ShortName>UIButtonPress.wav</ShortName>
+							<Path>SFX/UIButtonPress_E4073A26.wem</Path>
+						</File>
+						<File Id="17516549" Language="SFX">
+							<ShortName>UIButtonPress.wav</ShortName>
+							<Path>SFX/UIButtonPress_18BDB122.wem</Path>
+						</File>
+						<File Id="75365945" Language="SFX">
+							<ShortName>UIButtonPress.wav</ShortName>
+							<Path>SFX/UIButtonPress_38CCF9F7.wem</Path>
+						</File>
+						<File Id="585672463" Language="SFX">
+							<ShortName>UIButtonPress.wav</ShortName>
+							<Path>SFX/UIButtonPress_29B87592.wem</Path>
+						</File>
+						<File Id="861986732" Language="SFX">
+							<ShortName>UIButtonPress.wav</ShortName>
+							<Path>SFX/UIButtonPress_7775164E.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="3020861821" Name="Play_DoorSqueaky" ObjectPath="\Events\Default Work Unit\UI\Play_DoorSqueaky" DurationType="OneShot" DurationMin="0.836813" DurationMax="1.761217">
+					<IncludedMemoryFiles>
+						<File Id="552528663" Language="SFX">
+							<ShortName>SqueakyDoor.wav</ShortName>
+							<Path>SFX/SqueakyDoor_BEE3B957.wem</Path>
+						</File>
+						<File Id="684050722" Language="SFX">
+							<ShortName>SqueakyDoor.wav</ShortName>
+							<Path>SFX/SqueakyDoor_9199D959.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="1927856655" Name="Play_GruntEliteProjectileExplode" ObjectPath="\Events\Default Work Unit\Enemies\Play_GruntEliteProjectileExplode" DurationType="OneShot" DurationMin="0.673181" DurationMax="4.060711">
+					<IncludedMemoryFiles>
+						<File Id="129928124" Language="SFX">
+							<ShortName>ProjectileExplode.wav</ShortName>
+							<Path>SFX/ProjectileExplode_B394EDA4.wem</Path>
+						</File>
+						<File Id="436327313" Language="SFX">
+							<ShortName>ProjectileExplode.wav</ShortName>
+							<Path>SFX/ProjectileExplode_4702B53F.wem</Path>
+						</File>
+						<File Id="693424916" Language="SFX">
+							<ShortName>ProjectileExplode.wav</ShortName>
+							<Path>SFX/ProjectileExplode_726ACF56.wem</Path>
+						</File>
+						<File Id="745176646" Language="SFX">
+							<ShortName>ProjectileExplode.wav</ShortName>
+							<Path>SFX/ProjectileExplode_7CEFF59D.wem</Path>
+						</File>
+						<File Id="854468581" Language="SFX">
+							<ShortName>ProjectileExplode.wav</ShortName>
+							<Path>SFX/ProjectileExplode_B682017B.wem</Path>
+						</File>
+						<File Id="995914859" Language="SFX">
+							<ShortName>ProjectileExplode.wav</ShortName>
+							<Path>SFX/ProjectileExplode_0E1A68E4.wem</Path>
+						</File>
+						<File Id="997698416" Language="SFX">
+							<ShortName>ProjectileExplode.wav</ShortName>
+							<Path>SFX/ProjectileExplode_295F8A4B.wem</Path>
+						</File>
+						<File Id="1018989538" Language="SFX">
+							<ShortName>ProjectileExplode.wav</ShortName>
+							<Path>SFX/ProjectileExplode_3DCAD84A.wem</Path>
+						</File>
+						<File Id="1020300007" Language="SFX">
+							<ShortName>ProjectileExplode.wav</ShortName>
+							<Path>SFX/ProjectileExplode_A2CD41C8.wem</Path>
+						</File>
+						<File Id="1039091598" Language="SFX">
+							<ShortName>ProjectileExplode.wav</ShortName>
+							<Path>SFX/ProjectileExplode_5B60732A.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="3941375504" Name="Play_GruntEliteProjectileThrow" ObjectPath="\Events\Default Work Unit\Enemies\Play_GruntEliteProjectileThrow" DurationType="Infinite">
+					<IncludedMemoryFiles>
+						<File Id="238543085" Language="SFX">
+							<ShortName>ProjectileThrow.wav</ShortName>
+							<Path>SFX/ProjectileThrow_2B7498F0.wem</Path>
+						</File>
+						<File Id="345272659" Language="SFX">
+							<ShortName>Fire.wav</ShortName>
+							<Path>SFX/Fire_D79FB2B7.wem</Path>
+						</File>
+						<File Id="425030932" Language="SFX">
+							<ShortName>ProjectileThrow.wav</ShortName>
+							<Path>SFX/ProjectileThrow_5970BD41.wem</Path>
+						</File>
+						<File Id="984304702" Language="SFX">
+							<ShortName>ProjectileThrow.wav</ShortName>
+							<Path>SFX/ProjectileThrow_3E57480F.wem</Path>
+						</File>
+						<File Id="984676907" Language="SFX">
+							<ShortName>ProjectileThrow.wav</ShortName>
+							<Path>SFX/ProjectileThrow_B7CF1BEC.wem</Path>
+						</File>
+						<File Id="1013540231" Language="SFX">
+							<ShortName>ProjectileThrow.wav</ShortName>
+							<Path>SFX/ProjectileThrow_FE6255E8.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="1423843544" Name="Play_GruntProjectileExplode" ObjectPath="\Events\Default Work Unit\Enemies\Play_GruntProjectileExplode" DurationType="OneShot" DurationMin="0.673181" DurationMax="5.420399">
+					<IncludedMemoryFiles>
+						<File Id="129928124" Language="SFX">
+							<ShortName>ProjectileExplode.wav</ShortName>
+							<Path>SFX/ProjectileExplode_B394EDA4.wem</Path>
+						</File>
+						<File Id="436327313" Language="SFX">
+							<ShortName>ProjectileExplode.wav</ShortName>
+							<Path>SFX/ProjectileExplode_4702B53F.wem</Path>
+						</File>
+						<File Id="693424916" Language="SFX">
+							<ShortName>ProjectileExplode.wav</ShortName>
+							<Path>SFX/ProjectileExplode_726ACF56.wem</Path>
+						</File>
+						<File Id="745176646" Language="SFX">
+							<ShortName>ProjectileExplode.wav</ShortName>
+							<Path>SFX/ProjectileExplode_7CEFF59D.wem</Path>
+						</File>
+						<File Id="854468581" Language="SFX">
+							<ShortName>ProjectileExplode.wav</ShortName>
+							<Path>SFX/ProjectileExplode_B682017B.wem</Path>
+						</File>
+						<File Id="995914859" Language="SFX">
+							<ShortName>ProjectileExplode.wav</ShortName>
+							<Path>SFX/ProjectileExplode_0E1A68E4.wem</Path>
+						</File>
+						<File Id="997698416" Language="SFX">
+							<ShortName>ProjectileExplode.wav</ShortName>
+							<Path>SFX/ProjectileExplode_295F8A4B.wem</Path>
+						</File>
+						<File Id="1018989538" Language="SFX">
+							<ShortName>ProjectileExplode.wav</ShortName>
+							<Path>SFX/ProjectileExplode_3DCAD84A.wem</Path>
+						</File>
+						<File Id="1020300007" Language="SFX">
+							<ShortName>ProjectileExplode.wav</ShortName>
+							<Path>SFX/ProjectileExplode_A2CD41C8.wem</Path>
+						</File>
+						<File Id="1039091598" Language="SFX">
+							<ShortName>ProjectileExplode.wav</ShortName>
+							<Path>SFX/ProjectileExplode_5B60732A.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="4218963955" Name="Play_GruntProjectileThrow" ObjectPath="\Events\Default Work Unit\Enemies\Play_GruntProjectileThrow" DurationType="Infinite">
+					<IncludedMemoryFiles>
+						<File Id="238543085" Language="SFX">
+							<ShortName>ProjectileThrow.wav</ShortName>
+							<Path>SFX/ProjectileThrow_2B7498F0.wem</Path>
+						</File>
+						<File Id="345272659" Language="SFX">
+							<ShortName>Fire.wav</ShortName>
+							<Path>SFX/Fire_D79FB2B7.wem</Path>
+						</File>
+						<File Id="425030932" Language="SFX">
+							<ShortName>ProjectileThrow.wav</ShortName>
+							<Path>SFX/ProjectileThrow_5970BD41.wem</Path>
+						</File>
+						<File Id="984304702" Language="SFX">
+							<ShortName>ProjectileThrow.wav</ShortName>
+							<Path>SFX/ProjectileThrow_3E57480F.wem</Path>
+						</File>
+						<File Id="984676907" Language="SFX">
+							<ShortName>ProjectileThrow.wav</ShortName>
+							<Path>SFX/ProjectileThrow_B7CF1BEC.wem</Path>
+						</File>
+						<File Id="1013540231" Language="SFX">
+							<ShortName>ProjectileThrow.wav</ShortName>
+							<Path>SFX/ProjectileThrow_FE6255E8.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="3010145222" Name="Play_ImpactCardboard" ObjectPath="\Events\Default Work Unit\ItemsScene\Play_ImpactCardboard" DurationType="OneShot" DurationMin="0.319421" DurationMax="1.245893">
+					<IncludedMemoryFiles>
+						<File Id="23732595" Language="SFX">
+							<ShortName>CardboardImpact.wav</ShortName>
+							<Path>SFX/CardboardImpact_6F26D83E.wem</Path>
+						</File>
+						<File Id="394627533" Language="SFX">
+							<ShortName>CardboardImpact.wav</ShortName>
+							<Path>SFX/CardboardImpact_3B8A16C1.wem</Path>
+						</File>
+						<File Id="811632332" Language="SFX">
+							<ShortName>CardboardImpact.wav</ShortName>
+							<Path>SFX/CardboardImpact_45969E13.wem</Path>
+						</File>
+						<File Id="997870370" Language="SFX">
+							<ShortName>CardboardImpact.wav</ShortName>
+							<Path>SFX/CardboardImpact_A2C0C5E8.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="1438502543" Name="Play_LeavingFootsteps" ObjectPath="\Events\Default Work Unit\Character\Play_LeavingFootsteps" DurationType="OneShot" DurationMin="0.947353" DurationMax="1.385587">
+					<IncludedMemoryFiles>
+						<File Id="323942138" Language="SFX">
+							<ShortName>Tile1.wav</ShortName>
+							<Path>SFX/Tile1_46AB9349.wem</Path>
+						</File>
+						<File Id="385491676" Language="SFX">
+							<ShortName>Tile1.wav</ShortName>
+							<Path>SFX/Tile1_9D91DD5F.wem</Path>
+						</File>
+						<File Id="431402745" Language="SFX">
+							<ShortName>Tile1.wav</ShortName>
+							<Path>SFX/Tile1_D145568B.wem</Path>
+						</File>
+						<File Id="492770314" Language="SFX">
+							<ShortName>Tile1.wav</ShortName>
+							<Path>SFX/Tile1_DECFB337.wem</Path>
+						</File>
+						<File Id="736235376" Language="SFX">
+							<ShortName>Tile1.wav</ShortName>
+							<Path>SFX/Tile1_99C0194F.wem</Path>
+						</File>
+						<File Id="777566849" Language="SFX">
+							<ShortName>Tile1.wav</ShortName>
+							<Path>SFX/Tile1_0651EECB.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="31596624" Name="Play_PoofCardboard" ObjectPath="\Events\Default Work Unit\ItemsScene\Play_PoofCardboard" DurationType="OneShot" DurationMin="0.787154" DurationMax="1.443116">
+					<IncludedMemoryFiles>
+						<File Id="154705653" Language="SFX">
+							<ShortName>CardboardPoof.wav</ShortName>
+							<Path>SFX/CardboardPoof_2F1F70CD.wem</Path>
+						</File>
+						<File Id="750855172" Language="SFX">
+							<ShortName>CardboardPoof.wav</ShortName>
+							<Path>SFX/CardboardPoof_5F7F731E.wem</Path>
+						</File>
+						<File Id="934852199" Language="SFX">
+							<ShortName>CardboardPoof.wav</ShortName>
+							<Path>SFX/CardboardPoof_A741EBA1.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="99206220" Name="Play_Step" ObjectPath="\Events\Default Work Unit\Character\Play_Step" DurationType="OneShot" DurationMin="0.097353" DurationMax="0.485587">
+					<IncludedMemoryFiles>
+						<File Id="323942138" Language="SFX">
+							<ShortName>Tile1.wav</ShortName>
+							<Path>SFX/Tile1_46AB9349.wem</Path>
+						</File>
+						<File Id="385491676" Language="SFX">
+							<ShortName>Tile1.wav</ShortName>
+							<Path>SFX/Tile1_9D91DD5F.wem</Path>
+						</File>
+						<File Id="431402745" Language="SFX">
+							<ShortName>Tile1.wav</ShortName>
+							<Path>SFX/Tile1_D145568B.wem</Path>
+						</File>
+						<File Id="492770314" Language="SFX">
+							<ShortName>Tile1.wav</ShortName>
+							<Path>SFX/Tile1_DECFB337.wem</Path>
+						</File>
+						<File Id="736235376" Language="SFX">
+							<ShortName>Tile1.wav</ShortName>
+							<Path>SFX/Tile1_99C0194F.wem</Path>
+						</File>
+						<File Id="777566849" Language="SFX">
+							<ShortName>Tile1.wav</ShortName>
+							<Path>SFX/Tile1_0651EECB.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+					<DefaultSwitchValue>{F13EB533-41C9-4F36-B89B-D678BDDAAF47}</DefaultSwitchValue>
+					<SwitchContainers>
+						<SwitchContainer SwitchValue="{F13EB533-41C9-4F36-B89B-D678BDDAAF47}">
+							<Media>
+								<File Id="323942138"/>
+								<File Id="385491676"/>
+								<File Id="431402745"/>
+								<File Id="492770314"/>
+								<File Id="736235376"/>
+								<File Id="777566849"/>
+							</Media>
+						</SwitchContainer>
+					</SwitchContainers>
+				</Event>
+			</IncludedEvents>
+			<SwitchGroups>
+				<SwitchGroup Id="3865314626" Name="Material" ObjectPath="\Switches\Default Work Unit\Material" GUID="{3B231D83-CEB8-4D6E-87F3-B78A280E368F}">
+					<Switches>
+						<Switch Id="782826392" Name="Default" ObjectPath="\Switches\Default Work Unit\Material\Default" GUID="{F13EB533-41C9-4F36-B89B-D678BDDAAF47}"/>
+					</Switches>
+				</SwitchGroup>
+			</SwitchGroups>
+		</SoundBank>
+		<SoundBank Id="1355168291" Language="SFX" Hash="3690994985">
+			<ObjectPath>Init</ObjectPath>
+			<ShortName>Init</ShortName>
+			<Path>Init.bnk</Path>
+		</SoundBank>
+	</SoundBanks>
+</SoundBanksInfo>

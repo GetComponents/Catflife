@@ -80,13 +80,16 @@ public class EncounterCell : MonoBehaviour
             case EEncounterType.NONE:
                 break;
             case EEncounterType.FIGHTEASY:
-                SceneManager.LoadScene("Combat", LoadSceneMode.Additive);
+                SceneTransition.Instance.ChangeScene("Combat", 1);
+                //SceneManager.LoadScene("Combat", LoadSceneMode.Additive);
                 break;
             case EEncounterType.FIGHTMEDIUM:
-                SceneManager.LoadScene("Combat", LoadSceneMode.Additive);
+                SceneTransition.Instance.ChangeScene("Combat", 1);
+                //SceneManager.LoadScene("Combat", LoadSceneMode.Additive);
                 break;
             case EEncounterType.FIGHTHARD:
-                SceneManager.LoadScene("Combat", LoadSceneMode.Additive);
+                SceneTransition.Instance.ChangeScene("Combat", 1);
+                //SceneManager.LoadScene("Combat", LoadSceneMode.Additive);
                 break;
             case EEncounterType.BOSS:
                 PlayerController.Instance.Die();
@@ -96,11 +99,11 @@ public class EncounterCell : MonoBehaviour
             default:
                 break;
         }
+        //SceneTransition.Instance?.StartTransition();
         NewDungeonGridGenerator.Instance.CurrentEncounter = MyEncounter;
         NewDungeonGridGenerator.Instance.CurrentEncounterIndex = MyEncounterIndex;
         NewDungeonGridGenerator.Instance.ClearedArena = IsCleared;
         MapManager.Instance.CurrentCell = this;
-        MapManager.Instance.ChangeMapState(false);
     }
 
     private void OnTriggerEnter(Collider other)
