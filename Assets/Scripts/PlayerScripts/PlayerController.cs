@@ -113,6 +113,7 @@ public class PlayerController : MonoBehaviour
     [Space]
     public int LavalampColor;
     private bool gameIsPaused;
+    public bool IsInCombat = true;
 
     void Awake()
     {
@@ -163,6 +164,20 @@ public class PlayerController : MonoBehaviour
                     walkingDistance = 0;
                 }
             }
+
+            if (playerHitBox.eulerAngles.y <= 45 && playerHitBox.eulerAngles.y >= 225)
+            {
+                ////höchster wert ist -45 und niedrigstes ist 45/-135
+                ////+ 45 => 0 = max, 90/-90 = min
+                //// 90 - |wert| / 90 
+                //myAnimator.SetFloat("ForwardBlend", (90f - Mathf.Abs(playerHitBox.eulerAngles.y)) / 90f);
+
+                //höchster Wert ist 360 und niedrigstes ist 225/45
+            }
+            else
+            {
+                //
+            }
         }
         else if (DashStarted)
         {
@@ -184,16 +199,16 @@ public class PlayerController : MonoBehaviour
     {
         m_moveDir = context.ReadValue<Vector2>();
         //Debug.Log(m_moveDir);
-        //displayPlayer.SetFloat("ForwardBlend", m_moveDir.y);
-        //displayPlayer.SetFloat("RightBlend", m_moveDir.x);
+        myAnimator.SetFloat("ForwardBlend", m_moveDir.y);
+        myAnimator.SetFloat("RightBlend", m_moveDir.x);
     }
 
     public void MouseDown(InputAction.CallbackContext context)
     {
-        if (!gameIsPaused)
+        if (!gameIsPaused && IsInCombat)
         {
             mouseContext = context.ReadValue<float>();
-            if (myAnimator.GetCurrentAnimatorStateInfo(0).IsName("Idle") && context.started)
+            if ((myAnimator.GetCurrentAnimatorStateInfo(0).IsName("Idle") || myAnimator.GetCurrentAnimatorStateInfo(0).IsName("Walking")) && context.started)
             {
                 myAnimator.SetBool("isSwinging", true);
             }
@@ -225,7 +240,8 @@ public class PlayerController : MonoBehaviour
 
     public void Dash(InputAction.CallbackContext context)
     {
-        if (currentDashCooldown < 0 && context.started && myAnimator.GetCurrentAnimatorStateInfo(0).IsName("Idle"))
+        if (currentDashCooldown < 0 && context.started
+            && (myAnimator.GetCurrentAnimatorStateInfo(0).IsName("Idle") || myAnimator.GetCurrentAnimatorStateInfo(0).IsName("Walking")))
         {
             IsDashing = true;
             currentDashCooldown = dashCooldown;
@@ -236,10 +252,15 @@ public class PlayerController : MonoBehaviour
 
     public void Cast(InputAction.CallbackContext context)
     {
-        if (myAnimator.GetCurrentAnimatorStateInfo(0).IsName("Idle") && context.started && unlockedProjectile && CurrentMana >= projectileManaCost)
+        if ((myAnimator.GetCurrentAnimatorStateInfo(0).IsName("Idle") || myAnimator.GetCurrentAnimatorStateInfo(0).IsName("Walking"))
+            && context.started && unlockedProjectile && CurrentMana >= projectileManaCost)
         {
-            CurrentMana -= projectileManaCost;
-            myAnimator.SetBool("isCasting", true);
+            if (IsInCombat)
+            {
+
+                CurrentMana -= projectileManaCost;
+                myAnimator.SetBool("isCasting", true);
+            }
         }
     }
 

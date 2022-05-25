@@ -10,6 +10,9 @@ public class SceneTransition : MonoBehaviour
     [SerializeField]
     Image TransitionImage;
 
+    [SerializeField]
+    SkinnedMeshRenderer playerSword;
+
     string sceneToLoad;
     int loadType;
 
@@ -47,10 +50,8 @@ public class SceneTransition : MonoBehaviour
         {
             case 0:
                 SceneManager.LoadScene(sceneToLoad);
-                Debug.Log("trying to load " + sceneToLoad);
                 break;
             case 1:
-                Debug.Log("trying to load " + sceneToLoad + " additive");
                 SceneManager.LoadScene(sceneToLoad, LoadSceneMode.Additive);
                 while (true)
                 {
@@ -76,6 +77,16 @@ public class SceneTransition : MonoBehaviour
 
     public void EndTransition(Scene _previousScene, Scene _newScene)
     {
+        if (_newScene == SceneManager.GetSceneByName("Combat"))
+        {
+            PlayerController.Instance.IsInCombat = true;
+            playerSword.enabled = true;
+        }
+        else if (_previousScene == SceneManager.GetSceneByName("Combat"))
+        {
+            PlayerController.Instance.IsInCombat = false;
+            playerSword.enabled = false;
+        }
         StartCoroutine(FinishTransition());
     }
 
