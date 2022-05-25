@@ -37,11 +37,19 @@ public class CombatSceneChange : MonoBehaviour
     }
     private void Start()
     {
-        SpawnArena();
+        StartCoroutine(SpawnArena());
     }
 
-    private void SpawnArena()
+    private IEnumerator SpawnArena()
     {
+        while (true)
+        {
+            if (SceneManager.GetActiveScene() == SceneManager.GetSceneByName("Combat"))
+            {
+                break;
+            }
+            yield return new WaitForEndOfFrame();
+        }
         NewDungeonGridGenerator tmp = NewDungeonGridGenerator.Instance;
         switch (tmp.CurrentEncounter)
         {

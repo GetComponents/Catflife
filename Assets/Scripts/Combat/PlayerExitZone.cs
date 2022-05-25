@@ -19,8 +19,7 @@ public class PlayerExitZone : MonoBehaviour
         {
             AkSoundEngine.PostEvent("Play_LeavingFootsteps", this.gameObject);
             MapManager.Instance.PlayerTookExit = IsExit;
-            MapManager.Instance.ChangeMapState(true);
-            SceneManager.UnloadSceneAsync("Combat");
+            SceneTransition.Instance.ChangeScene("Combat", 2);
         }
     }
 }
