@@ -31,19 +31,6 @@ public class Watering : MonoBehaviour
 
     void Awake()
     {
-<<<<<<< HEAD
-        mainCam = Camera.main;
-        click = new InputAction(binding: "<Mouse>/leftButton");
-        click.started += ctx => {
-            if (IsWatering)
-            {
-                //PlaySound Watering
-                myAnimator.SetBool("IsWatering", true);
-            }
-        };
-        
-        click.Enable();
-=======
         if (Instance == null)
         {
             Instance = this;
@@ -53,7 +40,6 @@ public class Watering : MonoBehaviour
             Destroy(gameObject);
             return;
         }
->>>>>>> Develop
     }
 
     public void EnableWatering()
@@ -71,8 +57,6 @@ public class Watering : MonoBehaviour
         hpPlantCanvas.SetActive(true);
         speedPlantCanvas.SetActive(true);
     }
-<<<<<<< HEAD
-=======
 
     private IEnumerator EnableUI()
     {
@@ -105,5 +89,4 @@ public class Watering : MonoBehaviour
         playerCameraUI.Priority++;
         playerCamera.Priority++;
     }
->>>>>>> Develop
 }
