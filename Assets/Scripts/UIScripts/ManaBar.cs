@@ -6,10 +6,18 @@ using UnityEngine.UI;
 public class ManaBar : MonoBehaviour
 {
     public static ManaBar Instance;
+
+
     [SerializeField]
-    Image barFilling;
+    List<Image> barFillings;
+
+    [SerializeField]
+    List<GameObject> manaBars;
+
     [SerializeField]
     GameObject myCanvas;
+
+    public int ManaBarAmount;
 
     private void Awake()
     {
@@ -27,11 +35,24 @@ public class ManaBar : MonoBehaviour
 
     private void Start()
     {
-        PlayerController.Instance.OnManaChange.AddListener(changeMana);
+        PlayerController.Instance.OnManaChange.AddListener(ChangeMana);
+        UnlockNewManabar();
+        ChangeMana();
     }
 
-    private void changeMana()
+    private void ChangeMana()
     {
-        barFilling.fillAmount = (float)PlayerController.Instance.CurrentMana / (float)PlayerController.Instance.maxMana;
+        for (int i = 0; i < ManaBarAmount; i++)
+        {
+            //4 ist Maxmana bei 0 Upgrades und jedes Upgrade gibt 4 extra Mana
+            barFillings[i].fillAmount = Mathf.Clamp((float)PlayerController.Instance.CurrentMana - (i * 4), 0, 4) / 4;
+        }
+        //barFilling.fillAmount = (float)PlayerController.Instance.CurrentMana / (float)PlayerController.Instance.maxMana;
+    }
+
+    public void UnlockNewManabar()
+    {
+        ManaBarAmount = Mathf.Clamp(PlayerInventory.Instance.ManaUpgrades + 1, 0, 4);
+        manaBars[Mathf.Clamp(PlayerInventory.Instance.ManaUpgrades, 0, 3)].SetActive(true);
     }
 }
