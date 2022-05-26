@@ -78,10 +78,12 @@ public class Enemy : MonoBehaviour
             Quaternion.identity).GetComponent<PickupEnergy>();
         if (isElite)
         {
+            //PlaySound EnemyDeath (Lower pitch)
             energyPickup.EnergyGainAmount = BaseEnergyPickupAmount * 2;
         }
         else
         {
+            //PlaySound EnemyDeath 
             energyPickup.EnergyGainAmount = BaseEnergyPickupAmount;
         }
         Instantiate(PickupHP,

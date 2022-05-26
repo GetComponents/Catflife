@@ -10,6 +10,7 @@ public class PlayerUnlock : MonoBehaviour
         SPINMOVE,
         PROJECTILE,
         REFLECT,
+        STATUE
     }
 
     [SerializeField]
@@ -22,13 +23,32 @@ public class PlayerUnlock : MonoBehaviour
             case EUnlockType.NONE:
                 break;
             case EUnlockType.SPINMOVE:
-                PlayerController.Instance.unlockedSpinMove = true;
+                if (PlayerController.Instance.unlockedSpinMove)
+                {
+                    //PlaySound UnlockJingle
+                    PlayerController.Instance.unlockedSpinMove = true;
+                }
                 break;
             case EUnlockType.PROJECTILE:
-                PlayerController.Instance.unlockedProjectile = true;
+                if (PlayerController.Instance.unlockedProjectile)
+                {
+                    //PlaySound UnlockJingle
+                    PlayerController.Instance.unlockedProjectile = true;
+                }
                 break;
             case EUnlockType.REFLECT:
-                PlayerController.Instance.unlockedReflect = true;
+                if (PlayerController.Instance.unlockedReflect)
+                {
+                    //PlaySound UnlockJingle
+                    PlayerController.Instance.unlockedReflect = true;
+                }
+                break;
+            case EUnlockType.STATUE:
+                if (PlayerController.Instance.UnlockedStatue)
+                {
+                    //PlaySound UnlockJingle
+                    PlayerController.Instance.UnlockedStatue = true;
+                }
                 break;
             default:
                 break;

@@ -2,14 +2,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 using UnityEngine.SceneManagement;
 
 public class EncounterCell : MonoBehaviour
 {
     public List<EncounterCell> NextCells = new List<EncounterCell>();
-    //public List<UILineRenderer> CellConnection = new List<UILineRenderer>();
+    public bool ContainsEncounter;
     public bool IsConnected = false, IsDeadEnd = true, IsCleared;
     public int MyEncounterIndex;
+    [SerializeField]
+    GameObject StartEncounterUI;
+
     public EEncounterType MyEncounter
     {
         get => m_myEncounter;
@@ -20,15 +24,12 @@ public class EncounterCell : MonoBehaviour
                 case EEncounterType.NONE:
                     break;
                 case EEncounterType.FIGHTEASY:
-                    //GetComponent<Image>().sprite = easyEncounter;
                     GetComponent<MeshRenderer>().material.color = Color.blue;
                     break;
                 case EEncounterType.FIGHTMEDIUM:
-                    //GetComponent<Image>().sprite = mediumEncounter;
                     GetComponent<MeshRenderer>().material.color = Color.green;
                     break;
                 case EEncounterType.FIGHTHARD:
-                    //GetComponent<Image>().sprite = hardEncounter;
                     GetComponent<MeshRenderer>().material.color = Color.yellow;
                     break;
                 case EEncounterType.BOSS:
@@ -44,59 +45,51 @@ public class EncounterCell : MonoBehaviour
     [SerializeField]
     private EEncounterType m_myEncounter;
     public bool Clickable;
-    [SerializeField]
-    Sprite easyEncounter, mediumEncounter, hardEncounter;
 
-    public Vector3 LeftWallPos, RightWallPos;
-
-    private void Start()
-    {
-        LeftWallPos = new Vector3(transform.position.x, transform.position.y, transform.position.z);
-        RightWallPos = new Vector3(transform.position.x, transform.position.y, transform.position.z);
-    }
+    public Transform LeftWallPos, RightWallPos, EntrancePos, ExitPos;
 
 
     public void StartEncounter()
     {
         if (Clickable == true)
         {
-            MapManager.Instance.StagePos = transform.position;
-            DisableOtherCells();
+            //DisableOtherCells();
             GenerateEncounter();
         }
     }
     private void DisableOtherCells()
     {
-        foreach (EncounterCell cell in DungeonGridGenerator.Instance.SelectableCells)
-        {
-            //cell.gameObject.GetComponent<Image>().color = Color.red;
-            cell.Clickable = false;
-        }
-        DungeonGridGenerator.Instance.SelectableCells.Clear();
-        foreach (EncounterCell cell in NextCells)
-        {
-            //cell.gameObject.GetComponent<Image>().color = Color.white;
-            cell.Clickable = true;
-            DungeonGridGenerator.Instance.SelectableCells.Add(cell);
-        }
-        DungeonGridGenerator.Instance.MoveMap(gameObject.transform.localScale.y);
-        MapManager.Instance.ChangeMapState(false);
+        //foreach (EncounterCell cell in DungeonGridGenerator.Instance.SelectableCells)
+        //{
+        //    cell.Clickable = false;
+        //}
+        //DungeonGridGenerator.Instance.SelectableCells.Clear();
+        //foreach (EncounterCell cell in NextCells)
+        //{
+        //    cell.Clickable = true;
+        //    DungeonGridGenerator.Instance.SelectableCells.Add(cell);
+        //}
+        //DungeonGridGenerator.Instance.MoveMap(gameObject.transform.localScale.y);
+        //MapManager.Instance.ChangeMapState(false);
     }
 
-    private void GenerateEncounter()
+    public void GenerateEncounter()
     {
         switch (MyEncounter)
         {
             case EEncounterType.NONE:
                 break;
             case EEncounterType.FIGHTEASY:
-                SceneManager.LoadScene("Combat", LoadSceneMode.Additive);
+                SceneTransition.Instance.ChangeScene("Combat", 1);
+                //SceneManager.LoadScene("Combat", LoadSceneMode.Additive);
                 break;
             case EEncounterType.FIGHTMEDIUM:
-                SceneManager.LoadScene("Combat", LoadSceneMode.Additive);
+                SceneTransition.Instance.ChangeScene("Combat", 1);
+                //SceneManager.LoadScene("Combat", LoadSceneMode.Additive);
                 break;
             case EEncounterType.FIGHTHARD:
-                SceneManager.LoadScene("Combat", LoadSceneMode.Additive);
+                SceneTransition.Instance.ChangeScene("Combat", 1);
+                //SceneManager.LoadScene("Combat", LoadSceneMode.Additive);
                 break;
             case EEncounterType.BOSS:
                 PlayerController.Instance.Die();
@@ -106,9 +99,21 @@ public class EncounterCell : MonoBehaviour
             default:
                 break;
         }
-        DungeonGridGenerator.Instance.CurrentEncounter = MyEncounter;
-        DungeonGridGenerator.Instance.CurrentEncounterIndex = MyEncounterIndex;
+        //SceneTransition.Instance?.StartTransition();
+        NewDungeonGridGenerator.Instance.CurrentEncounter = MyEncounter;
+        NewDungeonGridGenerator.Instance.CurrentEncounterIndex = MyEncounterIndex;
+        NewDungeonGridGenerator.Instance.ClearedArena = IsCleared;
+        MapManager.Instance.CurrentCell = this;
+    }
 
+    private void OnTriggerEnter(Collider other)
+    {
+        StartEncounterUI.SetActive(true);
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        StartEncounterUI.SetActive(false);
     }
 }
 

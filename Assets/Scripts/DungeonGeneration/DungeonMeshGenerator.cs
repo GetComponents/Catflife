@@ -12,69 +12,273 @@ public class DungeonMeshGenerator : MonoBehaviour
     public List<int> meshIndices;
     private EncounterCell[] allEncounterCells;
     private Cell[,] allCells;
+    [HideInInspector]
     public int gridWidth, gridHeight;
+    [SerializeField]
+    private float wallThickness, wallHeight;
     int wallVertices;
 
     private void Start()
     {
-        //DungeonMesh = GetComponent<MeshFilter>().mesh;
+        AddMeshComponents();
+        copyDungeonInformation();
+        createVerticesAndIndices();
+        createUVs();
+        DrawMesh();
+        DungeonMesh.RecalculateNormals();
+        gameObject.GetComponent<MeshCollider>().sharedMesh = DungeonMesh;
+    }
+
+    private void AddMeshComponents()
+    {
         DungeonMesh = gameObject.AddComponent<MeshFilter>().mesh;
         gameObject.AddComponent<MeshRenderer>();
         GetComponent<MeshRenderer>().material = wallMaterial;
-        copyDungeonInformation();
-        createVertices();
-        createUVs();
-        createIndices();
-        DrawMesh();
-        DungeonMesh.RecalculateNormals();
     }
 
     private void copyDungeonInformation()
     {
         allEncounterCells = FindObjectsOfType<EncounterCell>();
-        allCells = DungeonGridGenerator.Instance.DungeonGrid;
-        gridWidth = DungeonGridGenerator.Instance.GridWidth;
-        gridHeight = DungeonGridGenerator.Instance.GridHeight;
+        allCells = NewDungeonGridGenerator.Instance.DungeonGrid;
+        gridWidth = NewDungeonGridGenerator.Instance.GridWidth;
+        gridHeight = NewDungeonGridGenerator.Instance.GridHeight;
     }
 
-    private void createVertices()
+    private void createVerticesAndIndices()
     {
         meshVertices = new List<Vector3>();
+        CreateHorizontalWalls();
+        CreateVerticalWalls();
+        CreateFloor();
+    }
+
+    private void CreateHorizontalWalls()
+    {
+        //Draw Walls Left to Right
         for (int i = 0; i < gridWidth; i++)
         {
             for (int j = 0; j < gridHeight; j++)
             {
-                if (allCells[i, j].MyView == null || allCells[i, j].MyView.transform == null)
+                //Leftmost wall
+                if (i == 0)
                 {
-                    continue;
-                }
-                else
-                {
-                    for (int k = i; k < gridWidth; k++)
+                    for (int k = 0; k < gridWidth; k++)
                     {
-                        if (allCells[k, j].MyView != null && allCells[k, j].MyView.transform != null)
+                        if (allCells[k, j].ContainsEncounter)
                         {
-                            DrawWall(allCells[i, j], allCells[k, j]);
+                            DrawHorizontalWall(allCells[i, j].MyView.transform.position
+                                - (new Vector3(1, 0, 1) * NewDungeonGridGenerator.Instance.nodeSpacing.x)
+                                + new Vector3(wallThickness, 0, wallThickness),
+                                allCells[k, j].MyView.GetComponent<EncounterCell>().LeftWallPos.position);
+                            break;
                         }
+                    }
+                }
+                //Left Point
+                if (allCells[i, j].ContainsEncounter)
+                {
+                    bool foundCell = false;
+                    for (int k = i + 1; k < gridWidth; k++)
+                    {
+                        //Right Point
+                        if (allCells[k, j].ContainsEncounter)
+                        {
+                            DrawHorizontalWall(allCells[i, j].MyView.GetComponent<EncounterCell>().RightWallPos.position,
+                                allCells[k, j].MyView.GetComponent<EncounterCell>().LeftWallPos.position);
+                            foundCell = true;
+                            break;
+
+                        }
+                        //Rightmost Point
+                        else if (k == gridWidth - 1)
+                        {
+                            DrawHorizontalWall(allCells[i, j].MyView.GetComponent<EncounterCell>().RightWallPos.position,
+                                allCells[gridWidth - 1, j].MyView.transform.position
+                                + new Vector3(1, 0, 1) * NewDungeonGridGenerator.Instance.nodeSpacing.x
+                                + new Vector3(-wallThickness, 0, -wallThickness));
+                            foundCell = true;
+                            break;
+                        }
+                    }
+                    //For the case that the rightmost point contains an encoutercell
+                    if (!foundCell)
+                    {
+                        DrawHorizontalWall(allCells[i, j].MyView.GetComponent<EncounterCell>().RightWallPos.position,
+                                allCells[gridWidth - 1, j].MyView.transform.position
+                                + (new Vector3(1, 0, 1) * NewDungeonGridGenerator.Instance.nodeSpacing.x)
+                                + new Vector3(-wallThickness, 0, -wallThickness));
                     }
                 }
             }
         }
+        //Draw the bottommost and topmost wall
+        DrawHorizontalWall(allCells[0, 0].MyView.transform.position
+            - (new Vector3(1, 0, 1) * NewDungeonGridGenerator.Instance.nodeSpacing.x)
+            + (new Vector3(1, 0, -1) * NewDungeonGridGenerator.Instance.nodeSpacing.y)
+            + new Vector3(wallThickness, 0, wallThickness),
+            allCells[gridWidth - 1, 0].MyView.transform.position
+            + (new Vector3(1, 0, 1) * NewDungeonGridGenerator.Instance.nodeSpacing.x)
+             + (new Vector3(1, 0, -1) * NewDungeonGridGenerator.Instance.nodeSpacing.y)
+             + new Vector3(-wallThickness, 0, -wallThickness));
+
+        DrawHorizontalWall(allCells[0, gridHeight - 1].MyView.transform.position
+            - (new Vector3(1, 0, 1) * NewDungeonGridGenerator.Instance.nodeSpacing.x)
+            - (new Vector3(1, 0, -1) * NewDungeonGridGenerator.Instance.nodeSpacing.y)
+            + new Vector3(wallThickness, 0, wallThickness),
+            allCells[gridWidth - 1, gridHeight - 1].MyView.transform.position
+            + (new Vector3(1, 0, 1) * NewDungeonGridGenerator.Instance.nodeSpacing.x)
+             - (new Vector3(1, 0, -1) * NewDungeonGridGenerator.Instance.nodeSpacing.y)
+             + new Vector3(-wallThickness, 0, -wallThickness));
     }
 
-    private void DrawWall(Cell _leftCell, Cell _rightCell)
+    private void CreateVerticalWalls()
     {
-        meshVertices.Add(_leftCell.MyView.GetComponent<EncounterCell>().RightWallPos - new Vector3(0, 3, 0));
-        meshVertices.Add(_leftCell.MyView.GetComponent<EncounterCell>().RightWallPos + new Vector3(0, 3, 0));
-        meshVertices.Add(_rightCell.MyView.GetComponent<EncounterCell>().LeftWallPos - new Vector3(0, 3, 0));
-        meshVertices.Add(_rightCell.MyView.GetComponent<EncounterCell>().LeftWallPos + new Vector3(0, 3, 0));
+        //Left Wall
+        DrawVerticalWall(allCells[0, 0].MyView.transform.position
+            - (new Vector3(1, 0, 1) * NewDungeonGridGenerator.Instance.nodeSpacing.x)
+            + (new Vector3(1, 0, -1) * NewDungeonGridGenerator.Instance.nodeSpacing.y)
+            + (new Vector3(1, 0, -1) * wallThickness),
+            allCells[0, gridHeight - 1].MyView.transform.position
+            - (new Vector3(1, 0, 1) * NewDungeonGridGenerator.Instance.nodeSpacing.x)
+            - (new Vector3(1, 0, -1) * NewDungeonGridGenerator.Instance.nodeSpacing.y)
+            - (new Vector3(1, 0, -1) * wallThickness));
+        //Right Wall
+        DrawVerticalWall(allCells[gridWidth - 1, 0].MyView.transform.position
+            + (new Vector3(1, 0, 1) * NewDungeonGridGenerator.Instance.nodeSpacing.x)
+             + (new Vector3(1, 0, -1) * NewDungeonGridGenerator.Instance.nodeSpacing.y)
+             + (new Vector3(1, 0, -1) * wallThickness),
+            allCells[gridWidth - 1, gridHeight - 1].MyView.transform.position
+            + (new Vector3(1, 0, 1) * NewDungeonGridGenerator.Instance.nodeSpacing.x)
+             - (new Vector3(1, 0, -1) * NewDungeonGridGenerator.Instance.nodeSpacing.y)
+             - (new Vector3(1, 0, -1) * wallThickness));
+    }
+
+    private void CreateFloor()
+    {
+        //Bottom left
+        meshVertices.Add(allCells[0, 0].MyView.transform.position
+            - (new Vector3(1, 0, 1) * NewDungeonGridGenerator.Instance.nodeSpacing.x)
+             + (new Vector3(1, 0, -1) * NewDungeonGridGenerator.Instance.nodeSpacing.y));
+        //Top left
+        meshVertices.Add(allCells[0, gridHeight - 1].MyView.transform.position
+            - (new Vector3(1, 0, 1) * NewDungeonGridGenerator.Instance.nodeSpacing.x)
+             - (new Vector3(1, 0, -1) * NewDungeonGridGenerator.Instance.nodeSpacing.y));
+        //Bottom right
+        meshVertices.Add(allCells[gridWidth - 1, 0].MyView.transform.position
+            + (new Vector3(1, 0, 1) * NewDungeonGridGenerator.Instance.nodeSpacing.x)
+             + (new Vector3(1, 0, -1) * NewDungeonGridGenerator.Instance.nodeSpacing.y));
+        //Top right
+        meshVertices.Add(allCells[gridWidth - 1, gridHeight - 1].MyView.transform.position
+            + (new Vector3(1, 0, 1) * NewDungeonGridGenerator.Instance.nodeSpacing.x)
+             - (new Vector3(1, 0, -1) * NewDungeonGridGenerator.Instance.nodeSpacing.y));
+
         meshIndices.Add(wallVertices + 0);
         meshIndices.Add(wallVertices + 1);
         meshIndices.Add(wallVertices + 3);
         meshIndices.Add(wallVertices + 0);
         meshIndices.Add(wallVertices + 3);
         meshIndices.Add(wallVertices + 2);
-        wallVertices += 4;
+    }
+
+    private void DrawHorizontalWall(Vector3 _leftPosition, Vector3 _topPosition)
+    {
+        //Frontface
+        meshVertices.Add(_leftPosition + new Vector3(wallThickness, -wallHeight, -wallThickness));
+        meshVertices.Add(_leftPosition + new Vector3(wallThickness, wallHeight, -wallThickness));
+        meshVertices.Add(_topPosition + new Vector3(wallThickness, -wallHeight, -wallThickness));
+        meshVertices.Add(_topPosition + new Vector3(wallThickness, wallHeight, -wallThickness));
+
+        meshIndices.Add(wallVertices + 0);
+        meshIndices.Add(wallVertices + 1);
+        meshIndices.Add(wallVertices + 3);
+        meshIndices.Add(wallVertices + 0);
+        meshIndices.Add(wallVertices + 3);
+        meshIndices.Add(wallVertices + 2);
+
+        //Backface
+        meshVertices.Add(_leftPosition + new Vector3(-wallThickness, -wallHeight, wallThickness));
+        meshVertices.Add(_leftPosition + new Vector3(-wallThickness, wallHeight, wallThickness));
+        meshVertices.Add(_topPosition + new Vector3(-wallThickness, -wallHeight, wallThickness));
+        meshVertices.Add(_topPosition + new Vector3(-wallThickness, wallHeight, wallThickness));
+
+        meshIndices.Add(wallVertices + 4);
+        meshIndices.Add(wallVertices + 7);
+        meshIndices.Add(wallVertices + 5);
+        meshIndices.Add(wallVertices + 4);
+        meshIndices.Add(wallVertices + 6);
+        meshIndices.Add(wallVertices + 7);
+
+        //TopFace
+        meshVertices.Add(_leftPosition + new Vector3(wallThickness, wallHeight, -wallThickness));
+        meshVertices.Add(_leftPosition + new Vector3(-wallThickness, wallHeight, wallThickness));
+        meshVertices.Add(_topPosition + new Vector3(wallThickness, wallHeight, -wallThickness));
+        meshVertices.Add(_topPosition + new Vector3(-wallThickness, wallHeight, wallThickness));
+
+        meshIndices.Add(wallVertices + 8);
+        meshIndices.Add(wallVertices + 9);
+        meshIndices.Add(wallVertices + 11);
+        meshIndices.Add(wallVertices + 8);
+        meshIndices.Add(wallVertices + 11);
+        meshIndices.Add(wallVertices + 10);
+
+        wallVertices += 12;
+    }
+
+    private void DrawVerticalWall(Vector3 _bottomPosition, Vector3 _rightPosition)
+    {
+        //Leftface
+        meshVertices.Add(_bottomPosition + new Vector3(wallThickness, -wallHeight, wallThickness));
+        meshVertices.Add(_bottomPosition + new Vector3(wallThickness, wallHeight, wallThickness));
+        meshVertices.Add(_rightPosition + new Vector3(wallThickness, -wallHeight, wallThickness));
+        meshVertices.Add(_rightPosition + new Vector3(wallThickness, wallHeight, wallThickness));
+
+        meshIndices.Add(wallVertices + 0);
+        meshIndices.Add(wallVertices + 1);
+        meshIndices.Add(wallVertices + 3);
+        meshIndices.Add(wallVertices + 0);
+        meshIndices.Add(wallVertices + 3);
+        meshIndices.Add(wallVertices + 2);
+
+        //Rightface
+        meshVertices.Add(_bottomPosition + new Vector3(-wallThickness, -wallHeight, -wallThickness));
+        meshVertices.Add(_bottomPosition + new Vector3(-wallThickness, wallHeight, -wallThickness));
+        meshVertices.Add(_rightPosition + new Vector3(-wallThickness, -wallHeight, -wallThickness));
+        meshVertices.Add(_rightPosition + new Vector3(-wallThickness, wallHeight, -wallThickness));
+
+        meshIndices.Add(wallVertices + 4);
+        meshIndices.Add(wallVertices + 7);
+        meshIndices.Add(wallVertices + 5);
+        meshIndices.Add(wallVertices + 4);
+        meshIndices.Add(wallVertices + 6);
+        meshIndices.Add(wallVertices + 7);
+
+        //TopFace
+        meshVertices.Add(_bottomPosition + new Vector3(-wallThickness, wallHeight, -wallThickness));
+        meshVertices.Add(_rightPosition + new Vector3(-wallThickness, wallHeight, -wallThickness));
+        meshVertices.Add(_bottomPosition + new Vector3(wallThickness, wallHeight, wallThickness));
+        meshVertices.Add(_rightPosition + new Vector3(wallThickness, wallHeight, wallThickness));
+
+        meshIndices.Add(wallVertices + 8);
+        meshIndices.Add(wallVertices + 9);
+        meshIndices.Add(wallVertices + 11);
+        meshIndices.Add(wallVertices + 8);
+        meshIndices.Add(wallVertices + 11);
+        meshIndices.Add(wallVertices + 10);
+
+        //Frontface
+        meshVertices.Add(_bottomPosition + new Vector3(-wallThickness, -wallHeight, -wallThickness));
+        meshVertices.Add(_bottomPosition + new Vector3(-wallThickness, wallHeight, -wallThickness));
+        meshVertices.Add(_bottomPosition + new Vector3(wallThickness, -wallHeight, wallThickness));
+        meshVertices.Add(_bottomPosition + new Vector3(wallThickness, wallHeight, wallThickness));
+
+        meshIndices.Add(wallVertices + 12);
+        meshIndices.Add(wallVertices + 13);
+        meshIndices.Add(wallVertices + 15);
+        meshIndices.Add(wallVertices + 12);
+        meshIndices.Add(wallVertices + 15);
+        meshIndices.Add(wallVertices + 14);
+
+        wallVertices += 16;
     }
 
     private void createUVs()
@@ -87,22 +291,6 @@ public class DungeonMeshGenerator : MonoBehaviour
             meshUVs[i + 2] = new Vector2(1, 0);
             meshUVs[i + 3] = new Vector2(1, 1);
         }
-    }
-
-    private void createIndices()
-    {
-        //meshIndices = new int[((int)(meshVertices.Count / 2) * 3) - 6];
-        //for (int i = 0; i < meshIndices.Length; i += 6)
-        //{
-
-            
-        //    //meshIndices[i + 0] = i + 0;
-        //    //meshIndices[i + 1] = i + 1;
-        //    //meshIndices[i + 2] = i + 3;
-        //    //meshIndices[i + 3] = i + 0;
-        //    //meshIndices[i + 5] = i + 3;
-        //    //meshIndices[i + 4] = i + 2;
-        //}
     }
 
     private void DrawMesh()

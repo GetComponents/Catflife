@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.SceneManagement;
+using UnityEngine.Serialization;
 
 #if UNITY_EDITOR
 using UnityEditor;
@@ -53,6 +54,7 @@ public enum EActionType
     NONE,
     UNPACK,
     WATER,
+    STARTWATER,
     SLEEP
 }
 
@@ -86,10 +88,32 @@ public class Interactable : MonoBehaviour
 
     public float timeForObjectMovement = 1;
 
-    public int UnlockIndex;
+    public int UnlockIndex
+    {
+        get => m_unlockIndex;
+        set
+        {
+            if (value == 0 && myAction == EActionType.UNPACK)
+            {
+                GetComponentInChildren<SkinnedMeshRenderer>().material = interactableBoxMaterial;
+            }
+            m_unlockIndex = value;
+        }
+    }
+    [SerializeField]
+    [FormerlySerializedAs("UnlockIndex")]
+    private int m_unlockIndex;
+
+    public int BoxNumber;
+
+    [SerializeField]
+    Material interactableBoxMaterial;
 
     [SerializeField]
     private List<Interactable> FollowUpBoxes = new List<Interactable>();
+
+    [SerializeField]
+    private WateringCan wateringCan;
 
     private void Start()
     {
@@ -131,6 +155,9 @@ public class Interactable : MonoBehaviour
             case EActionType.WATER:
                 NameUI.text = "Water " + Name;
                 break;
+            case EActionType.STARTWATER:
+                NameUI.text = "Water " + Name;
+                break;
             case EActionType.SLEEP:
                 NameUI.text = "Sleep in " + Name;
                 break;
@@ -146,10 +173,7 @@ public class Interactable : MonoBehaviour
             player = PlayerInventory.Instance;
             processInteraction();
             player.Energy -= costOfInteraction;
-            foreach (Interactable box in FollowUpBoxes)
-            {
-                box.UnlockIndex--;
-            }
+            
         }
     }
 
@@ -171,6 +195,9 @@ public class Interactable : MonoBehaviour
             case EActionType.WATER:
                 UpgradeStat();
                 break;
+            case EActionType.STARTWATER:
+                Watering.Instance.EnableWatering();
+                break;
             case EActionType.SLEEP:
                 Sleep();
                 break;
@@ -184,19 +211,28 @@ public class Interactable : MonoBehaviour
         switch (myUpgradeType)
         {
             case ETypeOfUpgrade.ATTACK:
+
+                //PlaySound UpgradeJingle
                 player.AttackUpgrades++;
+                wateringCan.MoveWateringCan(transform.position);
                 Debug.Log($"You Feel Stronger ({player.AttackUpgrades})");
                 break;
             case ETypeOfUpgrade.HP:
+                //PlaySound UpgradeJingle
                 player.HPUpgrades++;
+                wateringCan.MoveWateringCan(transform.position);
                 Debug.Log($"You Feel Healthier ({player.HPUpgrades})");
                 break;
             case ETypeOfUpgrade.MANA:
+                //PlaySound UpgradeJingle
                 player.ManaUpgrades++;
+                wateringCan.MoveWateringCan(transform.position);
                 Debug.Log($"You Feel More Resiliant ({player.ManaUpgrades})");
                 break;
             case ETypeOfUpgrade.SPEED:
+                //PlaySound UpgradeJingle
                 player.DashUpgrades++;
+                wateringCan.MoveWateringCan(transform.position);
                 Debug.Log($"You Feel More Energetic ({player.DashUpgrades})");
                 break;
         }
@@ -212,12 +248,13 @@ public class Interactable : MonoBehaviour
 
     private IEnumerator MoveObject()
     {
+        AkSoundEngine.PostEvent("Play_ImpactCardboard", this.gameObject);
+        AkSoundEngine.PostEvent("Play_PoofCardboard", this.gameObject);
         GameObject movingObject = Instantiate(objectToUnpack, transform.position, transform.rotation);
-        //movingObject.transform.localScale = new Vector3(0.1f, 0.1f, 0.1f);
         objectMoveUpPosition = Instantiate(new GameObject(), transform).transform;
         objectMoveUpPosition.position += new Vector3(0, 2, 0);
         objectMoveUpPosition.eulerAngles += new Vector3(0, 180, 0);
-        objectMoveUpPosition.localScale *= 2;//Temporär
+        objectMoveUpPosition.localScale *= 2;
         for (float i = 0; i <= 1; i += 0.01f)
         {
             movingObject.transform.position = new Vector3(
@@ -234,22 +271,35 @@ public class Interactable : MonoBehaviour
                 Mathf.Lerp(transform.eulerAngles.z, objectMoveUpPosition.eulerAngles.z, i));
             yield return new WaitForSeconds((float)(timeForObjectMovement) / 100);
         }
-        //movingObject.transform.position = objectPosition.position;
-        //movingObject.transform.rotation = objectPosition.rotation;
+
         yield return new WaitForSeconds(1);
         Destroy(movingObject);
+        AkSoundEngine.PostEvent("Play_PoofCardboard", this.gameObject);
         yield return new WaitForSeconds(1);
-        objectPosition.gameObject.SetActive(true);
+        AkSoundEngine.PostEvent("Play_PoofCardboard", this.gameObject);
+
+        BoxManager.Instance.OpenedBoxesIndex.Add(BoxNumber);
+        OpenMyBox();
         if (UnlockContent)
         {
             GetComponent<PlayerUnlock>().UnlockMyContent();
         }
+    }
+
+    public void OpenMyBox()
+    {
+        foreach (Interactable box in FollowUpBoxes)
+        {
+            box.UnlockIndex--;
+        }
+        objectPosition.gameObject.SetActive(true);
         Destroy(gameObject);
     }
 
     private void Sleep()
     {
-        SceneManager.LoadSceneAsync("EncounterSelection");
+        //PlaySound SleepJingle
+        SceneTransition.Instance.ChangeScene("EncounterSelection", 0);
         PlayerController.Instance.HealFull();
     }
 }

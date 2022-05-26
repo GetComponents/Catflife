@@ -28,6 +28,7 @@ public class PickupHP : MonoBehaviour
     {
         if (other.tag == "Player")
         {
+            //PlaySound HealPlayer
             player.Heal(HealAmount);
             Destroy(gameObject);
         }

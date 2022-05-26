@@ -7,11 +7,13 @@ public class MenuUI : MonoBehaviour
 {
     public void StartGame()
     {
-        SceneManager.LoadScene("SampleScene");
+        AkSoundEngine.PostEvent("Play_ButtonPress", this.gameObject);
+        SceneManager.LoadScene("MainRoom");
     }
 
     public void Continue()
     {
+        AkSoundEngine.PostEvent("Play_ButtonPress", this.gameObject);
         if (Time.timeScale == 0)
         {
             Time.timeScale = 1;
@@ -21,6 +23,7 @@ public class MenuUI : MonoBehaviour
 
     public void StartMenu()
     {
+        AkSoundEngine.PostEvent("Play_ButtonPress", this.gameObject);
         if (Time.timeScale == 0)
         {
             Time.timeScale = 1;

@@ -13,7 +13,7 @@ public class CombatSceneChange : MonoBehaviour
         get => m_enemyAmount;
         set
         {
-            if (value < m_enemyAmount && value == 0)
+            if (value == 0)
             {
                 Debug.Log("The Gates Open");
                 EndCombat();
@@ -37,26 +37,32 @@ public class CombatSceneChange : MonoBehaviour
     }
     private void Start()
     {
-        SceneManager.SetActiveScene(SceneManager.GetSceneByName("Combat"));
-        SpawnArena();
-        //Instantiate(AllArenaPrefabs[Random.Range(0, AllArenaPrefabs.Count - 1)], transform.position, Quaternion.identity);
+        StartCoroutine(SpawnArena());
     }
 
-    private void SpawnArena()
+    private IEnumerator SpawnArena()
     {
-        DungeonGridGenerator tmp = DungeonGridGenerator.Instance;
-        switch (DungeonGridGenerator.Instance.CurrentEncounter)
+        while (true)
+        {
+            if (SceneManager.GetActiveScene() == SceneManager.GetSceneByName("Combat"))
+            {
+                break;
+            }
+            yield return new WaitForEndOfFrame();
+        }
+        NewDungeonGridGenerator tmp = NewDungeonGridGenerator.Instance;
+        switch (tmp.CurrentEncounter)
         {
             case EEncounterType.NONE:
                 break;
             case EEncounterType.FIGHTEASY:
-                Instantiate(tmp.EasyEncounters[tmp.CurrentEncounterIndex], transform.position, Quaternion.identity);
+                Instantiate(tmp.EasyEncounters[tmp.CurrentEncounterIndex], transform.position, Quaternion.Euler(0, -90f, 0));
                 break;
             case EEncounterType.FIGHTMEDIUM:
-                Instantiate(tmp.MediumEncounters[tmp.CurrentEncounterIndex], transform.position, Quaternion.identity);
+                Instantiate(tmp.MediumEncounters[tmp.CurrentEncounterIndex], transform.position, Quaternion.Euler(0, -90f, 0));
                 break;
             case EEncounterType.FIGHTHARD:
-                Instantiate(tmp.HardEncounters[tmp.CurrentEncounterIndex], transform.position, Quaternion.identity);
+                Instantiate(tmp.HardEncounters[tmp.CurrentEncounterIndex], transform.position, Quaternion.Euler(0, -90f, 0));
                 break;
             case EEncounterType.BOSS:
                 break;
@@ -79,10 +85,10 @@ public class CombatSceneChange : MonoBehaviour
 
     public void EndCombat()
     {
+        AkSoundEngine.PostEvent("Play_DoorSqueaky", this.gameObject);
         foreach (var _exit in FindObjectsOfType<PlayerExitZone>())
         {
             _exit.IsAbleToLeave = true;
         }
-        //PlayerExitZone.Instance.IsAbleToLeave = true;
     }
 }
