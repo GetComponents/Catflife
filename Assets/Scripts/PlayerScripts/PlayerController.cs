@@ -209,6 +209,9 @@ public class PlayerController : MonoBehaviour
     public void EndDamageAnim()
     {
         myAnimator.SetBool("takeDamage", false);
+        myAnimator.SetBool("isDashing", false);
+        myAnimator.SetBool("isSwinging", false);
+        myAnimator.SetBool("isCasting", false);
     }
 
     #region InputMethods
