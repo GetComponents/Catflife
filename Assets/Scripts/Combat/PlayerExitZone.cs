@@ -5,22 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class PlayerExitZone : MonoBehaviour
 {
-    public bool IsAbleToLeave
-    {
-        get => m_isAbleToLeave;
-        set
-        {
-            if (value == true && gateAnimator!= null)
-            {
-                gateAnimator.SetBool("openGate", true);
-            }
-            m_isAbleToLeave = value;
-        }
-    }
-    bool m_isAbleToLeave;
+    public bool IsAbleToLeave;
     public bool IsExit;
-    [SerializeField]
-    Animator gateAnimator;
 
     private void Awake()
     {
