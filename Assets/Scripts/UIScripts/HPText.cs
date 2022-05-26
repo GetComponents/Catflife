@@ -10,10 +10,10 @@ public class HPText : MonoBehaviour
     TextMeshProUGUI text;
 
     [SerializeField]
-    Image Heart;
+    List<Image> Hearts;
 
     [SerializeField]
-    Sprite heartFull, heartHalf;
+    Sprite heartFull, heartHalf, heartEmpty, heartLocked;
 
     private void Start()
     {
@@ -26,7 +26,23 @@ public class HPText : MonoBehaviour
 
     private void ChangeHPDisplay()
     {
-
+        float healthAmount = PlayerController.Instance.HealthPoints;
+        for (int i = 1; i <= PlayerController.Instance.MaxHP; i += 2)
+        {
+            if (i + 1 <= healthAmount)
+            {
+                Hearts[Mathf.FloorToInt(i / 2)].sprite = heartFull;
+                continue;
+            }
+            if (i == healthAmount)
+            {
+                Hearts[Mathf.FloorToInt(i / 2)].sprite = heartHalf;
+            }
+            else
+            {
+                Hearts[Mathf.FloorToInt(i / 2)].sprite = heartEmpty;
+            }
+        }
     }
 
     private void ChangeHPText()
