@@ -87,6 +87,10 @@ public class SceneTransition : MonoBehaviour
             PlayerController.Instance.IsInCombat = false;
             playerSword.enabled = false;
         }
+        if(_newScene == SceneManager.GetSceneByName("MainRoom"))
+        {
+            PlayerController.Instance.Revive();
+        }
         StartCoroutine(FinishTransition());
     }
 
