@@ -71,6 +71,7 @@ public class Mage : Enemy
         {
             isAggro = false;
             myAnimator.SetBool("isFleeing", false);
+            isAttacking = false;
         }
     }
 
