@@ -249,6 +249,7 @@ MonoBehaviour:
   BoxNumber: 22
   interactableBoxMaterial: {fileID: 0}
   FollowUpBoxes: []
+  wateringCan: {fileID: 0}
 --- !u!1 &7390144418017566783
 GameObject:
   m_ObjectHideFlags: 0
@@ -422,8 +423,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8030181245768644936}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0, y: 0.3, z: 0}
+  m_LocalScale: {x: 0.6, y: 0.6, z: 0.6}
   m_Children: []
   m_Father: {fileID: 7564453294121776638}
   m_RootOrder: 2
