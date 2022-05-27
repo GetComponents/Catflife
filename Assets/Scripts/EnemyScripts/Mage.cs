@@ -56,6 +56,7 @@ public class Mage : Enemy
 
     private void StartAttack()
     {
+        timeUntilAttack = timeToAttack;
         myAnimator.SetBool("isAttacking", true);
         isAttacking = true;
     }
@@ -63,8 +64,14 @@ public class Mage : Enemy
     private void Move()
     {
         myAnimator.SetBool("isAttacking", false);
+        myAnimator.SetBool("isFleeing", true);
         enemyNavMesh.SetDestination((-(PlayerController.Instance.transform.GetChild(0).position - transform.position).normalized
             * targetPointDistance) + transform.position);
+        if (!isInRange)
+        {
+            isAggro = false;
+            myAnimator.SetBool("isFleeing", false);
+        }
     }
 
     private void StartCast()
@@ -78,14 +85,8 @@ public class Mage : Enemy
 
     private void EndCast()
     {
-        if (isElite)
-        {
-            MageCast tmp = Instantiate(AOEAttack, PlayerController.Instance.transform.GetChild(0).position, Quaternion.identity).GetComponent<MageCast>();
-            tmp.MyDamage = damage;
-            tmp.TimeUntilExplosion = AOEExplosionTime;
-            tmp.TimeUntilFaded = AOEFadeTime;
-        }
         myAnimator.SetBool("isAttacking", false);
+        isAttacking = false;
     }
 
     IEnumerator CastRandomly()
