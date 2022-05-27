@@ -15121,7 +15121,6 @@ MonoBehaviour:
   heartFull: {fileID: 21300000, guid: 327540f252baffc42bd5a056d7c6e974, type: 3}
   heartHalf: {fileID: 21300000, guid: 51299cf3fbcf6f84db92a36fdf57a060, type: 3}
   heartEmpty: {fileID: 21300000, guid: e7f81baa762fa474699ae35b570cea64, type: 3}
-  heartLocked: {fileID: 21300000, guid: efdb3c9192be50d40ac2c7b3e7dde1e0, type: 3}
 --- !u!114 &1093932520
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -29603,8 +29602,8 @@ MonoBehaviour:
   mainCam: {fileID: 963194227}
   rb: {fileID: 919132148850103127}
   playerHitBox: {fileID: 543450652838873580}
-  m_healthPoints: 6
-  MaxHP: 6
+  m_healthPoints: 4
+  MaxHP: 4
   isInvincible: 0
   myAnimator: {fileID: 919132148850103131}
   maxMana: 4

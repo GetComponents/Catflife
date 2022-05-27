@@ -123,7 +123,7 @@ public class PlayerInventory : MonoBehaviour
             }
             m_manaUpgrades = value;
             PlayerController.Instance.CurrentMana = PlayerController.Instance.maxMana;
-            ManaBar.Instance.UnlockNewManabar();
+            //ManaBar.Instance.UnlockNewManabar();
         }
     }
     [SerializeField]

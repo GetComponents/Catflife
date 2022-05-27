@@ -42,6 +42,10 @@ public class ManaBar : MonoBehaviour
 
     private void ChangeMana()
     {
+        if ((float)PlayerController.Instance.maxMana / 4 > ManaBarAmount)
+        {
+            UnlockNewManabar();
+        }
         for (int i = 0; i < ManaBarAmount; i++)
         {
             //4 ist Maxmana bei 0 Upgrades und jedes Upgrade gibt 4 extra Mana
