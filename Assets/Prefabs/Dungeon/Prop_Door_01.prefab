@@ -16,7 +16,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &4352753085669988399
 Transform:
@@ -154,6 +154,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Prop_DoorBars_01
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 29331fd590ea75b449404d7b2d1ae4eb, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 29331fd590ea75b449404d7b2d1ae4eb, type: 3}
 --- !u!4 &7521712056495365062 stripped
@@ -231,6 +235,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 3a349c64c4eef014b9f31db6c61dd3e6, type: 3}
       propertyPath: m_Name
       value: UCX_Beta_01 (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 3a349c64c4eef014b9f31db6c61dd3e6, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3a349c64c4eef014b9f31db6c61dd3e6, type: 3}
