@@ -28,6 +28,7 @@ public class SceneTransition : MonoBehaviour
             return;
         }
         SceneManager.activeSceneChanged += EndTransition;
+        
     }
 
     public void ChangeScene(string _sceneToLoad, int _loadType)
@@ -77,7 +78,8 @@ public class SceneTransition : MonoBehaviour
 
     public void EndTransition(Scene _previousScene, Scene _newScene)
     {
-        if (_newScene == SceneManager.GetSceneByName("Combat"))
+        Debug.Log(_newScene.name);
+        if (_newScene == SceneManager.GetSceneByName("Combat") || SceneManager.GetSceneByName("CombatDebug") == _newScene)
         {
             PlayerController.Instance.IsInCombat = true;
             playerSword.enabled = true;
