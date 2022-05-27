@@ -151,6 +151,10 @@ public class PlayerController : MonoBehaviour
     private void Start()
     {
         CurrentMana = maxMana;
+        if (SceneManager.GetActiveScene().name == "CombatDebug")
+        {
+            IsInCombat = true;
+        }
     }
 
     private void FixedUpdate()
