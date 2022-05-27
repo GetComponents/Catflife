@@ -297,7 +297,7 @@ public class Interactable : MonoBehaviour
 
     private void Sleep()
     {
-        AkSoundEngine.PostEvent("SleepJingle", this.gameObject);
+        AkSoundEngine.PostEvent("Play_SleepJingle", this.gameObject);
         SceneTransition.Instance.ChangeScene("EncounterSelection", 0);
         PlayerController.Instance.HealFull();
     }
