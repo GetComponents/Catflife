@@ -46,4 +46,9 @@ public class PAnimationRelay : MonoBehaviour
     {
         pc.EndCast();
     }
+
+    private void StartTakeDamageAnim()
+    {
+        pc.StartDamageAnim();
+    }
 }

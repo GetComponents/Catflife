@@ -41,11 +41,14 @@ public class PlayerController : MonoBehaviour
         {
             if (value <= 0)
             {
+                myAnimator.SetBool("takeDamage", true);
                 Die();
+                m_healthPoints = 0;
             }
             else if (value < m_healthPoints)
             {
                 StartCoroutine(TurnInvincible());
+                myAnimator.SetBool("takeDamage", true);
                 m_healthPoints = value;
             }
             else if (value > MaxHP)
@@ -165,8 +168,10 @@ public class PlayerController : MonoBehaviour
                 }
             }
 
-            if (playerHitBox.eulerAngles.y <= 45 && playerHitBox.eulerAngles.y >= 225)
+            if (playerHitBox.eulerAngles.y <= 315)
             {
+                myAnimator.SetFloat("ForwardBlend", m_moveDir.y * ((Mathf.Abs(playerHitBox.eulerAngles.y - 135) - 90) / 90));
+                myAnimator.SetFloat("RightBlend", m_moveDir.x * ((Mathf.Abs(playerHitBox.eulerAngles.y - 225) - 90) / 90));
                 ////höchster wert ist -45 und niedrigstes ist 45/-135
                 ////+ 45 => 0 = max, 90/-90 = min
                 //// 90 - |wert| / 90 
@@ -176,7 +181,8 @@ public class PlayerController : MonoBehaviour
             }
             else
             {
-                //
+                myAnimator.SetFloat("ForwardBlend", m_moveDir.y * ((405 - playerHitBox.eulerAngles.y) / 90));
+                myAnimator.SetFloat("RightBlend", m_moveDir.x * ((playerHitBox.eulerAngles.y - 315) / 90));
             }
         }
         else if (DashStarted)
@@ -189,9 +195,24 @@ public class PlayerController : MonoBehaviour
 
     public void Die()
     {
-        HealthPoints = MaxHP;
         //PlaySound PlayerDeath
+        myAnimator.SetBool("die", true);
         SceneTransition.Instance.ChangeScene("MainRoom", 0);
+    }
+
+    public void Revive()
+    {
+        HealthPoints = MaxHP;
+        CurrentMana = maxMana;
+        myAnimator.SetBool("die", false);
+    }
+
+    public void StartDamageAnim()
+    {
+        myAnimator.SetBool("takeDamage", false);
+        myAnimator.SetBool("isDashing", false);
+        myAnimator.SetBool("isSwinging", false);
+        myAnimator.SetBool("isCasting", false);
     }
 
     #region InputMethods
@@ -199,7 +220,7 @@ public class PlayerController : MonoBehaviour
     {
         m_moveDir = context.ReadValue<Vector2>();
         //Debug.Log(m_moveDir);
-        myAnimator.SetFloat("ForwardBlend", m_moveDir.y);
+        //myAnimator.SetFloat("ForwardBlend", m_moveDir.y);
         myAnimator.SetFloat("RightBlend", m_moveDir.x);
     }
 
