@@ -7,21 +7,21 @@ using UnityEngine.UI;
 
 public class HPText : MonoBehaviour
 {
-    TextMeshProUGUI text;
+    //TextMeshProUGUI text;
 
     [SerializeField]
     List<Image> Hearts;
 
     [SerializeField]
-    Sprite heartFull, heartHalf, heartEmpty, heartLocked;
+    Sprite heartFull, heartHalf, heartEmpty;
 
     private void Start()
     {
-        text = GetComponent<TextMeshProUGUI>();
-        PlayerController.Instance.OnHealthChange.AddListener(ChangeHPText);
+        //text = GetComponent<TextMeshProUGUI>();
+        //PlayerController.Instance.OnHealthChange.AddListener(ChangeHPText);
         PlayerController.Instance.OnHealthChange.AddListener(ChangeHPDisplay);
         ChangeHPDisplay();
-        ChangeHPText();
+        //ChangeHPText();
     }
 
     private void ChangeHPDisplay()
@@ -45,13 +45,13 @@ public class HPText : MonoBehaviour
         }
     }
 
-    private void ChangeHPText()
-    {
-        text.text = $"Health: {PlayerController.Instance.HealthPoints} / {PlayerController.Instance.MaxHP}";
-    }
+    //private void ChangeHPText()
+    //{
+    //    text.text = $"Health: {PlayerController.Instance.HealthPoints} / {PlayerController.Instance.MaxHP}";
+    //}
 
     private void OnDestroy()
     {
-        PlayerInventory.Instance.OnEnergyChange.RemoveListener(ChangeHPText);
+        PlayerController.Instance.OnHealthChange.RemoveListener(ChangeHPDisplay);
     }
 }

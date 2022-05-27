@@ -4,37 +4,29 @@ using UnityEngine;
 
 public class EnemyAggroRange : MonoBehaviour
 {
-    PlayerController player;
+    PlayerInventory player;
     [SerializeField]
     Enemy enemyController;
-    [SerializeField]
-    MeshRenderer meshRenderer;
-    [SerializeField]
-    Material aggroMaterial;
-    Material oldMaterial;
 
 
     private void Start()
     {
-        oldMaterial = meshRenderer.material;
-        player = PlayerController.Instance;
+        player = PlayerInventory.Instance;
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.transform == PlayerInventory.Instance.transform)
+        if (other.transform == player.transform)
         {
             enemyController.isInRange = true;
-            meshRenderer.material = aggroMaterial;
         }
     }
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.transform == player.transform.GetChild(0))
+        if (other.transform == player.transform)
         {
             enemyController.isInRange = false;
-            meshRenderer.material = oldMaterial;
         }
     }
 }

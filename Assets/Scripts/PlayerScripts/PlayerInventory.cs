@@ -91,6 +91,7 @@ public class PlayerInventory : MonoBehaviour
                 PlayerController.Instance.MaxHP = (int)hpProgression.z;
             }
             m_hpUpgrades = value;
+            PlayerController.Instance.HealthPoints = PlayerController.Instance.MaxHP;
         }
     }
     public int ManaUpgrades
@@ -121,6 +122,8 @@ public class PlayerInventory : MonoBehaviour
                 PlayerController.Instance.ManaGain = (int)manaGainProgression.z;
             }
             m_manaUpgrades = value;
+            PlayerController.Instance.CurrentMana = PlayerController.Instance.maxMana;
+            //ManaBar.Instance.UnlockNewManabar();
         }
     }
     [SerializeField]

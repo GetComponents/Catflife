@@ -43,6 +43,7 @@ public class PlayerController : MonoBehaviour
             {
                 myAnimator.SetBool("takeDamage", true);
                 Die();
+                m_healthPoints = 0;
             }
             else if (value < m_healthPoints)
             {
@@ -206,7 +207,7 @@ public class PlayerController : MonoBehaviour
         myAnimator.SetBool("die", false);
     }
 
-    public void EndDamageAnim()
+    public void StartDamageAnim()
     {
         myAnimator.SetBool("takeDamage", false);
         myAnimator.SetBool("isDashing", false);
