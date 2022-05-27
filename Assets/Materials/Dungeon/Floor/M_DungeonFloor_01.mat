@@ -25,6 +25,14 @@ Material:
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
+    - Texture2D_357613575f1c4bffa8424ecc3b3311b1:
+        m_Texture: {fileID: 2800000, guid: 49d94cf3a1e4ded4da602adfbecf24f2, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - Texture2D_577ccdc0deda4686b19f8e50df2c4544:
+        m_Texture: {fileID: 2800000, guid: 10e8cecc037046b4486044c7cc2ba07d, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - Texture2D_973fe8702b1e4b999b0fd074a377dfe4:
         m_Texture: {fileID: 2800000, guid: 121bad92bfd3be8498ccfd6395f4663e, type: 3}
         m_Scale: {x: 1, y: 1}
@@ -122,6 +130,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
+    - Vector1_61313a862c7a442e93800095624d03bf: 0.12
     - _AORemapMax: 1
     - _AORemapMin: 0
     - _ATDistance: 1
@@ -152,7 +161,7 @@ Material:
     - _DisplacementLockTilingScale: 1
     - _DisplacementMode: 0
     - _DoubleSidedEnable: 0
-    - _DoubleSidedNormalMode: 1
+    - _DoubleSidedNormalMode: 2
     - _DstBlend: 0
     - _EmissiveColorMode: 1
     - _EmissiveExposureWeight: 1
@@ -235,12 +244,13 @@ Material:
     - _ZTestTransparent: 4
     - _ZWrite: 1
     m_Colors:
+    - Color_28c95a4b5e83408995f2b68ec0dc9293: {r: 0.72023517, g: 0.6784888, b: 0.745283, a: 0}
     - Vector2_16cacfe235dc462694aa5ab404b99c78: {r: 1, g: 1, b: 1, a: 1}
     - _BaseColor: {r: 0.5849056, g: 0.5849056, b: 0.5849056, a: 1}
     - _BaseColorMap_MipInfo: {r: 0, g: 0, b: 0, a: 0}
     - _Color: {r: 0.5849056, g: 0.5849056, b: 0.5849056, a: 1}
     - _DiffusionProfileAsset: {r: 0, g: 0, b: 0, a: 0}
-    - _DoubleSidedConstants: {r: 1, g: 1, b: -1, a: 0}
+    - _DoubleSidedConstants: {r: 1, g: 1, b: 1, a: 0}
     - _EmissionColor: {r: 1, g: 1, b: 1, a: 1}
     - _EmissiveColor: {r: 0, g: 0, b: 0, a: 1}
     - _EmissiveColorLDR: {r: 0, g: 0, b: 0, a: 1}
