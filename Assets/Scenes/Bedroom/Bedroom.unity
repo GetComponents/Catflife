@@ -97,7 +97,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 0}
+  m_LightingDataAsset: {fileID: 112000000, guid: 22e8855064ccfbe488efd2324bf8af54, type: 2}
   m_LightingSettings: {fileID: 0}
 --- !u!196 &4
 NavMeshSettings:
@@ -123,3 +123,60 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1001 &4871801559644627036
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 759140547037134458, guid: ec774b56dbd4cbc45af3840e0a493221, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 759140547037134458, guid: ec774b56dbd4cbc45af3840e0a493221, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 3.6599379
+      objectReference: {fileID: 0}
+    - target: {fileID: 759140547037134458, guid: ec774b56dbd4cbc45af3840e0a493221, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -8.972785
+      objectReference: {fileID: 0}
+    - target: {fileID: 759140547037134458, guid: ec774b56dbd4cbc45af3840e0a493221, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 11.467275
+      objectReference: {fileID: 0}
+    - target: {fileID: 759140547037134458, guid: ec774b56dbd4cbc45af3840e0a493221, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 759140547037134458, guid: ec774b56dbd4cbc45af3840e0a493221, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 759140547037134458, guid: ec774b56dbd4cbc45af3840e0a493221, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 759140547037134458, guid: ec774b56dbd4cbc45af3840e0a493221, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 759140547037134458, guid: ec774b56dbd4cbc45af3840e0a493221, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 759140547037134458, guid: ec774b56dbd4cbc45af3840e0a493221, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 759140547037134458, guid: ec774b56dbd4cbc45af3840e0a493221, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8130440491087223020, guid: ec774b56dbd4cbc45af3840e0a493221, type: 3}
+      propertyPath: m_Name
+      value: BedroomPrefab
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: ec774b56dbd4cbc45af3840e0a493221, type: 3}
