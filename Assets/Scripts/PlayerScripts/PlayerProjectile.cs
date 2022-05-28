@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerProjectile : MonoBehaviour
 {
     public float MyDamage;
+    private uint playingID;
 
     [SerializeField]
     private float selfDestructTime;
@@ -15,27 +16,30 @@ public class PlayerProjectile : MonoBehaviour
     private void Start()
     {
         Destroy(gameObject, selfDestructTime);
-        //PlaySound AmbientFire ?
+        playingID = AkSoundEngine.PostEvent("Play_CharProjectileAmbience", this.gameObject);
     }
     private void OnTriggerEnter(Collider other)
     {
         if (other.tag == "Enemy")
         {
             other.GetComponent<Enemy>().TakeDamage(MyDamage);
-            //PlaySound FirballHit
+            AkSoundEngine.PostEvent("Play_CharProjectileExplode", this.gameObject);
+            AkSoundEngine.StopPlayingID(playingID, 200, AkCurveInterpolation.AkCurveInterpolation_Constant);
             Destroy(Instantiate(explosionVFX, transform.position, Quaternion.identity), 1);
             Destroy(gameObject);
         }
         else if(other.tag == "Wall")
         {
-            //PlaySound FirballHit
+            AkSoundEngine.PostEvent("Play_CharProjectileExplode", this.gameObject);
+            AkSoundEngine.StopPlayingID(playingID, 200, AkCurveInterpolation.AkCurveInterpolation_Constant);
             Destroy(Instantiate(explosionVFX, transform.position, Quaternion.identity), 1);
             Destroy(gameObject);
         }
         else if (other.tag == "Boss")
         {
             other.GetComponent<Boss>().TakeDamage(MyDamage);
-            //PlaySound FirballHit
+            AkSoundEngine.PostEvent("Play_CharProjectileExplode", this.gameObject);
+            AkSoundEngine.StopPlayingID(playingID, 200, AkCurveInterpolation.AkCurveInterpolation_Constant);
             Destroy(Instantiate(explosionVFX, transform.position, Quaternion.identity), 1);
             Destroy(gameObject);
         }

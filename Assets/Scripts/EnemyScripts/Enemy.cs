@@ -30,7 +30,7 @@ public class Enemy : MonoBehaviour
     protected bool seesPlayer;
     protected NavMeshAgent enemyNavMesh;
     [SerializeField]
-    GameObject PickupHP, PickupEnergy;
+    protected GameObject PickupHP, PickupEnergy;
     public int BaseEnergyPickupAmount = 10;
     [HideInInspector]
     public float originalNavMeshSpeed, slowedSpeed = 1;
@@ -71,7 +71,7 @@ public class Enemy : MonoBehaviour
         HealthPoints -= amount;
     }
 
-    private void Die()
+    protected virtual void Die()
     {
         PickupEnergy energyPickup = Instantiate(PickupEnergy,
             new Vector3(transform.position.x, PlayerInventory.Instance.transform.position.y, transform.position.z),

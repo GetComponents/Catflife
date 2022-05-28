@@ -9,6 +9,14 @@
 							<ObjectRef Name="Play_GruntProjectileExplode" ID="{6F419F55-EB58-47F6-B105-F44CF0CE0218}" WorkUnitID="{241DAD68-20A2-4EEC-81F1-8FCC85376151}"/>
 							<Position X="0" Y="0"/>
 						</Module>
+						<Module>
+							<ObjectRef Name="Play_Watering" ID="{22B88C88-6389-4000-929B-43B5CA33F90E}" WorkUnitID="{241DAD68-20A2-4EEC-81F1-8FCC85376151}"/>
+							<Position X="1" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Stop_Watering" ID="{789702E3-2702-4E28-9A6F-E8E1195B516A}" WorkUnitID="{241DAD68-20A2-4EEC-81F1-8FCC85376151}"/>
+							<Position X="2" Y="0"/>
+						</Module>
 					</ModuleList>
 					<RTPCValueList ShowAll="true"/>
 					<CurrentStateList ShowAll="true"/>

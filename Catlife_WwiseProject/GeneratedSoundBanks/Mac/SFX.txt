@@ -1,12 +1,26 @@
 Event	ID	Name			Wwise Object Path	Notes
+	10982625	Play_UnlockJingle			\Default Work Unit\ItemsScene\Play_UnlockJingle	
 	31596624	Play_PoofCardboard			\Default Work Unit\ItemsScene\Play_PoofCardboard	
 	99206220	Play_Step			\Default Work Unit\Character\Play_Step	
+	125832294	Play_CharProjectileExplode			\Default Work Unit\Character\Play_CharProjectileExplode	
+	186625315	Play_CharProjectileAmbience			\Default Work Unit\Character\Play_CharProjectileAmbience	
+	354571108	Play_SleepJingle			\Default Work Unit\ItemsScene\Play_SleepJingle	
+	383068205	Play_UpgradeJingle			\Default Work Unit\ItemsScene\Play_UpgradeJingle	
+	598714956	Play_SwordHit			\Default Work Unit\Character\Play_SwordHit	
+	1017112217	Play_CharProjectileThrow			\Default Work Unit\Character\Play_CharProjectileThrow	
+	1126284757	Play_Watering			\Default Work Unit\ItemsScene\Play_Watering	
 	1423843544	Play_GruntProjectileExplode			\Default Work Unit\Enemies\Play_GruntProjectileExplode	
 	1438502543	Play_LeavingFootsteps			\Default Work Unit\Character\Play_LeavingFootsteps	
+	1622429165	Play_LightUpStatue			\Default Work Unit\ItemsScene\Play_LightUpStatue	
+	1746766985	Play_SwordSwing			\Default Work Unit\Character\Play_SwordSwing	
 	1927856655	Play_GruntEliteProjectileExplode			\Default Work Unit\Enemies\Play_GruntEliteProjectileExplode	
+	2028186725	Play_EnergyJingle			\Default Work Unit\ItemsScene\Play_EnergyJingle	
+	2106862869	Play_HPJingle			\Default Work Unit\ItemsScene\Play_HPJingle	
 	2652178615	Play_ButtonPress			\Default Work Unit\UI\Play_ButtonPress	
 	3010145222	Play_ImpactCardboard			\Default Work Unit\ItemsScene\Play_ImpactCardboard	
 	3020861821	Play_DoorSqueaky			\Default Work Unit\UI\Play_DoorSqueaky	
+	3226714187	Stop_Watering			\Default Work Unit\ItemsScene\Stop_Watering	
+	3450689315	Play_ShootStatue			\Default Work Unit\ItemsScene\Play_ShootStatue	
 	3941375504	Play_GruntEliteProjectileThrow			\Default Work Unit\Enemies\Play_GruntEliteProjectileThrow	
 	4218963955	Play_GruntProjectileThrow			\Default Work Unit\Enemies\Play_GruntProjectileThrow	
 
@@ -17,40 +31,64 @@ Switch	ID	Name	Switch Group			Notes
 	782826392	Default	Material			
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
-	6159929	UIButtonPress_01	Y:\Documents\UnityProject\Catflife\Catlife_WwiseProject\.cache\Mac\SFX\UIButtonPress_E4073A26.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\ButtonPress\UIButtonPress_01		52960
-	17516549	UIButtonPress_04	Y:\Documents\UnityProject\Catflife\Catlife_WwiseProject\.cache\Mac\SFX\UIButtonPress_18BDB122.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\ButtonPress\UIButtonPress_04		74120
-	23732595	CardboardImpact_01	Y:\Documents\UnityProject\Catflife\Catlife_WwiseProject\.cache\Mac\SFX\CardboardImpact_6F26D83E.wem		\Actor-Mixer Hierarchy\Default Work Unit\ItemsScene\Cardboard\Impact\CardboardImpact_01		90320
-	75365945	UIButtonPress_02	Y:\Documents\UnityProject\Catflife\Catlife_WwiseProject\.cache\Mac\SFX\UIButtonPress_38CCF9F7.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\ButtonPress\UIButtonPress_02		50316
-	129928124	ProjectileExplode_06	Y:\Documents\UnityProject\Catflife\Catlife_WwiseProject\.cache\Mac\SFX\ProjectileExplode_B394EDA4.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemies\Grunt\Projectile\Explosion\GruntEliteProjectileExplode\ProjectileExplode_06		306864
-	154705653	CardboardPoof_03	Y:\Documents\UnityProject\Catflife\Catlife_WwiseProject\.cache\Mac\SFX\CardboardPoof_2F1F70CD.wem		\Actor-Mixer Hierarchy\Default Work Unit\ItemsScene\Cardboard\Poof\CardboardPoof_03		254628
-	238543085	ProjectileThrow_04	Y:\Documents\UnityProject\Catflife\Catlife_WwiseProject\.cache\Mac\SFX\ProjectileThrow_2B7498F0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemies\Grunt\Projectile\Throw\Throw\ProjectileThrow_04		162060
+	6159929	UIButtonPress_01	Y:\Documents\UnityProject\Catflife\Catlife_WwiseProject\.cache\Mac\SFX\UIButtonPress_1FF5341A.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\ButtonPress\UIButtonPress_01		52960
+	17516549	UIButtonPress_04	Y:\Documents\UnityProject\Catflife\Catlife_WwiseProject\.cache\Mac\SFX\UIButtonPress_79A2CFEA.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\ButtonPress\UIButtonPress_04		74120
+	23732595	CardboardImpact_01	Y:\Documents\UnityProject\Catflife\Catlife_WwiseProject\.cache\Mac\SFX\CardboardImpact_EEC90E33.wem		\Actor-Mixer Hierarchy\Default Work Unit\ItemsScene\Cardboard\Impact\CardboardImpact_01		90320
+	27174265	SwordSwing_08	Y:\Documents\UnityProject\Catflife\Catlife_WwiseProject\.cache\Mac\SFX\SwordSwing_A8EEE66F.wem		\Actor-Mixer Hierarchy\Default Work Unit\Character\Sword\Swing\SwordSwing_08		49820
+	75365945	UIButtonPress_02	Y:\Documents\UnityProject\Catflife\Catlife_WwiseProject\.cache\Mac\SFX\UIButtonPress_2F884072.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\ButtonPress\UIButtonPress_02		50316
+	95700381	UpgradeJingle	Y:\Documents\UnityProject\Catflife\Catlife_WwiseProject\.cache\Mac\SFX\UpgradeJingle_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\ItemsScene\Jingle\UpgradeJingle		226196
+	129928124	ProjectileExplode_06	Y:\Documents\UnityProject\Catflife\Catlife_WwiseProject\.cache\Mac\SFX\ProjectileExplode_D31D5985.wem		\Actor-Mixer Hierarchy\Default Work Unit\Character\Projectile\Explosion\CharProjectileExplode\ProjectileExplode_06		306864
+	143940415	SwordSwing_06	Y:\Documents\UnityProject\Catflife\Catlife_WwiseProject\.cache\Mac\SFX\SwordSwing_E2A2D57E.wem		\Actor-Mixer Hierarchy\Default Work Unit\Character\Sword\Swing\SwordSwing_06		55152
+	154705653	CardboardPoof_03	Y:\Documents\UnityProject\Catflife\Catlife_WwiseProject\.cache\Mac\SFX\CardboardPoof_2DB66D78.wem		\Actor-Mixer Hierarchy\Default Work Unit\ItemsScene\Cardboard\Poof\CardboardPoof_03		254628
+	189741884	StatueShoot_04	Y:\Documents\UnityProject\Catflife\Catlife_WwiseProject\.cache\Mac\SFX\StatueShoot_36B55B69.wem		\Actor-Mixer Hierarchy\Default Work Unit\ItemsScene\Statue\ShootStatue\Electric\StatueShoot_04		210988
+	202986522	SwordHit_02	Y:\Documents\UnityProject\Catflife\Catlife_WwiseProject\.cache\Mac\SFX\SwordHit_9A355FBB.wem		\Actor-Mixer Hierarchy\Default Work Unit\Character\Sword\Hit\SwordHit_02		62796
+	207199769	Watering	Y:\Documents\UnityProject\Catflife\Catlife_WwiseProject\.cache\Mac\SFX\Watering_D79FB2B7.wem		\Actor-Mixer Hierarchy\Default Work Unit\ItemsScene\Watering		9362904
+	238543085	ProjectileThrow_04	Y:\Documents\UnityProject\Catflife\Catlife_WwiseProject\.cache\Mac\SFX\ProjectileThrow_7295C13E.wem		\Actor-Mixer Hierarchy\Default Work Unit\Character\Projectile\Throw\CharProjectileThrow\ProjectileThrow_04		162060
+	262470071	StatueShoot_03	Y:\Documents\UnityProject\Catflife\Catlife_WwiseProject\.cache\Mac\SFX\StatueShoot_C8E0291B.wem		\Actor-Mixer Hierarchy\Default Work Unit\ItemsScene\Statue\ShootStatue\Electric\StatueShoot_03		232812
+	318260061	SwordHit_01	Y:\Documents\UnityProject\Catflife\Catlife_WwiseProject\.cache\Mac\SFX\SwordHit_BE15939A.wem		\Actor-Mixer Hierarchy\Default Work Unit\Character\Sword\Hit\SwordHit_01		87344
 	323942138	Tile_05	Y:\Documents\UnityProject\Catflife\Catlife_WwiseProject\.cache\Mac\SFX\Tile1_46AB9349.wem		\Actor-Mixer Hierarchy\Default Work Unit\Character\Step\Tile\Tile_05		39800
-	345272659	Fire	Y:\Documents\UnityProject\Catflife\Catlife_WwiseProject\.cache\Mac\SFX\Fire_D79FB2B7.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemies\Grunt\Projectile\Throw\Fire		2462720
+	343653293	StatueLightUp_02	Y:\Documents\UnityProject\Catflife\Catlife_WwiseProject\.cache\Mac\SFX\StatueLightUp_78B2DDB1.wem		\Actor-Mixer Hierarchy\Default Work Unit\ItemsScene\Statue\LightUpStatue\StatueLightUp_02		439768
+	345272659	CharProjectileAmbience	Y:\Documents\UnityProject\Catflife\Catlife_WwiseProject\.cache\Mac\SFX\Fire_D79FB2B7.wem		\Actor-Mixer Hierarchy\Default Work Unit\Character\Projectile\Ambiance\CharProjectileAmbience		2462720
+	348566923	SwordHit_03	Y:\Documents\UnityProject\Catflife\Catlife_WwiseProject\.cache\Mac\SFX\SwordHit_5CC85433.wem		\Actor-Mixer Hierarchy\Default Work Unit\Character\Sword\Hit\SwordHit_03		72796
+	365072858	HPJingle	Y:\Documents\UnityProject\Catflife\Catlife_WwiseProject\.cache\Mac\SFX\HPJingle_98F05687.wem		\Actor-Mixer Hierarchy\Default Work Unit\ItemsScene\Jingle\HPJingle		150156
+	377746266	StatueShoot_01	Y:\Documents\UnityProject\Catflife\Catlife_WwiseProject\.cache\Mac\SFX\StatueShoot_02B60996.wem		\Actor-Mixer Hierarchy\Default Work Unit\ItemsScene\Statue\ShootStatue\Electric\StatueShoot_01		178260
 	385491676	Tile_01	Y:\Documents\UnityProject\Catflife\Catlife_WwiseProject\.cache\Mac\SFX\Tile1_9D91DD5F.wem		\Actor-Mixer Hierarchy\Default Work Unit\Character\Step\Tile\Tile_01		36876
-	394627533	CardboardImpact_02	Y:\Documents\UnityProject\Catflife\Catlife_WwiseProject\.cache\Mac\SFX\CardboardImpact_3B8A16C1.wem		\Actor-Mixer Hierarchy\Default Work Unit\ItemsScene\Cardboard\Impact\CardboardImpact_02		86020
-	425030932	ProjectileThrow_02	Y:\Documents\UnityProject\Catflife\Catlife_WwiseProject\.cache\Mac\SFX\ProjectileThrow_5970BD41.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemies\Grunt\Projectile\Throw\Throw\ProjectileThrow_02		159744
+	394627533	CardboardImpact_02	Y:\Documents\UnityProject\Catflife\Catlife_WwiseProject\.cache\Mac\SFX\CardboardImpact_CEF09C6C.wem		\Actor-Mixer Hierarchy\Default Work Unit\ItemsScene\Cardboard\Impact\CardboardImpact_02		86020
+	425030932	ProjectileThrow_02	Y:\Documents\UnityProject\Catflife\Catlife_WwiseProject\.cache\Mac\SFX\ProjectileThrow_E675D320.wem		\Actor-Mixer Hierarchy\Default Work Unit\Character\Projectile\Throw\CharProjectileThrow\ProjectileThrow_02		159744
 	431402745	Tile_04	Y:\Documents\UnityProject\Catflife\Catlife_WwiseProject\.cache\Mac\SFX\Tile1_D145568B.wem		\Actor-Mixer Hierarchy\Default Work Unit\Character\Step\Tile\Tile_04		30660
-	436327313	ProjectileExplode_09	Y:\Documents\UnityProject\Catflife\Catlife_WwiseProject\.cache\Mac\SFX\ProjectileExplode_4702B53F.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemies\Grunt\Projectile\Explosion\GruntEliteProjectileExplode\ProjectileExplode_09		338600
+	436327313	ProjectileExplode_09	Y:\Documents\UnityProject\Catflife\Catlife_WwiseProject\.cache\Mac\SFX\ProjectileExplode_75C7817A.wem		\Actor-Mixer Hierarchy\Default Work Unit\Character\Projectile\Explosion\CharProjectileExplode\ProjectileExplode_09		338600
+	474341501	SwordSwing_09	Y:\Documents\UnityProject\Catflife\Catlife_WwiseProject\.cache\Mac\SFX\SwordSwing_D5663B20.wem		\Actor-Mixer Hierarchy\Default Work Unit\Character\Sword\Swing\SwordSwing_09		55148
+	482311064	SwordSwing_10	Y:\Documents\UnityProject\Catflife\Catlife_WwiseProject\.cache\Mac\SFX\SwordSwing_BF4C3CB8.wem		\Actor-Mixer Hierarchy\Default Work Unit\Character\Sword\Swing\SwordSwing_10		46264
 	492770314	Tile_03	Y:\Documents\UnityProject\Catflife\Catlife_WwiseProject\.cache\Mac\SFX\Tile1_DECFB337.wem		\Actor-Mixer Hierarchy\Default Work Unit\Character\Step\Tile\Tile_03		41260
-	552528663	SqueakyDoor_02	Y:\Documents\UnityProject\Catflife\Catlife_WwiseProject\.cache\Mac\SFX\SqueakyDoor_BEE3B957.wem		\Actor-Mixer Hierarchy\Default Work Unit\ItemsScene\DoorSqueaky\SqueakyDoor_02		232808
-	585672463	UIButtonPress_05	Y:\Documents\UnityProject\Catflife\Catlife_WwiseProject\.cache\Mac\SFX\UIButtonPress_29B87592.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\ButtonPress\UIButtonPress_05		41060
-	684050722	SqueakyDoor_01	Y:\Documents\UnityProject\Catflife\Catlife_WwiseProject\.cache\Mac\SFX\SqueakyDoor_9199D959.wem		\Actor-Mixer Hierarchy\Default Work Unit\ItemsScene\DoorSqueaky\SqueakyDoor_01		197104
-	693424916	ProjectileExplode_10	Y:\Documents\UnityProject\Catflife\Catlife_WwiseProject\.cache\Mac\SFX\ProjectileExplode_726ACF56.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemies\Grunt\Projectile\Explosion\GruntEliteProjectileExplode\ProjectileExplode_10		238100
+	546497670	StatueLightUp_03	Y:\Documents\UnityProject\Catflife\Catlife_WwiseProject\.cache\Mac\SFX\StatueLightUp_1EF3F483.wem		\Actor-Mixer Hierarchy\Default Work Unit\ItemsScene\Statue\LightUpStatue\StatueLightUp_03		495308
+	552528663	SqueakyDoor_02	Y:\Documents\UnityProject\Catflife\Catlife_WwiseProject\.cache\Mac\SFX\SqueakyDoor_BA87A6F8.wem		\Actor-Mixer Hierarchy\Default Work Unit\ItemsScene\DoorSqueaky\SqueakyDoor_02		232808
+	562410588	SwordHit_04	Y:\Documents\UnityProject\Catflife\Catlife_WwiseProject\.cache\Mac\SFX\SwordHit_868E3C00.wem		\Actor-Mixer Hierarchy\Default Work Unit\Character\Sword\Hit\SwordHit_04		80980
+	585672463	UIButtonPress_05	Y:\Documents\UnityProject\Catflife\Catlife_WwiseProject\.cache\Mac\SFX\UIButtonPress_021408CD.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\ButtonPress\UIButtonPress_05		41060
+	629954010	EnergyJingle	Y:\Documents\UnityProject\Catflife\Catlife_WwiseProject\.cache\Mac\SFX\EnergyJingle_03DF8F59.wem		\Actor-Mixer Hierarchy\Default Work Unit\ItemsScene\Jingle\EnergyJingle		143216
+	666293255	SwordSwing_11	Y:\Documents\UnityProject\Catflife\Catlife_WwiseProject\.cache\Mac\SFX\SwordSwing_555BA00F.wem		\Actor-Mixer Hierarchy\Default Work Unit\Character\Sword\Swing\SwordSwing_11		58704
+	684050722	SqueakyDoor_01	Y:\Documents\UnityProject\Catflife\Catlife_WwiseProject\.cache\Mac\SFX\SqueakyDoor_2EDB9131.wem		\Actor-Mixer Hierarchy\Default Work Unit\ItemsScene\DoorSqueaky\SqueakyDoor_01		197104
+	693424916	ProjectileExplode_10	Y:\Documents\UnityProject\Catflife\Catlife_WwiseProject\.cache\Mac\SFX\ProjectileExplode_E290C6B3.wem		\Actor-Mixer Hierarchy\Default Work Unit\Character\Projectile\Explosion\CharProjectileExplode\ProjectileExplode_10		238100
 	736235376	Tile_02	Y:\Documents\UnityProject\Catflife\Catlife_WwiseProject\.cache\Mac\SFX\Tile1_99C0194F.wem		\Actor-Mixer Hierarchy\Default Work Unit\Character\Step\Tile\Tile_02		48136
-	745176646	ProjectileExplode_05	Y:\Documents\UnityProject\Catflife\Catlife_WwiseProject\.cache\Mac\SFX\ProjectileExplode_7CEFF59D.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemies\Grunt\Projectile\Explosion\GruntEliteProjectileExplode\ProjectileExplode_05		322732
-	750855172	CardboardPoof_02	Y:\Documents\UnityProject\Catflife\Catlife_WwiseProject\.cache\Mac\SFX\CardboardPoof_5F7F731E.wem		\Actor-Mixer Hierarchy\Default Work Unit\ItemsScene\Cardboard\Poof\CardboardPoof_02		138916
+	741723858	UnlockJingle	Y:\Documents\UnityProject\Catflife\Catlife_WwiseProject\.cache\Mac\SFX\UnlockJingle_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\ItemsScene\Jingle\UnlockJingle		226196
+	745176646	ProjectileExplode_05	Y:\Documents\UnityProject\Catflife\Catlife_WwiseProject\.cache\Mac\SFX\ProjectileExplode_F2B8F644.wem		\Actor-Mixer Hierarchy\Default Work Unit\Character\Projectile\Explosion\CharProjectileExplode\ProjectileExplode_05		322732
+	750855172	CardboardPoof_02	Y:\Documents\UnityProject\Catflife\Catlife_WwiseProject\.cache\Mac\SFX\CardboardPoof_3E29FB15.wem		\Actor-Mixer Hierarchy\Default Work Unit\ItemsScene\Cardboard\Poof\CardboardPoof_02		138916
 	777566849	Tile_06	Y:\Documents\UnityProject\Catflife\Catlife_WwiseProject\.cache\Mac\SFX\Tile1_0651EECB.wem		\Actor-Mixer Hierarchy\Default Work Unit\Character\Step\Tile\Tile_06		31436
-	811632332	CardboardImpact_03	Y:\Documents\UnityProject\Catflife\Catlife_WwiseProject\.cache\Mac\SFX\CardboardImpact_45969E13.wem		\Actor-Mixer Hierarchy\Default Work Unit\ItemsScene\Cardboard\Impact\CardboardImpact_03		75276
-	854468581	ProjectileExplode_03	Y:\Documents\UnityProject\Catflife\Catlife_WwiseProject\.cache\Mac\SFX\ProjectileExplode_B682017B.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemies\Grunt\Projectile\Explosion\GruntEliteProjectileExplode\ProjectileExplode_03		248680
-	861986732	UIButtonPress_03	Y:\Documents\UnityProject\Catflife\Catlife_WwiseProject\.cache\Mac\SFX\UIButtonPress_7775164E.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\ButtonPress\UIButtonPress_03		55604
-	934852199	CardboardPoof_01	Y:\Documents\UnityProject\Catflife\Catlife_WwiseProject\.cache\Mac\SFX\CardboardPoof_A741EBA1.wem		\Actor-Mixer Hierarchy\Default Work Unit\ItemsScene\Cardboard\Poof\CardboardPoof_01		168672
-	984304702	ProjectileThrow_03	Y:\Documents\UnityProject\Catflife\Catlife_WwiseProject\.cache\Mac\SFX\ProjectileThrow_3E57480F.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemies\Grunt\Projectile\Throw\Throw\ProjectileThrow_03		206032
-	984676907	ProjectileThrow_05	Y:\Documents\UnityProject\Catflife\Catlife_WwiseProject\.cache\Mac\SFX\ProjectileThrow_B7CF1BEC.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemies\Grunt\Projectile\Throw\Throw\ProjectileThrow_05		169004
-	995914859	ProjectileExplode_08	Y:\Documents\UnityProject\Catflife\Catlife_WwiseProject\.cache\Mac\SFX\ProjectileExplode_0E1A68E4.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemies\Grunt\Projectile\Explosion\GruntEliteProjectileExplode\ProjectileExplode_08		328024
-	997698416	ProjectileExplode_01	Y:\Documents\UnityProject\Catflife\Catlife_WwiseProject\.cache\Mac\SFX\ProjectileExplode_295F8A4B.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemies\Grunt\Projectile\Explosion\GruntEliteProjectileExplode\ProjectileExplode_01		227520
-	997870370	CardboardImpact_07	Y:\Documents\UnityProject\Catflife\Catlife_WwiseProject\.cache\Mac\SFX\CardboardImpact_A2C0C5E8.wem		\Actor-Mixer Hierarchy\Default Work Unit\ItemsScene\Cardboard\Impact\CardboardImpact_07		92468
-	1013540231	ProjectileThrow_01	Y:\Documents\UnityProject\Catflife\Catlife_WwiseProject\.cache\Mac\SFX\ProjectileThrow_FE6255E8.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemies\Grunt\Projectile\Throw\Throw\ProjectileThrow_01		166688
-	1018989538	ProjectileExplode_02	Y:\Documents\UnityProject\Catflife\Catlife_WwiseProject\.cache\Mac\SFX\ProjectileExplode_3DCAD84A.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemies\Grunt\Projectile\Explosion\GruntEliteProjectileExplode\ProjectileExplode_02		211648
-	1020300007	ProjectileExplode_07	Y:\Documents\UnityProject\Catflife\Catlife_WwiseProject\.cache\Mac\SFX\ProjectileExplode_A2CD41C8.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemies\Grunt\Projectile\Explosion\GruntEliteProjectileExplode\ProjectileExplode_07		402080
-	1039091598	ProjectileExplode_04	Y:\Documents\UnityProject\Catflife\Catlife_WwiseProject\.cache\Mac\SFX\ProjectileExplode_5B60732A.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemies\Grunt\Projectile\Explosion\GruntEliteProjectileExplode\ProjectileExplode_04		248680
+	787769316	StatueLightUp_01	Y:\Documents\UnityProject\Catflife\Catlife_WwiseProject\.cache\Mac\SFX\StatueLightUp_4EBBF22B.wem		\Actor-Mixer Hierarchy\Default Work Unit\ItemsScene\Statue\LightUpStatue\StatueLightUp_01		317112
+	787940266	StatueShoot_02	Y:\Documents\UnityProject\Catflife\Catlife_WwiseProject\.cache\Mac\SFX\StatueShoot_ECC18EB4.wem		\Actor-Mixer Hierarchy\Default Work Unit\ItemsScene\Statue\ShootStatue\Electric\StatueShoot_02		225540
+	811632332	CardboardImpact_03	Y:\Documents\UnityProject\Catflife\Catlife_WwiseProject\.cache\Mac\SFX\CardboardImpact_33C708BA.wem		\Actor-Mixer Hierarchy\Default Work Unit\ItemsScene\Cardboard\Impact\CardboardImpact_03		75276
+	854468581	ProjectileExplode_03	Y:\Documents\UnityProject\Catflife\Catlife_WwiseProject\.cache\Mac\SFX\ProjectileExplode_A480A54C.wem		\Actor-Mixer Hierarchy\Default Work Unit\Character\Projectile\Explosion\CharProjectileExplode\ProjectileExplode_03		248680
+	859955218	SwordHit_06	Y:\Documents\UnityProject\Catflife\Catlife_WwiseProject\.cache\Mac\SFX\SwordHit_C72E4304.wem		\Actor-Mixer Hierarchy\Default Work Unit\Character\Sword\Hit\SwordHit_06		64616
+	861986732	UIButtonPress_03	Y:\Documents\UnityProject\Catflife\Catlife_WwiseProject\.cache\Mac\SFX\UIButtonPress_0F0627E1.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\ButtonPress\UIButtonPress_03		55604
+	898289585	SwordHit_05	Y:\Documents\UnityProject\Catflife\Catlife_WwiseProject\.cache\Mac\SFX\SwordHit_30B1C2E6.wem		\Actor-Mixer Hierarchy\Default Work Unit\Character\Sword\Hit\SwordHit_05		106436
+	934852199	CardboardPoof_01	Y:\Documents\UnityProject\Catflife\Catlife_WwiseProject\.cache\Mac\SFX\CardboardPoof_966C9491.wem		\Actor-Mixer Hierarchy\Default Work Unit\ItemsScene\Cardboard\Poof\CardboardPoof_01		168672
+	984304702	ProjectileThrow_03	Y:\Documents\UnityProject\Catflife\Catlife_WwiseProject\.cache\Mac\SFX\ProjectileThrow_CCB9D056.wem		\Actor-Mixer Hierarchy\Default Work Unit\Character\Projectile\Throw\CharProjectileThrow\ProjectileThrow_03		206032
+	984676907	ProjectileThrow_05	Y:\Documents\UnityProject\Catflife\Catlife_WwiseProject\.cache\Mac\SFX\ProjectileThrow_6FC0092E.wem		\Actor-Mixer Hierarchy\Default Work Unit\Character\Projectile\Throw\CharProjectileThrow\ProjectileThrow_05		169004
+	995914859	ProjectileExplode_08	Y:\Documents\UnityProject\Catflife\Catlife_WwiseProject\.cache\Mac\SFX\ProjectileExplode_33BD63AD.wem		\Actor-Mixer Hierarchy\Default Work Unit\Character\Projectile\Explosion\CharProjectileExplode\ProjectileExplode_08		328024
+	997698416	ProjectileExplode_01	Y:\Documents\UnityProject\Catflife\Catlife_WwiseProject\.cache\Mac\SFX\ProjectileExplode_BFEFFFC6.wem		\Actor-Mixer Hierarchy\Default Work Unit\Character\Projectile\Explosion\CharProjectileExplode\ProjectileExplode_01		227520
+	997870370	CardboardImpact_07	Y:\Documents\UnityProject\Catflife\Catlife_WwiseProject\.cache\Mac\SFX\CardboardImpact_9083B01B.wem		\Actor-Mixer Hierarchy\Default Work Unit\ItemsScene\Cardboard\Impact\CardboardImpact_07		92468
+	1013540231	ProjectileThrow_01	Y:\Documents\UnityProject\Catflife\Catlife_WwiseProject\.cache\Mac\SFX\ProjectileThrow_C962039C.wem		\Actor-Mixer Hierarchy\Default Work Unit\Character\Projectile\Throw\CharProjectileThrow\ProjectileThrow_01		166688
+	1018989538	ProjectileExplode_02	Y:\Documents\UnityProject\Catflife\Catlife_WwiseProject\.cache\Mac\SFX\ProjectileExplode_B7DCDCC9.wem		\Actor-Mixer Hierarchy\Default Work Unit\Character\Projectile\Explosion\CharProjectileExplode\ProjectileExplode_02		211648
+	1020300007	ProjectileExplode_07	Y:\Documents\UnityProject\Catflife\Catlife_WwiseProject\.cache\Mac\SFX\ProjectileExplode_FB92E4E7.wem		\Actor-Mixer Hierarchy\Default Work Unit\Character\Projectile\Explosion\CharProjectileExplode\ProjectileExplode_07		402080
+	1039091598	ProjectileExplode_04	Y:\Documents\UnityProject\Catflife\Catlife_WwiseProject\.cache\Mac\SFX\ProjectileExplode_05FA28C3.wem		\Actor-Mixer Hierarchy\Default Work Unit\Character\Projectile\Explosion\CharProjectileExplode\ProjectileExplode_04		248680
+	1043595354	SleepJingle	Y:\Documents\UnityProject\Catflife\Catlife_WwiseProject\.cache\Mac\SFX\SleepJingle_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\ItemsScene\Jingle\SleepJingle		226196
 

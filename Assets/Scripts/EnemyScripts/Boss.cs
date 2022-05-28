@@ -60,7 +60,8 @@ public class Boss : MonoBehaviour
                     break;
                 case 3:
                     //PlaySound PlayerDeath
-                    Destroy(gameObject);
+                    StopAllCoroutines();
+                    bossAnimator.SetBool("Die", true);
                     break;
                 default:
                     break;
@@ -73,7 +74,10 @@ public class Boss : MonoBehaviour
     float selfcastDelay;
 
     [SerializeField]
-    GameObject fireballPrefab, castPrefab, sword, selfCastPrefab;
+    GameObject fireballPrefab, castPrefab, selfCastPrefab;
+
+    [SerializeField]
+    BoxCollider sword;
 
     [SerializeField]
     Transform handPos;
@@ -88,6 +92,8 @@ public class Boss : MonoBehaviour
     float movementSpeed;
 
     public bool PlayerIsInRange;
+
+    public int SpawnedEnemiesAmount;
 
     private void Start()
     {
@@ -198,17 +204,26 @@ public class Boss : MonoBehaviour
         {
             bossNavmesh.speed = movementSpeed;
         }
-        if (bossAnimator.GetBool("ChangePhase"))
-        {
-            bossAnimator.SetBool("ChangePhase", false);
-            bossNavmesh.speed = movementSpeed;
-            return;
-        }
         currentAttack.RemoveAt(0);
         if (currentAttack.Count == 0)
         {
             bossAnimator.SetInteger("AttackType", 0);
         }
+    }
+
+    private void EndPhaseChange()
+    {
+        bossAnimator.SetBool("ChangePhase", false);
+        bossNavmesh.speed = movementSpeed;
+    }
+
+    void StartDeath()
+    {
+        bossAnimator.SetBool("Die", false);
+    }
+    void Die()
+    {     
+        SceneTransition.Instance.ChangeScene("EndScene", 0);
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -217,7 +232,7 @@ public class Boss : MonoBehaviour
         {
             bossAnimator.SetBool("Spinning", false);
             spinVector = Vector3.zero;
-            sword.SetActive(false);
+            sword.enabled = false;
         }
     }
 }

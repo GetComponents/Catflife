@@ -14,15 +14,29 @@ namespace AK
     namespace EVENTS
     {
         static const AkUniqueID PLAY_BUTTONPRESS = 2652178615U;
+        static const AkUniqueID PLAY_CHARPROJECTILEAMBIENCE = 186625315U;
+        static const AkUniqueID PLAY_CHARPROJECTILEEXPLODE = 125832294U;
+        static const AkUniqueID PLAY_CHARPROJECTILETHROW = 1017112217U;
         static const AkUniqueID PLAY_DOORSQUEAKY = 3020861821U;
+        static const AkUniqueID PLAY_ENERGYJINGLE = 2028186725U;
         static const AkUniqueID PLAY_GRUNTELITEPROJECTILEEXPLODE = 1927856655U;
         static const AkUniqueID PLAY_GRUNTELITEPROJECTILETHROW = 3941375504U;
         static const AkUniqueID PLAY_GRUNTPROJECTILEEXPLODE = 1423843544U;
         static const AkUniqueID PLAY_GRUNTPROJECTILETHROW = 4218963955U;
+        static const AkUniqueID PLAY_HPJINGLE = 2106862869U;
         static const AkUniqueID PLAY_IMPACTCARDBOARD = 3010145222U;
         static const AkUniqueID PLAY_LEAVINGFOOTSTEPS = 1438502543U;
+        static const AkUniqueID PLAY_LIGHTUPSTATUE = 1622429165U;
         static const AkUniqueID PLAY_POOFCARDBOARD = 31596624U;
+        static const AkUniqueID PLAY_SHOOTSTATUE = 3450689315U;
+        static const AkUniqueID PLAY_SLEEPJINGLE = 354571108U;
         static const AkUniqueID PLAY_STEP = 99206220U;
+        static const AkUniqueID PLAY_SWORDHIT = 598714956U;
+        static const AkUniqueID PLAY_SWORDSWING = 1746766985U;
+        static const AkUniqueID PLAY_UNLOCKJINGLE = 10982625U;
+        static const AkUniqueID PLAY_UPGRADEJINGLE = 383068205U;
+        static const AkUniqueID PLAY_WATERING = 1126284757U;
+        static const AkUniqueID STOP_WATERING = 3226714187U;
     } // namespace EVENTS
 
     namespace SWITCHES

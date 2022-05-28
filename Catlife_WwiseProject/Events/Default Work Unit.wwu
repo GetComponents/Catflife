@@ -104,6 +104,61 @@
 								</Action>
 							</ChildrenList>
 						</Event>
+						<Event Name="Play_CharProjectileExplode" ID="{4CB81268-E0CD-4EDF-BE2A-943DFA48312B}">
+							<ChildrenList>
+								<Action Name="" ID="{D78C9CFE-3793-4E0B-9C9A-AD151F06953C}" ShortID="740004035">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="CharProjectileExplode" ID="{822FF6B9-F34A-4811-9F19-81B7D66462F5}" WorkUnitID="{D02594BD-4199-499F-A2D9-CB65908B02DD}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_CharProjectileThrow" ID="{6801FE84-85BA-4435-9605-4A15AA669139}">
+							<ChildrenList>
+								<Action Name="" ID="{BA06CEBA-538A-47A9-9A92-7ECBA662170E}" ShortID="273671547">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="CharProjectileThrow" ID="{158805C5-94E1-4F25-B764-B9128CCDBE11}" WorkUnitID="{D02594BD-4199-499F-A2D9-CB65908B02DD}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_CharProjectileAmbience" ID="{1BD3B450-C7B4-4C44-B1B9-183706EA35D2}">
+							<ChildrenList>
+								<Action Name="" ID="{B2E88AAA-835D-46E3-9255-AA8607F55140}" ShortID="566165506">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="CharProjectileAmbience" ID="{8A321BB8-FD8C-4415-900B-CB1F50394416}" WorkUnitID="{D02594BD-4199-499F-A2D9-CB65908B02DD}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_SwordHit" ID="{1BE40F31-F579-4179-9A55-0FB7830C51ED}">
+							<ChildrenList>
+								<Action Name="" ID="{A4E581AE-EA2C-4CD2-B275-D02A888B3643}" ShortID="491810836">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Hit" ID="{57775CC3-267E-4F8E-AE0D-DE6D12C93B96}" WorkUnitID="{D02594BD-4199-499F-A2D9-CB65908B02DD}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_SwordSwing" ID="{FDF80154-FF76-44CB-BF78-4DD9E6B03CF7}">
+							<ChildrenList>
+								<Action Name="" ID="{8EA38775-99D6-4237-88E6-DAD72350E9ED}" ShortID="580149057">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Swing" ID="{F777E107-ECC1-4A26-A6E4-B4AE5487C0E5}" WorkUnitID="{D02594BD-4199-499F-A2D9-CB65908B02DD}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="ItemsScene" ID="{2659EB23-8ED5-4684-B9B7-6D33CFA88CF7}" ShortID="33185504">
@@ -125,6 +180,132 @@
 									<ReferenceList>
 										<Reference Name="Target">
 											<ObjectRef Name="Impact" ID="{200195FC-1D53-41F5-89F3-317AB2FD651B}" WorkUnitID="{D02594BD-4199-499F-A2D9-CB65908B02DD}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_LightUpStatue" ID="{A3ADA9FD-7CB2-416F-978E-C1C99F0006EE}">
+							<ChildrenList>
+								<Action Name="" ID="{2D725EB9-DCB4-43F9-8344-B63E9257E5F3}" ShortID="297156012">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="LightUpStatue" ID="{4F7F554C-F613-49B3-A587-BBBBA2A09FBC}" WorkUnitID="{D02594BD-4199-499F-A2D9-CB65908B02DD}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_ShootStatue" ID="{EC4CFF96-12FF-4923-8E4C-AF130D1D342E}">
+							<ChildrenList>
+								<Action Name="" ID="{9E6D9D84-3779-4256-9033-53A2A1C17366}" ShortID="717502442">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="ShootStatue" ID="{A2D02589-A20A-4BC2-9EB7-48350912669E}" WorkUnitID="{D02594BD-4199-499F-A2D9-CB65908B02DD}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_UpgradeJingle" ID="{8C861070-9F2D-40EA-95B0-39AE050EB97E}">
+							<ChildrenList>
+								<Action Name="" ID="{87C9B548-1E82-40B1-A0AC-A0F323BC2319}" ShortID="728943006">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="UpgradeJingle" ID="{36B2D479-6F96-4EA9-801E-BC55305962FB}" WorkUnitID="{D02594BD-4199-499F-A2D9-CB65908B02DD}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_UnlockJingle" ID="{F4F2FE0F-737D-450E-94F6-B7DA1EAFB6E1}">
+							<ChildrenList>
+								<Action Name="" ID="{DC668D82-F984-4EE1-B61E-287B65ED52F3}" ShortID="29890894">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="UnlockJingle" ID="{9A3199EB-8398-47C7-ACA4-B5EBEB3D9607}" WorkUnitID="{D02594BD-4199-499F-A2D9-CB65908B02DD}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_SleepJingle" ID="{54FFA3E5-7C85-45C6-B9F7-14508D069788}">
+							<ChildrenList>
+								<Action Name="" ID="{B3BC32D1-EB59-4524-92BE-C41C89EB2EAA}" ShortID="434007818">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="SleepJingle" ID="{F5F9482B-D1CE-48FA-9D3E-FF94577816F6}" WorkUnitID="{D02594BD-4199-499F-A2D9-CB65908B02DD}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_HPJingle" ID="{688EE876-3F12-49D8-9D59-F97B867261EF}">
+							<ChildrenList>
+								<Action Name="" ID="{55B77256-66D4-4575-AFC2-E1042111A1C0}" ShortID="968153752">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="HPJingle" ID="{FABA11FC-EB70-4C73-A3D6-B13A2388D663}" WorkUnitID="{D02594BD-4199-499F-A2D9-CB65908B02DD}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_EnergyJingle" ID="{888FB9CA-FAC5-4F74-916B-5254780EBD7D}">
+							<ChildrenList>
+								<Action Name="" ID="{3BA4E39A-C864-45C8-A907-918C195F8CC0}" ShortID="465141886">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="EnergyJingle" ID="{6D6DB20F-42C3-4FA7-995B-A7B61847FA9A}" WorkUnitID="{D02594BD-4199-499F-A2D9-CB65908B02DD}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Stop_Watering" ID="{789702E3-2702-4E28-9A6F-E8E1195B516A}">
+							<ChildrenList>
+								<Action Name="" ID="{38AECAB9-BAFA-4AB1-86D0-03724A8DCBEF}" ShortID="922428584">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+										<Property Name="FadeOutCurve" Type="int16" Value="5"/>
+										<Property Name="FadeTime" Type="Real64" Value="1">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{6C9977A2-C0B5-4542-AFF2-416FD454CD03}"/>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Watering" ID="{01AA73A6-6B5C-4E58-8388-6D9CEBFBB463}" WorkUnitID="{D02594BD-4199-499F-A2D9-CB65908B02DD}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_Watering" ID="{22B88C88-6389-4000-929B-43B5CA33F90E}">
+							<ChildrenList>
+								<Action Name="" ID="{13230405-9C0F-4033-9F13-464A56D01F17}" ShortID="593304856">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+										<Property Name="FadeOutCurve" Type="int16" Value="5"/>
+										<Property Name="FadeTime" Type="Real64" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Watering" ID="{01AA73A6-6B5C-4E58-8388-6D9CEBFBB463}" WorkUnitID="{D02594BD-4199-499F-A2D9-CB65908B02DD}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{643FF8C0-9836-485B-BE4E-FD67762335B1}" ShortID="465077646">
+									<PropertyList>
+										<Property Name="FadeInCurve" Type="int16" Value="5"/>
+										<Property Name="FadeTime" Type="Real64" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Watering" ID="{01AA73A6-6B5C-4E58-8388-6D9CEBFBB463}" WorkUnitID="{D02594BD-4199-499F-A2D9-CB65908B02DD}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>

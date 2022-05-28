@@ -32,7 +32,8 @@ public class BossCast : MonoBehaviour
         myCollider.enabled = true;
         GetComponent<MeshRenderer>().material.color = Color.blue;
         yield return new WaitForSeconds(TimeUntilFaded);
-        Instantiate(enemyToSpawn, transform.position, Quaternion.identity);
+        if (FindObjectOfType<Boss>().SpawnedEnemiesAmount < 3)
+            Instantiate(enemyToSpawn, transform.position, Quaternion.identity);
         Destroy(gameObject);
     }
 

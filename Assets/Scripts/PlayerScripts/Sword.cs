@@ -8,32 +8,32 @@ public class Sword : MonoBehaviour
     {
         if (other.tag == "Enemy" && PlayerController.Instance.IsSwinging)
         {
-            //PlaySound SwordHit
+            AkSoundEngine.PostEvent("Play_SwordHit", this.gameObject);
             other.GetComponent<Enemy>().TakeDamage(PlayerController.Instance.SwordDamage);
             PlayerController.Instance.CurrentMana += PlayerController.Instance.ManaGain;
         }
         else if (other.tag == "Enemy" && PlayerController.Instance.IsSpinning)
         {
-            //PlaySound SwordHit
+            AkSoundEngine.PostEvent("Play_SwordHit", this.gameObject);
             other.GetComponent<Enemy>().TakeDamage(PlayerController.Instance.SwordDamage * PlayerController.Instance.SpinAttackDamageMultiplier);
         }
         else if (other.tag == "EnemyProjectile" && (PlayerController.Instance.IsSpinning || PlayerController.Instance.IsSwinging))
         {
             if (PlayerController.Instance.ReturnEnemyProjectile(other.transform))
             {
-                //PlaySound SwordHit
+                AkSoundEngine.PostEvent("Play_SwordHit", this.gameObject);
                 Destroy(other.gameObject);
             }
         }
         else if (other.tag == "Boss" && PlayerController.Instance.IsSwinging)
         {
-            //PlaySound SwordHit
+            AkSoundEngine.PostEvent("Play_SwordHit", this.gameObject);
             other.GetComponent<Boss>().TakeDamage(PlayerController.Instance.SwordDamage);
             PlayerController.Instance.CurrentMana += PlayerController.Instance.ManaGain;
         }
         else if (other.tag == "Boss" && PlayerController.Instance.IsSpinning)
         {
-            //PlaySound SwordHit
+            AkSoundEngine.PostEvent("Play_SwordHit", this.gameObject);
             other.GetComponent<Boss>().TakeDamage(PlayerController.Instance.SwordDamage * PlayerController.Instance.SpinAttackDamageMultiplier);
         }
     }

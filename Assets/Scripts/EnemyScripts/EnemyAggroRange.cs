@@ -16,6 +16,11 @@ public class EnemyAggroRange : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        if (player == null)
+        {
+            player = PlayerInventory.Instance;
+            return;
+        }
         if (other.transform == player.transform)
         {
             enemyController.isInRange = true;
@@ -24,6 +29,11 @@ public class EnemyAggroRange : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
+        if (player == null)
+        {
+            player = PlayerInventory.Instance;
+            return;
+        }
         if (other.transform == player.transform)
         {
             enemyController.isInRange = false;

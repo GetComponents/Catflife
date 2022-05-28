@@ -21,12 +21,13 @@ public class WateringCan : MonoBehaviour
 
     void StartWatering()
     {
-        //PlaySound Watering
+        AkSoundEngine.PostEvent("Play_Watering", this.gameObject);
         currentWater = Instantiate(watervfx, face);
     }
 
     void EndWatering()
     {
+        AkSoundEngine.PostEvent("Stop_Watering", this.gameObject);
         Destroy(currentWater);
         transform.position = startPos;
         transform.eulerAngles = new Vector3(0, 90, 0);

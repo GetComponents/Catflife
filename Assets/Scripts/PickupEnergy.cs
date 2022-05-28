@@ -29,7 +29,7 @@ public class PickupEnergy : MonoBehaviour
     {
         if (other.tag == "Player")
         {
-            //PlaySound EnergyPickup (wahrscheinlich eintönig)
+            AkSoundEngine.PostEvent("Play_EnergyJingle", this.gameObject);
             player.GainEnergy(EnergyGainAmount);
             Destroy(gameObject);
         }

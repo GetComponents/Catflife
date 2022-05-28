@@ -31,6 +31,24 @@ public class MenuUI : MonoBehaviour
         SceneManager.LoadScene("StartScreen");
     }
 
+    public void OpenControls()
+    {
+        AkSoundEngine.PostEvent("Play_ButtonPress", this.gameObject);
+        SceneManager.LoadScene("ControlsScreenPause", LoadSceneMode.Additive);
+    }
+
+    public void CloseControls()
+    {
+        AkSoundEngine.PostEvent("Play_ButtonPress", this.gameObject);
+        SceneManager.UnloadSceneAsync("ControlsScreenPause");
+    }
+
+    public void OpenCredits()
+    {
+        AkSoundEngine.PostEvent("Play_ButtonPress", this.gameObject);
+        SceneManager.LoadScene("CreditsScreen", LoadSceneMode.Additive);
+    }
+
     public void QuitGame()
     {
         Application.Quit();

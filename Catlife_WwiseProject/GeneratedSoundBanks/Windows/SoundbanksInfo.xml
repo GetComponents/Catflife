@@ -11,7 +11,7 @@
 	<StreamedFiles/>
 	<MediaFilesNotInAnyBank/>
 	<SoundBanks>
-		<SoundBank Id="393239870" Language="SFX" Hash="1518485282">
+		<SoundBank Id="393239870" Language="SFX" Hash="4019108520">
 			<ObjectPath>\SoundBanks\Default Work Unit\SFX</ObjectPath>
 			<ShortName>SFX</ShortName>
 			<Path>SFX.bnk</Path>
@@ -20,23 +20,99 @@
 					<IncludedMemoryFiles>
 						<File Id="6159929" Language="SFX">
 							<ShortName>UIButtonPress.wav</ShortName>
-							<Path>SFX/UIButtonPress_E4073A26.wem</Path>
+							<Path>SFX/UIButtonPress_1FF5341A.wem</Path>
 						</File>
 						<File Id="17516549" Language="SFX">
 							<ShortName>UIButtonPress.wav</ShortName>
-							<Path>SFX/UIButtonPress_18BDB122.wem</Path>
+							<Path>SFX/UIButtonPress_79A2CFEA.wem</Path>
 						</File>
 						<File Id="75365945" Language="SFX">
 							<ShortName>UIButtonPress.wav</ShortName>
-							<Path>SFX/UIButtonPress_38CCF9F7.wem</Path>
+							<Path>SFX/UIButtonPress_2F884072.wem</Path>
 						</File>
 						<File Id="585672463" Language="SFX">
 							<ShortName>UIButtonPress.wav</ShortName>
-							<Path>SFX/UIButtonPress_29B87592.wem</Path>
+							<Path>SFX/UIButtonPress_021408CD.wem</Path>
 						</File>
 						<File Id="861986732" Language="SFX">
 							<ShortName>UIButtonPress.wav</ShortName>
-							<Path>SFX/UIButtonPress_7775164E.wem</Path>
+							<Path>SFX/UIButtonPress_0F0627E1.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="186625315" Name="Play_CharProjectileAmbience" ObjectPath="\Events\Default Work Unit\Character\Play_CharProjectileAmbience" DurationType="Infinite">
+					<IncludedMemoryFiles>
+						<File Id="345272659" Language="SFX">
+							<ShortName>Fire.wav</ShortName>
+							<Path>SFX/Fire_D79FB2B7.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="125832294" Name="Play_CharProjectileExplode" ObjectPath="\Events\Default Work Unit\Character\Play_CharProjectileExplode" DurationType="OneShot" DurationMin="0.673181" DurationMax="4.060711">
+					<IncludedMemoryFiles>
+						<File Id="129928124" Language="SFX">
+							<ShortName>ProjectileExplode.wav</ShortName>
+							<Path>SFX/ProjectileExplode_D31D5985.wem</Path>
+						</File>
+						<File Id="436327313" Language="SFX">
+							<ShortName>ProjectileExplode.wav</ShortName>
+							<Path>SFX/ProjectileExplode_75C7817A.wem</Path>
+						</File>
+						<File Id="693424916" Language="SFX">
+							<ShortName>ProjectileExplode.wav</ShortName>
+							<Path>SFX/ProjectileExplode_E290C6B3.wem</Path>
+						</File>
+						<File Id="745176646" Language="SFX">
+							<ShortName>ProjectileExplode.wav</ShortName>
+							<Path>SFX/ProjectileExplode_F2B8F644.wem</Path>
+						</File>
+						<File Id="854468581" Language="SFX">
+							<ShortName>ProjectileExplode.wav</ShortName>
+							<Path>SFX/ProjectileExplode_A480A54C.wem</Path>
+						</File>
+						<File Id="995914859" Language="SFX">
+							<ShortName>ProjectileExplode.wav</ShortName>
+							<Path>SFX/ProjectileExplode_33BD63AD.wem</Path>
+						</File>
+						<File Id="997698416" Language="SFX">
+							<ShortName>ProjectileExplode.wav</ShortName>
+							<Path>SFX/ProjectileExplode_BFEFFFC6.wem</Path>
+						</File>
+						<File Id="1018989538" Language="SFX">
+							<ShortName>ProjectileExplode.wav</ShortName>
+							<Path>SFX/ProjectileExplode_B7DCDCC9.wem</Path>
+						</File>
+						<File Id="1020300007" Language="SFX">
+							<ShortName>ProjectileExplode.wav</ShortName>
+							<Path>SFX/ProjectileExplode_FB92E4E7.wem</Path>
+						</File>
+						<File Id="1039091598" Language="SFX">
+							<ShortName>ProjectileExplode.wav</ShortName>
+							<Path>SFX/ProjectileExplode_05FA28C3.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="1017112217" Name="Play_CharProjectileThrow" ObjectPath="\Events\Default Work Unit\Character\Play_CharProjectileThrow" DurationType="OneShot" DurationMin="0.678154" DurationMax="1.558575">
+					<IncludedMemoryFiles>
+						<File Id="238543085" Language="SFX">
+							<ShortName>ProjectileThrow.wav</ShortName>
+							<Path>SFX/ProjectileThrow_7295C13E.wem</Path>
+						</File>
+						<File Id="425030932" Language="SFX">
+							<ShortName>ProjectileThrow.wav</ShortName>
+							<Path>SFX/ProjectileThrow_E675D320.wem</Path>
+						</File>
+						<File Id="984304702" Language="SFX">
+							<ShortName>ProjectileThrow.wav</ShortName>
+							<Path>SFX/ProjectileThrow_CCB9D056.wem</Path>
+						</File>
+						<File Id="984676907" Language="SFX">
+							<ShortName>ProjectileThrow.wav</ShortName>
+							<Path>SFX/ProjectileThrow_6FC0092E.wem</Path>
+						</File>
+						<File Id="1013540231" Language="SFX">
+							<ShortName>ProjectileThrow.wav</ShortName>
+							<Path>SFX/ProjectileThrow_C962039C.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -44,11 +120,19 @@
 					<IncludedMemoryFiles>
 						<File Id="552528663" Language="SFX">
 							<ShortName>SqueakyDoor.wav</ShortName>
-							<Path>SFX/SqueakyDoor_BEE3B957.wem</Path>
+							<Path>SFX/SqueakyDoor_BA87A6F8.wem</Path>
 						</File>
 						<File Id="684050722" Language="SFX">
 							<ShortName>SqueakyDoor.wav</ShortName>
-							<Path>SFX/SqueakyDoor_9199D959.wem</Path>
+							<Path>SFX/SqueakyDoor_2EDB9131.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="2028186725" Name="Play_EnergyJingle" ObjectPath="\Events\Default Work Unit\ItemsScene\Play_EnergyJingle" DurationType="OneShot" DurationMin="0.811513" DurationMax="0.811513">
+					<IncludedMemoryFiles>
+						<File Id="629954010" Language="SFX">
+							<ShortName>EnergyJingle.wav</ShortName>
+							<Path>SFX/EnergyJingle_03DF8F59.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -56,43 +140,43 @@
 					<IncludedMemoryFiles>
 						<File Id="129928124" Language="SFX">
 							<ShortName>ProjectileExplode.wav</ShortName>
-							<Path>SFX/ProjectileExplode_B394EDA4.wem</Path>
+							<Path>SFX/ProjectileExplode_D31D5985.wem</Path>
 						</File>
 						<File Id="436327313" Language="SFX">
 							<ShortName>ProjectileExplode.wav</ShortName>
-							<Path>SFX/ProjectileExplode_4702B53F.wem</Path>
+							<Path>SFX/ProjectileExplode_75C7817A.wem</Path>
 						</File>
 						<File Id="693424916" Language="SFX">
 							<ShortName>ProjectileExplode.wav</ShortName>
-							<Path>SFX/ProjectileExplode_726ACF56.wem</Path>
+							<Path>SFX/ProjectileExplode_E290C6B3.wem</Path>
 						</File>
 						<File Id="745176646" Language="SFX">
 							<ShortName>ProjectileExplode.wav</ShortName>
-							<Path>SFX/ProjectileExplode_7CEFF59D.wem</Path>
+							<Path>SFX/ProjectileExplode_F2B8F644.wem</Path>
 						</File>
 						<File Id="854468581" Language="SFX">
 							<ShortName>ProjectileExplode.wav</ShortName>
-							<Path>SFX/ProjectileExplode_B682017B.wem</Path>
+							<Path>SFX/ProjectileExplode_A480A54C.wem</Path>
 						</File>
 						<File Id="995914859" Language="SFX">
 							<ShortName>ProjectileExplode.wav</ShortName>
-							<Path>SFX/ProjectileExplode_0E1A68E4.wem</Path>
+							<Path>SFX/ProjectileExplode_33BD63AD.wem</Path>
 						</File>
 						<File Id="997698416" Language="SFX">
 							<ShortName>ProjectileExplode.wav</ShortName>
-							<Path>SFX/ProjectileExplode_295F8A4B.wem</Path>
+							<Path>SFX/ProjectileExplode_BFEFFFC6.wem</Path>
 						</File>
 						<File Id="1018989538" Language="SFX">
 							<ShortName>ProjectileExplode.wav</ShortName>
-							<Path>SFX/ProjectileExplode_3DCAD84A.wem</Path>
+							<Path>SFX/ProjectileExplode_B7DCDCC9.wem</Path>
 						</File>
 						<File Id="1020300007" Language="SFX">
 							<ShortName>ProjectileExplode.wav</ShortName>
-							<Path>SFX/ProjectileExplode_A2CD41C8.wem</Path>
+							<Path>SFX/ProjectileExplode_FB92E4E7.wem</Path>
 						</File>
 						<File Id="1039091598" Language="SFX">
 							<ShortName>ProjectileExplode.wav</ShortName>
-							<Path>SFX/ProjectileExplode_5B60732A.wem</Path>
+							<Path>SFX/ProjectileExplode_05FA28C3.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -100,7 +184,7 @@
 					<IncludedMemoryFiles>
 						<File Id="238543085" Language="SFX">
 							<ShortName>ProjectileThrow.wav</ShortName>
-							<Path>SFX/ProjectileThrow_2B7498F0.wem</Path>
+							<Path>SFX/ProjectileThrow_7295C13E.wem</Path>
 						</File>
 						<File Id="345272659" Language="SFX">
 							<ShortName>Fire.wav</ShortName>
@@ -108,19 +192,19 @@
 						</File>
 						<File Id="425030932" Language="SFX">
 							<ShortName>ProjectileThrow.wav</ShortName>
-							<Path>SFX/ProjectileThrow_5970BD41.wem</Path>
+							<Path>SFX/ProjectileThrow_E675D320.wem</Path>
 						</File>
 						<File Id="984304702" Language="SFX">
 							<ShortName>ProjectileThrow.wav</ShortName>
-							<Path>SFX/ProjectileThrow_3E57480F.wem</Path>
+							<Path>SFX/ProjectileThrow_CCB9D056.wem</Path>
 						</File>
 						<File Id="984676907" Language="SFX">
 							<ShortName>ProjectileThrow.wav</ShortName>
-							<Path>SFX/ProjectileThrow_B7CF1BEC.wem</Path>
+							<Path>SFX/ProjectileThrow_6FC0092E.wem</Path>
 						</File>
 						<File Id="1013540231" Language="SFX">
 							<ShortName>ProjectileThrow.wav</ShortName>
-							<Path>SFX/ProjectileThrow_FE6255E8.wem</Path>
+							<Path>SFX/ProjectileThrow_C962039C.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -128,43 +212,43 @@
 					<IncludedMemoryFiles>
 						<File Id="129928124" Language="SFX">
 							<ShortName>ProjectileExplode.wav</ShortName>
-							<Path>SFX/ProjectileExplode_B394EDA4.wem</Path>
+							<Path>SFX/ProjectileExplode_D31D5985.wem</Path>
 						</File>
 						<File Id="436327313" Language="SFX">
 							<ShortName>ProjectileExplode.wav</ShortName>
-							<Path>SFX/ProjectileExplode_4702B53F.wem</Path>
+							<Path>SFX/ProjectileExplode_75C7817A.wem</Path>
 						</File>
 						<File Id="693424916" Language="SFX">
 							<ShortName>ProjectileExplode.wav</ShortName>
-							<Path>SFX/ProjectileExplode_726ACF56.wem</Path>
+							<Path>SFX/ProjectileExplode_E290C6B3.wem</Path>
 						</File>
 						<File Id="745176646" Language="SFX">
 							<ShortName>ProjectileExplode.wav</ShortName>
-							<Path>SFX/ProjectileExplode_7CEFF59D.wem</Path>
+							<Path>SFX/ProjectileExplode_F2B8F644.wem</Path>
 						</File>
 						<File Id="854468581" Language="SFX">
 							<ShortName>ProjectileExplode.wav</ShortName>
-							<Path>SFX/ProjectileExplode_B682017B.wem</Path>
+							<Path>SFX/ProjectileExplode_A480A54C.wem</Path>
 						</File>
 						<File Id="995914859" Language="SFX">
 							<ShortName>ProjectileExplode.wav</ShortName>
-							<Path>SFX/ProjectileExplode_0E1A68E4.wem</Path>
+							<Path>SFX/ProjectileExplode_33BD63AD.wem</Path>
 						</File>
 						<File Id="997698416" Language="SFX">
 							<ShortName>ProjectileExplode.wav</ShortName>
-							<Path>SFX/ProjectileExplode_295F8A4B.wem</Path>
+							<Path>SFX/ProjectileExplode_BFEFFFC6.wem</Path>
 						</File>
 						<File Id="1018989538" Language="SFX">
 							<ShortName>ProjectileExplode.wav</ShortName>
-							<Path>SFX/ProjectileExplode_3DCAD84A.wem</Path>
+							<Path>SFX/ProjectileExplode_B7DCDCC9.wem</Path>
 						</File>
 						<File Id="1020300007" Language="SFX">
 							<ShortName>ProjectileExplode.wav</ShortName>
-							<Path>SFX/ProjectileExplode_A2CD41C8.wem</Path>
+							<Path>SFX/ProjectileExplode_FB92E4E7.wem</Path>
 						</File>
 						<File Id="1039091598" Language="SFX">
 							<ShortName>ProjectileExplode.wav</ShortName>
-							<Path>SFX/ProjectileExplode_5B60732A.wem</Path>
+							<Path>SFX/ProjectileExplode_05FA28C3.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -172,7 +256,7 @@
 					<IncludedMemoryFiles>
 						<File Id="238543085" Language="SFX">
 							<ShortName>ProjectileThrow.wav</ShortName>
-							<Path>SFX/ProjectileThrow_2B7498F0.wem</Path>
+							<Path>SFX/ProjectileThrow_7295C13E.wem</Path>
 						</File>
 						<File Id="345272659" Language="SFX">
 							<ShortName>Fire.wav</ShortName>
@@ -180,19 +264,27 @@
 						</File>
 						<File Id="425030932" Language="SFX">
 							<ShortName>ProjectileThrow.wav</ShortName>
-							<Path>SFX/ProjectileThrow_5970BD41.wem</Path>
+							<Path>SFX/ProjectileThrow_E675D320.wem</Path>
 						</File>
 						<File Id="984304702" Language="SFX">
 							<ShortName>ProjectileThrow.wav</ShortName>
-							<Path>SFX/ProjectileThrow_3E57480F.wem</Path>
+							<Path>SFX/ProjectileThrow_CCB9D056.wem</Path>
 						</File>
 						<File Id="984676907" Language="SFX">
 							<ShortName>ProjectileThrow.wav</ShortName>
-							<Path>SFX/ProjectileThrow_B7CF1BEC.wem</Path>
+							<Path>SFX/ProjectileThrow_6FC0092E.wem</Path>
 						</File>
 						<File Id="1013540231" Language="SFX">
 							<ShortName>ProjectileThrow.wav</ShortName>
-							<Path>SFX/ProjectileThrow_FE6255E8.wem</Path>
+							<Path>SFX/ProjectileThrow_C962039C.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="2106862869" Name="Play_HPJingle" ObjectPath="\Events\Default Work Unit\ItemsScene\Play_HPJingle" DurationType="OneShot" DurationMin="0.85087" DurationMax="0.85087">
+					<IncludedMemoryFiles>
+						<File Id="365072858" Language="SFX">
+							<ShortName>HPJingle.wav</ShortName>
+							<Path>SFX/HPJingle_98F05687.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -200,19 +292,19 @@
 					<IncludedMemoryFiles>
 						<File Id="23732595" Language="SFX">
 							<ShortName>CardboardImpact.wav</ShortName>
-							<Path>SFX/CardboardImpact_6F26D83E.wem</Path>
+							<Path>SFX/CardboardImpact_EEC90E33.wem</Path>
 						</File>
 						<File Id="394627533" Language="SFX">
 							<ShortName>CardboardImpact.wav</ShortName>
-							<Path>SFX/CardboardImpact_3B8A16C1.wem</Path>
+							<Path>SFX/CardboardImpact_CEF09C6C.wem</Path>
 						</File>
 						<File Id="811632332" Language="SFX">
 							<ShortName>CardboardImpact.wav</ShortName>
-							<Path>SFX/CardboardImpact_45969E13.wem</Path>
+							<Path>SFX/CardboardImpact_33C708BA.wem</Path>
 						</File>
 						<File Id="997870370" Language="SFX">
 							<ShortName>CardboardImpact.wav</ShortName>
-							<Path>SFX/CardboardImpact_A2C0C5E8.wem</Path>
+							<Path>SFX/CardboardImpact_9083B01B.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -244,19 +336,83 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
+				<Event Id="1622429165" Name="Play_LightUpStatue" ObjectPath="\Events\Default Work Unit\ItemsScene\Play_LightUpStatue" DurationType="OneShot" DurationMin="1.346481" DurationMax="3.747586">
+					<IncludedMemoryFiles>
+						<File Id="343653293" Language="SFX">
+							<ShortName>StatueLightUp.wav</ShortName>
+							<Path>SFX/StatueLightUp_78B2DDB1.wem</Path>
+						</File>
+						<File Id="546497670" Language="SFX">
+							<ShortName>StatueLightUp.wav</ShortName>
+							<Path>SFX/StatueLightUp_1EF3F483.wem</Path>
+						</File>
+						<File Id="787769316" Language="SFX">
+							<ShortName>StatueLightUp.wav</ShortName>
+							<Path>SFX/StatueLightUp_4EBBF22B.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
 				<Event Id="31596624" Name="Play_PoofCardboard" ObjectPath="\Events\Default Work Unit\ItemsScene\Play_PoofCardboard" DurationType="OneShot" DurationMin="0.787154" DurationMax="1.443116">
 					<IncludedMemoryFiles>
 						<File Id="154705653" Language="SFX">
 							<ShortName>CardboardPoof.wav</ShortName>
-							<Path>SFX/CardboardPoof_2F1F70CD.wem</Path>
+							<Path>SFX/CardboardPoof_2DB66D78.wem</Path>
 						</File>
 						<File Id="750855172" Language="SFX">
 							<ShortName>CardboardPoof.wav</ShortName>
-							<Path>SFX/CardboardPoof_5F7F731E.wem</Path>
+							<Path>SFX/CardboardPoof_3E29FB15.wem</Path>
 						</File>
 						<File Id="934852199" Language="SFX">
 							<ShortName>CardboardPoof.wav</ShortName>
-							<Path>SFX/CardboardPoof_A741EBA1.wem</Path>
+							<Path>SFX/CardboardPoof_966C9491.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="3450689315" Name="Play_ShootStatue" ObjectPath="\Events\Default Work Unit\ItemsScene\Play_ShootStatue" DurationType="OneShot" DurationMin="0.756781" DurationMax="1.761216">
+					<IncludedMemoryFiles>
+						<File Id="189741884" Language="SFX">
+							<ShortName>StatueShoot.wav</ShortName>
+							<Path>SFX/StatueShoot_36B55B69.wem</Path>
+						</File>
+						<File Id="238543085" Language="SFX">
+							<ShortName>ProjectileThrow.wav</ShortName>
+							<Path>SFX/ProjectileThrow_7295C13E.wem</Path>
+						</File>
+						<File Id="262470071" Language="SFX">
+							<ShortName>StatueShoot.wav</ShortName>
+							<Path>SFX/StatueShoot_C8E0291B.wem</Path>
+						</File>
+						<File Id="377746266" Language="SFX">
+							<ShortName>StatueShoot.wav</ShortName>
+							<Path>SFX/StatueShoot_02B60996.wem</Path>
+						</File>
+						<File Id="425030932" Language="SFX">
+							<ShortName>ProjectileThrow.wav</ShortName>
+							<Path>SFX/ProjectileThrow_E675D320.wem</Path>
+						</File>
+						<File Id="787940266" Language="SFX">
+							<ShortName>StatueShoot.wav</ShortName>
+							<Path>SFX/StatueShoot_ECC18EB4.wem</Path>
+						</File>
+						<File Id="984304702" Language="SFX">
+							<ShortName>ProjectileThrow.wav</ShortName>
+							<Path>SFX/ProjectileThrow_CCB9D056.wem</Path>
+						</File>
+						<File Id="984676907" Language="SFX">
+							<ShortName>ProjectileThrow.wav</ShortName>
+							<Path>SFX/ProjectileThrow_6FC0092E.wem</Path>
+						</File>
+						<File Id="1013540231" Language="SFX">
+							<ShortName>ProjectileThrow.wav</ShortName>
+							<Path>SFX/ProjectileThrow_C962039C.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="354571108" Name="Play_SleepJingle" ObjectPath="\Events\Default Work Unit\ItemsScene\Play_SleepJingle" DurationType="OneShot" DurationMin="1.281927" DurationMax="1.281927">
+					<IncludedMemoryFiles>
+						<File Id="1043595354" Language="SFX">
+							<ShortName>SleepJingle.wav</ShortName>
+							<Path>SFX/SleepJingle_10C4C929.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -301,6 +457,83 @@
 						</SwitchContainer>
 					</SwitchContainers>
 				</Event>
+				<Event Id="598714956" Name="Play_SwordHit" ObjectPath="\Events\Default Work Unit\Character\Play_SwordHit" DurationType="OneShot" DurationMin="0.355625" DurationMax="0.603017">
+					<IncludedMemoryFiles>
+						<File Id="202986522" Language="SFX">
+							<ShortName>SwordHit.wav</ShortName>
+							<Path>SFX/SwordHit_9A355FBB.wem</Path>
+						</File>
+						<File Id="318260061" Language="SFX">
+							<ShortName>SwordHit.wav</ShortName>
+							<Path>SFX/SwordHit_BE15939A.wem</Path>
+						</File>
+						<File Id="348566923" Language="SFX">
+							<ShortName>SwordHit.wav</ShortName>
+							<Path>SFX/SwordHit_5CC85433.wem</Path>
+						</File>
+						<File Id="562410588" Language="SFX">
+							<ShortName>SwordHit.wav</ShortName>
+							<Path>SFX/SwordHit_868E3C00.wem</Path>
+						</File>
+						<File Id="859955218" Language="SFX">
+							<ShortName>SwordHit.wav</ShortName>
+							<Path>SFX/SwordHit_C72E4304.wem</Path>
+						</File>
+						<File Id="898289585" Language="SFX">
+							<ShortName>SwordHit.wav</ShortName>
+							<Path>SFX/SwordHit_30B1C2E6.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="1746766985" Name="Play_SwordSwing" ObjectPath="\Events\Default Work Unit\Character\Play_SwordSwing" DurationType="OneShot" DurationMin="0.233341" DurationMax="0.373142">
+					<IncludedMemoryFiles>
+						<File Id="27174265" Language="SFX">
+							<ShortName>SwordSwing.wav</ShortName>
+							<Path>SFX/SwordSwing_A8EEE66F.wem</Path>
+						</File>
+						<File Id="143940415" Language="SFX">
+							<ShortName>SwordSwing.wav</ShortName>
+							<Path>SFX/SwordSwing_E2A2D57E.wem</Path>
+						</File>
+						<File Id="474341501" Language="SFX">
+							<ShortName>SwordSwing.wav</ShortName>
+							<Path>SFX/SwordSwing_D5663B20.wem</Path>
+						</File>
+						<File Id="482311064" Language="SFX">
+							<ShortName>SwordSwing.wav</ShortName>
+							<Path>SFX/SwordSwing_BF4C3CB8.wem</Path>
+						</File>
+						<File Id="666293255" Language="SFX">
+							<ShortName>SwordSwing.wav</ShortName>
+							<Path>SFX/SwordSwing_555BA00F.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="10982625" Name="Play_UnlockJingle" ObjectPath="\Events\Default Work Unit\ItemsScene\Play_UnlockJingle" DurationType="OneShot" DurationMin="1.281927" DurationMax="1.281927">
+					<IncludedMemoryFiles>
+						<File Id="741723858" Language="SFX">
+							<ShortName>UnlockJingle.wav</ShortName>
+							<Path>SFX/UnlockJingle_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="383068205" Name="Play_UpgradeJingle" ObjectPath="\Events\Default Work Unit\ItemsScene\Play_UpgradeJingle" DurationType="OneShot" DurationMin="1.281927" DurationMax="1.281927">
+					<IncludedMemoryFiles>
+						<File Id="95700381" Language="SFX">
+							<ShortName>UpgradeJingle.wav</ShortName>
+							<Path>SFX/UpgradeJingle_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="1126284757" Name="Play_Watering" ObjectPath="\Events\Default Work Unit\ItemsScene\Play_Watering" DurationType="Infinite">
+					<IncludedMemoryFiles>
+						<File Id="207199769" Language="SFX">
+							<ShortName>Watering.wav</ShortName>
+							<Path>SFX/Watering_D79FB2B7.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="3226714187" Name="Stop_Watering" ObjectPath="\Events\Default Work Unit\ItemsScene\Stop_Watering" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
 			</IncludedEvents>
 			<SwitchGroups>
 				<SwitchGroup Id="3865314626" Name="Material" ObjectPath="\Switches\Default Work Unit\Material" GUID="{3B231D83-CEB8-4D6E-87F3-B78A280E368F}">

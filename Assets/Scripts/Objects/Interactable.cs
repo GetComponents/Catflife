@@ -172,8 +172,8 @@ public class Interactable : MonoBehaviour
         {
             player = PlayerInventory.Instance;
             processInteraction();
-            player.Energy -= costOfInteraction;
-            
+            //player.Energy -= costOfInteraction;
+
         }
     }
 
@@ -190,10 +190,12 @@ public class Interactable : MonoBehaviour
             case EActionType.NONE:
                 break;
             case EActionType.UNPACK:
-                UnpackItem();
+                //UnpackItem();
+                BoxInteractionCanvas.Instance.OpenCanvas(costOfInteraction, this);
                 break;
             case EActionType.WATER:
-                UpgradeStat();
+                PlantInteractionCanvas.Instance.OpenCanvas(costOfInteraction, this);
+                //UpgradeStat();
                 break;
             case EActionType.STARTWATER:
                 Watering.Instance.EnableWatering();
@@ -206,31 +208,35 @@ public class Interactable : MonoBehaviour
         }
     }
 
-    private void UpgradeStat()
+    private void OpenInteractionCanvas()
     {
+    }
+
+    public void UpgradeStat()
+    {
+        player.Energy -= costOfInteraction;
         switch (myUpgradeType)
         {
             case ETypeOfUpgrade.ATTACK:
-
-                //PlaySound UpgradeJingle
+                AkSoundEngine.PostEvent("Play_UpgradeJingle", this.gameObject);
                 player.AttackUpgrades++;
                 wateringCan.MoveWateringCan(transform.position);
                 Debug.Log($"You Feel Stronger ({player.AttackUpgrades})");
                 break;
             case ETypeOfUpgrade.HP:
-                //PlaySound UpgradeJingle
+                AkSoundEngine.PostEvent("Play_UpgradeJingle", this.gameObject);
                 player.HPUpgrades++;
                 wateringCan.MoveWateringCan(transform.position);
                 Debug.Log($"You Feel Healthier ({player.HPUpgrades})");
                 break;
             case ETypeOfUpgrade.MANA:
-                //PlaySound UpgradeJingle
+                AkSoundEngine.PostEvent("Play_UpgradeJingle", this.gameObject);
                 player.ManaUpgrades++;
                 wateringCan.MoveWateringCan(transform.position);
                 Debug.Log($"You Feel More Resiliant ({player.ManaUpgrades})");
                 break;
             case ETypeOfUpgrade.SPEED:
-                //PlaySound UpgradeJingle
+                AkSoundEngine.PostEvent("Play_UpgradeJingle", this.gameObject);
                 player.DashUpgrades++;
                 wateringCan.MoveWateringCan(transform.position);
                 Debug.Log($"You Feel More Energetic ({player.DashUpgrades})");
@@ -238,10 +244,11 @@ public class Interactable : MonoBehaviour
         }
     }
 
-    private void UnpackItem()
+    public void UnpackItem()
     {
         Destroy(interactionCanvas);
         isUnpacking = true;
+        player.Energy -= costOfInteraction;
         GetComponent<Animator>().SetBool("OpenBox", true);
         StartCoroutine(MoveObject());
     }
@@ -298,7 +305,7 @@ public class Interactable : MonoBehaviour
 
     private void Sleep()
     {
-        //PlaySound SleepJingle
+        AkSoundEngine.PostEvent("Play_SleepJingle", this.gameObject);
         SceneTransition.Instance.ChangeScene("EncounterSelection", 0);
         PlayerController.Instance.HealFull();
     }
