@@ -172,8 +172,8 @@ public class Interactable : MonoBehaviour
         {
             player = PlayerInventory.Instance;
             processInteraction();
-            player.Energy -= costOfInteraction;
-            
+            //player.Energy -= costOfInteraction;
+
         }
     }
 
@@ -190,10 +190,12 @@ public class Interactable : MonoBehaviour
             case EActionType.NONE:
                 break;
             case EActionType.UNPACK:
-                UnpackItem();
+                //UnpackItem();
+                BoxInteractionCanvas.Instance.OpenCanvas(costOfInteraction, this);
                 break;
             case EActionType.WATER:
-                UpgradeStat();
+                PlantInteractionCanvas.Instance.OpenCanvas(costOfInteraction, this);
+                //UpgradeStat();
                 break;
             case EActionType.STARTWATER:
                 Watering.Instance.EnableWatering();
@@ -206,8 +208,13 @@ public class Interactable : MonoBehaviour
         }
     }
 
-    private void UpgradeStat()
+    private void OpenInteractionCanvas()
     {
+    }
+
+    public void UpgradeStat()
+    {
+        player.Energy -= costOfInteraction;
         switch (myUpgradeType)
         {
             case ETypeOfUpgrade.ATTACK:
@@ -237,10 +244,11 @@ public class Interactable : MonoBehaviour
         }
     }
 
-    private void UnpackItem()
+    public void UnpackItem()
     {
         Destroy(interactionCanvas);
         isUnpacking = true;
+        player.Energy -= costOfInteraction;
         GetComponent<Animator>().SetBool("OpenBox", true);
         StartCoroutine(MoveObject());
     }
