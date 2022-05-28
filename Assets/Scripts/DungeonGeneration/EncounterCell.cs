@@ -92,7 +92,14 @@ public class EncounterCell : MonoBehaviour
                 //SceneManager.LoadScene("Combat", LoadSceneMode.Additive);
                 break;
             case EEncounterType.BOSS:
-                PlayerController.Instance.Die();
+                if (true)
+                {
+                    SceneTransition.Instance.ChangeScene("BossStage", 0);
+                }
+                else
+                {
+                    PlayerController.Instance.Die();
+                }
                 break;
             case EEncounterType.HEAL:
                 break;

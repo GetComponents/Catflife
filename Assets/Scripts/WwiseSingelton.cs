@@ -18,6 +18,7 @@ namespace Wwise
             else
             {
                 Destroy(gameObject);
+                return;
             }
         }
     }

@@ -10,7 +10,7 @@ public class BossGrunt : Enemy
     Vector3 playerPosition;
     public float maxMoveCounter, MaxStopCounter, JumpingDistance;
     float moveCounter, stopCounter;
-
+    Animator myAnimator;
     Boss boss;
 
     void Start()
@@ -19,6 +19,7 @@ public class BossGrunt : Enemy
         boss.SpawnedEnemiesAmount++;
         playerPosition = PlayerController.Instance.transform.GetChild(0).position;
         enemyNavMesh = GetComponent<NavMeshAgent>();
+        myAnimator = GetComponent<Animator>();
     }
 
     new void Update()
@@ -48,15 +49,21 @@ public class BossGrunt : Enemy
             stopCounter = MaxStopCounter;
             playerPosition = PlayerController.Instance.transform.GetChild(0).position;
             playerPosition = ((playerPosition - transform.position).normalized * JumpingDistance) + transform.position;
+            myAnimator.SetBool("attack", true);
         }
     }
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.tag == "Player")
+        if (collision.gameObject.tag == "Player" && myAnimator.GetBool("attack"))
         {
             PlayerController.Instance.TakeDamage(damage);
         }
+    }
+
+    private void EndAttackAnim()
+    {
+        myAnimator.SetBool("attack", false);
     }
 
     protected override void Die()

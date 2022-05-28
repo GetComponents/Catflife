@@ -78,8 +78,8 @@ public class SceneTransition : MonoBehaviour
 
     public void EndTransition(Scene _previousScene, Scene _newScene)
     {
-        Debug.Log(_newScene.name);
-        if (_newScene == SceneManager.GetSceneByName("Combat") || SceneManager.GetSceneByName("CombatDebug") == _newScene)
+        string newSceneName = _newScene.name;
+        if (newSceneName == "Combat" || "CombatDebug" == newSceneName || newSceneName == "BossStage")
         {
             PlayerController.Instance.IsInCombat = true;
             playerSword.enabled = true;

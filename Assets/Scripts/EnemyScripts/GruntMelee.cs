@@ -13,6 +13,9 @@ namespace EnemyAI
         public float maxMoveCounter, MaxStopCounter, JumpingDistance;
         float moveCounter, stopCounter;
 
+        [SerializeField]
+        Animator myAnimator;
+
         void Start()
         {
             playerPosition = PlayerController.Instance.transform.GetChild(0).position;
@@ -42,12 +45,18 @@ namespace EnemyAI
                 stopCounter = MaxStopCounter;
                 playerPosition = PlayerController.Instance.transform.GetChild(0).position;
                 playerPosition = ((playerPosition - transform.position).normalized * JumpingDistance) + transform.position;
+                myAnimator.SetBool("attack", true);
             }
+        }
+
+        private void EndAttackAnim()
+        {
+            myAnimator.SetBool("attack", false);
         }
 
         private void OnCollisionEnter(Collision collision)
         {
-            if (collision.gameObject.tag == "Player")
+            if (collision.gameObject.tag == "Player" && myAnimator.GetBool("attack"))
             {
                 PlayerController.Instance.TakeDamage(damage);
             }
