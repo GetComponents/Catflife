@@ -81,6 +81,130 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &761487000229039926
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 454918217999577706}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.5, y: 1.5, z: 1.5}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!95 &761487000229039927
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 454918217999577706}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 40f33eeb211e01e4c9fad4886524b1b7, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &761487000229039924
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 454918217999577706}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e550e4c2d4387c245a1aa979d04c3ac8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myUpgradeType: 0
+  myAction: 1
+  Name: venus flytrap
+  interactionCanvas: {fileID: 761486998642046526}
+  costUI: {fileID: 761487000180339357}
+  NameUI: {fileID: 761486998550622904}
+  costOfInteraction: 0
+  UnlockContent: 0
+  objectToUnpack: {fileID: 3580320176227380453, guid: 3bd9acbdc4ca37b4496e14d9940df6c8, type: 3}
+  objectPosition: {fileID: 944596046004822868}
+  objectMoveUpPosition: {fileID: 0}
+  timeForObjectMovement: 1
+  m_unlockIndex: 3
+  BoxNumber: 0
+  interactableBoxMaterial: {fileID: 2100000, guid: 5d1b07f32bed7db4cb62a1242ca47b99, type: 2}
+  FollowUpBoxes:
+  - {fileID: 761486998884119425}
+  - {fileID: 761486998570542171}
+  wateringCan: {fileID: 0}
+--- !u!65 &761487000175859393
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 454918218079955867}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.5, y: 1.5, z: 1.5}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!95 &761487000175859398
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 454918218079955867}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 40f33eeb211e01e4c9fad4886524b1b7, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &761487000175859399
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 454918218079955867}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e550e4c2d4387c245a1aa979d04c3ac8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myUpgradeType: 0
+  myAction: 1
+  Name: books
+  interactionCanvas: {fileID: 761486999332099943}
+  costUI: {fileID: 761486999545111276}
+  NameUI: {fileID: 761487000056733717}
+  costOfInteraction: 0
+  UnlockContent: 0
+  objectToUnpack: {fileID: 2347332541903968861, guid: 4d5b96b63361c5947ae1df364184a218, type: 3}
+  objectPosition: {fileID: 6208290492027980443}
+  objectMoveUpPosition: {fileID: 0}
+  timeForObjectMovement: 1
+  m_unlockIndex: 2
+  BoxNumber: 0
+  interactableBoxMaterial: {fileID: 2100000, guid: 5d1b07f32bed7db4cb62a1242ca47b99, type: 2}
+  FollowUpBoxes: []
+  wateringCan: {fileID: 0}
 --- !u!1 &454918218122300120
 GameObject:
   m_ObjectHideFlags: 0
@@ -176,6 +300,131 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 10.999998, y: 0.000003226667, z: 8}
   m_Center: {x: 0.1499722, y: -0.000017311777, z: 0.35000134}
+--- !u!65 &761487000525350761
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 454918218296400419}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.5, y: 1.5, z: 1.5}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!95 &761487000525350766
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 454918218296400419}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 40f33eeb211e01e4c9fad4886524b1b7, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &761487000525350767
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 454918218296400419}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e550e4c2d4387c245a1aa979d04c3ac8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myUpgradeType: 0
+  myAction: 1
+  Name: pictures
+  interactionCanvas: {fileID: 761486998715039310}
+  costUI: {fileID: 761486999798743922}
+  NameUI: {fileID: 761486999264421826}
+  costOfInteraction: 0
+  UnlockContent: 0
+  objectToUnpack: {fileID: 4381063088109949607, guid: cca2376a1874ab54b86de64c48d3c0a6, type: 3}
+  objectPosition: {fileID: 3742451426770329314}
+  objectMoveUpPosition: {fileID: 0}
+  timeForObjectMovement: 1
+  m_unlockIndex: 2
+  BoxNumber: 0
+  interactableBoxMaterial: {fileID: 2100000, guid: 5d1b07f32bed7db4cb62a1242ca47b99, type: 2}
+  FollowUpBoxes:
+  - {fileID: 761486999804734345}
+  - {fileID: 761486999043358824}
+  - {fileID: 761486998567488874}
+  wateringCan: {fileID: 0}
+--- !u!65 &761487000463046231
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 454918218367126281}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.5, y: 1.5, z: 1.5}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!95 &761487000463046228
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 454918218367126281}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 40f33eeb211e01e4c9fad4886524b1b7, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &761487000463046229
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 454918218367126281}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e550e4c2d4387c245a1aa979d04c3ac8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myUpgradeType: 0
+  myAction: 1
+  Name: frog pillow
+  interactionCanvas: {fileID: 761486999511884493}
+  costUI: {fileID: 761486999584088289}
+  NameUI: {fileID: 761486998766371152}
+  costOfInteraction: 0
+  UnlockContent: 0
+  objectToUnpack: {fileID: 6564027841168080096, guid: 46e8d077d06346e439f14f77f994d8b3, type: 3}
+  objectPosition: {fileID: 868054255337583713}
+  objectMoveUpPosition: {fileID: 0}
+  timeForObjectMovement: 1
+  m_unlockIndex: 3
+  BoxNumber: 0
+  interactableBoxMaterial: {fileID: 2100000, guid: 5d1b07f32bed7db4cb62a1242ca47b99, type: 2}
+  FollowUpBoxes: []
+  wateringCan: {fileID: 0}
 --- !u!1 &454918218507274833
 GameObject:
   m_ObjectHideFlags: 0
@@ -338,6 +587,193 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &761486999652242317
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 454918218630606535}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.5, y: 1.5, z: 1.5}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!95 &761486999652242322
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 454918218630606535}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 40f33eeb211e01e4c9fad4886524b1b7, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &761486999652242323
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 454918218630606535}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e550e4c2d4387c245a1aa979d04c3ac8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myUpgradeType: 0
+  myAction: 1
+  Name: notebook
+  interactionCanvas: {fileID: 761486999267488054}
+  costUI: {fileID: 761486999095232436}
+  NameUI: {fileID: 761487000350485807}
+  costOfInteraction: 0
+  UnlockContent: 0
+  objectToUnpack: {fileID: 4747068531418530923, guid: 99eeb7640130db94c8668cdb9074fb43, type: 3}
+  objectPosition: {fileID: 944596046437603412}
+  objectMoveUpPosition: {fileID: 0}
+  timeForObjectMovement: 1
+  m_unlockIndex: 2
+  BoxNumber: 0
+  interactableBoxMaterial: {fileID: 2100000, guid: 5d1b07f32bed7db4cb62a1242ca47b99, type: 2}
+  FollowUpBoxes: []
+  wateringCan: {fileID: 0}
+--- !u!65 &761486999804734347
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 454918218650048221}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.5, y: 1.5, z: 1.5}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!95 &761486999804734344
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 454918218650048221}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 40f33eeb211e01e4c9fad4886524b1b7, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &761486999804734345
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 454918218650048221}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e550e4c2d4387c245a1aa979d04c3ac8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myUpgradeType: 0
+  myAction: 1
+  Name: rugs
+  interactionCanvas: {fileID: 761486999828826570}
+  costUI: {fileID: 761486999562166194}
+  NameUI: {fileID: 761486999019257299}
+  costOfInteraction: 0
+  UnlockContent: 0
+  objectToUnpack: {fileID: 2981175429425481534, guid: 0fed46cee690e22498022972bdd58f96, type: 3}
+  objectPosition: {fileID: 7468782230527953305}
+  objectMoveUpPosition: {fileID: 0}
+  timeForObjectMovement: 1
+  m_unlockIndex: 3
+  BoxNumber: 0
+  interactableBoxMaterial: {fileID: 2100000, guid: 5d1b07f32bed7db4cb62a1242ca47b99, type: 2}
+  FollowUpBoxes:
+  - {fileID: 761486998567488874}
+  wateringCan: {fileID: 0}
+--- !u!65 &761486999792176518
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 454918218771722458}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.5, y: 1.5, z: 1.5}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!95 &761486999792176519
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 454918218771722458}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 40f33eeb211e01e4c9fad4886524b1b7, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &761486999792176516
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 454918218771722458}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e550e4c2d4387c245a1aa979d04c3ac8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myUpgradeType: 0
+  myAction: 1
+  Name: lamp
+  interactionCanvas: {fileID: 761486999384138785}
+  costUI: {fileID: 761486999987994722}
+  NameUI: {fileID: 761486998659363524}
+  costOfInteraction: 0
+  UnlockContent: 0
+  objectToUnpack: {fileID: 2099103866482598119, guid: 2dda26fa968eae944b7e21fe78b34326, type: 3}
+  objectPosition: {fileID: 2499697560131161890}
+  objectMoveUpPosition: {fileID: 0}
+  timeForObjectMovement: 1
+  m_unlockIndex: 2
+  BoxNumber: 0
+  interactableBoxMaterial: {fileID: 2100000, guid: 5d1b07f32bed7db4cb62a1242ca47b99, type: 2}
+  FollowUpBoxes:
+  - {fileID: 761486998570542171}
+  - {fileID: 761486998921758923}
+  - {fileID: 761487000229039924}
+  wateringCan: {fileID: 0}
 --- !u!1 &454918218801516607
 GameObject:
   m_ObjectHideFlags: 0
@@ -419,6 +855,151 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &761486999977286225
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 454918218821429003}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.5, y: 1.5, z: 1.5}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!95 &761486999977286230
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 454918218821429003}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 40f33eeb211e01e4c9fad4886524b1b7, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &761486999977286231
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 454918218821429003}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e550e4c2d4387c245a1aa979d04c3ac8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myUpgradeType: 0
+  myAction: 1
+  Name: pillows
+  interactionCanvas: {fileID: 761486999802215039}
+  costUI: {fileID: 761487000089885802}
+  NameUI: {fileID: 761486999157107864}
+  costOfInteraction: 0
+  UnlockContent: 0
+  objectToUnpack: {fileID: 5465985879536028522, guid: e9fef21cd93589c43b12298556816cc4, type: 3}
+  objectPosition: {fileID: 4410369757390050256}
+  objectMoveUpPosition: {fileID: 0}
+  timeForObjectMovement: 1
+  m_unlockIndex: 0
+  BoxNumber: 20
+  interactableBoxMaterial: {fileID: 2100000, guid: 5d1b07f32bed7db4cb62a1242ca47b99, type: 2}
+  FollowUpBoxes:
+  - {fileID: 761486999457460463}
+  - {fileID: 761487000104951364}
+  - {fileID: 761486999566869914}
+  - {fileID: 761486998956942160}
+  - {fileID: 761487000525350767}
+  - {fileID: 761486999418650500}
+  - {fileID: 761486998751821138}
+  - {fileID: 761486998567488874}
+  - {fileID: 761486999043358824}
+  - {fileID: 761486999804734345}
+  - {fileID: 761487000463046229}
+  - {fileID: 761487000021399610}
+  - {fileID: 761486998815136405}
+  - {fileID: 761486999652242323}
+  - {fileID: 761487000229039924}
+  - {fileID: 761486999792176516}
+  - {fileID: 761486998921758923}
+  - {fileID: 761486998570542171}
+  - {fileID: 761486998884119425}
+  - {fileID: 761487000175859399}
+  - {fileID: 761486998665352238}
+  wateringCan: {fileID: 0}
+--- !u!65 &761487000104951366
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 454918218949616410}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.5, y: 1.5, z: 1.5}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!95 &761487000104951367
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 454918218949616410}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 40f33eeb211e01e4c9fad4886524b1b7, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &761487000104951364
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 454918218949616410}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e550e4c2d4387c245a1aa979d04c3ac8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myUpgradeType: 0
+  myAction: 1
+  Name: clothes
+  interactionCanvas: {fileID: 761486999687544790}
+  costUI: {fileID: 761486999748719015}
+  NameUI: {fileID: 761487000056811696}
+  costOfInteraction: 0
+  UnlockContent: 0
+  objectToUnpack: {fileID: 2106635121651488607, guid: 269a0763024bc8e4ebd4aad25677f68e, type: 3}
+  objectPosition: {fileID: 6014122940705079286}
+  objectMoveUpPosition: {fileID: 0}
+  timeForObjectMovement: 1
+  m_unlockIndex: 2
+  BoxNumber: 0
+  interactableBoxMaterial: {fileID: 2100000, guid: 5d1b07f32bed7db4cb62a1242ca47b99, type: 2}
+  FollowUpBoxes:
+  - {fileID: 761486998751821138}
+  - {fileID: 761486999566869914}
+  wateringCan: {fileID: 0}
 --- !u!1 &454918218964021882
 GameObject:
   m_ObjectHideFlags: 0
@@ -500,6 +1081,223 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &761487000021399604
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 454918218999874920}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.5, y: 1.5, z: 1.5}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!95 &761487000021399605
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 454918218999874920}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 40f33eeb211e01e4c9fad4886524b1b7, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &761487000021399607
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 454918218999874920}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f0dc3fbb5b2d6d4c8d87e261281d2e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myUnlock: 2
+--- !u!114 &761487000021399610
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 454918218999874920}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e550e4c2d4387c245a1aa979d04c3ac8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myUpgradeType: 0
+  myAction: 1
+  Name: weird book
+  interactionCanvas: {fileID: 761487000331992879}
+  costUI: {fileID: 761487000630568285}
+  NameUI: {fileID: 761486998812038694}
+  costOfInteraction: 0
+  UnlockContent: 0
+  objectToUnpack: {fileID: 866079624875605628, guid: 5250a39ee8eda9245a0604550386294c, type: 3}
+  objectPosition: {fileID: 2228939959202810385}
+  objectMoveUpPosition: {fileID: 0}
+  timeForObjectMovement: 1
+  m_unlockIndex: 3
+  BoxNumber: 0
+  interactableBoxMaterial: {fileID: 2100000, guid: 5d1b07f32bed7db4cb62a1242ca47b99, type: 2}
+  FollowUpBoxes:
+  - {fileID: 761486998884119425}
+  wateringCan: {fileID: 0}
+--- !u!65 &761486999418650502
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 454918219335992026}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.5, y: 1.5, z: 1.5}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!95 &761486999418650503
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 454918219335992026}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 40f33eeb211e01e4c9fad4886524b1b7, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &761486999418650500
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 454918219335992026}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e550e4c2d4387c245a1aa979d04c3ac8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myUpgradeType: 0
+  myAction: 1
+  Name: calendar
+  interactionCanvas: {fileID: 761487000366579752}
+  costUI: {fileID: 761486999404662802}
+  NameUI: {fileID: 761486998943705304}
+  costOfInteraction: 0
+  UnlockContent: 0
+  objectToUnpack: {fileID: 8417094790930282182, guid: 91706e2a1ca26b64d86843e305f000a6, type: 3}
+  objectPosition: {fileID: 944596044493649620}
+  objectMoveUpPosition: {fileID: 0}
+  timeForObjectMovement: 1
+  m_unlockIndex: 3
+  BoxNumber: 0
+  interactableBoxMaterial: {fileID: 2100000, guid: 5d1b07f32bed7db4cb62a1242ca47b99, type: 2}
+  FollowUpBoxes: []
+  wateringCan: {fileID: 0}
+--- !u!65 &761486999457460457
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 454918219374808483}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.5, y: 1.5, z: 1.5}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!95 &761486999457460462
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 454918219374808483}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 40f33eeb211e01e4c9fad4886524b1b7, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &761486999457460463
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 454918219374808483}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e550e4c2d4387c245a1aa979d04c3ac8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myUpgradeType: 0
+  myAction: 1
+  Name: blanket
+  interactionCanvas: {fileID: 761487000110527661}
+  costUI: {fileID: 761486999169035734}
+  NameUI: {fileID: 761486998665794369}
+  costOfInteraction: 0
+  UnlockContent: 0
+  objectToUnpack: {fileID: 1517790914532712608, guid: 75c445a7f06cc52469e813f32671dacc, type: 3}
+  objectPosition: {fileID: 939599443005136906}
+  objectMoveUpPosition: {fileID: 0}
+  timeForObjectMovement: 1
+  m_unlockIndex: 1
+  BoxNumber: 0
+  interactableBoxMaterial: {fileID: 2100000, guid: 5d1b07f32bed7db4cb62a1242ca47b99, type: 2}
+  FollowUpBoxes:
+  - {fileID: 761487000104951364}
+  - {fileID: 761486999566869914}
+  - {fileID: 761486998956942160}
+  - {fileID: 761487000525350767}
+  - {fileID: 761486999418650500}
+  - {fileID: 761486998751821138}
+  - {fileID: 761486998567488874}
+  - {fileID: 761486999043358824}
+  - {fileID: 761486999804734345}
+  - {fileID: 761487000463046229}
+  - {fileID: 761487000021399610}
+  - {fileID: 761486998815136405}
+  - {fileID: 761486999652242323}
+  - {fileID: 761487000229039924}
+  - {fileID: 761486999792176516}
+  - {fileID: 761486998921758923}
+  - {fileID: 761486998570542171}
+  - {fileID: 761486998884119425}
+  - {fileID: 761487000175859399}
+  - {fileID: 761486998665352238}
+  wateringCan: {fileID: 0}
 --- !u!1 &454918219380872721
 GameObject:
   m_ObjectHideFlags: 0
@@ -595,6 +1393,68 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 3.417159, y: 0.6548144, z: 0.7684891}
   m_Center: {x: -0.36640054, y: 0.3274072, z: -3.0592732}
+--- !u!65 &761486999566869908
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 454918219485927624}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.5, y: 1.5, z: 1.5}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!95 &761486999566869909
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 454918219485927624}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 40f33eeb211e01e4c9fad4886524b1b7, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &761486999566869914
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 454918219485927624}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e550e4c2d4387c245a1aa979d04c3ac8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myUpgradeType: 0
+  myAction: 1
+  Name: flower pillow
+  interactionCanvas: {fileID: 761486998572058901}
+  costUI: {fileID: 761486999455089075}
+  NameUI: {fileID: 761487000014221794}
+  costOfInteraction: 0
+  UnlockContent: 0
+  objectToUnpack: {fileID: 1110900185757146996, guid: ba69c38dd16ec1041853cae74bfd53a8, type: 3}
+  objectPosition: {fileID: 8213817350063427741}
+  objectMoveUpPosition: {fileID: 0}
+  timeForObjectMovement: 1
+  m_unlockIndex: 3
+  BoxNumber: 0
+  interactableBoxMaterial: {fileID: 2100000, guid: 5d1b07f32bed7db4cb62a1242ca47b99, type: 2}
+  FollowUpBoxes:
+  - {fileID: 761486998751821138}
+  wateringCan: {fileID: 0}
 --- !u!1 &454918219691885294
 GameObject:
   m_ObjectHideFlags: 0
@@ -676,6 +1536,143 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &761486998567488868
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 454918219694387256}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.5, y: 1.5, z: 1.5}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!95 &761486998567488869
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 454918219694387256}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 40f33eeb211e01e4c9fad4886524b1b7, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &761486998567488871
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 454918219694387256}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f0dc3fbb5b2d6d4c8d87e261281d2e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myUnlock: 3
+--- !u!114 &761486998567488874
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 454918219694387256}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e550e4c2d4387c245a1aa979d04c3ac8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myUpgradeType: 0
+  myAction: 1
+  Name: frying pan
+  interactionCanvas: {fileID: 761486999430923225}
+  costUI: {fileID: 761486999233820793}
+  NameUI: {fileID: 761487000010880850}
+  costOfInteraction: 0
+  UnlockContent: 0
+  objectToUnpack: {fileID: 7535585392934675033, guid: f6dd43e78ce77874bb825d5e2f57a3bf, type: 3}
+  objectPosition: {fileID: 5046343411185599782}
+  objectMoveUpPosition: {fileID: 0}
+  timeForObjectMovement: 1
+  m_unlockIndex: 4
+  BoxNumber: 0
+  interactableBoxMaterial: {fileID: 2100000, guid: 5d1b07f32bed7db4cb62a1242ca47b99, type: 2}
+  FollowUpBoxes:
+  - {fileID: 761486998884119425}
+  wateringCan: {fileID: 0}
+--- !u!65 &761486998570542165
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 454918219697559823}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.5, y: 1.5, z: 1.5}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!95 &761486998570542170
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 454918219697559823}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 40f33eeb211e01e4c9fad4886524b1b7, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &761486998570542171
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 454918219697559823}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e550e4c2d4387c245a1aa979d04c3ac8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myUpgradeType: 0
+  myAction: 1
+  Name: sunflower
+  interactionCanvas: {fileID: 761486999842158173}
+  costUI: {fileID: 761487000386058932}
+  NameUI: {fileID: 761487000146347019}
+  costOfInteraction: 0
+  UnlockContent: 0
+  objectToUnpack: {fileID: 5833588229865926036, guid: 68e813df564255340bce55c5e545f698, type: 3}
+  objectPosition: {fileID: 944596045206124052}
+  objectMoveUpPosition: {fileID: 0}
+  timeForObjectMovement: 1
+  m_unlockIndex: 5
+  BoxNumber: 0
+  interactableBoxMaterial: {fileID: 2100000, guid: 5d1b07f32bed7db4cb62a1242ca47b99, type: 2}
+  FollowUpBoxes:
+  - {fileID: 761486998884119425}
+  wateringCan: {fileID: 0}
 --- !u!1 &454918219720945193
 GameObject:
   m_ObjectHideFlags: 0
@@ -757,6 +1754,267 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &761486998751821132
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 454918219743035392}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.5, y: 1.5, z: 1.5}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!95 &761486998751821133
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 454918219743035392}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 40f33eeb211e01e4c9fad4886524b1b7, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &761486998751821135
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 454918219743035392}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f0dc3fbb5b2d6d4c8d87e261281d2e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myUnlock: 1
+--- !u!114 &761486998751821138
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 454918219743035392}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e550e4c2d4387c245a1aa979d04c3ac8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myUpgradeType: 0
+  myAction: 1
+  Name: fan
+  interactionCanvas: {fileID: 761486999611270718}
+  costUI: {fileID: 761486998971351184}
+  NameUI: {fileID: 761487000305197050}
+  costOfInteraction: 0
+  UnlockContent: 0
+  objectToUnpack: {fileID: 4796265563053444456, guid: 58bf63c1e1cd16e47b5ecc822a04b1a6, type: 3}
+  objectPosition: {fileID: 944596045642154677}
+  objectMoveUpPosition: {fileID: 0}
+  timeForObjectMovement: 1
+  m_unlockIndex: 4
+  BoxNumber: 0
+  interactableBoxMaterial: {fileID: 2100000, guid: 5d1b07f32bed7db4cb62a1242ca47b99, type: 2}
+  FollowUpBoxes:
+  - {fileID: 761486998884119425}
+  wateringCan: {fileID: 0}
+--- !u!65 &761486998884119427
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 454918219876912853}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.5, y: 1.5, z: 1.5}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!95 &761486998884119424
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 454918219876912853}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 40f33eeb211e01e4c9fad4886524b1b7, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &761486998884119425
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 454918219876912853}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e550e4c2d4387c245a1aa979d04c3ac8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myUpgradeType: 0
+  myAction: 1
+  Name: statue
+  interactionCanvas: {fileID: 761486999386406628}
+  costUI: {fileID: 761487000408788053}
+  NameUI: {fileID: 761486999379147917}
+  costOfInteraction: 0
+  UnlockContent: 0
+  objectToUnpack: {fileID: 2302541446176864712, guid: 9a82332eb540f294790790bd51105dc6, type: 3}
+  objectPosition: {fileID: 761486998689477170}
+  objectMoveUpPosition: {fileID: 0}
+  timeForObjectMovement: 1
+  m_unlockIndex: 9
+  BoxNumber: 21
+  interactableBoxMaterial: {fileID: 2100000, guid: 5d1b07f32bed7db4cb62a1242ca47b99, type: 2}
+  FollowUpBoxes: []
+  wateringCan: {fileID: 0}
+--- !u!65 &761486998921758917
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 454918219912869279}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.5, y: 1.5, z: 1.5}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!95 &761486998921758922
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 454918219912869279}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 40f33eeb211e01e4c9fad4886524b1b7, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &761486998921758923
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 454918219912869279}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e550e4c2d4387c245a1aa979d04c3ac8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myUpgradeType: 0
+  myAction: 1
+  Name: aloe vera
+  interactionCanvas: {fileID: 761486999375749747}
+  costUI: {fileID: 761486999713218581}
+  NameUI: {fileID: 761486999885478333}
+  costOfInteraction: 0
+  UnlockContent: 0
+  objectToUnpack: {fileID: 6576237421818560762, guid: e70a9067f9613374d84f9677159497a0, type: 3}
+  objectPosition: {fileID: 944596044817640946}
+  objectMoveUpPosition: {fileID: 0}
+  timeForObjectMovement: 1
+  m_unlockIndex: 3
+  BoxNumber: 0
+  interactableBoxMaterial: {fileID: 2100000, guid: 5d1b07f32bed7db4cb62a1242ca47b99, type: 2}
+  FollowUpBoxes:
+  - {fileID: 761486998570542171}
+  - {fileID: 761486998884119425}
+  wateringCan: {fileID: 0}
+--- !u!65 &761486998815136407
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 454918219941636041}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.5, y: 1.5, z: 1.5}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!95 &761486998815136404
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 454918219941636041}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 40f33eeb211e01e4c9fad4886524b1b7, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &761486998815136405
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 454918219941636041}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e550e4c2d4387c245a1aa979d04c3ac8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myUpgradeType: 0
+  myAction: 1
+  Name: trashcan
+  interactionCanvas: {fileID: 761486998900504339}
+  costUI: {fileID: 761486998624631748}
+  NameUI: {fileID: 761486999277797221}
+  costOfInteraction: 0
+  UnlockContent: 0
+  objectToUnpack: {fileID: 7289703245259702867, guid: 68b51ce26e3d63a4a879b3612fda42f9, type: 3}
+  objectPosition: {fileID: 944596045373408202}
+  objectMoveUpPosition: {fileID: 0}
+  timeForObjectMovement: 1
+  m_unlockIndex: 2
+  BoxNumber: 0
+  interactableBoxMaterial: {fileID: 2100000, guid: 5d1b07f32bed7db4cb62a1242ca47b99, type: 2}
+  FollowUpBoxes:
+  - {fileID: 761487000021399610}
+  wateringCan: {fileID: 0}
 --- !u!1 &454918219964915276
 GameObject:
   m_ObjectHideFlags: 0
@@ -838,6 +2096,132 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &761486999043358826
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 454918220034604350}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.5, y: 1.5, z: 1.5}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!95 &761486999043358827
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 454918220034604350}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 40f33eeb211e01e4c9fad4886524b1b7, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &761486999043358824
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 454918220034604350}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e550e4c2d4387c245a1aa979d04c3ac8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myUpgradeType: 0
+  myAction: 1
+  Name: coffee plant
+  interactionCanvas: {fileID: 761486999681639091}
+  costUI: {fileID: 761486998924143438}
+  NameUI: {fileID: 761487000038474241}
+  costOfInteraction: 0
+  UnlockContent: 0
+  objectToUnpack: {fileID: 8390470950295146803, guid: ad526a0e33a305540a0c87a4baa9c9b1, type: 3}
+  objectPosition: {fileID: 944596046096628051}
+  objectMoveUpPosition: {fileID: 0}
+  timeForObjectMovement: 1
+  m_unlockIndex: 3
+  BoxNumber: 0
+  interactableBoxMaterial: {fileID: 2100000, guid: 5d1b07f32bed7db4cb62a1242ca47b99, type: 2}
+  FollowUpBoxes:
+  - {fileID: 761486998567488874}
+  - {fileID: 761486998884119425}
+  wateringCan: {fileID: 0}
+--- !u!65 &761486998956942162
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 454918220082912774}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.5, y: 1.5, z: 1.5}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!95 &761486998956942163
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 454918220082912774}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 40f33eeb211e01e4c9fad4886524b1b7, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &761486998956942160
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 454918220082912774}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e550e4c2d4387c245a1aa979d04c3ac8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myUpgradeType: 0
+  myAction: 1
+  Name: shark pillow
+  interactionCanvas: {fileID: 761486999040773810}
+  costUI: {fileID: 761486998697121921}
+  NameUI: {fileID: 761487000379515454}
+  costOfInteraction: 0
+  UnlockContent: 0
+  objectToUnpack: {fileID: 5664201707599425291, guid: dc8f9a2cdc748ce44beeb64297de4a92, type: 3}
+  objectPosition: {fileID: 2608602051570231466}
+  objectMoveUpPosition: {fileID: 0}
+  timeForObjectMovement: 1
+  m_unlockIndex: 2
+  BoxNumber: 0
+  interactableBoxMaterial: {fileID: 2100000, guid: 5d1b07f32bed7db4cb62a1242ca47b99, type: 2}
+  FollowUpBoxes:
+  - {fileID: 761487000463046229}
+  - {fileID: 761486999418650500}
+  wateringCan: {fileID: 0}
 --- !u!1 &461576363688776935
 GameObject:
   m_ObjectHideFlags: 0
@@ -1344,143 +2728,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 3.6381671, z: 6.7594724}
   m_Center: {x: 0, y: 1.3190838, z: 0.9233358}
---- !u!65 &761486998567488868
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 454918219694387256}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1.5, y: 1.5, z: 1.5}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!95 &761486998567488869
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 454918219694387256}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 40f33eeb211e01e4c9fad4886524b1b7, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &761486998567488874
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 454918219694387256}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e550e4c2d4387c245a1aa979d04c3ac8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  myUpgradeType: 0
-  myAction: 1
-  Name: frying pan
-  interactionCanvas: {fileID: 761486999430923225}
-  costUI: {fileID: 761486999233820793}
-  NameUI: {fileID: 761487000010880850}
-  costOfInteraction: 0
-  UnlockContent: 0
-  objectToUnpack: {fileID: 7535585392934675033, guid: f6dd43e78ce77874bb825d5e2f57a3bf, type: 3}
-  objectPosition: {fileID: 5046343411185599782}
-  objectMoveUpPosition: {fileID: 0}
-  timeForObjectMovement: 1
-  m_unlockIndex: 4
-  BoxNumber: 0
-  interactableBoxMaterial: {fileID: 2100000, guid: 5d1b07f32bed7db4cb62a1242ca47b99, type: 2}
-  FollowUpBoxes:
-  - {fileID: 761486998884119425}
-  wateringCan: {fileID: 0}
---- !u!114 &761486998567488871
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 454918219694387256}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2f0dc3fbb5b2d6d4c8d87e261281d2e1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  myUnlock: 3
---- !u!65 &761486998570542165
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 454918219697559823}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1.5, y: 1.5, z: 1.5}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!95 &761486998570542170
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 454918219697559823}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 40f33eeb211e01e4c9fad4886524b1b7, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &761486998570542171
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 454918219697559823}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e550e4c2d4387c245a1aa979d04c3ac8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  myUpgradeType: 0
-  myAction: 1
-  Name: sunflower
-  interactionCanvas: {fileID: 761486999842158173}
-  costUI: {fileID: 761487000386058932}
-  NameUI: {fileID: 761487000146347019}
-  costOfInteraction: 0
-  UnlockContent: 0
-  objectToUnpack: {fileID: 5833588229865926036, guid: 68e813df564255340bce55c5e545f698, type: 3}
-  objectPosition: {fileID: 944596045206124052}
-  objectMoveUpPosition: {fileID: 0}
-  timeForObjectMovement: 1
-  m_unlockIndex: 5
-  BoxNumber: 0
-  interactableBoxMaterial: {fileID: 2100000, guid: 5d1b07f32bed7db4cb62a1242ca47b99, type: 2}
-  FollowUpBoxes:
-  - {fileID: 761486998884119425}
-  wateringCan: {fileID: 0}
 --- !u!1 &761486998572058901
 GameObject:
   m_ObjectHideFlags: 0
@@ -2636,81 +3883,6 @@ MonoBehaviour:
           m_StringArgument: Jeha
           m_BoolArgument: 0
         m_CallState: 2
---- !u!65 &761486998751821132
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 454918219743035392}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1.5, y: 1.5, z: 1.5}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!95 &761486998751821133
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 454918219743035392}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 40f33eeb211e01e4c9fad4886524b1b7, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &761486998751821138
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 454918219743035392}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e550e4c2d4387c245a1aa979d04c3ac8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  myUpgradeType: 0
-  myAction: 1
-  Name: fan
-  interactionCanvas: {fileID: 761486999611270718}
-  costUI: {fileID: 761486998971351184}
-  NameUI: {fileID: 761487000305197050}
-  costOfInteraction: 0
-  UnlockContent: 0
-  objectToUnpack: {fileID: 4796265563053444456, guid: 58bf63c1e1cd16e47b5ecc822a04b1a6, type: 3}
-  objectPosition: {fileID: 944596045642154677}
-  objectMoveUpPosition: {fileID: 0}
-  timeForObjectMovement: 1
-  m_unlockIndex: 4
-  BoxNumber: 0
-  interactableBoxMaterial: {fileID: 2100000, guid: 5d1b07f32bed7db4cb62a1242ca47b99, type: 2}
-  FollowUpBoxes:
-  - {fileID: 761486998884119425}
-  wateringCan: {fileID: 0}
---- !u!114 &761486998751821135
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 454918219743035392}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2f0dc3fbb5b2d6d4c8d87e261281d2e1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  myUnlock: 1
 --- !u!1 &761486998766371158
 GameObject:
   m_ObjectHideFlags: 0
@@ -3023,68 +4195,6 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
---- !u!65 &761486998815136407
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 454918219941636041}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1.5, y: 1.5, z: 1.5}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!95 &761486998815136404
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 454918219941636041}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 40f33eeb211e01e4c9fad4886524b1b7, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &761486998815136405
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 454918219941636041}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e550e4c2d4387c245a1aa979d04c3ac8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  myUpgradeType: 0
-  myAction: 1
-  Name: trashcan
-  interactionCanvas: {fileID: 761486998900504339}
-  costUI: {fileID: 761486998624631748}
-  NameUI: {fileID: 761486999277797221}
-  costOfInteraction: 0
-  UnlockContent: 0
-  objectToUnpack: {fileID: 7289703245259702867, guid: 68b51ce26e3d63a4a879b3612fda42f9, type: 3}
-  objectPosition: {fileID: 944596045373408202}
-  objectMoveUpPosition: {fileID: 0}
-  timeForObjectMovement: 1
-  m_unlockIndex: 2
-  BoxNumber: 0
-  interactableBoxMaterial: {fileID: 2100000, guid: 5d1b07f32bed7db4cb62a1242ca47b99, type: 2}
-  FollowUpBoxes:
-  - {fileID: 761487000021399610}
-  wateringCan: {fileID: 0}
 --- !u!1 &761486998843970903
 GameObject:
   m_ObjectHideFlags: 0
@@ -3318,67 +4428,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!65 &761486998884119427
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 454918219876912853}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1.5, y: 1.5, z: 1.5}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!95 &761486998884119424
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 454918219876912853}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 40f33eeb211e01e4c9fad4886524b1b7, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &761486998884119425
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 454918219876912853}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e550e4c2d4387c245a1aa979d04c3ac8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  myUpgradeType: 0
-  myAction: 1
-  Name: statue
-  interactionCanvas: {fileID: 761486999386406628}
-  costUI: {fileID: 761487000408788053}
-  NameUI: {fileID: 761486999379147917}
-  costOfInteraction: 0
-  UnlockContent: 0
-  objectToUnpack: {fileID: 2302541446176864712, guid: 9a82332eb540f294790790bd51105dc6, type: 3}
-  objectPosition: {fileID: 761486998689477170}
-  objectMoveUpPosition: {fileID: 0}
-  timeForObjectMovement: 1
-  m_unlockIndex: 9
-  BoxNumber: 21
-  interactableBoxMaterial: {fileID: 2100000, guid: 5d1b07f32bed7db4cb62a1242ca47b99, type: 2}
-  FollowUpBoxes: []
-  wateringCan: {fileID: 0}
 --- !u!1 &761486998895839428
 GameObject:
   m_ObjectHideFlags: 0
@@ -3733,69 +4782,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2.013855, y: 0.72224486, z: 0.92519116}
   m_Center: {x: 2.0609686, y: 0.35725975, z: 3.7612739}
---- !u!65 &761486998921758917
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 454918219912869279}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1.5, y: 1.5, z: 1.5}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!95 &761486998921758922
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 454918219912869279}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 40f33eeb211e01e4c9fad4886524b1b7, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &761486998921758923
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 454918219912869279}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e550e4c2d4387c245a1aa979d04c3ac8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  myUpgradeType: 0
-  myAction: 1
-  Name: aloe vera
-  interactionCanvas: {fileID: 761486999375749747}
-  costUI: {fileID: 761486999713218581}
-  NameUI: {fileID: 761486999885478333}
-  costOfInteraction: 0
-  UnlockContent: 0
-  objectToUnpack: {fileID: 6576237421818560762, guid: e70a9067f9613374d84f9677159497a0, type: 3}
-  objectPosition: {fileID: 944596044817640946}
-  objectMoveUpPosition: {fileID: 0}
-  timeForObjectMovement: 1
-  m_unlockIndex: 3
-  BoxNumber: 0
-  interactableBoxMaterial: {fileID: 2100000, guid: 5d1b07f32bed7db4cb62a1242ca47b99, type: 2}
-  FollowUpBoxes:
-  - {fileID: 761486998570542171}
-  - {fileID: 761486998884119425}
-  wateringCan: {fileID: 0}
 --- !u!1 &761486998924143436
 GameObject:
   m_ObjectHideFlags: 0
@@ -4064,69 +5050,6 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
---- !u!65 &761486998956942162
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 454918220082912774}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1.5, y: 1.5, z: 1.5}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!95 &761486998956942163
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 454918220082912774}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 40f33eeb211e01e4c9fad4886524b1b7, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &761486998956942160
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 454918220082912774}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e550e4c2d4387c245a1aa979d04c3ac8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  myUpgradeType: 0
-  myAction: 1
-  Name: shark pillow
-  interactionCanvas: {fileID: 761486999040773810}
-  costUI: {fileID: 761486998697121921}
-  NameUI: {fileID: 761487000379515454}
-  costOfInteraction: 0
-  UnlockContent: 0
-  objectToUnpack: {fileID: 5664201707599425291, guid: dc8f9a2cdc748ce44beeb64297de4a92, type: 3}
-  objectPosition: {fileID: 2608602051570231466}
-  objectMoveUpPosition: {fileID: 0}
-  timeForObjectMovement: 1
-  m_unlockIndex: 2
-  BoxNumber: 0
-  interactableBoxMaterial: {fileID: 2100000, guid: 5d1b07f32bed7db4cb62a1242ca47b99, type: 2}
-  FollowUpBoxes:
-  - {fileID: 761487000463046229}
-  - {fileID: 761486999418650500}
-  wateringCan: {fileID: 0}
 --- !u!1 &761486998971351190
 GameObject:
   m_ObjectHideFlags: 0
@@ -4509,69 +5432,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45001b8b2ed3c8b4891eb3cc04e924a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!65 &761486999043358826
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 454918220034604350}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1.5, y: 1.5, z: 1.5}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!95 &761486999043358827
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 454918220034604350}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 40f33eeb211e01e4c9fad4886524b1b7, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &761486999043358824
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 454918220034604350}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e550e4c2d4387c245a1aa979d04c3ac8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  myUpgradeType: 0
-  myAction: 1
-  Name: coffee plant
-  interactionCanvas: {fileID: 761486999681639091}
-  costUI: {fileID: 761486998924143438}
-  NameUI: {fileID: 761487000038474241}
-  costOfInteraction: 0
-  UnlockContent: 0
-  objectToUnpack: {fileID: 8390470950295146803, guid: ad526a0e33a305540a0c87a4baa9c9b1, type: 3}
-  objectPosition: {fileID: 944596046096628051}
-  objectMoveUpPosition: {fileID: 0}
-  timeForObjectMovement: 1
-  m_unlockIndex: 3
-  BoxNumber: 0
-  interactableBoxMaterial: {fileID: 2100000, guid: 5d1b07f32bed7db4cb62a1242ca47b99, type: 2}
-  FollowUpBoxes:
-  - {fileID: 761486998567488874}
-  - {fileID: 761486998884119425}
-  wateringCan: {fileID: 0}
 --- !u!1 &761486999095232442
 GameObject:
   m_ObjectHideFlags: 0
@@ -6927,67 +7787,6 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
---- !u!65 &761486999418650502
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 454918219335992026}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1.5, y: 1.5, z: 1.5}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!95 &761486999418650503
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 454918219335992026}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 40f33eeb211e01e4c9fad4886524b1b7, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &761486999418650500
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 454918219335992026}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e550e4c2d4387c245a1aa979d04c3ac8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  myUpgradeType: 0
-  myAction: 1
-  Name: calendar
-  interactionCanvas: {fileID: 761487000366579752}
-  costUI: {fileID: 761486999404662802}
-  NameUI: {fileID: 761486998943705304}
-  costOfInteraction: 0
-  UnlockContent: 0
-  objectToUnpack: {fileID: 8417094790930282182, guid: 91706e2a1ca26b64d86843e305f000a6, type: 3}
-  objectPosition: {fileID: 944596044493649620}
-  objectMoveUpPosition: {fileID: 0}
-  timeForObjectMovement: 1
-  m_unlockIndex: 3
-  BoxNumber: 0
-  interactableBoxMaterial: {fileID: 2100000, guid: 5d1b07f32bed7db4cb62a1242ca47b99, type: 2}
-  FollowUpBoxes: []
-  wateringCan: {fileID: 0}
 --- !u!1 &761486999426403031
 GameObject:
   m_ObjectHideFlags: 0
@@ -7324,87 +8123,6 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
---- !u!65 &761486999457460457
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 454918219374808483}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1.5, y: 1.5, z: 1.5}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!95 &761486999457460462
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 454918219374808483}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 40f33eeb211e01e4c9fad4886524b1b7, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &761486999457460463
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 454918219374808483}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e550e4c2d4387c245a1aa979d04c3ac8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  myUpgradeType: 0
-  myAction: 1
-  Name: blanket
-  interactionCanvas: {fileID: 761487000110527661}
-  costUI: {fileID: 761486999169035734}
-  NameUI: {fileID: 761486998665794369}
-  costOfInteraction: 0
-  UnlockContent: 0
-  objectToUnpack: {fileID: 1517790914532712608, guid: 75c445a7f06cc52469e813f32671dacc, type: 3}
-  objectPosition: {fileID: 939599443005136906}
-  objectMoveUpPosition: {fileID: 0}
-  timeForObjectMovement: 1
-  m_unlockIndex: 1
-  BoxNumber: 0
-  interactableBoxMaterial: {fileID: 2100000, guid: 5d1b07f32bed7db4cb62a1242ca47b99, type: 2}
-  FollowUpBoxes:
-  - {fileID: 761487000104951364}
-  - {fileID: 761486999566869914}
-  - {fileID: 761486998956942160}
-  - {fileID: 761487000525350767}
-  - {fileID: 761486999418650500}
-  - {fileID: 761486998751821138}
-  - {fileID: 761486998567488874}
-  - {fileID: 761486999043358824}
-  - {fileID: 761486999804734345}
-  - {fileID: 761487000463046229}
-  - {fileID: 761487000021399610}
-  - {fileID: 761486998815136405}
-  - {fileID: 761486999652242323}
-  - {fileID: 761487000229039924}
-  - {fileID: 761486999792176516}
-  - {fileID: 761486998921758923}
-  - {fileID: 761486998570542171}
-  - {fileID: 761486998884119425}
-  - {fileID: 761487000175859399}
-  - {fileID: 761486998665352238}
-  wateringCan: {fileID: 0}
 --- !u!1 &761486999470460474
 GameObject:
   m_ObjectHideFlags: 0
@@ -7976,68 +8694,6 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
---- !u!65 &761486999566869908
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 454918219485927624}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1.5, y: 1.5, z: 1.5}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!95 &761486999566869909
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 454918219485927624}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 40f33eeb211e01e4c9fad4886524b1b7, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &761486999566869914
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 454918219485927624}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e550e4c2d4387c245a1aa979d04c3ac8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  myUpgradeType: 0
-  myAction: 1
-  Name: flower pillow
-  interactionCanvas: {fileID: 761486998572058901}
-  costUI: {fileID: 761486999455089075}
-  NameUI: {fileID: 761487000014221794}
-  costOfInteraction: 0
-  UnlockContent: 0
-  objectToUnpack: {fileID: 1110900185757146996, guid: ba69c38dd16ec1041853cae74bfd53a8, type: 3}
-  objectPosition: {fileID: 8213817350063427741}
-  objectMoveUpPosition: {fileID: 0}
-  timeForObjectMovement: 1
-  m_unlockIndex: 3
-  BoxNumber: 0
-  interactableBoxMaterial: {fileID: 2100000, guid: 5d1b07f32bed7db4cb62a1242ca47b99, type: 2}
-  FollowUpBoxes:
-  - {fileID: 761486998751821138}
-  wateringCan: {fileID: 0}
 --- !u!1 &761486999584088295
 GameObject:
   m_ObjectHideFlags: 0
@@ -8461,67 +9117,6 @@ MonoBehaviour:
           m_StringArgument: Jeha
           m_BoolArgument: 0
         m_CallState: 2
---- !u!65 &761486999652242317
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 454918218630606535}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1.5, y: 1.5, z: 1.5}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!95 &761486999652242322
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 454918218630606535}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 40f33eeb211e01e4c9fad4886524b1b7, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &761486999652242323
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 454918218630606535}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e550e4c2d4387c245a1aa979d04c3ac8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  myUpgradeType: 0
-  myAction: 1
-  Name: notebook
-  interactionCanvas: {fileID: 761486999267488054}
-  costUI: {fileID: 761486999095232436}
-  NameUI: {fileID: 761487000350485807}
-  costOfInteraction: 0
-  UnlockContent: 0
-  objectToUnpack: {fileID: 4747068531418530923, guid: 99eeb7640130db94c8668cdb9074fb43, type: 3}
-  objectPosition: {fileID: 944596046437603412}
-  objectMoveUpPosition: {fileID: 0}
-  timeForObjectMovement: 1
-  m_unlockIndex: 2
-  BoxNumber: 0
-  interactableBoxMaterial: {fileID: 2100000, guid: 5d1b07f32bed7db4cb62a1242ca47b99, type: 2}
-  FollowUpBoxes: []
-  wateringCan: {fileID: 0}
 --- !u!1 &761486999681639091
 GameObject:
   m_ObjectHideFlags: 0
@@ -9207,70 +9802,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!65 &761486999792176518
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 454918218771722458}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1.5, y: 1.5, z: 1.5}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!95 &761486999792176519
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 454918218771722458}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 40f33eeb211e01e4c9fad4886524b1b7, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &761486999792176516
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 454918218771722458}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e550e4c2d4387c245a1aa979d04c3ac8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  myUpgradeType: 0
-  myAction: 1
-  Name: lamp
-  interactionCanvas: {fileID: 761486999384138785}
-  costUI: {fileID: 761486999987994722}
-  NameUI: {fileID: 761486998659363524}
-  costOfInteraction: 0
-  UnlockContent: 0
-  objectToUnpack: {fileID: 2099103866482598119, guid: 2dda26fa968eae944b7e21fe78b34326, type: 3}
-  objectPosition: {fileID: 2499697560131161890}
-  objectMoveUpPosition: {fileID: 0}
-  timeForObjectMovement: 1
-  m_unlockIndex: 2
-  BoxNumber: 0
-  interactableBoxMaterial: {fileID: 2100000, guid: 5d1b07f32bed7db4cb62a1242ca47b99, type: 2}
-  FollowUpBoxes:
-  - {fileID: 761486998570542171}
-  - {fileID: 761486998921758923}
-  - {fileID: 761487000229039924}
-  wateringCan: {fileID: 0}
 --- !u!1 &761486999798743920
 GameObject:
   m_ObjectHideFlags: 0
@@ -9519,68 +10050,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45001b8b2ed3c8b4891eb3cc04e924a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!65 &761486999804734347
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 454918218650048221}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1.5, y: 1.5, z: 1.5}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!95 &761486999804734344
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 454918218650048221}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 40f33eeb211e01e4c9fad4886524b1b7, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &761486999804734345
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 454918218650048221}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e550e4c2d4387c245a1aa979d04c3ac8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  myUpgradeType: 0
-  myAction: 1
-  Name: rugs
-  interactionCanvas: {fileID: 761486999828826570}
-  costUI: {fileID: 761486999562166194}
-  NameUI: {fileID: 761486999019257299}
-  costOfInteraction: 0
-  UnlockContent: 0
-  objectToUnpack: {fileID: 2981175429425481534, guid: 0fed46cee690e22498022972bdd58f96, type: 3}
-  objectPosition: {fileID: 7468782230527953305}
-  objectMoveUpPosition: {fileID: 0}
-  timeForObjectMovement: 1
-  m_unlockIndex: 3
-  BoxNumber: 0
-  interactableBoxMaterial: {fileID: 2100000, guid: 5d1b07f32bed7db4cb62a1242ca47b99, type: 2}
-  FollowUpBoxes:
-  - {fileID: 761486998567488874}
-  wateringCan: {fileID: 0}
 --- !u!1 &761486999825312045
 GameObject:
   m_ObjectHideFlags: 0
@@ -10267,88 +10736,6 @@ MonoBehaviour:
           m_StringArgument: Jeha
           m_BoolArgument: 0
         m_CallState: 2
---- !u!65 &761486999977286225
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 454918218821429003}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1.5, y: 1.5, z: 1.5}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!95 &761486999977286230
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 454918218821429003}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 40f33eeb211e01e4c9fad4886524b1b7, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &761486999977286231
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 454918218821429003}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e550e4c2d4387c245a1aa979d04c3ac8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  myUpgradeType: 0
-  myAction: 1
-  Name: pillows
-  interactionCanvas: {fileID: 761486999802215039}
-  costUI: {fileID: 761487000089885802}
-  NameUI: {fileID: 761486999157107864}
-  costOfInteraction: 0
-  UnlockContent: 0
-  objectToUnpack: {fileID: 5465985879536028522, guid: e9fef21cd93589c43b12298556816cc4, type: 3}
-  objectPosition: {fileID: 4410369757390050256}
-  objectMoveUpPosition: {fileID: 0}
-  timeForObjectMovement: 1
-  m_unlockIndex: 0
-  BoxNumber: 20
-  interactableBoxMaterial: {fileID: 2100000, guid: 5d1b07f32bed7db4cb62a1242ca47b99, type: 2}
-  FollowUpBoxes:
-  - {fileID: 761486999457460463}
-  - {fileID: 761487000104951364}
-  - {fileID: 761486999566869914}
-  - {fileID: 761486998956942160}
-  - {fileID: 761487000525350767}
-  - {fileID: 761486999418650500}
-  - {fileID: 761486998751821138}
-  - {fileID: 761486998567488874}
-  - {fileID: 761486999043358824}
-  - {fileID: 761486999804734345}
-  - {fileID: 761487000463046229}
-  - {fileID: 761487000021399610}
-  - {fileID: 761486998815136405}
-  - {fileID: 761486999652242323}
-  - {fileID: 761487000229039924}
-  - {fileID: 761486999792176516}
-  - {fileID: 761486998921758923}
-  - {fileID: 761486998570542171}
-  - {fileID: 761486998884119425}
-  - {fileID: 761487000175859399}
-  - {fileID: 761486998665352238}
-  wateringCan: {fileID: 0}
 --- !u!1 &761486999977483011
 GameObject:
   m_ObjectHideFlags: 0
@@ -10890,81 +11277,6 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
---- !u!65 &761487000021399604
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 454918218999874920}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1.5, y: 1.5, z: 1.5}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!95 &761487000021399605
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 454918218999874920}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 40f33eeb211e01e4c9fad4886524b1b7, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &761487000021399610
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 454918218999874920}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e550e4c2d4387c245a1aa979d04c3ac8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  myUpgradeType: 0
-  myAction: 1
-  Name: weird book
-  interactionCanvas: {fileID: 761487000331992879}
-  costUI: {fileID: 761487000630568285}
-  NameUI: {fileID: 761486998812038694}
-  costOfInteraction: 0
-  UnlockContent: 0
-  objectToUnpack: {fileID: 866079624875605628, guid: 5250a39ee8eda9245a0604550386294c, type: 3}
-  objectPosition: {fileID: 2228939959202810385}
-  objectMoveUpPosition: {fileID: 0}
-  timeForObjectMovement: 1
-  m_unlockIndex: 3
-  BoxNumber: 0
-  interactableBoxMaterial: {fileID: 2100000, guid: 5d1b07f32bed7db4cb62a1242ca47b99, type: 2}
-  FollowUpBoxes:
-  - {fileID: 761486998884119425}
-  wateringCan: {fileID: 0}
---- !u!114 &761487000021399607
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 454918218999874920}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2f0dc3fbb5b2d6d4c8d87e261281d2e1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  myUnlock: 2
 --- !u!1 &761487000038474247
 GameObject:
   m_ObjectHideFlags: 0
@@ -11734,69 +12046,6 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
---- !u!65 &761487000104951366
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 454918218949616410}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1.5, y: 1.5, z: 1.5}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!95 &761487000104951367
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 454918218949616410}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 40f33eeb211e01e4c9fad4886524b1b7, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &761487000104951364
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 454918218949616410}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e550e4c2d4387c245a1aa979d04c3ac8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  myUpgradeType: 0
-  myAction: 1
-  Name: clothes
-  interactionCanvas: {fileID: 761486999687544790}
-  costUI: {fileID: 761486999748719015}
-  NameUI: {fileID: 761487000056811696}
-  costOfInteraction: 0
-  UnlockContent: 0
-  objectToUnpack: {fileID: 2106635121651488607, guid: 269a0763024bc8e4ebd4aad25677f68e, type: 3}
-  objectPosition: {fileID: 6014122940705079286}
-  objectMoveUpPosition: {fileID: 0}
-  timeForObjectMovement: 1
-  m_unlockIndex: 2
-  BoxNumber: 0
-  interactableBoxMaterial: {fileID: 2100000, guid: 5d1b07f32bed7db4cb62a1242ca47b99, type: 2}
-  FollowUpBoxes:
-  - {fileID: 761486998751821138}
-  - {fileID: 761486999566869914}
-  wateringCan: {fileID: 0}
 --- !u!1 &761487000110527661
 GameObject:
   m_ObjectHideFlags: 0
@@ -12335,67 +12584,6 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
---- !u!65 &761487000175859393
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 454918218079955867}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1.5, y: 1.5, z: 1.5}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!95 &761487000175859398
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 454918218079955867}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 40f33eeb211e01e4c9fad4886524b1b7, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &761487000175859399
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 454918218079955867}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e550e4c2d4387c245a1aa979d04c3ac8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  myUpgradeType: 0
-  myAction: 1
-  Name: books
-  interactionCanvas: {fileID: 761486999332099943}
-  costUI: {fileID: 761486999545111276}
-  NameUI: {fileID: 761487000056733717}
-  costOfInteraction: 0
-  UnlockContent: 0
-  objectToUnpack: {fileID: 2347332541903968861, guid: 4d5b96b63361c5947ae1df364184a218, type: 3}
-  objectPosition: {fileID: 6208290492027980443}
-  objectMoveUpPosition: {fileID: 0}
-  timeForObjectMovement: 1
-  m_unlockIndex: 2
-  BoxNumber: 0
-  interactableBoxMaterial: {fileID: 2100000, guid: 5d1b07f32bed7db4cb62a1242ca47b99, type: 2}
-  FollowUpBoxes: []
-  wateringCan: {fileID: 0}
 --- !u!1 &761487000180339427
 GameObject:
   m_ObjectHideFlags: 0
@@ -12530,69 +12718,6 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
---- !u!65 &761487000229039926
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 454918217999577706}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1.5, y: 1.5, z: 1.5}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!95 &761487000229039927
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 454918217999577706}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 40f33eeb211e01e4c9fad4886524b1b7, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &761487000229039924
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 454918217999577706}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e550e4c2d4387c245a1aa979d04c3ac8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  myUpgradeType: 0
-  myAction: 1
-  Name: venus flytrap
-  interactionCanvas: {fileID: 761486998642046526}
-  costUI: {fileID: 761487000180339357}
-  NameUI: {fileID: 761486998550622904}
-  costOfInteraction: 0
-  UnlockContent: 0
-  objectToUnpack: {fileID: 3580320176227380453, guid: 3bd9acbdc4ca37b4496e14d9940df6c8, type: 3}
-  objectPosition: {fileID: 944596046004822868}
-  objectMoveUpPosition: {fileID: 0}
-  timeForObjectMovement: 1
-  m_unlockIndex: 3
-  BoxNumber: 0
-  interactableBoxMaterial: {fileID: 2100000, guid: 5d1b07f32bed7db4cb62a1242ca47b99, type: 2}
-  FollowUpBoxes:
-  - {fileID: 761486998884119425}
-  - {fileID: 761486998570542171}
-  wateringCan: {fileID: 0}
 --- !u!1 &761487000295803576
 GameObject:
   m_ObjectHideFlags: 0
@@ -14190,67 +14315,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!65 &761487000463046231
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 454918218367126281}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1.5, y: 1.5, z: 1.5}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!95 &761487000463046228
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 454918218367126281}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 40f33eeb211e01e4c9fad4886524b1b7, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &761487000463046229
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 454918218367126281}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e550e4c2d4387c245a1aa979d04c3ac8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  myUpgradeType: 0
-  myAction: 1
-  Name: frog pillow
-  interactionCanvas: {fileID: 761486999511884493}
-  costUI: {fileID: 761486999584088289}
-  NameUI: {fileID: 761486998766371152}
-  costOfInteraction: 0
-  UnlockContent: 0
-  objectToUnpack: {fileID: 6564027841168080096, guid: 46e8d077d06346e439f14f77f994d8b3, type: 3}
-  objectPosition: {fileID: 868054255337583713}
-  objectMoveUpPosition: {fileID: 0}
-  timeForObjectMovement: 1
-  m_unlockIndex: 3
-  BoxNumber: 0
-  interactableBoxMaterial: {fileID: 2100000, guid: 5d1b07f32bed7db4cb62a1242ca47b99, type: 2}
-  FollowUpBoxes: []
-  wateringCan: {fileID: 0}
 --- !u!1 &761487000512486574
 GameObject:
   m_ObjectHideFlags: 0
@@ -14339,70 +14403,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 3.6381671, z: 2.7107706}
   m_Center: {x: -0.00000084738406, y: 1.3190838, z: 4.054187}
---- !u!65 &761487000525350761
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 454918218296400419}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1.5, y: 1.5, z: 1.5}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!95 &761487000525350766
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 454918218296400419}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 40f33eeb211e01e4c9fad4886524b1b7, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &761487000525350767
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 454918218296400419}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e550e4c2d4387c245a1aa979d04c3ac8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  myUpgradeType: 0
-  myAction: 1
-  Name: pictures
-  interactionCanvas: {fileID: 761486998715039310}
-  costUI: {fileID: 761486999798743922}
-  NameUI: {fileID: 761486999264421826}
-  costOfInteraction: 0
-  UnlockContent: 0
-  objectToUnpack: {fileID: 4381063088109949607, guid: cca2376a1874ab54b86de64c48d3c0a6, type: 3}
-  objectPosition: {fileID: 3742451426770329314}
-  objectMoveUpPosition: {fileID: 0}
-  timeForObjectMovement: 1
-  m_unlockIndex: 2
-  BoxNumber: 0
-  interactableBoxMaterial: {fileID: 2100000, guid: 5d1b07f32bed7db4cb62a1242ca47b99, type: 2}
-  FollowUpBoxes:
-  - {fileID: 761486999804734345}
-  - {fileID: 761486999043358824}
-  - {fileID: 761486998567488874}
-  wateringCan: {fileID: 0}
 --- !u!1 &761487000596605830
 GameObject:
   m_ObjectHideFlags: 0
@@ -15310,7 +15310,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4871801559694300411}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 29.541, y: -370.665, z: -105.784}
 --- !u!108 &4871801558077604524
 Light:
@@ -20428,7 +20428,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4871801559694300411}
-  m_RootOrder: 6
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 112.836, y: 25.778, z: 0}
 --- !u!108 &4871801558297064819
 Light:
@@ -20614,222 +20614,6 @@ MonoBehaviour:
   m_AreaLightEmissiveMeshShadowCastingMode: 0
   m_AreaLightEmissiveMeshMotionVectorGenerationMode: 0
   m_AreaLightEmissiveMeshLayer: -1
---- !u!1 &4871801558382265160
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 4871801558382265161}
-  - component: {fileID: 4871801558382265163}
-  - component: {fileID: 4871801558382265162}
-  m_Layer: 0
-  m_Name: Spot Light
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &4871801558382265161
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4871801558382265160}
-  m_LocalRotation: {x: 0.12157742, y: 0.74271685, z: -0.1403568, w: 0.6433433}
-  m_LocalPosition: {x: -4.74, y: 2.01, z: 1.23}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 4871801559694300411}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 21.403, y: 98.202, z: 0}
---- !u!108 &4871801558382265163
-Light:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4871801558382265160}
-  m_Enabled: 1
-  serializedVersion: 10
-  m_Type: 0
-  m_Shape: 0
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 95810.586
-  m_Range: 12
-  m_SpotAngle: 67
-  m_InnerSpotAngle: 21.80208
-  m_CookieSize: 10
-  m_Shadows:
-    m_Type: 1
-    m_Resolution: -1
-    m_CustomResolution: -1
-    m_Strength: 1
-    m_Bias: 0.05
-    m_NormalBias: 0.4
-    m_NearPlane: 0.2
-    m_CullingMatrixOverride:
-      e00: 1
-      e01: 0
-      e02: 0
-      e03: 0
-      e10: 0
-      e11: 1
-      e12: 0
-      e13: 0
-      e20: 0
-      e21: 0
-      e22: 1
-      e23: 0
-      e30: 0
-      e31: 0
-      e32: 0
-      e33: 1
-    m_UseCullingMatrixOverride: 0
-  m_Cookie: {fileID: 0}
-  m_DrawHalo: 0
-  m_Flare: {fileID: 0}
-  m_RenderMode: 0
-  m_CullingMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_RenderingLayerMask: 1
-  m_Lightmapping: 1
-  m_LightShadowCasterMode: 2
-  m_AreaSize: {x: 0.5, y: 0.5}
-  m_BounceIntensity: 1
-  m_ColorTemperature: 3033
-  m_UseColorTemperature: 1
-  m_BoundingSphereOverride: {x: 4.8554528e+33, y: 2.8168867e+20, z: 1.0899303e+27, w: 5.2166656e-11}
-  m_UseBoundingSphereOverride: 0
-  m_UseViewFrustumForShadowCasterCull: 1
-  m_ShadowRadius: 0
-  m_ShadowAngle: 0
---- !u!114 &4871801558382265162
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4871801558382265160}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7a68c43fe1f2a47cfa234b5eeaa98012, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Version: 11
-  m_ObsoleteShadowResolutionTier: 1
-  m_ObsoleteUseShadowQualitySettings: 0
-  m_ObsoleteCustomShadowResolution: 512
-  m_ObsoleteContactShadows: 0
-  m_PointlightHDType: 0
-  m_SpotLightShape: 0
-  m_AreaLightShape: 0
-  m_Intensity: 100000
-  m_EnableSpotReflector: 1
-  m_LuxAtDistance: 1
-  m_InnerSpotPercent: 93.1
-  m_SpotIESCutoffPercent: 100
-  m_LightDimmer: 1
-  m_VolumetricDimmer: 3.9
-  m_LightUnit: 0
-  m_FadeDistance: 10000
-  m_VolumetricFadeDistance: 10000
-  m_AffectDiffuse: 1
-  m_AffectSpecular: 1
-  m_NonLightmappedOnly: 0
-  m_ShapeWidth: 0.5
-  m_ShapeHeight: 0.5
-  m_AspectRatio: 1
-  m_ShapeRadius: 0.025
-  m_SoftnessScale: 1
-  m_UseCustomSpotLightShadowCone: 0
-  m_CustomSpotLightShadowCone: 30
-  m_MaxSmoothness: 0.99
-  m_ApplyRangeAttenuation: 1
-  m_DisplayAreaLightEmissiveMesh: 0
-  m_AreaLightCookie: {fileID: 0}
-  m_IESPoint: {fileID: 0}
-  m_IESSpot: {fileID: 0}
-  m_IncludeForRayTracing: 1
-  m_AreaLightShadowCone: 120
-  m_UseScreenSpaceShadows: 0
-  m_InteractsWithSky: 1
-  m_AngularDiameter: 0.5
-  m_FlareSize: 2
-  m_FlareTint: {r: 1, g: 1, b: 1, a: 1}
-  m_FlareFalloff: 4
-  m_SurfaceTexture: {fileID: 0}
-  m_SurfaceTint: {r: 1, g: 1, b: 1, a: 1}
-  m_Distance: 1.5e+11
-  m_UseRayTracedShadows: 0
-  m_NumRayTracingSamples: 4
-  m_FilterTracedShadow: 1
-  m_FilterSizeTraced: 16
-  m_SunLightConeAngle: 0.5
-  m_LightShadowRadius: 0.5
-  m_SemiTransparentShadow: 0
-  m_ColorShadow: 1
-  m_DistanceBasedFiltering: 0
-  m_EvsmExponent: 15
-  m_EvsmLightLeakBias: 0
-  m_EvsmVarianceBias: 0.00001
-  m_EvsmBlurPasses: 0
-  m_LightlayersMask: 1
-  m_LinkShadowLayers: 1
-  m_ShadowNearPlane: 1.1
-  m_BlockerSampleCount: 24
-  m_FilterSampleCount: 16
-  m_MinFilterSize: 0.1
-  m_KernelSize: 5
-  m_LightAngle: 1
-  m_MaxDepthBias: 0.001
-  m_ShadowResolution:
-    m_Override: 512
-    m_UseOverride: 0
-    m_Level: 2
-  m_ShadowDimmer: 1
-  m_VolumetricShadowDimmer: 1
-  m_ShadowFadeDistance: 10000
-  m_UseContactShadow:
-    m_Override: 1
-    m_UseOverride: 0
-    m_Level: 2
-  m_RayTracedContactShadow: 0
-  m_ShadowTint: {r: 0.108678006, g: 0.018422928, b: 0.16981131, a: 1}
-  m_PenumbraTint: 0
-  m_NormalBias: 0.75
-  m_SlopeBias: 0.5
-  m_ShadowUpdateMode: 0
-  m_AlwaysDrawDynamicShadows: 0
-  m_UpdateShadowOnLightMovement: 0
-  m_CachedShadowTranslationThreshold: 0.01
-  m_CachedShadowAngularThreshold: 0.5
-  m_BarnDoorAngle: 90
-  m_BarnDoorLength: 0.05
-  m_preserveCachedShadow: 0
-  m_ShadowCascadeRatios:
-  - 0.05
-  - 0.2
-  - 0.3
-  m_ShadowCascadeBorders:
-  - 0.2
-  - 0.2
-  - 0.2
-  - 0.2
-  m_ShadowAlgorithm: 0
-  m_ShadowVariant: 0
-  m_ShadowPrecision: 0
-  useOldInspector: 0
-  useVolumetric: 1
-  featuresFoldout: 1
-  showAdditionalSettings: 8
-  m_AreaLightEmissiveMeshShadowCastingMode: 0
-  m_AreaLightEmissiveMeshMotionVectorGenerationMode: 0
-  m_AreaLightEmissiveMeshLayer: -1
 --- !u!1 &4871801558580565012
 GameObject:
   m_ObjectHideFlags: 0
@@ -20925,7 +20709,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4871801559694300411}
-  m_RootOrder: 8
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 91.83002, y: 214.72299, z: 191.957}
 --- !u!108 &4871801558635349304
 Light:
@@ -26099,222 +25883,6 @@ Transform:
   m_Father: {fileID: 4871801559793367090}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &4871801558816565385
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 4871801558816565386}
-  - component: {fileID: 4871801558816565380}
-  - component: {fileID: 4871801558816565387}
-  m_Layer: 0
-  m_Name: Spot Light (1)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &4871801558816565386
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4871801558816565385}
-  m_LocalRotation: {x: 0.10969193, y: 0.687617, z: -0.14982916, w: 0.70192724}
-  m_LocalPosition: {x: -4.7999997, y: 2.15, z: -0.17999996}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 4871801559694300411}
-  m_RootOrder: 5
-  m_LocalEulerAnglesHint: {x: 21.103, y: 88.139, z: -3.656}
---- !u!108 &4871801558816565380
-Light:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4871801558816565385}
-  m_Enabled: 1
-  serializedVersion: 10
-  m_Type: 0
-  m_Shape: 0
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 81142.26
-  m_Range: 12
-  m_SpotAngle: 73
-  m_InnerSpotAngle: 21.80208
-  m_CookieSize: 10
-  m_Shadows:
-    m_Type: 1
-    m_Resolution: -1
-    m_CustomResolution: -1
-    m_Strength: 1
-    m_Bias: 0.05
-    m_NormalBias: 0.4
-    m_NearPlane: 0.2
-    m_CullingMatrixOverride:
-      e00: 1
-      e01: 0
-      e02: 0
-      e03: 0
-      e10: 0
-      e11: 1
-      e12: 0
-      e13: 0
-      e20: 0
-      e21: 0
-      e22: 1
-      e23: 0
-      e30: 0
-      e31: 0
-      e32: 0
-      e33: 1
-    m_UseCullingMatrixOverride: 0
-  m_Cookie: {fileID: 0}
-  m_DrawHalo: 0
-  m_Flare: {fileID: 0}
-  m_RenderMode: 0
-  m_CullingMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_RenderingLayerMask: 1
-  m_Lightmapping: 1
-  m_LightShadowCasterMode: 2
-  m_AreaSize: {x: 0.5, y: 0.5}
-  m_BounceIntensity: 1
-  m_ColorTemperature: 3033
-  m_UseColorTemperature: 1
-  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 8.5e-44}
-  m_UseBoundingSphereOverride: 0
-  m_UseViewFrustumForShadowCasterCull: 1
-  m_ShadowRadius: 0
-  m_ShadowAngle: 0
---- !u!114 &4871801558816565387
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4871801558816565385}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7a68c43fe1f2a47cfa234b5eeaa98012, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Version: 11
-  m_ObsoleteShadowResolutionTier: 1
-  m_ObsoleteUseShadowQualitySettings: 0
-  m_ObsoleteCustomShadowResolution: 512
-  m_ObsoleteContactShadows: 0
-  m_PointlightHDType: 0
-  m_SpotLightShape: 0
-  m_AreaLightShape: 0
-  m_Intensity: 100000
-  m_EnableSpotReflector: 1
-  m_LuxAtDistance: 1
-  m_InnerSpotPercent: 93.1
-  m_SpotIESCutoffPercent: 100
-  m_LightDimmer: 1
-  m_VolumetricDimmer: 1
-  m_LightUnit: 0
-  m_FadeDistance: 10000
-  m_VolumetricFadeDistance: 10000
-  m_AffectDiffuse: 1
-  m_AffectSpecular: 1
-  m_NonLightmappedOnly: 0
-  m_ShapeWidth: 0.5
-  m_ShapeHeight: 0.5
-  m_AspectRatio: 1
-  m_ShapeRadius: 0.025
-  m_SoftnessScale: 1
-  m_UseCustomSpotLightShadowCone: 0
-  m_CustomSpotLightShadowCone: 30
-  m_MaxSmoothness: 0.99
-  m_ApplyRangeAttenuation: 1
-  m_DisplayAreaLightEmissiveMesh: 0
-  m_AreaLightCookie: {fileID: 0}
-  m_IESPoint: {fileID: 0}
-  m_IESSpot: {fileID: 0}
-  m_IncludeForRayTracing: 1
-  m_AreaLightShadowCone: 120
-  m_UseScreenSpaceShadows: 0
-  m_InteractsWithSky: 1
-  m_AngularDiameter: 0.5
-  m_FlareSize: 2
-  m_FlareTint: {r: 1, g: 1, b: 1, a: 1}
-  m_FlareFalloff: 4
-  m_SurfaceTexture: {fileID: 0}
-  m_SurfaceTint: {r: 1, g: 1, b: 1, a: 1}
-  m_Distance: 1.5e+11
-  m_UseRayTracedShadows: 0
-  m_NumRayTracingSamples: 4
-  m_FilterTracedShadow: 1
-  m_FilterSizeTraced: 16
-  m_SunLightConeAngle: 0.5
-  m_LightShadowRadius: 0.5
-  m_SemiTransparentShadow: 0
-  m_ColorShadow: 1
-  m_DistanceBasedFiltering: 0
-  m_EvsmExponent: 15
-  m_EvsmLightLeakBias: 0
-  m_EvsmVarianceBias: 0.00001
-  m_EvsmBlurPasses: 0
-  m_LightlayersMask: 1
-  m_LinkShadowLayers: 1
-  m_ShadowNearPlane: 1.1
-  m_BlockerSampleCount: 24
-  m_FilterSampleCount: 16
-  m_MinFilterSize: 0.1
-  m_KernelSize: 5
-  m_LightAngle: 1
-  m_MaxDepthBias: 0.001
-  m_ShadowResolution:
-    m_Override: 512
-    m_UseOverride: 0
-    m_Level: 2
-  m_ShadowDimmer: 1
-  m_VolumetricShadowDimmer: 1
-  m_ShadowFadeDistance: 10000
-  m_UseContactShadow:
-    m_Override: 1
-    m_UseOverride: 0
-    m_Level: 2
-  m_RayTracedContactShadow: 0
-  m_ShadowTint: {r: 0.09464784, g: 0.023495909, b: 0.1509434, a: 1}
-  m_PenumbraTint: 0
-  m_NormalBias: 0.75
-  m_SlopeBias: 0.5
-  m_ShadowUpdateMode: 0
-  m_AlwaysDrawDynamicShadows: 0
-  m_UpdateShadowOnLightMovement: 0
-  m_CachedShadowTranslationThreshold: 0.01
-  m_CachedShadowAngularThreshold: 0.5
-  m_BarnDoorAngle: 90
-  m_BarnDoorLength: 0.05
-  m_preserveCachedShadow: 0
-  m_ShadowCascadeRatios:
-  - 0.05
-  - 0.2
-  - 0.3
-  m_ShadowCascadeBorders:
-  - 0.2
-  - 0.2
-  - 0.2
-  - 0.2
-  m_ShadowAlgorithm: 0
-  m_ShadowVariant: 0
-  m_ShadowPrecision: 0
-  useOldInspector: 0
-  useVolumetric: 1
-  featuresFoldout: 1
-  showAdditionalSettings: 8
-  m_AreaLightEmissiveMeshShadowCastingMode: 0
-  m_AreaLightEmissiveMeshMotionVectorGenerationMode: 0
-  m_AreaLightEmissiveMeshLayer: -1
 --- !u!1 &4871801558857562624
 GameObject:
   m_ObjectHideFlags: 0
@@ -26518,7 +26086,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4871801559694300411}
-  m_RootOrder: 7
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 91.83002, y: 214.72299, z: 191.957}
 --- !u!108 &4871801558884742065
 Light:
@@ -26734,7 +26302,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4871801559694300411}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 18.909, y: 89.178, z: 0}
 --- !u!108 &4871801559121707348
 Light:
@@ -27141,7 +26709,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4871801559694300411}
-  m_RootOrder: 9
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 90, y: 180, z: 0}
 --- !u!108 &4871801559289354932
 Light:
@@ -27453,7 +27021,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4871801559694300411}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 51.698, y: -379.343, z: -111.72}
 --- !u!108 &4871801559421923627
 Light:
@@ -32621,7 +32189,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4871801559694300411}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 35.664, y: -67.844, z: -124.617}
 --- !u!108 &4871801559519433551
 Light:
@@ -32834,12 +32402,10 @@ Transform:
   m_LocalPosition: {x: -3.6599379, y: 8.972785, z: -11.467275}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 4871801558382265161}
   - {fileID: 4871801559519433544}
   - {fileID: 4871801559421923625}
   - {fileID: 4871801558077604530}
   - {fileID: 4871801559121707354}
-  - {fileID: 4871801558816565386}
   - {fileID: 4871801558297064817}
   - {fileID: 4871801558884742071}
   - {fileID: 4871801558635349310}
@@ -32983,7 +32549,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4871801559694300411}
-  m_RootOrder: 10
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 131.43399, y: 37.535004, z: -4.2380066}
 --- !u!108 &4871801559812546806
 Light:
@@ -33209,7 +32775,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4871801559930527740}
-  - component: {fileID: 4871801559930527683}
   m_Layer: 0
   m_Name: WwiseGlobal
   m_TagString: Untagged
@@ -33231,31 +32796,6 @@ Transform:
   m_Father: {fileID: 759140547037134458}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &4871801559930527683
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4871801559930527682}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: feff9e2bead0f4cdabd18e6db715266e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  InitializationSettings: {fileID: 11400000, guid: 334931b3269144d56818f2056bcbada2, type: 2}
-  basePath: 
-  language: 
-  defaultPoolSize: 0
-  lowerPoolSize: 0
-  streamingPoolSize: 0
-  memoryCutoffThreshold: 0
-  monitorPoolSize: 0
-  monitorQueuePoolSize: 0
-  callbackManagerBufferSize: 0
-  spatialAudioPoolSize: 0
-  maxSoundPropagationDepth: 0
-  engineLogging: 0
 --- !u!1 &4946560087212028429
 GameObject:
   m_ObjectHideFlags: 0
@@ -34104,14 +33644,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2ff44c9705ebcdc4dbc7426ad3e183cd, type: 3}
---- !u!4 &944596046435904130 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 2ff44c9705ebcdc4dbc7426ad3e183cd, type: 3}
-  m_PrefabInstance: {fileID: 761486998567488873}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &454918219694387256 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 2ff44c9705ebcdc4dbc7426ad3e183cd, type: 3}
+  m_PrefabInstance: {fileID: 761486998567488873}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &944596046435904130 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 2ff44c9705ebcdc4dbc7426ad3e183cd, type: 3}
   m_PrefabInstance: {fileID: 761486998567488873}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &761486998570542174
@@ -34617,14 +34157,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2ff44c9705ebcdc4dbc7426ad3e183cd, type: 3}
---- !u!1 &454918219941636041 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 2ff44c9705ebcdc4dbc7426ad3e183cd, type: 3}
-  m_PrefabInstance: {fileID: 761486998815136408}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &944596046230142323 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 2ff44c9705ebcdc4dbc7426ad3e183cd, type: 3}
+  m_PrefabInstance: {fileID: 761486998815136408}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &454918219941636041 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 2ff44c9705ebcdc4dbc7426ad3e183cd, type: 3}
   m_PrefabInstance: {fileID: 761486998815136408}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &761486998884119428
@@ -34959,14 +34499,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2ff44c9705ebcdc4dbc7426ad3e183cd, type: 3}
---- !u!1 &454918219912869279 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 2ff44c9705ebcdc4dbc7426ad3e183cd, type: 3}
-  m_PrefabInstance: {fileID: 761486998921758926}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &944596046123773733 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 2ff44c9705ebcdc4dbc7426ad3e183cd, type: 3}
+  m_PrefabInstance: {fileID: 761486998921758926}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &454918219912869279 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 2ff44c9705ebcdc4dbc7426ad3e183cd, type: 3}
   m_PrefabInstance: {fileID: 761486998921758926}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &761486998956942167
@@ -35130,14 +34670,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2ff44c9705ebcdc4dbc7426ad3e183cd, type: 3}
---- !u!4 &944596046088324284 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 2ff44c9705ebcdc4dbc7426ad3e183cd, type: 3}
-  m_PrefabInstance: {fileID: 761486998956942167}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &454918220082912774 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 2ff44c9705ebcdc4dbc7426ad3e183cd, type: 3}
+  m_PrefabInstance: {fileID: 761486998956942167}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &944596046088324284 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 2ff44c9705ebcdc4dbc7426ad3e183cd, type: 3}
   m_PrefabInstance: {fileID: 761486998956942167}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &761486998969267762
@@ -35367,14 +34907,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2ff44c9705ebcdc4dbc7426ad3e183cd, type: 3}
---- !u!1 &454918220034604350 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 2ff44c9705ebcdc4dbc7426ad3e183cd, type: 3}
-  m_PrefabInstance: {fileID: 761486999043358831}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &944596045993846660 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 2ff44c9705ebcdc4dbc7426ad3e183cd, type: 3}
+  m_PrefabInstance: {fileID: 761486999043358831}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &454918220034604350 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 2ff44c9705ebcdc4dbc7426ad3e183cd, type: 3}
   m_PrefabInstance: {fileID: 761486999043358831}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &761486999418650507
@@ -36222,14 +35762,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2ff44c9705ebcdc4dbc7426ad3e183cd, type: 3}
---- !u!4 &944596045244770912 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 2ff44c9705ebcdc4dbc7426ad3e183cd, type: 3}
-  m_PrefabInstance: {fileID: 761486999792176523}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &454918218771722458 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 2ff44c9705ebcdc4dbc7426ad3e183cd, type: 3}
+  m_PrefabInstance: {fileID: 761486999792176523}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &944596045244770912 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 2ff44c9705ebcdc4dbc7426ad3e183cd, type: 3}
   m_PrefabInstance: {fileID: 761486999792176523}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &761486999804734348
@@ -36401,14 +35941,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2ff44c9705ebcdc4dbc7426ad3e183cd, type: 3}
---- !u!4 &944596045206981735 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 2ff44c9705ebcdc4dbc7426ad3e183cd, type: 3}
-  m_PrefabInstance: {fileID: 761486999804734348}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &454918218650048221 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 2ff44c9705ebcdc4dbc7426ad3e183cd, type: 3}
+  m_PrefabInstance: {fileID: 761486999804734348}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &944596045206981735 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 2ff44c9705ebcdc4dbc7426ad3e183cd, type: 3}
   m_PrefabInstance: {fileID: 761486999804734348}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &761486999961599545
@@ -36650,14 +36190,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2ff44c9705ebcdc4dbc7426ad3e183cd, type: 3}
---- !u!1 &454918218821429003 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 2ff44c9705ebcdc4dbc7426ad3e183cd, type: 3}
-  m_PrefabInstance: {fileID: 761486999977286234}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &944596045026049457 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 2ff44c9705ebcdc4dbc7426ad3e183cd, type: 3}
+  m_PrefabInstance: {fileID: 761486999977286234}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &454918218821429003 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 2ff44c9705ebcdc4dbc7426ad3e183cd, type: 3}
   m_PrefabInstance: {fileID: 761486999977286234}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &761487000021399609
@@ -37058,14 +36598,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2ff44c9705ebcdc4dbc7426ad3e183cd, type: 3}
---- !u!1 &454918218949616410 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 2ff44c9705ebcdc4dbc7426ad3e183cd, type: 3}
-  m_PrefabInstance: {fileID: 761487000104951371}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &944596044906772896 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 2ff44c9705ebcdc4dbc7426ad3e183cd, type: 3}
+  m_PrefabInstance: {fileID: 761487000104951371}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &454918218949616410 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 2ff44c9705ebcdc4dbc7426ad3e183cd, type: 3}
   m_PrefabInstance: {fileID: 761487000104951371}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &761487000175859402
@@ -37412,14 +36952,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2ff44c9705ebcdc4dbc7426ad3e183cd, type: 3}
---- !u!4 &944596044808169680 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 2ff44c9705ebcdc4dbc7426ad3e183cd, type: 3}
-  m_PrefabInstance: {fileID: 761487000229039931}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &454918217999577706 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 2ff44c9705ebcdc4dbc7426ad3e183cd, type: 3}
+  m_PrefabInstance: {fileID: 761487000229039931}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &944596044808169680 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 2ff44c9705ebcdc4dbc7426ad3e183cd, type: 3}
   m_PrefabInstance: {fileID: 761487000229039931}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &761487000463046232
@@ -37583,14 +37123,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2ff44c9705ebcdc4dbc7426ad3e183cd, type: 3}
---- !u!4 &944596044573839795 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 2ff44c9705ebcdc4dbc7426ad3e183cd, type: 3}
-  m_PrefabInstance: {fileID: 761487000463046232}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &454918218367126281 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 2ff44c9705ebcdc4dbc7426ad3e183cd, type: 3}
+  m_PrefabInstance: {fileID: 761487000463046232}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &944596044573839795 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 2ff44c9705ebcdc4dbc7426ad3e183cd, type: 3}
   m_PrefabInstance: {fileID: 761487000463046232}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &761487000525350770
@@ -39063,14 +38603,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bfcab8db6daf592469d55fd0c945947e, type: 3}
---- !u!4 &1258010811164296448 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 5974385126215716287, guid: bfcab8db6daf592469d55fd0c945947e, type: 3}
-  m_PrefabInstance: {fileID: 4871801559001565375}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &9203288803512463655 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4333795258074347928, guid: bfcab8db6daf592469d55fd0c945947e, type: 3}
+  m_PrefabInstance: {fileID: 4871801559001565375}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1258010811164296448 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5974385126215716287, guid: bfcab8db6daf592469d55fd0c945947e, type: 3}
   m_PrefabInstance: {fileID: 4871801559001565375}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &4871801559339012860
