@@ -151,7 +151,7 @@ public class PlayerController : MonoBehaviour
     private void Start()
     {
         CurrentMana = maxMana;
-        if (SceneManager.GetActiveScene().name == "CombatDebug")
+        if (SceneManager.GetActiveScene().name == "CombatDebug" || SceneManager.GetActiveScene().name == "BossStage")
         {
             IsInCombat = true;
         }

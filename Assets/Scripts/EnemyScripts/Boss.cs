@@ -186,7 +186,8 @@ public class Boss : MonoBehaviour
 
     private void AnimCast()
     {
-        Instantiate(castPrefab, Vector3.Scale(new Vector3(1, 0, 1), PlayerInventory.Instance.transform.position), Quaternion.identity);
+        Instantiate(castPrefab, Vector3.Scale(new Vector3(1, 0, 1), PlayerInventory.Instance.transform.position) + new Vector3(0, transform.position.y + 0.1f, 0),
+            Quaternion.identity);
     }
 
     private void AnimFireball()
@@ -222,7 +223,7 @@ public class Boss : MonoBehaviour
         bossAnimator.SetBool("Die", false);
     }
     void Die()
-    {     
+    {
         SceneTransition.Instance.ChangeScene("EndScene", 0);
     }
 
