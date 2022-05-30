@@ -159,6 +159,28 @@
 								</Action>
 							</ChildrenList>
 						</Event>
+						<Event Name="Play_CharDeath" ID="{0C65D409-F000-454E-87DC-6BA0FD40D606}">
+							<ChildrenList>
+								<Action Name="" ID="{85C7E3F6-02EA-4B57-94BD-760F2745279D}" ShortID="804382785">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Death" ID="{A8474350-97B6-44FF-A7FD-49C3D19B85C4}" WorkUnitID="{D02594BD-4199-499F-A2D9-CB65908B02DD}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_CharHurt" ID="{0694055F-3853-42C6-839B-DDE4A640B3FE}">
+							<ChildrenList>
+								<Action Name="" ID="{6E46A2F4-9361-4F01-B1DA-281FE1CFA555}" ShortID="471185366">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Hurt" ID="{6C8F70B5-165C-47C6-89C1-A74E0AD9FA06}" WorkUnitID="{D02594BD-4199-499F-A2D9-CB65908B02DD}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="ItemsScene" ID="{2659EB23-8ED5-4684-B9B7-6D33CFA88CF7}" ShortID="33185504">
