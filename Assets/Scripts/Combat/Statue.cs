@@ -6,7 +6,7 @@ public class Statue : MonoBehaviour
 {
 
     [SerializeField]
-    GameObject projectile, slowingHitbox, slowingVFX;
+    GameObject projectile, slowingHitbox, shootPoint;
 
     private bool activated = false;
     private Enemy targetEnemy;
@@ -33,7 +33,7 @@ public class Statue : MonoBehaviour
                         StartCoroutine(shootEnemies());
                         break;
                     case 1:
-                        slowingHitbox.SetActive(true);
+                        Instantiate(slowingHitbox, transform.position, Quaternion.identity);
 
                         break;
                     default:
@@ -54,7 +54,7 @@ public class Statue : MonoBehaviour
             if (targetEnemy != null)
             {
                 AkSoundEngine.PostEvent("Play_ShootStatue", this.gameObject);
-                StatueProjectile tmp = Instantiate(projectile, transform.position, Quaternion.identity).GetComponent<StatueProjectile>();
+                StatueProjectile tmp = Instantiate(projectile, shootPoint.transform.position, Quaternion.identity).GetComponent<StatueProjectile>();
                 tmp.target = targetEnemy;
                 tmp.gameObject.GetComponent<Rigidbody>().velocity = Vector3.zero;
             }

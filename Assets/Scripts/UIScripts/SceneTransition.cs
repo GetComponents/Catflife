@@ -89,6 +89,7 @@ public class SceneTransition : MonoBehaviour
 
     public void EndTransition(Scene _previousScene, Scene _newScene)
     {
+        string previousSceneName = _previousScene.name;
         string newSceneName = _newScene.name;
         Debug.Log("new scene name: " + newSceneName);
         if (newSceneName == "Combat" || "CombatDebug" == newSceneName || newSceneName == "BossStage")
@@ -96,7 +97,7 @@ public class SceneTransition : MonoBehaviour
             PlayerController.Instance.IsInCombat = true;
             playerSword.enabled = true;
         }
-        else if (_previousScene == SceneManager.GetSceneByName("Combat"))
+        else if (previousSceneName == "Combat")
         {
             PlayerController.Instance.IsInCombat = false;
             playerSword.enabled = false;
@@ -116,9 +117,11 @@ public class SceneTransition : MonoBehaviour
             //}
             //Destroy(dontDestroyCanvas);
         }
-        if(_newScene == SceneManager.GetSceneByName("MainRoom"))
+        if(newSceneName == "MainRoom")
         {
             PlayerController.Instance.Revive();
+            PlayerController.Instance.IsInCombat = false;
+            playerSword.enabled = false;
         }
         StartCoroutine(FinishTransition());
     }

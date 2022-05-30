@@ -78,7 +78,7 @@ public class Mage : Enemy
     private void StartCast()
     {
         //PlaySound MageMumbling ?
-        MageCast tmp = Instantiate(AOEAttack, PlayerController.Instance.transform.GetChild(0).position, Quaternion.identity).GetComponent<MageCast>();
+        MageCast tmp = Instantiate(AOEAttack, PlayerController.Instance.transform.GetChild(0).position + new Vector3(0, 0.2f, 0), Quaternion.identity).GetComponent<MageCast>();
         tmp.MyDamage = damage;
         tmp.TimeUntilExplosion = AOEExplosionTime;
         tmp.TimeUntilFaded = AOEFadeTime;
@@ -99,7 +99,8 @@ public class Mage : Enemy
             {
                 MageCast tmp = Instantiate(AOEAttack,
                     PlayerController.Instance.transform.GetChild(0).position +
-                    new Vector3(Random.Range(-1f, 1f), 0, Random.Range(-1f, 1f)).normalized * Random.Range(EliteCastDistance.x, EliteCastDistance.y),
+                    new Vector3(Random.Range(-1f, 1f), 0, Random.Range(-1f, 1f)).normalized * Random.Range(EliteCastDistance.x, EliteCastDistance.y)
+                    + new Vector3(0, 0.2f, 0),
                     Quaternion.identity).GetComponent<MageCast>();
                 tmp.MyDamage = damage;
                 tmp.TimeUntilExplosion = AOEExplosionTime;

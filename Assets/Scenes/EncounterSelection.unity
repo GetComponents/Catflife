@@ -517,14 +517,14 @@ Light:
   serializedVersion: 10
   m_Type: 1
   m_Shape: 0
-  m_Color: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
+  m_Color: {r: 1, g: 0.95806384, b: 0.8915094, a: 1}
   m_Intensity: 100000
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 1
+    m_Type: 2
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
@@ -561,7 +561,7 @@ Light:
   m_LightShadowCasterMode: 2
   m_AreaSize: {x: 0.5, y: 0.5}
   m_BounceIntensity: 1
-  m_ColorTemperature: 6570
+  m_ColorTemperature: 5342
   m_UseColorTemperature: 1
   m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
   m_UseBoundingSphereOverride: 0
@@ -853,10 +853,15 @@ MonoBehaviour:
   - {fileID: 791641800094285746, guid: 9a1d90031cc0d474688ffd10e38f1f88, type: 3}
   - {fileID: 678304503015575061, guid: 2a00827026fc368439e6bafb8cc09c0c, type: 3}
   MediumEncounters:
-  - {fileID: 9006765695563474562, guid: 01e016d93a0e5ed459e9046f96e8fadd, type: 3}
-  - {fileID: 2964214316257737840, guid: 4b001e1534df09a46b8b3391bcb33f3b, type: 3}
+  - {fileID: 130519113892447278, guid: 2005e78b1a2c8a7479a4c9d08970a611, type: 3}
+  - {fileID: 9164623144913483906, guid: cf49883abf4de80409fab9fd5947f8ff, type: 3}
+  - {fileID: 6427559468027367358, guid: 4fce332829730d94b9d711349f70fdaf, type: 3}
+  - {fileID: 8010996765272218616, guid: 5b81745bd3bbb1540bc03cc304b0e0d1, type: 3}
   HardEncounters:
-  - {fileID: 8850917308622044812, guid: 7e4ffa44c47bc5144aee8db8b81ae4b7, type: 3}
+  - {fileID: 3082635390515690908, guid: c66dcdfcedd0b0a4f8172cc40ee71775, type: 3}
+  - {fileID: 4114432796922190254, guid: a6ad833afe1a52b4cae6381e427d171f, type: 3}
+  - {fileID: 8698574315099962861, guid: 55658125cbd193e4cac23bdac9f5a6b3, type: 3}
+  - {fileID: 4238080207092491073, guid: d70084f8af45f5647ac6eb5220edd744, type: 3}
   CurrentEncounter: 0
   CurrentEncounterIndex: 0
   ClearedArena: 0

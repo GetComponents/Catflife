@@ -24,7 +24,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 90187473578258847}
   m_LocalRotation: {x: 0, y: 0.5806572, z: -0, w: 0.8141482}
-  m_LocalPosition: {x: -0.6435522, y: 1.2621774e-31, z: 2.2870594e-16}
+  m_LocalPosition: {x: -0.179, y: 1.2621774e-31, z: 0.16}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 8206411156518327829}
@@ -865,7 +865,7 @@ MonoBehaviour:
   MaxStopCounter: 1
   JumpingDistance: 7
   Projectile: {fileID: 737495494197295055, guid: 338d2354765a489468bae6758623000b, type: 3}
-  projectileSpeed: 0.6
+  projectileSpeed: 0.2
   timeForEachShot: 2
 --- !u!136 &3591055580359114764
 CapsuleCollider:
@@ -878,9 +878,9 @@ CapsuleCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   m_Radius: 0.5
-  m_Height: 1.7751496
+  m_Height: 1.0437865
   m_Direction: 1
-  m_Center: {x: 0, y: 0.3875748, z: 0}
+  m_Center: {x: 0, y: 0.021893263, z: 0}
 --- !u!1 &3295923321987832049
 GameObject:
   m_ObjectHideFlags: 0
@@ -1331,7 +1331,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4967496075694795862}
   m_LocalRotation: {x: 0.501039, y: -0.4989588, z: -0.4989588, w: 0.501039}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0.25, y: -0.101, z: 0}
   m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
   m_Children:
   - {fileID: 264473085235707203}
