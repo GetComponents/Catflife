@@ -181,6 +181,72 @@
 								</Action>
 							</ChildrenList>
 						</Event>
+						<Event Name="Play_CharSpin" ID="{E372E1E3-3573-48E4-9DF9-53D5FC948666}">
+							<ChildrenList>
+								<Action Name="" ID="{3C0E6454-74B5-4517-8C94-36E52681C67F}" ShortID="703173800">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Spin" ID="{A377A055-EA38-41E6-9274-8751C596DC9C}" WorkUnitID="{D02594BD-4199-499F-A2D9-CB65908B02DD}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{0476C8DE-7E82-48C3-AEC9-52C2FE4AC739}" ShortID="85462707">
+									<PropertyList>
+										<Property Name="Delay" Type="Real64" Value="0.3"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Spin" ID="{A377A055-EA38-41E6-9274-8751C596DC9C}" WorkUnitID="{D02594BD-4199-499F-A2D9-CB65908B02DD}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{84D15420-C9BA-4E31-A102-7C52A9460F10}" ShortID="539865519">
+									<PropertyList>
+										<Property Name="Delay" Type="Real64" Value="0.6"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Spin" ID="{A377A055-EA38-41E6-9274-8751C596DC9C}" WorkUnitID="{D02594BD-4199-499F-A2D9-CB65908B02DD}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_CharDash" ID="{39CFDE72-81D6-4A9A-B9E8-FEC14A90197E}">
+							<ChildrenList>
+								<Action Name="" ID="{254573CE-44F4-499A-8CC6-76A13361C32A}" ShortID="820467305">
+									<PropertyList>
+										<Property Name="Delay" Type="Real64" Value="0.3"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Spin" ID="{A377A055-EA38-41E6-9274-8751C596DC9C}" WorkUnitID="{D02594BD-4199-499F-A2D9-CB65908B02DD}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{C60FDA18-A050-4510-81B9-6D93582BB58F}" ShortID="513452583">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="41"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Play_Step" ID="{EE741F52-8E3B-458A-9A68-26B9F51B0675}" WorkUnitID="{241DAD68-20A2-4EEC-81F1-8FCC85376151}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{07836E82-CECC-4B7D-B05B-6594F606F676}" ShortID="482878145">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="41"/>
+										<Property Name="Delay" Type="Real64" Value="0.7"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Play_Step" ID="{EE741F52-8E3B-458A-9A68-26B9F51B0675}" WorkUnitID="{241DAD68-20A2-4EEC-81F1-8FCC85376151}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="ItemsScene" ID="{2659EB23-8ED5-4684-B9B7-6D33CFA88CF7}" ShortID="33185504">

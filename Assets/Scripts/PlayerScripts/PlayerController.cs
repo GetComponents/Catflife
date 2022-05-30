@@ -401,7 +401,7 @@ public class PlayerController : MonoBehaviour
     public void StartDash()
     {
         DashStarted = true;
-        //PlaySound Dash
+        AkSoundEngine.PostEvent("Play_CharDash", this.gameObject);
     }
 
     public void EndDash()
@@ -414,7 +414,7 @@ public class PlayerController : MonoBehaviour
     public void StartSpinAttack()
     {
         IsSpinning = true;
-        //PlaySound Spinmove
+        AkSoundEngine.PostEvent("Play_CharSpin", this.gameObject);
     }
 
     public void EndSpinAttack()

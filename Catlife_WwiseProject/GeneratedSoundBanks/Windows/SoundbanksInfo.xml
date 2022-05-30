@@ -11,7 +11,7 @@
 	<StreamedFiles/>
 	<MediaFilesNotInAnyBank/>
 	<SoundBanks>
-		<SoundBank Id="393239870" Language="SFX" Hash="4210075135">
+		<SoundBank Id="393239870" Language="SFX" Hash="2528070832">
 			<ObjectPath>\SoundBanks\Default Work Unit\SFX</ObjectPath>
 			<ShortName>SFX</ShortName>
 			<Path>SFX.bnk</Path>
@@ -40,27 +40,54 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
+				<Event Id="4198908286" Name="Play_CharDash" ObjectPath="\Events\Default Work Unit\Character\Play_CharDash" DurationType="OneShot" DurationMin="0.552547" DurationMax="0.668513">
+					<IncludedMemoryFiles>
+						<File Id="159060462" Language="SFX">
+							<ShortName>SoftWhooshDash.wav</ShortName>
+							<Path>SFX/SoftWhooshDash_7870BC91.wem</Path>
+						</File>
+						<File Id="416701831" Language="SFX">
+							<ShortName>SoftWhooshDash.wav</ShortName>
+							<Path>SFX/SoftWhooshDash_0D39F20F.wem</Path>
+						</File>
+						<File Id="536830051" Language="SFX">
+							<ShortName>SoftWhooshDash.wav</ShortName>
+							<Path>SFX/SoftWhooshDash_124E63E0.wem</Path>
+						</File>
+						<File Id="770718429" Language="SFX">
+							<ShortName>SoftWhooshDash.wav</ShortName>
+							<Path>SFX/SoftWhooshDash_6F97777C.wem</Path>
+						</File>
+						<File Id="1037053258" Language="SFX">
+							<ShortName>SoftWhooshDash.wav</ShortName>
+							<Path>SFX/SoftWhooshDash_4F86D787.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+					<ActionPostEvent>
+						<ActionPostEventEntry Id="99206220" Name="Play_Step" ObjectPath="\Events\Default Work Unit\Character\Play_Step"/>
+					</ActionPostEvent>
+				</Event>
 				<Event Id="214494936" Name="Play_CharDeath" ObjectPath="\Events\Default Work Unit\Character\Play_CharDeath" DurationType="OneShot" DurationMin="0.884549" DurationMax="2.206522">
 					<IncludedMemoryFiles>
 						<File Id="145299274" Language="SFX">
 							<ShortName>CharDeath.wav</ShortName>
-							<Path>SFX/CharDeath_36EA4CFB.wem</Path>
+							<Path>SFX/CharDeath_E711F849.wem</Path>
 						</File>
 						<File Id="507177512" Language="SFX">
 							<ShortName>CharDeath.wav</ShortName>
-							<Path>SFX/CharDeath_42785B4D.wem</Path>
+							<Path>SFX/CharDeath_9877822D.wem</Path>
 						</File>
 						<File Id="911625356" Language="SFX">
 							<ShortName>CharDeath.wav</ShortName>
-							<Path>SFX/CharDeath_106BAD0B.wem</Path>
+							<Path>SFX/CharDeath_5ACDFE68.wem</Path>
 						</File>
 						<File Id="1003332352" Language="SFX">
 							<ShortName>CharDeath.wav</ShortName>
-							<Path>SFX/CharDeath_DECA6088.wem</Path>
+							<Path>SFX/CharDeath_43240916.wem</Path>
 						</File>
 						<File Id="1025540274" Language="SFX">
 							<ShortName>CharDeath.wav</ShortName>
-							<Path>SFX/CharDeath_DA6BB370.wem</Path>
+							<Path>SFX/CharDeath_6FD16D1F.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -68,55 +95,55 @@
 					<IncludedMemoryFiles>
 						<File Id="26091089" Language="SFX">
 							<ShortName>CharHurt.wav</ShortName>
-							<Path>SFX/CharHurt_912B8F43.wem</Path>
+							<Path>SFX/CharHurt_6B9289FD.wem</Path>
 						</File>
 						<File Id="35751028" Language="SFX">
 							<ShortName>CharHurt.wav</ShortName>
-							<Path>SFX/CharHurt_C332B97A.wem</Path>
+							<Path>SFX/CharHurt_93D7CD09.wem</Path>
 						</File>
 						<File Id="139706771" Language="SFX">
 							<ShortName>CharHurt.wav</ShortName>
-							<Path>SFX/CharHurt_2D6EA094.wem</Path>
+							<Path>SFX/CharHurt_D21F2EC8.wem</Path>
 						</File>
 						<File Id="153111388" Language="SFX">
 							<ShortName>CharHurt.wav</ShortName>
-							<Path>SFX/CharHurt_1972EC6A.wem</Path>
+							<Path>SFX/CharHurt_284D748B.wem</Path>
 						</File>
 						<File Id="163553998" Language="SFX">
 							<ShortName>CharHurt.wav</ShortName>
-							<Path>SFX/CharHurt_C936B68F.wem</Path>
+							<Path>SFX/CharHurt_E94066AE.wem</Path>
 						</File>
 						<File Id="500629284" Language="SFX">
 							<ShortName>CharHurt.wav</ShortName>
-							<Path>SFX/CharHurt_F7782226.wem</Path>
+							<Path>SFX/CharHurt_B28F64C3.wem</Path>
 						</File>
 						<File Id="587118507" Language="SFX">
 							<ShortName>CharHurt.wav</ShortName>
-							<Path>SFX/CharHurt_E2EB68C9.wem</Path>
+							<Path>SFX/CharHurt_E1E6AA3F.wem</Path>
 						</File>
 						<File Id="766108406" Language="SFX">
 							<ShortName>CharHurt.wav</ShortName>
-							<Path>SFX/CharHurt_A92730F6.wem</Path>
+							<Path>SFX/CharHurt_A1A18F68.wem</Path>
 						</File>
 						<File Id="865593000" Language="SFX">
 							<ShortName>CharHurt.wav</ShortName>
-							<Path>SFX/CharHurt_FA674CC8.wem</Path>
+							<Path>SFX/CharHurt_7FF8DFE4.wem</Path>
 						</File>
 						<File Id="937864113" Language="SFX">
 							<ShortName>CharHurt.wav</ShortName>
-							<Path>SFX/CharHurt_B5483E7E.wem</Path>
+							<Path>SFX/CharHurt_EB38943C.wem</Path>
 						</File>
 						<File Id="1010163066" Language="SFX">
 							<ShortName>CharHurt.wav</ShortName>
-							<Path>SFX/CharHurt_0D49585E.wem</Path>
+							<Path>SFX/CharHurt_62AEBD17.wem</Path>
 						</File>
 						<File Id="1011683481" Language="SFX">
 							<ShortName>CharHurt.wav</ShortName>
-							<Path>SFX/CharHurt_638F087F.wem</Path>
+							<Path>SFX/CharHurt_5F0A3913.wem</Path>
 						</File>
 						<File Id="1066943025" Language="SFX">
 							<ShortName>CharHurt.wav</ShortName>
-							<Path>SFX/CharHurt_E52E6124.wem</Path>
+							<Path>SFX/CharHurt_05C76ADF.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -193,6 +220,30 @@
 						<File Id="1013540231" Language="SFX">
 							<ShortName>ProjectileThrow.wav</ShortName>
 							<Path>SFX/ProjectileThrow_C962039C.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="25077814" Name="Play_CharSpin" ObjectPath="\Events\Default Work Unit\Character\Play_CharSpin" DurationType="OneShot" DurationMin="0.852547" DurationMax="0.968513">
+					<IncludedMemoryFiles>
+						<File Id="159060462" Language="SFX">
+							<ShortName>SoftWhooshDash.wav</ShortName>
+							<Path>SFX/SoftWhooshDash_7870BC91.wem</Path>
+						</File>
+						<File Id="416701831" Language="SFX">
+							<ShortName>SoftWhooshDash.wav</ShortName>
+							<Path>SFX/SoftWhooshDash_0D39F20F.wem</Path>
+						</File>
+						<File Id="536830051" Language="SFX">
+							<ShortName>SoftWhooshDash.wav</ShortName>
+							<Path>SFX/SoftWhooshDash_124E63E0.wem</Path>
+						</File>
+						<File Id="770718429" Language="SFX">
+							<ShortName>SoftWhooshDash.wav</ShortName>
+							<Path>SFX/SoftWhooshDash_6F97777C.wem</Path>
+						</File>
+						<File Id="1037053258" Language="SFX">
+							<ShortName>SoftWhooshDash.wav</ShortName>
+							<Path>SFX/SoftWhooshDash_4F86D787.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -387,6 +438,9 @@
 							<Path>SFX/CardboardImpact_9083B01B.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
+					<ActionPostEvent>
+						<ActionPostEventEntry Id="31596624" Name="Play_PoofCardboard" ObjectPath="\Events\Default Work Unit\ItemsScene\Play_PoofCardboard"/>
+					</ActionPostEvent>
 				</Event>
 				<Event Id="1438502543" Name="Play_LeavingFootsteps" ObjectPath="\Events\Default Work Unit\Character\Play_LeavingFootsteps" DurationType="OneShot" DurationMin="1.064612" DurationMax="2.242918">
 					<IncludedMemoryFiles>

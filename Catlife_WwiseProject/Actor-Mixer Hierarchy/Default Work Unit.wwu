@@ -2610,6 +2610,187 @@
 							</ChildrenList>
 							<ObjectLists/>
 						</ActorMixer>
+						<RandomSequenceContainer Name="Spin" ID="{A377A055-EA38-41E6-9274-8751C596DC9C}" ShortID="1052270035">
+							<PropertyList>
+								<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
+								<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DA489A64-FA6D-4EEE-B839-F6A4ADB4B7DC}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Main" ID="{8B17C660-DB37-4E99-B168-E5F7712F1EF9}" WorkUnitID="{27CE760E-D39C-41A2-A7AE-4FA0EBDD5634}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="SoftWhooshDash_01" ID="{4C5F8912-969F-42C0-831A-C00581E611FD}" ShortID="161887195">
+									<PropertyList>
+										<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DA489A64-FA6D-4EEE-B839-F6A4ADB4B7DC}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Main" ID="{8B17C660-DB37-4E99-B168-E5F7712F1EF9}" WorkUnitID="{27CE760E-D39C-41A2-A7AE-4FA0EBDD5634}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SoftWhooshDash" ID="{B86D6D11-7D56-4D4E-A839-BB15130B2C90}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.00773103393404144"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.0154620678680829"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimEnd" Type="Real64" Value="0.252547108512021"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>SoftWhooshDash.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="1037053258"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ObjectLists/>
+									<ActiveSourceList>
+										<ActiveSource Name="SoftWhooshDash" ID="{B86D6D11-7D56-4D4E-A839-BB15130B2C90}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="SoftWhooshDash_02" ID="{B0AC0DE6-D947-420A-A0CA-FD11DF5B5A44}" ShortID="844237219">
+									<PropertyList>
+										<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DA489A64-FA6D-4EEE-B839-F6A4ADB4B7DC}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Main" ID="{8B17C660-DB37-4E99-B168-E5F7712F1EF9}" WorkUnitID="{27CE760E-D39C-41A2-A7AE-4FA0EBDD5634}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SoftWhooshDash" ID="{6D37AE41-429F-4E1F-9B2B-2B260A1E49AA}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.00773103393404144"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.0154620678680829"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.257701131134715"/>
+												<Property Name="TrimEnd" Type="Real64" Value="0.564365477185026"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>SoftWhooshDash.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="159060462"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ObjectLists/>
+									<ActiveSourceList>
+										<ActiveSource Name="SoftWhooshDash" ID="{6D37AE41-429F-4E1F-9B2B-2B260A1E49AA}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="SoftWhooshDash_03" ID="{E24D468D-E185-4BDD-877B-FF493A0A9EB0}" ShortID="511128338">
+									<PropertyList>
+										<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DA489A64-FA6D-4EEE-B839-F6A4ADB4B7DC}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Main" ID="{8B17C660-DB37-4E99-B168-E5F7712F1EF9}" WorkUnitID="{27CE760E-D39C-41A2-A7AE-4FA0EBDD5634}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SoftWhooshDash" ID="{8F1AED45-3307-458A-BD53-3946FB0A0DF6}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.00773103393404144"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.0154620678680829"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.579827545053109"/>
+												<Property Name="TrimEnd" Type="Real64" Value="0.90453097028285"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>SoftWhooshDash.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="770718429"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ObjectLists/>
+									<ActiveSourceList>
+										<ActiveSource Name="SoftWhooshDash" ID="{8F1AED45-3307-458A-BD53-3946FB0A0DF6}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="SoftWhooshDash_04" ID="{69154EBC-85DB-4FBA-8946-652AEB2E71B5}" ShortID="3564046">
+									<PropertyList>
+										<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DA489A64-FA6D-4EEE-B839-F6A4ADB4B7DC}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Main" ID="{8B17C660-DB37-4E99-B168-E5F7712F1EF9}" WorkUnitID="{27CE760E-D39C-41A2-A7AE-4FA0EBDD5634}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SoftWhooshDash" ID="{D5E4081B-18C2-4CDE-9123-23D3C0903509}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.00773103393404144"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.0154620678680829"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.899376947660156"/>
+												<Property Name="TrimEnd" Type="Real64" Value="1.2678895651828"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>SoftWhooshDash.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="416701831"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ObjectLists/>
+									<ActiveSourceList>
+										<ActiveSource Name="SoftWhooshDash" ID="{D5E4081B-18C2-4CDE-9123-23D3C0903509}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="SoftWhooshDash_05" ID="{215014DF-7619-4E87-8239-60C610800C64}" ShortID="391965433">
+									<PropertyList>
+										<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DA489A64-FA6D-4EEE-B839-F6A4ADB4B7DC}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Main" ID="{8B17C660-DB37-4E99-B168-E5F7712F1EF9}" WorkUnitID="{27CE760E-D39C-41A2-A7AE-4FA0EBDD5634}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SoftWhooshDash" ID="{8D6BDE3F-A910-424E-9559-1AB478A7E3AC}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.00773103393404144"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.0154620678680829"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="1.28592864436223"/>
+												<Property Name="TrimEnd" Type="Real64" Value="1.62609413746005"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>SoftWhooshDash.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="536830051"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ObjectLists/>
+									<ActiveSourceList>
+										<ActiveSource Name="SoftWhooshDash" ID="{8D6BDE3F-A910-424E-9559-1AB478A7E3AC}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+							<ObjectLists/>
+						</RandomSequenceContainer>
 					</ChildrenList>
 					<ObjectLists/>
 				</ActorMixer>
