@@ -10,8 +10,16 @@
 							<Position X="0" Y="0"/>
 						</Module>
 						<Module>
+							<ObjectRef Name="Play_GruntProjectileThrow" ID="{86CF7DB1-9C22-4C17-B938-BE8E0361010A}" WorkUnitID="{241DAD68-20A2-4EEC-81F1-8FCC85376151}"/>
+							<Position X="0" Y="1"/>
+						</Module>
+						<Module>
 							<ObjectRef Name="Play_Watering" ID="{22B88C88-6389-4000-929B-43B5CA33F90E}" WorkUnitID="{241DAD68-20A2-4EEC-81F1-8FCC85376151}"/>
 							<Position X="1" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Play_CharDeath" ID="{0C65D409-F000-454E-87DC-6BA0FD40D606}" WorkUnitID="{241DAD68-20A2-4EEC-81F1-8FCC85376151}"/>
+							<Position X="1" Y="1"/>
 						</Module>
 						<Module>
 							<ObjectRef Name="Stop_Watering" ID="{789702E3-2702-4E28-9A6F-E8E1195B516A}" WorkUnitID="{241DAD68-20A2-4EEC-81F1-8FCC85376151}"/>

@@ -19,6 +19,8 @@ public class SceneTransition : MonoBehaviour
     string sceneToLoad;
     int loadType;
 
+    public string SceneToLoad => sceneToLoad;
+
     private void Awake()
     {
         if (Instance == null)

@@ -2937,6 +2937,7 @@ GameObject:
   - component: {fileID: 5456076604507349766}
   - component: {fileID: 3666491764288061757}
   - component: {fileID: 8525052462461972730}
+  - component: {fileID: 8434092711139362061}
   m_Layer: 0
   m_Name: NewMageElite
   m_TagString: Enemy
@@ -3053,6 +3054,28 @@ CapsuleCollider:
   m_Height: 1.9600432
   m_Direction: 1
   m_Center: {x: -0.04066372, y: 0.7019907, z: 0}
+--- !u!114 &8434092711139362061
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7123948133131095604}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 35b26296480c84795b02d52f2dad072d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_listeners:
+    initialListenerList: []
+    useDefaultListeners: 1
+  isEnvironmentAware: 1
+  isStaticObject: 0
+  m_positionOffsetData:
+    KeepMe: 0
+    positionOffset: {x: 0, y: 0, z: 0}
+  m_posOffsetData: {fileID: 0}
+  listenerMask: 1
 --- !u!1 &7180573799531438840
 GameObject:
   m_ObjectHideFlags: 0

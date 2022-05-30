@@ -118,6 +118,11 @@ public class PlayerController : MonoBehaviour
     public int LavalampColor;
     private bool gameIsPaused;
     public bool IsInCombat = true;
+    
+    [Header("Player Enviroment Aware")]
+    [SerializeField]
+    AkGameObj _akGameObj;
+    private string actualScene;
 
     void Awake()
     {
@@ -168,7 +173,12 @@ public class PlayerController : MonoBehaviour
                 walkingDistance += Time.deltaTime;
                 if (walkingDistance >= 0.3f)
                 {
-                    AkSoundEngine.PostEvent("Play_Step", this.gameObject);
+                    if (SceneTransition.Instance.SceneToLoad != actualScene)
+                    {
+                        actualScene = SceneTransition.Instance.SceneToLoad;
+                        SetSceneMaterialSound(actualScene);
+                    }
+                    AkSoundEngine.PostEvent("Play_Step", _akGameObj.gameObject);
                     walkingDistance = 0;
                 }
             }
@@ -197,10 +207,22 @@ public class PlayerController : MonoBehaviour
             DashStarted = false;
         }
     }
+    
+    private void SetSceneMaterialSound(string _sceneToLoad)
+    {
+        if (_sceneToLoad.Equals("MainRoom"))
+        {
+            AkSoundEngine.SetSwitch("Material", "Default", this.gameObject);
+        }
+        else
+        {
+            AkSoundEngine.SetSwitch("Material", "Stone", this.gameObject);
+        }
+    }
 
     public void Die()
     {
-        //PlaySound PlayerDeath
+        AkSoundEngine.PostEvent("Play_CharDeath", this.gameObject);
         myAnimator.SetBool("die", true);
         SceneTransition.Instance.ChangeScene("MainRoom", 0);
     }
@@ -327,7 +349,7 @@ public class PlayerController : MonoBehaviour
     {
         if (!isInvincible)
         {
-            //PlaySound Hurt
+            AkSoundEngine.PostEvent("Play_CharHurt", this.gameObject);
             HealthPoints -= damage;
         }
     }
@@ -379,7 +401,7 @@ public class PlayerController : MonoBehaviour
     public void StartDash()
     {
         DashStarted = true;
-        //PlaySound Dash
+        AkSoundEngine.PostEvent("Play_CharDash", this.gameObject);
     }
 
     public void EndDash()
@@ -392,7 +414,7 @@ public class PlayerController : MonoBehaviour
     public void StartSpinAttack()
     {
         IsSpinning = true;
-        //PlaySound Spinmove
+        AkSoundEngine.PostEvent("Play_CharSpin", this.gameObject);
     }
 
     public void EndSpinAttack()
