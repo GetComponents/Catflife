@@ -23,28 +23,28 @@ public class PlayerUnlock : MonoBehaviour
             case EUnlockType.NONE:
                 break;
             case EUnlockType.SPINMOVE:
-                if (PlayerController.Instance.unlockedSpinMove)
+                if (!PlayerController.Instance.unlockedSpinMove)
                 {
                     AkSoundEngine.PostEvent("Play_UnlockJingle", this.gameObject);
                     PlayerController.Instance.unlockedSpinMove = true;
                 }
                 break;
             case EUnlockType.PROJECTILE:
-                if (PlayerController.Instance.unlockedProjectile)
+                if (!PlayerController.Instance.unlockedProjectile)
                 {
                     AkSoundEngine.PostEvent("Play_UnlockJingle", this.gameObject);
                     PlayerController.Instance.unlockedProjectile = true;
                 }
                 break;
             case EUnlockType.REFLECT:
-                if (PlayerController.Instance.unlockedReflect)
+                if (!PlayerController.Instance.unlockedReflect)
                 {
                     AkSoundEngine.PostEvent("Play_UnlockJingle", this.gameObject);
                     PlayerController.Instance.unlockedReflect = true;
                 }
                 break;
             case EUnlockType.STATUE:
-                if (PlayerController.Instance.UnlockedStatue)
+                if (!PlayerController.Instance.UnlockedStatue)
                 {
                     AkSoundEngine.PostEvent("Play_UnlockJingle", this.gameObject);
                     PlayerController.Instance.UnlockedStatue = true;

@@ -24,7 +24,11 @@ namespace EnemyAI
 
         new void Update()
         {
-            MoveTowardsPlayer();
+            base.Update();
+            if (isAggro)
+            {
+                MoveTowardsPlayer();
+            }
         }
 
         private void MoveTowardsPlayer()

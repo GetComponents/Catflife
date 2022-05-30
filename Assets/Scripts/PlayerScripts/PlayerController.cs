@@ -43,6 +43,7 @@ public class PlayerController : MonoBehaviour
             {
                 myAnimator.SetBool("takeDamage", true);
                 Die();
+                StartCoroutine(TurnInvincible());
                 m_healthPoints = 0;
             }
             else if (value < m_healthPoints)
@@ -98,8 +99,7 @@ public class PlayerController : MonoBehaviour
     public bool unlockedSpinMove, unlockedReflect, unlockedProjectile, UnlockedStatue;
     [SerializeField]
     int spinMoveManaCost, projectileManaCost;
-    [SerializeField]
-    GameObject projectile;
+    public GameObject Projectile;
     public float ProjectileDamage, ProjectileSpeed;
     Vector2 m_moveDir = new Vector2();
     [SerializeField]
@@ -118,7 +118,7 @@ public class PlayerController : MonoBehaviour
     public int LavalampColor;
     private bool gameIsPaused;
     public bool IsInCombat = true;
-    
+
     [Header("Player Enviroment Aware")]
     [SerializeField]
     AkGameObj _akGameObj;
@@ -207,7 +207,7 @@ public class PlayerController : MonoBehaviour
             DashStarted = false;
         }
     }
-    
+
     private void SetSceneMaterialSound(string _sceneToLoad)
     {
         if (_sceneToLoad.Equals("MainRoom"))
@@ -357,7 +357,7 @@ public class PlayerController : MonoBehaviour
     IEnumerator TurnInvincible()
     {
         isInvincible = true;
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(2);
         isInvincible = false;
     }
 
@@ -426,7 +426,7 @@ public class PlayerController : MonoBehaviour
 
     public void StartCast()
     {
-        GameObject tmp = Instantiate(projectile, castHand.position, Quaternion.identity);
+        GameObject tmp = Instantiate(Projectile, castHand.position, Quaternion.identity);
         tmp.GetComponent<Rigidbody>().AddForce(transform.GetChild(0).forward.normalized * ProjectileSpeed, ForceMode.Impulse);
         tmp.GetComponent<PlayerProjectile>().MyDamage = ProjectileDamage;
         AkSoundEngine.PostEvent("Play_CharProjectileThrow", this.gameObject);
@@ -436,7 +436,7 @@ public class PlayerController : MonoBehaviour
     {
         if (unlockedReflect)
         {
-            GameObject tmp = Instantiate(projectile, projectileTransform.position, Quaternion.identity);
+            GameObject tmp = Instantiate(Projectile, projectileTransform.position, Quaternion.identity);
             tmp.transform.localScale = projectileTransform.localScale;
             tmp.GetComponent<Rigidbody>().AddForce(transform.GetChild(0).forward.normalized * ProjectileSpeed, ForceMode.Impulse);
             tmp.GetComponent<PlayerProjectile>().MyDamage = ProjectileDamage;
