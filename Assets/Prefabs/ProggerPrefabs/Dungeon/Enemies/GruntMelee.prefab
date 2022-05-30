@@ -501,11 +501,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1603312974673345560}
-  - component: {fileID: 1603312974673345563}
   - component: {fileID: 1603312974673345558}
   - component: {fileID: 837999138229813526}
   - component: {fileID: 1110454577548070710}
   - component: {fileID: 6530196349030305693}
+  - component: {fileID: 4712911932147063245}
   m_Layer: 2
   m_Name: GruntMelee
   m_TagString: Enemy
@@ -531,19 +531,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!135 &1603312974673345563
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1603312974673345564}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.34708259
-  m_Center: {x: 0, y: 0.49552187, z: 0}
 --- !u!195 &1603312974673345558
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -634,6 +621,20 @@ MonoBehaviour:
   MaxStopCounter: 1
   JumpingDistance: 5
   myAnimator: {fileID: 1110454577548070710}
+--- !u!136 &4712911932147063245
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1603312974673345564}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.5
+  m_Height: 1.3414255
+  m_Direction: 1
+  m_Center: {x: 0, y: 0.17071277, z: 0}
 --- !u!1 &1666688782624801492
 GameObject:
   m_ObjectHideFlags: 0

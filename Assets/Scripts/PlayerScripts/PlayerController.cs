@@ -102,7 +102,8 @@ public class PlayerController : MonoBehaviour
     GameObject projectile;
     public float ProjectileDamage, ProjectileSpeed;
     Vector2 m_moveDir = new Vector2();
-
+    [SerializeField]
+    Transform castHand;
     Vector3 dashDirection;
 
     [HideInInspector]
@@ -403,7 +404,7 @@ public class PlayerController : MonoBehaviour
 
     public void StartCast()
     {
-        GameObject tmp = Instantiate(projectile, transform.GetChild(0).position, Quaternion.identity);
+        GameObject tmp = Instantiate(projectile, castHand.position, Quaternion.identity);
         tmp.GetComponent<Rigidbody>().AddForce(transform.GetChild(0).forward.normalized * ProjectileSpeed, ForceMode.Impulse);
         tmp.GetComponent<PlayerProjectile>().MyDamage = ProjectileDamage;
         AkSoundEngine.PostEvent("Play_CharProjectileThrow", this.gameObject);

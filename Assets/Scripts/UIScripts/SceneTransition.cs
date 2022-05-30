@@ -13,6 +13,9 @@ public class SceneTransition : MonoBehaviour
     [SerializeField]
     SkinnedMeshRenderer playerSword;
 
+    [SerializeField]
+    GameObject dontDestroyCanvas;
+
     string sceneToLoad;
     int loadType;
 
@@ -28,7 +31,7 @@ public class SceneTransition : MonoBehaviour
             return;
         }
         SceneManager.activeSceneChanged += EndTransition;
-        
+        DontDestroyOnLoad(dontDestroyCanvas);
     }
 
     public void ChangeScene(string _sceneToLoad, int _loadType)
@@ -79,6 +82,7 @@ public class SceneTransition : MonoBehaviour
     public void EndTransition(Scene _previousScene, Scene _newScene)
     {
         string newSceneName = _newScene.name;
+        Debug.Log("new scene name: " + newSceneName);
         if (newSceneName == "Combat" || "CombatDebug" == newSceneName || newSceneName == "BossStage")
         {
             PlayerController.Instance.IsInCombat = true;
@@ -88,6 +92,21 @@ public class SceneTransition : MonoBehaviour
         {
             PlayerController.Instance.IsInCombat = false;
             playerSword.enabled = false;
+        }
+        if (newSceneName == "EndScene")
+        {
+            //GameObject[] tmp = SceneManager.GetSceneByName("DontDestroyOnLoad").GetRootGameObjects();
+            //Debug.Log("Objectamount in ddol: " + tmp.Length);
+            //foreach (GameObject _object in tmp)
+            //{
+            //    if (_object == dontDestroyCanvas)
+            //    {
+            //        continue;
+            //    }
+            //    Debug.Log(_object.name);
+            //    Destroy(_object);
+            //}
+            //Destroy(dontDestroyCanvas);
         }
         if(_newScene == SceneManager.GetSceneByName("MainRoom"))
         {
