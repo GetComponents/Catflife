@@ -506,6 +506,7 @@ GameObject:
   - component: {fileID: 1110454577548070710}
   - component: {fileID: 6530196349030305693}
   - component: {fileID: 4712911932147063245}
+  - component: {fileID: -920122673830525395}
   m_Layer: 2
   m_Name: GruntMelee
   m_TagString: Enemy
@@ -635,6 +636,28 @@ CapsuleCollider:
   m_Height: 0.79687583
   m_Direction: 1
   m_Center: {x: 0, y: -0.078718126, z: 0}
+--- !u!114 &-920122673830525395
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1603312974673345564}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 35b26296480c84795b02d52f2dad072d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_listeners:
+    initialListenerList: []
+    useDefaultListeners: 1
+  isEnvironmentAware: 1
+  isStaticObject: 0
+  m_positionOffsetData:
+    KeepMe: 0
+    positionOffset: {x: 0, y: 0, z: 0}
+  m_posOffsetData: {fileID: 0}
+  listenerMask: 1
 --- !u!1 &1666688782624801492
 GameObject:
   m_ObjectHideFlags: 0

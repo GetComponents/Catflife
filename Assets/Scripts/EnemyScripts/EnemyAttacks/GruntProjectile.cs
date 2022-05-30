@@ -42,4 +42,9 @@ public class GruntProjectile : MonoBehaviour
         AkSoundEngine.StopPlayingID(playingID, 200, AkCurveInterpolation.AkCurveInterpolation_Constant);
         AkSoundEngine.PostEvent("Play_GruntProjectileExplode", this.gameObject);
     }
+    
+    private void OnDestroy()
+    {
+        AkSoundEngine.StopPlayingID(playingID, 200, AkCurveInterpolation.AkCurveInterpolation_Constant);
+    }
 }

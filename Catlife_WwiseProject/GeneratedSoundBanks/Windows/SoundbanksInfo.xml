@@ -11,7 +11,7 @@
 	<StreamedFiles/>
 	<MediaFilesNotInAnyBank/>
 	<SoundBanks>
-		<SoundBank Id="393239870" Language="SFX" Hash="4019108520">
+		<SoundBank Id="393239870" Language="SFX" Hash="3025514428">
 			<ObjectPath>\SoundBanks\Default Work Unit\SFX</ObjectPath>
 			<ShortName>SFX</ShortName>
 			<Path>SFX.bnk</Path>
@@ -37,6 +37,113 @@
 						<File Id="861986732" Language="SFX">
 							<ShortName>UIButtonPress.wav</ShortName>
 							<Path>SFX/UIButtonPress_0F0627E1.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="4198908286" Name="Play_CharDash" ObjectPath="\Events\Default Work Unit\Character\Play_CharDash" DurationType="OneShot" DurationMin="0.552547" DurationMax="0.668513">
+					<IncludedMemoryFiles>
+						<File Id="159060462" Language="SFX">
+							<ShortName>SoftWhooshDash.wav</ShortName>
+							<Path>SFX/SoftWhooshDash_7870BC91.wem</Path>
+						</File>
+						<File Id="416701831" Language="SFX">
+							<ShortName>SoftWhooshDash.wav</ShortName>
+							<Path>SFX/SoftWhooshDash_0D39F20F.wem</Path>
+						</File>
+						<File Id="536830051" Language="SFX">
+							<ShortName>SoftWhooshDash.wav</ShortName>
+							<Path>SFX/SoftWhooshDash_124E63E0.wem</Path>
+						</File>
+						<File Id="770718429" Language="SFX">
+							<ShortName>SoftWhooshDash.wav</ShortName>
+							<Path>SFX/SoftWhooshDash_6F97777C.wem</Path>
+						</File>
+						<File Id="1037053258" Language="SFX">
+							<ShortName>SoftWhooshDash.wav</ShortName>
+							<Path>SFX/SoftWhooshDash_4F86D787.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+					<ActionPostEvent>
+						<ActionPostEventEntry Id="99206220" Name="Play_Step" ObjectPath="\Events\Default Work Unit\Character\Play_Step"/>
+					</ActionPostEvent>
+				</Event>
+				<Event Id="214494936" Name="Play_CharDeath" ObjectPath="\Events\Default Work Unit\Character\Play_CharDeath" DurationType="OneShot" DurationMin="0.884549" DurationMax="2.206522">
+					<IncludedMemoryFiles>
+						<File Id="145299274" Language="SFX">
+							<ShortName>CharDeath.wav</ShortName>
+							<Path>SFX/CharDeath_E711F849.wem</Path>
+						</File>
+						<File Id="507177512" Language="SFX">
+							<ShortName>CharDeath.wav</ShortName>
+							<Path>SFX/CharDeath_9877822D.wem</Path>
+						</File>
+						<File Id="911625356" Language="SFX">
+							<ShortName>CharDeath.wav</ShortName>
+							<Path>SFX/CharDeath_5ACDFE68.wem</Path>
+						</File>
+						<File Id="1003332352" Language="SFX">
+							<ShortName>CharDeath.wav</ShortName>
+							<Path>SFX/CharDeath_43240916.wem</Path>
+						</File>
+						<File Id="1025540274" Language="SFX">
+							<ShortName>CharDeath.wav</ShortName>
+							<Path>SFX/CharDeath_6FD16D1F.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="4020548773" Name="Play_CharHurt" ObjectPath="\Events\Default Work Unit\Character\Play_CharHurt" DurationType="OneShot" DurationMin="0.296784" DurationMax="1.786232">
+					<IncludedMemoryFiles>
+						<File Id="26091089" Language="SFX">
+							<ShortName>CharHurt.wav</ShortName>
+							<Path>SFX/CharHurt_6B9289FD.wem</Path>
+						</File>
+						<File Id="35751028" Language="SFX">
+							<ShortName>CharHurt.wav</ShortName>
+							<Path>SFX/CharHurt_93D7CD09.wem</Path>
+						</File>
+						<File Id="139706771" Language="SFX">
+							<ShortName>CharHurt.wav</ShortName>
+							<Path>SFX/CharHurt_D21F2EC8.wem</Path>
+						</File>
+						<File Id="153111388" Language="SFX">
+							<ShortName>CharHurt.wav</ShortName>
+							<Path>SFX/CharHurt_284D748B.wem</Path>
+						</File>
+						<File Id="163553998" Language="SFX">
+							<ShortName>CharHurt.wav</ShortName>
+							<Path>SFX/CharHurt_E94066AE.wem</Path>
+						</File>
+						<File Id="500629284" Language="SFX">
+							<ShortName>CharHurt.wav</ShortName>
+							<Path>SFX/CharHurt_B28F64C3.wem</Path>
+						</File>
+						<File Id="587118507" Language="SFX">
+							<ShortName>CharHurt.wav</ShortName>
+							<Path>SFX/CharHurt_E1E6AA3F.wem</Path>
+						</File>
+						<File Id="766108406" Language="SFX">
+							<ShortName>CharHurt.wav</ShortName>
+							<Path>SFX/CharHurt_A1A18F68.wem</Path>
+						</File>
+						<File Id="865593000" Language="SFX">
+							<ShortName>CharHurt.wav</ShortName>
+							<Path>SFX/CharHurt_7FF8DFE4.wem</Path>
+						</File>
+						<File Id="937864113" Language="SFX">
+							<ShortName>CharHurt.wav</ShortName>
+							<Path>SFX/CharHurt_EB38943C.wem</Path>
+						</File>
+						<File Id="1010163066" Language="SFX">
+							<ShortName>CharHurt.wav</ShortName>
+							<Path>SFX/CharHurt_62AEBD17.wem</Path>
+						</File>
+						<File Id="1011683481" Language="SFX">
+							<ShortName>CharHurt.wav</ShortName>
+							<Path>SFX/CharHurt_5F0A3913.wem</Path>
+						</File>
+						<File Id="1066943025" Language="SFX">
+							<ShortName>CharHurt.wav</ShortName>
+							<Path>SFX/CharHurt_05C76ADF.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -113,6 +220,30 @@
 						<File Id="1013540231" Language="SFX">
 							<ShortName>ProjectileThrow.wav</ShortName>
 							<Path>SFX/ProjectileThrow_C962039C.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="25077814" Name="Play_CharSpin" ObjectPath="\Events\Default Work Unit\Character\Play_CharSpin" DurationType="OneShot" DurationMin="0.852547" DurationMax="0.968513">
+					<IncludedMemoryFiles>
+						<File Id="159060462" Language="SFX">
+							<ShortName>SoftWhooshDash.wav</ShortName>
+							<Path>SFX/SoftWhooshDash_7870BC91.wem</Path>
+						</File>
+						<File Id="416701831" Language="SFX">
+							<ShortName>SoftWhooshDash.wav</ShortName>
+							<Path>SFX/SoftWhooshDash_0D39F20F.wem</Path>
+						</File>
+						<File Id="536830051" Language="SFX">
+							<ShortName>SoftWhooshDash.wav</ShortName>
+							<Path>SFX/SoftWhooshDash_124E63E0.wem</Path>
+						</File>
+						<File Id="770718429" Language="SFX">
+							<ShortName>SoftWhooshDash.wav</ShortName>
+							<Path>SFX/SoftWhooshDash_6F97777C.wem</Path>
+						</File>
+						<File Id="1037053258" Language="SFX">
+							<ShortName>SoftWhooshDash.wav</ShortName>
+							<Path>SFX/SoftWhooshDash_4F86D787.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -307,32 +438,127 @@
 							<Path>SFX/CardboardImpact_9083B01B.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
+					<ActionPostEvent>
+						<ActionPostEventEntry Id="31596624" Name="Play_PoofCardboard" ObjectPath="\Events\Default Work Unit\ItemsScene\Play_PoofCardboard"/>
+					</ActionPostEvent>
 				</Event>
-				<Event Id="1438502543" Name="Play_LeavingFootsteps" ObjectPath="\Events\Default Work Unit\Character\Play_LeavingFootsteps" DurationType="OneShot" DurationMin="0.947353" DurationMax="1.385587">
+				<Event Id="1438502543" Name="Play_LeavingFootsteps" ObjectPath="\Events\Default Work Unit\Character\Play_LeavingFootsteps" DurationType="OneShot" DurationMin="1.064612" DurationMax="2.242918">
 					<IncludedMemoryFiles>
-						<File Id="323942138" Language="SFX">
-							<ShortName>Tile1.wav</ShortName>
-							<Path>SFX/Tile1_46AB9349.wem</Path>
+						<File Id="27783476" Language="SFX">
+							<ShortName>Footsteps_Wood_Walk_07.wav</ShortName>
+							<Path>SFX/Footsteps_Wood_Walk_07_10C4C929.wem</Path>
 						</File>
-						<File Id="385491676" Language="SFX">
-							<ShortName>Tile1.wav</ShortName>
-							<Path>SFX/Tile1_9D91DD5F.wem</Path>
+						<File Id="41821027" Language="SFX">
+							<ShortName>Footsteps_Rock_Walk_02.wav</ShortName>
+							<Path>SFX/Footsteps_Rock_Walk_02_10C4C929.wem</Path>
 						</File>
-						<File Id="431402745" Language="SFX">
-							<ShortName>Tile1.wav</ShortName>
-							<Path>SFX/Tile1_D145568B.wem</Path>
+						<File Id="103452772" Language="SFX">
+							<ShortName>Footsteps_Wood_Walk_01.wav</ShortName>
+							<Path>SFX/Footsteps_Wood_Walk_01_10C4C929.wem</Path>
 						</File>
-						<File Id="492770314" Language="SFX">
-							<ShortName>Tile1.wav</ShortName>
-							<Path>SFX/Tile1_DECFB337.wem</Path>
+						<File Id="156892307" Language="SFX">
+							<ShortName>Footsteps_Wood_Walk_04.wav</ShortName>
+							<Path>SFX/Footsteps_Wood_Walk_04_10C4C929.wem</Path>
 						</File>
-						<File Id="736235376" Language="SFX">
-							<ShortName>Tile1.wav</ShortName>
-							<Path>SFX/Tile1_99C0194F.wem</Path>
+						<File Id="172301586" Language="SFX">
+							<ShortName>Footsteps_Wood_Walk_08.wav</ShortName>
+							<Path>SFX/Footsteps_Wood_Walk_08_10C4C929.wem</Path>
 						</File>
-						<File Id="777566849" Language="SFX">
-							<ShortName>Tile1.wav</ShortName>
-							<Path>SFX/Tile1_0651EECB.wem</Path>
+						<File Id="212556327" Language="SFX">
+							<ShortName>Footsteps_Wood_Walk_10.wav</ShortName>
+							<Path>SFX/Footsteps_Wood_Walk_10_10C4C929.wem</Path>
+						</File>
+						<File Id="268093903" Language="SFX">
+							<ShortName>Footsteps_Rock_Walk_05.wav</ShortName>
+							<Path>SFX/Footsteps_Rock_Walk_05_10C4C929.wem</Path>
+						</File>
+						<File Id="274151979" Language="SFX">
+							<ShortName>Footsteps_Gravel_Walk_08.wav</ShortName>
+							<Path>SFX/Footsteps_Gravel_Walk_08_10C4C929.wem</Path>
+						</File>
+						<File Id="341042815" Language="SFX">
+							<ShortName>Footsteps_Wood_Walk_05.wav</ShortName>
+							<Path>SFX/Footsteps_Wood_Walk_05_10C4C929.wem</Path>
+						</File>
+						<File Id="383558592" Language="SFX">
+							<ShortName>Footsteps_Gravel_Walk_03.wav</ShortName>
+							<Path>SFX/Footsteps_Gravel_Walk_03_10C4C929.wem</Path>
+						</File>
+						<File Id="411920450" Language="SFX">
+							<ShortName>Footsteps_Gravel_Walk_02.wav</ShortName>
+							<Path>SFX/Footsteps_Gravel_Walk_02_10C4C929.wem</Path>
+						</File>
+						<File Id="443044315" Language="SFX">
+							<ShortName>Footsteps_Gravel_Walk_01.wav</ShortName>
+							<Path>SFX/Footsteps_Gravel_Walk_01_10C4C929.wem</Path>
+						</File>
+						<File Id="444223497" Language="SFX">
+							<ShortName>Footsteps_Wood_Walk_06.wav</ShortName>
+							<Path>SFX/Footsteps_Wood_Walk_06_10C4C929.wem</Path>
+						</File>
+						<File Id="446841045" Language="SFX">
+							<ShortName>Footsteps_Wood_Walk_02.wav</ShortName>
+							<Path>SFX/Footsteps_Wood_Walk_02_10C4C929.wem</Path>
+						</File>
+						<File Id="463591104" Language="SFX">
+							<ShortName>Footsteps_Gravel_Walk_10.wav</ShortName>
+							<Path>SFX/Footsteps_Gravel_Walk_10_10C4C929.wem</Path>
+						</File>
+						<File Id="487076313" Language="SFX">
+							<ShortName>Footsteps_Wood_Walk_03.wav</ShortName>
+							<Path>SFX/Footsteps_Wood_Walk_03_10C4C929.wem</Path>
+						</File>
+						<File Id="514607162" Language="SFX">
+							<ShortName>Footsteps_Gravel_Walk_04.wav</ShortName>
+							<Path>SFX/Footsteps_Gravel_Walk_04_10C4C929.wem</Path>
+						</File>
+						<File Id="568193324" Language="SFX">
+							<ShortName>Footsteps_Rock_Walk_09.wav</ShortName>
+							<Path>SFX/Footsteps_Rock_Walk_09_10C4C929.wem</Path>
+						</File>
+						<File Id="575418895" Language="SFX">
+							<ShortName>Footsteps_Gravel_Walk_05.wav</ShortName>
+							<Path>SFX/Footsteps_Gravel_Walk_05_10C4C929.wem</Path>
+						</File>
+						<File Id="577452134" Language="SFX">
+							<ShortName>Footsteps_Rock_Walk_06.wav</ShortName>
+							<Path>SFX/Footsteps_Rock_Walk_06_10C4C929.wem</Path>
+						</File>
+						<File Id="583433152" Language="SFX">
+							<ShortName>Footsteps_Rock_Walk_07.wav</ShortName>
+							<Path>SFX/Footsteps_Rock_Walk_07_10C4C929.wem</Path>
+						</File>
+						<File Id="622867612" Language="SFX">
+							<ShortName>Footsteps_Gravel_Walk_09.wav</ShortName>
+							<Path>SFX/Footsteps_Gravel_Walk_09_10C4C929.wem</Path>
+						</File>
+						<File Id="636452334" Language="SFX">
+							<ShortName>Footsteps_Rock_Walk_08.wav</ShortName>
+							<Path>SFX/Footsteps_Rock_Walk_08_10C4C929.wem</Path>
+						</File>
+						<File Id="691801118" Language="SFX">
+							<ShortName>Footsteps_Wood_Walk_09.wav</ShortName>
+							<Path>SFX/Footsteps_Wood_Walk_09_10C4C929.wem</Path>
+						</File>
+						<File Id="736475125" Language="SFX">
+							<ShortName>Footsteps_Rock_Walk_03.wav</ShortName>
+							<Path>SFX/Footsteps_Rock_Walk_03_10C4C929.wem</Path>
+						</File>
+						<File Id="852044673" Language="SFX">
+							<ShortName>Footsteps_Gravel_Walk_07.wav</ShortName>
+							<Path>SFX/Footsteps_Gravel_Walk_07_10C4C929.wem</Path>
+						</File>
+						<File Id="856653355" Language="SFX">
+							<ShortName>Footsteps_Gravel_Walk_06.wav</ShortName>
+							<Path>SFX/Footsteps_Gravel_Walk_06_10C4C929.wem</Path>
+						</File>
+						<File Id="983664555" Language="SFX">
+							<ShortName>Footsteps_Rock_Walk_01.wav</ShortName>
+							<Path>SFX/Footsteps_Rock_Walk_01_10C4C929.wem</Path>
+						</File>
+						<File Id="1038919582" Language="SFX">
+							<ShortName>Footsteps_Rock_Walk_04.wav</ShortName>
+							<Path>SFX/Footsteps_Rock_Walk_04_10C4C929.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -416,43 +642,162 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="99206220" Name="Play_Step" ObjectPath="\Events\Default Work Unit\Character\Play_Step" DurationType="OneShot" DurationMin="0.097353" DurationMax="0.485587">
+				<Event Id="99206220" Name="Play_Step" ObjectPath="\Events\Default Work Unit\Character\Play_Step" DurationType="OneShot" DurationMin="0.214612" DurationMax="1.342918">
 					<IncludedMemoryFiles>
-						<File Id="323942138" Language="SFX">
-							<ShortName>Tile1.wav</ShortName>
-							<Path>SFX/Tile1_46AB9349.wem</Path>
+						<File Id="27783476" Language="SFX">
+							<ShortName>Footsteps_Wood_Walk_07.wav</ShortName>
+							<Path>SFX/Footsteps_Wood_Walk_07_10C4C929.wem</Path>
 						</File>
-						<File Id="385491676" Language="SFX">
-							<ShortName>Tile1.wav</ShortName>
-							<Path>SFX/Tile1_9D91DD5F.wem</Path>
+						<File Id="41821027" Language="SFX">
+							<ShortName>Footsteps_Rock_Walk_02.wav</ShortName>
+							<Path>SFX/Footsteps_Rock_Walk_02_10C4C929.wem</Path>
 						</File>
-						<File Id="431402745" Language="SFX">
-							<ShortName>Tile1.wav</ShortName>
-							<Path>SFX/Tile1_D145568B.wem</Path>
+						<File Id="103452772" Language="SFX">
+							<ShortName>Footsteps_Wood_Walk_01.wav</ShortName>
+							<Path>SFX/Footsteps_Wood_Walk_01_10C4C929.wem</Path>
 						</File>
-						<File Id="492770314" Language="SFX">
-							<ShortName>Tile1.wav</ShortName>
-							<Path>SFX/Tile1_DECFB337.wem</Path>
+						<File Id="156892307" Language="SFX">
+							<ShortName>Footsteps_Wood_Walk_04.wav</ShortName>
+							<Path>SFX/Footsteps_Wood_Walk_04_10C4C929.wem</Path>
 						</File>
-						<File Id="736235376" Language="SFX">
-							<ShortName>Tile1.wav</ShortName>
-							<Path>SFX/Tile1_99C0194F.wem</Path>
+						<File Id="172301586" Language="SFX">
+							<ShortName>Footsteps_Wood_Walk_08.wav</ShortName>
+							<Path>SFX/Footsteps_Wood_Walk_08_10C4C929.wem</Path>
 						</File>
-						<File Id="777566849" Language="SFX">
-							<ShortName>Tile1.wav</ShortName>
-							<Path>SFX/Tile1_0651EECB.wem</Path>
+						<File Id="212556327" Language="SFX">
+							<ShortName>Footsteps_Wood_Walk_10.wav</ShortName>
+							<Path>SFX/Footsteps_Wood_Walk_10_10C4C929.wem</Path>
+						</File>
+						<File Id="268093903" Language="SFX">
+							<ShortName>Footsteps_Rock_Walk_05.wav</ShortName>
+							<Path>SFX/Footsteps_Rock_Walk_05_10C4C929.wem</Path>
+						</File>
+						<File Id="274151979" Language="SFX">
+							<ShortName>Footsteps_Gravel_Walk_08.wav</ShortName>
+							<Path>SFX/Footsteps_Gravel_Walk_08_10C4C929.wem</Path>
+						</File>
+						<File Id="341042815" Language="SFX">
+							<ShortName>Footsteps_Wood_Walk_05.wav</ShortName>
+							<Path>SFX/Footsteps_Wood_Walk_05_10C4C929.wem</Path>
+						</File>
+						<File Id="383558592" Language="SFX">
+							<ShortName>Footsteps_Gravel_Walk_03.wav</ShortName>
+							<Path>SFX/Footsteps_Gravel_Walk_03_10C4C929.wem</Path>
+						</File>
+						<File Id="411920450" Language="SFX">
+							<ShortName>Footsteps_Gravel_Walk_02.wav</ShortName>
+							<Path>SFX/Footsteps_Gravel_Walk_02_10C4C929.wem</Path>
+						</File>
+						<File Id="443044315" Language="SFX">
+							<ShortName>Footsteps_Gravel_Walk_01.wav</ShortName>
+							<Path>SFX/Footsteps_Gravel_Walk_01_10C4C929.wem</Path>
+						</File>
+						<File Id="444223497" Language="SFX">
+							<ShortName>Footsteps_Wood_Walk_06.wav</ShortName>
+							<Path>SFX/Footsteps_Wood_Walk_06_10C4C929.wem</Path>
+						</File>
+						<File Id="446841045" Language="SFX">
+							<ShortName>Footsteps_Wood_Walk_02.wav</ShortName>
+							<Path>SFX/Footsteps_Wood_Walk_02_10C4C929.wem</Path>
+						</File>
+						<File Id="463591104" Language="SFX">
+							<ShortName>Footsteps_Gravel_Walk_10.wav</ShortName>
+							<Path>SFX/Footsteps_Gravel_Walk_10_10C4C929.wem</Path>
+						</File>
+						<File Id="487076313" Language="SFX">
+							<ShortName>Footsteps_Wood_Walk_03.wav</ShortName>
+							<Path>SFX/Footsteps_Wood_Walk_03_10C4C929.wem</Path>
+						</File>
+						<File Id="514607162" Language="SFX">
+							<ShortName>Footsteps_Gravel_Walk_04.wav</ShortName>
+							<Path>SFX/Footsteps_Gravel_Walk_04_10C4C929.wem</Path>
+						</File>
+						<File Id="568193324" Language="SFX">
+							<ShortName>Footsteps_Rock_Walk_09.wav</ShortName>
+							<Path>SFX/Footsteps_Rock_Walk_09_10C4C929.wem</Path>
+						</File>
+						<File Id="575418895" Language="SFX">
+							<ShortName>Footsteps_Gravel_Walk_05.wav</ShortName>
+							<Path>SFX/Footsteps_Gravel_Walk_05_10C4C929.wem</Path>
+						</File>
+						<File Id="577452134" Language="SFX">
+							<ShortName>Footsteps_Rock_Walk_06.wav</ShortName>
+							<Path>SFX/Footsteps_Rock_Walk_06_10C4C929.wem</Path>
+						</File>
+						<File Id="583433152" Language="SFX">
+							<ShortName>Footsteps_Rock_Walk_07.wav</ShortName>
+							<Path>SFX/Footsteps_Rock_Walk_07_10C4C929.wem</Path>
+						</File>
+						<File Id="622867612" Language="SFX">
+							<ShortName>Footsteps_Gravel_Walk_09.wav</ShortName>
+							<Path>SFX/Footsteps_Gravel_Walk_09_10C4C929.wem</Path>
+						</File>
+						<File Id="636452334" Language="SFX">
+							<ShortName>Footsteps_Rock_Walk_08.wav</ShortName>
+							<Path>SFX/Footsteps_Rock_Walk_08_10C4C929.wem</Path>
+						</File>
+						<File Id="691801118" Language="SFX">
+							<ShortName>Footsteps_Wood_Walk_09.wav</ShortName>
+							<Path>SFX/Footsteps_Wood_Walk_09_10C4C929.wem</Path>
+						</File>
+						<File Id="736475125" Language="SFX">
+							<ShortName>Footsteps_Rock_Walk_03.wav</ShortName>
+							<Path>SFX/Footsteps_Rock_Walk_03_10C4C929.wem</Path>
+						</File>
+						<File Id="852044673" Language="SFX">
+							<ShortName>Footsteps_Gravel_Walk_07.wav</ShortName>
+							<Path>SFX/Footsteps_Gravel_Walk_07_10C4C929.wem</Path>
+						</File>
+						<File Id="856653355" Language="SFX">
+							<ShortName>Footsteps_Gravel_Walk_06.wav</ShortName>
+							<Path>SFX/Footsteps_Gravel_Walk_06_10C4C929.wem</Path>
+						</File>
+						<File Id="983664555" Language="SFX">
+							<ShortName>Footsteps_Rock_Walk_01.wav</ShortName>
+							<Path>SFX/Footsteps_Rock_Walk_01_10C4C929.wem</Path>
+						</File>
+						<File Id="1038919582" Language="SFX">
+							<ShortName>Footsteps_Rock_Walk_04.wav</ShortName>
+							<Path>SFX/Footsteps_Rock_Walk_04_10C4C929.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 					<DefaultSwitchValue>{F13EB533-41C9-4F36-B89B-D678BDDAAF47}</DefaultSwitchValue>
 					<SwitchContainers>
 						<SwitchContainer SwitchValue="{F13EB533-41C9-4F36-B89B-D678BDDAAF47}">
 							<Media>
-								<File Id="323942138"/>
-								<File Id="385491676"/>
-								<File Id="431402745"/>
-								<File Id="492770314"/>
-								<File Id="736235376"/>
-								<File Id="777566849"/>
+								<File Id="27783476"/>
+								<File Id="103452772"/>
+								<File Id="156892307"/>
+								<File Id="172301586"/>
+								<File Id="212556327"/>
+								<File Id="341042815"/>
+								<File Id="444223497"/>
+								<File Id="446841045"/>
+								<File Id="487076313"/>
+								<File Id="691801118"/>
+							</Media>
+						</SwitchContainer>
+						<SwitchContainer SwitchValue="{2B565395-FFD0-420F-929B-377CDB324F38}">
+							<Media>
+								<File Id="41821027"/>
+								<File Id="268093903"/>
+								<File Id="274151979"/>
+								<File Id="383558592"/>
+								<File Id="411920450"/>
+								<File Id="443044315"/>
+								<File Id="463591104"/>
+								<File Id="514607162"/>
+								<File Id="568193324"/>
+								<File Id="575418895"/>
+								<File Id="577452134"/>
+								<File Id="583433152"/>
+								<File Id="622867612"/>
+								<File Id="636452334"/>
+								<File Id="736475125"/>
+								<File Id="852044673"/>
+								<File Id="856653355"/>
+								<File Id="983664555"/>
+								<File Id="1038919582"/>
 							</Media>
 						</SwitchContainer>
 					</SwitchContainers>
@@ -539,14 +884,19 @@
 				<SwitchGroup Id="3865314626" Name="Material" ObjectPath="\Switches\Default Work Unit\Material" GUID="{3B231D83-CEB8-4D6E-87F3-B78A280E368F}">
 					<Switches>
 						<Switch Id="782826392" Name="Default" ObjectPath="\Switches\Default Work Unit\Material\Default" GUID="{F13EB533-41C9-4F36-B89B-D678BDDAAF47}"/>
+						<Switch Id="1216965916" Name="Stone" ObjectPath="\Switches\Default Work Unit\Material\Stone" GUID="{2B565395-FFD0-420F-929B-377CDB324F38}"/>
 					</Switches>
 				</SwitchGroup>
 			</SwitchGroups>
 		</SoundBank>
-		<SoundBank Id="1355168291" Language="SFX" Hash="3690994985">
+		<SoundBank Id="1355168291" Language="SFX" Hash="456810138">
 			<ObjectPath>Init</ObjectPath>
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
+			<IncludedAuxBusses>
+				<AuxBus Id="1656394493" Name="BigReverb" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\BigReverb"/>
+				<AuxBus Id="2134960294" Name="SmallReverb" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\SmallReverb"/>
+			</IncludedAuxBusses>
 		</SoundBank>
 	</SoundBanks>
 </SoundBanksInfo>

@@ -1970,6 +1970,7 @@ GameObject:
   - component: {fileID: 6223157769259068023}
   - component: {fileID: 8527112986321059011}
   - component: {fileID: 4193133124244913249}
+  - component: {fileID: 41737243162955696}
   m_Layer: 0
   m_Name: GruntRanged
   m_TagString: Enemy
@@ -2134,6 +2135,28 @@ CapsuleCollider:
   m_Height: 0.77236235
   m_Direction: 1
   m_Center: {x: 0, y: -0.113818824, z: -0.015595317}
+--- !u!114 &41737243162955696
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6223157769259067977}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 35b26296480c84795b02d52f2dad072d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_listeners:
+    initialListenerList: []
+    useDefaultListeners: 1
+  isEnvironmentAware: 1
+  isStaticObject: 0
+  m_positionOffsetData:
+    KeepMe: 0
+    positionOffset: {x: 0, y: 0, z: 0}
+  m_posOffsetData: {fileID: 0}
+  listenerMask: 1
 --- !u!1 &6514128922704544075
 GameObject:
   m_ObjectHideFlags: 0

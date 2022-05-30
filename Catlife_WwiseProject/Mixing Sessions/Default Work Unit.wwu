@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{EF5AA79E-7559-4EF7-8F13-378F3CBB4260}" SchemaVersion="103">
 	<MixingSessions>
-		<WorkUnit Name="Default Work Unit" ID="{EF5AA79E-7559-4EF7-8F13-378F3CBB4260}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{EF5AA79E-7559-4EF7-8F13-378F3CBB4260}" PersistMode="Standalone">
+			<ChildrenList>
+				<MixingSession Name="MixingSession" ID="{96EBAC2D-16CC-472E-83D9-0BE9E70F16E2}">
+					<ObjectList>
+						<ObjectRef Name="Main" ID="{8B17C660-DB37-4E99-B168-E5F7712F1EF9}" WorkUnitID="{27CE760E-D39C-41A2-A7AE-4FA0EBDD5634}"/>
+						<ObjectRef Name="Secondary" ID="{FE8CCF91-1CB1-45CF-B668-9D5AD26F8DF0}" WorkUnitID="{27CE760E-D39C-41A2-A7AE-4FA0EBDD5634}"/>
+						<ObjectRef Name="BigReverb" ID="{C6D18B3D-CCB7-44B2-8DE9-C45442E726C8}" WorkUnitID="{27CE760E-D39C-41A2-A7AE-4FA0EBDD5634}"/>
+						<ObjectRef Name="SmallReverb" ID="{78CEBC2A-2C51-4F82-BD58-33BAE50675F8}" WorkUnitID="{27CE760E-D39C-41A2-A7AE-4FA0EBDD5634}"/>
+					</ObjectList>
+				</MixingSession>
+			</ChildrenList>
+		</WorkUnit>
 	</MixingSessions>
 </WwiseDocument>

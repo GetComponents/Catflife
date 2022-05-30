@@ -14,9 +14,13 @@ namespace AK
     namespace EVENTS
     {
         static const AkUniqueID PLAY_BUTTONPRESS = 2652178615U;
+        static const AkUniqueID PLAY_CHARDASH = 4198908286U;
+        static const AkUniqueID PLAY_CHARDEATH = 214494936U;
+        static const AkUniqueID PLAY_CHARHURT = 4020548773U;
         static const AkUniqueID PLAY_CHARPROJECTILEAMBIENCE = 186625315U;
         static const AkUniqueID PLAY_CHARPROJECTILEEXPLODE = 125832294U;
         static const AkUniqueID PLAY_CHARPROJECTILETHROW = 1017112217U;
+        static const AkUniqueID PLAY_CHARSPIN = 25077814U;
         static const AkUniqueID PLAY_DOORSQUEAKY = 3020861821U;
         static const AkUniqueID PLAY_ENERGYJINGLE = 2028186725U;
         static const AkUniqueID PLAY_GRUNTELITEPROJECTILEEXPLODE = 1927856655U;
@@ -48,6 +52,7 @@ namespace AK
             namespace SWITCH
             {
                 static const AkUniqueID DEFAULT = 782826392U;
+                static const AkUniqueID STONE = 1216965916U;
             } // namespace SWITCH
         } // namespace MATERIAL
 
@@ -61,8 +66,16 @@ namespace AK
 
     namespace BUSSES
     {
+        static const AkUniqueID MAIN = 3161908922U;
         static const AkUniqueID MASTER_AUDIO_BUS = 3803692087U;
+        static const AkUniqueID SECONDARY = 1871372953U;
     } // namespace BUSSES
+
+    namespace AUX_BUSSES
+    {
+        static const AkUniqueID BIGREVERB = 1656394493U;
+        static const AkUniqueID SMALLREVERB = 2134960294U;
+    } // namespace AUX_BUSSES
 
     namespace AUDIO_DEVICES
     {
