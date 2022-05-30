@@ -71,6 +71,14 @@ public class SceneTransition : MonoBehaviour
                 break;
             case 2:
                 SceneManager.UnloadSceneAsync(sceneToLoad);
+                while (true)
+                {
+                    if (SceneManager.GetActiveScene().name == "EncounterSelection")
+                    {
+                        break;
+                    }
+                    yield return new WaitForEndOfFrame();
+                }
                 MapManager.Instance.ChangeMapState(true);
                 break;
             default:

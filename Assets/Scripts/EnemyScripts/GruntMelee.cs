@@ -29,6 +29,7 @@ namespace EnemyAI
 
         private void MoveTowardsPlayer()
         {
+
             if (moveCounter >= 0)
             {
                 enemyNavMesh.SetDestination(playerPosition);

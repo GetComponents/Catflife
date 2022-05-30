@@ -111,6 +111,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   projectile: {fileID: 3197289015864360084, guid: f9cdb67a1fef7d843b14f1e1c8dad34b, type: 3}
   slowingHitbox: {fileID: 2821587716635543183}
+  slowingVFX: {fileID: 8586038160816040281, guid: 4ca686c4011f18f43b83119f0ea29532, type: 3}
 --- !u!1 &2821587716635543183
 GameObject:
   m_ObjectHideFlags: 0
@@ -130,7 +131,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &2736790260379879376
 Transform:
   m_ObjectHideFlags: 0

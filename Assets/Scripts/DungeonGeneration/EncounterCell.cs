@@ -115,12 +115,14 @@ public class EncounterCell : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        StartEncounterUI.SetActive(true);
+        if (other.tag == "Player")
+            StartEncounterUI.SetActive(true);
     }
 
     private void OnTriggerExit(Collider other)
     {
-        StartEncounterUI.SetActive(false);
+        if (other.tag == "Player")
+            StartEncounterUI.SetActive(false);
     }
 }
 

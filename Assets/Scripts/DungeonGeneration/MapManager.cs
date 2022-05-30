@@ -34,6 +34,13 @@ public class MapManager : MonoBehaviour
         {
             map.SetActive(true);
             dungeonMesh.SetActive(true);
+            foreach (Light light in FindObjectsOfType<Light>())
+            {
+                if (light != directionalLight)
+                {
+                    light.enabled = false;
+                }
+            }
             directionalLight.enabled = true;
             if (CurrentCell == null)
             {

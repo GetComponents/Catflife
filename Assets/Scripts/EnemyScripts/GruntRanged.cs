@@ -37,6 +37,8 @@ public class GruntRanged : Enemy
             //Move();
             Attack();
         }
+        Vector3 tmp = (PlayerInventory.Instance.transform.position - transform.position).normalized;
+        transform.forward = new Vector3(tmp.x, 0, tmp.z);
         base.Update();
     }
 

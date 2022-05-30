@@ -11,8 +11,11 @@ public class EnemySpawnpoint : MonoBehaviour
     {
         if (!NewDungeonGridGenerator.Instance.ClearedArena)
         {
-            Instantiate(Enemy, transform.position, Quaternion.identity);
-            CombatSceneChange.Instance.AddEnemy();
+            if (Enemy != null)
+            {
+                Instantiate(Enemy, transform.position, Quaternion.identity);
+                CombatSceneChange.Instance.AddEnemy();
+            }
         }
         else
         {

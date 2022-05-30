@@ -56,13 +56,13 @@ public class CombatSceneChange : MonoBehaviour
             case EEncounterType.NONE:
                 break;
             case EEncounterType.FIGHTEASY:
-                Instantiate(tmp.EasyEncounters[tmp.CurrentEncounterIndex], transform.position, Quaternion.Euler(0, -90f, 0));
+                Instantiate(tmp.EasyEncounters[tmp.CurrentEncounterIndex], transform.position, Quaternion.Euler(0, 0, 0));
                 break;
             case EEncounterType.FIGHTMEDIUM:
-                Instantiate(tmp.MediumEncounters[tmp.CurrentEncounterIndex], transform.position, Quaternion.Euler(0, -90f, 0));
+                Instantiate(tmp.MediumEncounters[tmp.CurrentEncounterIndex], transform.position, Quaternion.Euler(0, 0, 0));
                 break;
             case EEncounterType.FIGHTHARD:
-                Instantiate(tmp.HardEncounters[tmp.CurrentEncounterIndex], transform.position, Quaternion.Euler(0, -90f, 0));
+                Instantiate(tmp.HardEncounters[tmp.CurrentEncounterIndex], transform.position, Quaternion.Euler(0, 0, 0));
                 break;
             case EEncounterType.BOSS:
                 break;
@@ -71,6 +71,7 @@ public class CombatSceneChange : MonoBehaviour
             default:
                 break;
         }
+        NavmeshBake.Instance.Bake();
     }
 
     public void AddEnemy()

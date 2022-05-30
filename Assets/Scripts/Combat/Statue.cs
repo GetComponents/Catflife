@@ -6,7 +6,7 @@ public class Statue : MonoBehaviour
 {
 
     [SerializeField]
-    GameObject projectile, slowingHitbox;
+    GameObject projectile, slowingHitbox, slowingVFX;
 
     private bool activated = false;
     private Enemy targetEnemy;
@@ -34,6 +34,7 @@ public class Statue : MonoBehaviour
                         break;
                     case 1:
                         slowingHitbox.SetActive(true);
+
                         break;
                     default:
                         break;

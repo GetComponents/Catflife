@@ -18,8 +18,7 @@ public class Watering : MonoBehaviour
     [SerializeField]
     CinemachineVirtualCamera plantCamera, plantCameraUI, playerCamera, playerCameraUI;
 
-    [SerializeField]
-    Camera UICamera;
+    Camera myUICamera;
 
     public bool HoldsTheCan;
 
@@ -42,9 +41,30 @@ public class Watering : MonoBehaviour
         }
     }
 
+    private void Start()
+    {
+        FindUICamera();
+    }
+
+    private void FindUICamera()
+    {
+        Camera[] tmp = FindObjectsOfType<Camera>();
+        for (int i = 0; i < tmp.Length; i++)
+        {
+            if (tmp[i].gameObject.name == "UICamera")
+            {
+                myUICamera = tmp[i];
+            }
+        }
+    }
+
     public void EnableWatering()
     {
-        UICamera.enabled = false;
+        if (myUICamera == null)
+        {
+            FindUICamera();
+        }
+        myUICamera.enabled = false;
         StartCoroutine(EnableUI());
         EnterCanvas.SetActive(false);
         ExitCanvas.SetActive(true);
@@ -61,7 +81,7 @@ public class Watering : MonoBehaviour
     private IEnumerator EnableUI()
     {
         yield return new WaitForSeconds(2);
-        UICamera.enabled = true;
+        myUICamera.enabled = true;
     }
 
     public void DisableWatering()
@@ -76,7 +96,7 @@ public class Watering : MonoBehaviour
         manaPlantCanvas.SetActive(false);
         hpPlantCanvas.SetActive(false);
         speedPlantCanvas.SetActive(false);
-        UICamera.enabled = false;
+        myUICamera.enabled = false;
         StartCoroutine(EnableUI());
         StartCoroutine(test());
     }
