@@ -44,4 +44,9 @@ public class PlayerProjectile : MonoBehaviour
             Destroy(gameObject);
         }
     }
+    
+    private void OnDestroy()
+    {
+        AkSoundEngine.StopPlayingID(playingID, 200, AkCurveInterpolation.AkCurveInterpolation_Constant);
+    }
 }
