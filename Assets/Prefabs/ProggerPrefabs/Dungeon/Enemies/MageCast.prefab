@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 3350443701310008244}
   - component: {fileID: 3813451282609220948}
   - component: {fileID: 445312964395149030}
+  - component: {fileID: 6307814293061291493}
   m_Layer: 0
   m_Name: MageCast
   m_TagString: Untagged
@@ -114,6 +115,28 @@ MonoBehaviour:
   TimeUntilFaded: 0.3
   MyDamage: 0
   myCollider: {fileID: 3813451282609220948}
+--- !u!114 &6307814293061291493
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 379002393375379377}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 35b26296480c84795b02d52f2dad072d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_listeners:
+    initialListenerList: []
+    useDefaultListeners: 1
+  isEnvironmentAware: 1
+  isStaticObject: 0
+  m_positionOffsetData:
+    KeepMe: 0
+    positionOffset: {x: 0, y: 0, z: 0}
+  m_posOffsetData: {fileID: 0}
+  listenerMask: 1
 --- !u!1001 &5352281961895749890
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -164,6 +164,7 @@ GameObject:
   - component: {fileID: 8030181245878276624}
   - component: {fileID: 8030181245878276625}
   - component: {fileID: 8030181245878276630}
+  - component: {fileID: 8139958078579573617}
   m_Layer: 0
   m_Name: SM_MovingBox_22
   m_TagString: Untagged
@@ -250,6 +251,28 @@ MonoBehaviour:
   interactableBoxMaterial: {fileID: 0}
   FollowUpBoxes: []
   wateringCan: {fileID: 0}
+--- !u!114 &8139958078579573617
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7183670892832567108}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 35b26296480c84795b02d52f2dad072d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_listeners:
+    initialListenerList: []
+    useDefaultListeners: 1
+  isEnvironmentAware: 1
+  isStaticObject: 0
+  m_positionOffsetData:
+    KeepMe: 0
+    positionOffset: {x: 0, y: 0, z: 0}
+  m_posOffsetData: {fileID: 0}
+  listenerMask: 1
 --- !u!1 &7390144418017566783
 GameObject:
   m_ObjectHideFlags: 0

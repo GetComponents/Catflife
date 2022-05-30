@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 7600106833243672019}
   - component: {fileID: 3026734062551469219}
   - component: {fileID: 5921041710523463443}
+  - component: {fileID: 5305527181441565822}
   m_Layer: 0
   m_Name: GruntEliteProjectile
   m_TagString: EnemyProjectile
@@ -128,3 +129,25 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &5305527181441565822
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 737495494197295055}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 35b26296480c84795b02d52f2dad072d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_listeners:
+    initialListenerList: []
+    useDefaultListeners: 1
+  isEnvironmentAware: 1
+  isStaticObject: 0
+  m_positionOffsetData:
+    KeepMe: 0
+    positionOffset: {x: 0, y: 0, z: 0}
+  m_posOffsetData: {fileID: 0}
+  listenerMask: 1

@@ -256,7 +256,6 @@ public class Interactable : MonoBehaviour
     private IEnumerator MoveObject()
     {
         AkSoundEngine.PostEvent("Play_ImpactCardboard", this.gameObject);
-        AkSoundEngine.PostEvent("Play_PoofCardboard", this.gameObject);
         GameObject movingObject = Instantiate(objectToUnpack, transform.position, transform.rotation);
         objectMoveUpPosition = Instantiate(new GameObject(), transform).transform;
         objectMoveUpPosition.position += new Vector3(0, 2, 0);

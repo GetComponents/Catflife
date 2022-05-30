@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 4550269760456935815}
   - component: {fileID: 4550269760456935812}
   - component: {fileID: 4550269760456935818}
+  - component: {fileID: 3902335987863982787}
   m_Layer: 0
   m_Name: Mage
   m_TagString: Enemy
@@ -140,6 +141,11 @@ MonoBehaviour:
   PickupHP: {fileID: 5654831020001211, guid: 22cc8f85f869d8b40853ce92ad05553a, type: 3}
   PickupEnergy: {fileID: 7905170852432235875, guid: 4360d632fb8a6bd4dbc47c0036854c8f, type: 3}
   BaseEnergyPickupAmount: 10
+  originalNavMeshSpeed: 0
+  slowedSpeed: 1
+  OnDeath:
+    m_PersistentCalls:
+      m_Calls: []
   raycastLayerMask:
     serializedVersion: 2
     m_Bits: 768
@@ -172,6 +178,28 @@ NavMeshAgent:
   m_BaseOffset: 1
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!114 &3902335987863982787
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4550269760456935813}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 35b26296480c84795b02d52f2dad072d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_listeners:
+    initialListenerList: []
+    useDefaultListeners: 1
+  isEnvironmentAware: 1
+  isStaticObject: 0
+  m_positionOffsetData:
+    KeepMe: 0
+    positionOffset: {x: 0, y: 0, z: 0}
+  m_posOffsetData: {fileID: 0}
+  listenerMask: 1
 --- !u!1 &4550269761232931706
 GameObject:
   m_ObjectHideFlags: 0
@@ -282,5 +310,3 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyController: {fileID: 4550269760456935812}
-  meshRenderer: {fileID: 4550269760456935817}
-  aggroMaterial: {fileID: 2100000, guid: 04bf84b2400b7654d80e5efd04229323, type: 2}

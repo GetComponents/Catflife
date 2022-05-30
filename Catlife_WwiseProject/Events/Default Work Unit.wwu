@@ -205,6 +205,17 @@
 										</Reference>
 									</ReferenceList>
 								</Action>
+								<Action Name="" ID="{5DB175EF-2981-45D8-BD5A-2DA757F1534E}" ShortID="646569867">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="41"/>
+										<Property Name="Delay" Type="Real64" Value="0.4"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Play_PoofCardboard" ID="{D319F707-62DD-4B4D-AF77-FB0870A7066E}" WorkUnitID="{241DAD68-20A2-4EEC-81F1-8FCC85376151}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
 							</ChildrenList>
 						</Event>
 						<Event Name="Play_LightUpStatue" ID="{A3ADA9FD-7CB2-416F-978E-C1C99F0006EE}">
