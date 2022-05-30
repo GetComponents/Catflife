@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -46,5 +47,10 @@ public class GruntEliteProjectile : MonoBehaviour
     {
         AkSoundEngine.StopPlayingID(playingID, 200, AkCurveInterpolation.AkCurveInterpolation_Constant);
         AkSoundEngine.PostEvent("Play_GruntEliteProjectileExplode", this.gameObject);
+    }
+
+    private void OnDestroy()
+    {
+        AkSoundEngine.StopPlayingID(playingID, 200, AkCurveInterpolation.AkCurveInterpolation_Constant);
     }
 }
