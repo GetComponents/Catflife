@@ -281,14 +281,13 @@
 										</Reference>
 									</ReferenceList>
 								</Action>
-								<Action Name="" ID="{5DB175EF-2981-45D8-BD5A-2DA757F1534E}" ShortID="646569867">
+								<Action Name="" ID="{C2CF0A70-0931-45B6-BFF6-B66477758E9C}" ShortID="407100705">
 									<PropertyList>
-										<Property Name="ActionType" Type="int16" Value="41"/>
-										<Property Name="Delay" Type="Real64" Value="0.4"/>
+										<Property Name="Delay" Type="Real64" Value="0.8"/>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Target">
-											<ObjectRef Name="Play_PoofCardboard" ID="{D319F707-62DD-4B4D-AF77-FB0870A7066E}" WorkUnitID="{241DAD68-20A2-4EEC-81F1-8FCC85376151}"/>
+											<ObjectRef Name="Inflate" ID="{F1491BE6-FCB5-44A8-A3E2-39B95C624326}" WorkUnitID="{D02594BD-4199-499F-A2D9-CB65908B02DD}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
@@ -420,6 +419,38 @@
 								</Action>
 							</ChildrenList>
 						</Event>
+						<Event Name="Play_DoorSqueaky" ID="{E464FE0F-0B12-445B-A423-F145A5C827E0}">
+							<ChildrenList>
+								<Action Name="" ID="{3E4A177C-2E03-403A-8354-8A35749BA600}" ShortID="749630523">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="DoorSqueaky" ID="{AEEB4C8D-24F6-403C-BC41-E8D544F7D3F9}" WorkUnitID="{D02594BD-4199-499F-A2D9-CB65908B02DD}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_OpenGate" ID="{901F791F-81BF-4159-B332-58A67917917D}">
+							<ChildrenList>
+								<Action Name="" ID="{7BEA9F91-2F28-4064-B19D-E4C3385934D4}" ShortID="847468741">
+									<PropertyList>
+										<Property Name="Delay" Type="Real64" Value="0.5"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Chain" ID="{B8FB881C-DDE9-471E-B224-F18D77B2D61A}" WorkUnitID="{D02594BD-4199-499F-A2D9-CB65908B02DD}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{B1D07E55-D69E-4589-94EB-6414760ECB5C}" ShortID="565416406">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Door" ID="{EAF1A7BE-04FF-4F30-B67B-CF8A3B41783D}" WorkUnitID="{D02594BD-4199-499F-A2D9-CB65908B02DD}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="UI" ID="{197FDC5B-C88E-457E-BD37-7DBAAC4F6174}" ShortID="51399193">
@@ -430,17 +461,6 @@
 									<ReferenceList>
 										<Reference Name="Target">
 											<ObjectRef Name="ButtonPress" ID="{031B5CE4-2D13-4DF9-90CA-398F2C91EFC2}" WorkUnitID="{D02594BD-4199-499F-A2D9-CB65908B02DD}"/>
-										</Reference>
-									</ReferenceList>
-								</Action>
-							</ChildrenList>
-						</Event>
-						<Event Name="Play_DoorSqueaky" ID="{E464FE0F-0B12-445B-A423-F145A5C827E0}">
-							<ChildrenList>
-								<Action Name="" ID="{3E4A177C-2E03-403A-8354-8A35749BA600}" ShortID="749630523">
-									<ReferenceList>
-										<Reference Name="Target">
-											<ObjectRef Name="DoorSqueaky" ID="{AEEB4C8D-24F6-403C-BC41-E8D544F7D3F9}" WorkUnitID="{D02594BD-4199-499F-A2D9-CB65908B02DD}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>

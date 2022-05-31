@@ -31,6 +31,7 @@ namespace AK
         static const AkUniqueID PLAY_IMPACTCARDBOARD = 3010145222U;
         static const AkUniqueID PLAY_LEAVINGFOOTSTEPS = 1438502543U;
         static const AkUniqueID PLAY_LIGHTUPSTATUE = 1622429165U;
+        static const AkUniqueID PLAY_OPENGATE = 1929575027U;
         static const AkUniqueID PLAY_POOFCARDBOARD = 31596624U;
         static const AkUniqueID PLAY_SHOOTSTATUE = 3450689315U;
         static const AkUniqueID PLAY_SLEEPJINGLE = 354571108U;
