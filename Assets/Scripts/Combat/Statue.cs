@@ -9,13 +9,15 @@ public class Statue : MonoBehaviour
     GameObject projectile, slowingHitbox, shootPoint;
 
     private bool activated = false;
+    [SerializeField]
+    private GameObject myMesh;
     private Enemy targetEnemy;
 
     private void Start()
     {
         if (!PlayerController.Instance.UnlockedStatue)
         {
-            Destroy(gameObject);
+            Destroy(myMesh);
         }
     }
 
