@@ -11,7 +11,7 @@
 	<StreamedFiles/>
 	<MediaFilesNotInAnyBank/>
 	<SoundBanks>
-		<SoundBank Id="393239870" Language="SFX" Hash="1693119851">
+		<SoundBank Id="393239870" Language="SFX" Hash="3857033476">
 			<ObjectPath>\SoundBanks\Default Work Unit\SFX</ObjectPath>
 			<ShortName>SFX</ShortName>
 			<Path>SFX.bnk</Path>
@@ -259,6 +259,14 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
+				<Event Id="2200086212" Name="Play_DungeonAmb" ObjectPath="\Events\Default Work Unit\Ambiances\Play_DungeonAmb" DurationType="OneShot" DurationMin="272.143188" DurationMax="272.143188">
+					<IncludedMemoryFiles>
+						<File Id="310041421" Language="SFX">
+							<ShortName>WindDungeounAmb.wav</ShortName>
+							<Path>SFX/WindDungeounAmb_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
 				<Event Id="2028186725" Name="Play_EnergyJingle" ObjectPath="\Events\Default Work Unit\ItemsScene\Play_EnergyJingle" DurationType="OneShot" DurationMin="0.811513" DurationMax="0.811513">
 					<IncludedMemoryFiles>
 						<File Id="629954010" Language="SFX">
@@ -427,7 +435,7 @@
 						</File>
 						<File Id="335624386" Language="SFX">
 							<ShortName>Inflate.wav</ShortName>
-							<Path>SFX/Inflate_CBB10492.wem</Path>
+							<Path>SFX/Inflate_D3333A0D.wem</Path>
 						</File>
 						<File Id="394627533" Language="SFX">
 							<ShortName>CardboardImpact.wav</ShortName>
@@ -435,11 +443,11 @@
 						</File>
 						<File Id="506857444" Language="SFX">
 							<ShortName>Inflate.wav</ShortName>
-							<Path>SFX/Inflate_2C7B4C30.wem</Path>
+							<Path>SFX/Inflate_CD5014BA.wem</Path>
 						</File>
 						<File Id="524980596" Language="SFX">
 							<ShortName>Inflate.wav</ShortName>
-							<Path>SFX/Inflate_893F0229.wem</Path>
+							<Path>SFX/Inflate_FD40E3D7.wem</Path>
 						</File>
 						<File Id="811632332" Language="SFX">
 							<ShortName>CardboardImpact.wav</ShortName>
@@ -595,15 +603,15 @@
 						</File>
 						<File Id="25702114" Language="SFX">
 							<ShortName>ChainGate.wav</ShortName>
-							<Path>SFX/ChainGate_FE404D30.wem</Path>
+							<Path>SFX/ChainGate_2D818225.wem</Path>
 						</File>
 						<File Id="338090221" Language="SFX">
 							<ShortName>ChainGate.wav</ShortName>
-							<Path>SFX/ChainGate_5FC35E29.wem</Path>
+							<Path>SFX/ChainGate_F11F3E7B.wem</Path>
 						</File>
 						<File Id="357667839" Language="SFX">
 							<ShortName>ChainGate.wav</ShortName>
-							<Path>SFX/ChainGate_A3B58410.wem</Path>
+							<Path>SFX/ChainGate_4175E589.wem</Path>
 						</File>
 						<File Id="443642990" Language="SFX">
 							<ShortName>ChainGate.wav</ShortName>
@@ -623,11 +631,11 @@
 						</File>
 						<File Id="919899559" Language="SFX">
 							<ShortName>ChainGate.wav</ShortName>
-							<Path>SFX/ChainGate_1F08C913.wem</Path>
+							<Path>SFX/ChainGate_10D85185.wem</Path>
 						</File>
 						<File Id="996249066" Language="SFX">
 							<ShortName>ChainGate.wav</ShortName>
-							<Path>SFX/ChainGate_D38AAB5D.wem</Path>
+							<Path>SFX/ChainGate_26FD83FB.wem</Path>
 						</File>
 						<File Id="1025637278" Language="SFX">
 							<ShortName>DoorGate.wav</ShortName>

@@ -121,7 +121,7 @@ public class PlayerController : MonoBehaviour
 
     [Header("Player Enviroment Aware")]
     [SerializeField]
-    AkGameObj _akGameObj;
+    public AkGameObj _akGameObj;
     private string actualScene;
 
     void Awake()
@@ -176,7 +176,6 @@ public class PlayerController : MonoBehaviour
                     if (SceneTransition.Instance.SceneToLoad != actualScene)
                     {
                         actualScene = SceneTransition.Instance.SceneToLoad;
-                        SetSceneMaterialSound(actualScene);
                     }
                     AkSoundEngine.PostEvent("Play_Step", _akGameObj.gameObject);
                     walkingDistance = 0;
@@ -205,18 +204,6 @@ public class PlayerController : MonoBehaviour
             dashDirection = new Vector3((m_moveDir.y * -0.66f) + (m_moveDir.x * 0.66f), 0, (m_moveDir.y * 0.66f) + (m_moveDir.x * 0.66f)) * DashSpeed;
             rb.AddForce(dashDirection, ForceMode.VelocityChange);
             DashStarted = false;
-        }
-    }
-
-    private void SetSceneMaterialSound(string _sceneToLoad)
-    {
-        if (_sceneToLoad.Equals("MainRoom"))
-        {
-            AkSoundEngine.SetSwitch("Material", "Default", this.gameObject);
-        }
-        else
-        {
-            AkSoundEngine.SetSwitch("Material", "Stone", this.gameObject);
         }
     }
 

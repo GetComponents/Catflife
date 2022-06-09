@@ -19,6 +19,7 @@ Event	ID	Name			Wwise Object Path	Notes
 	1929575027	Play_OpenGate			\Default Work Unit\ItemsScene\Play_OpenGate	
 	2028186725	Play_EnergyJingle			\Default Work Unit\ItemsScene\Play_EnergyJingle	
 	2106862869	Play_HPJingle			\Default Work Unit\ItemsScene\Play_HPJingle	
+	2200086212	Play_DungeonAmb			\Default Work Unit\Ambiances\Play_DungeonAmb	
 	2652178615	Play_ButtonPress			\Default Work Unit\UI\Play_ButtonPress	
 	3010145222	Play_ImpactCardboard			\Default Work Unit\ItemsScene\Play_ImpactCardboard	
 	3020861821	Play_DoorSqueaky			\Default Work Unit\ItemsScene\Play_DoorSqueaky	
@@ -41,7 +42,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	6159929	UIButtonPress_01	Y:\Documents\UnityProject\Catflife\Catlife_WwiseProject\.cache\Windows\SFX\UIButtonPress_1FF5341A.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\ButtonPress\UIButtonPress_01		52960
 	17516549	UIButtonPress_04	Y:\Documents\UnityProject\Catflife\Catlife_WwiseProject\.cache\Windows\SFX\UIButtonPress_79A2CFEA.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\ButtonPress\UIButtonPress_04		74120
 	23732595	CardboardImpact_01	Y:\Documents\UnityProject\Catflife\Catlife_WwiseProject\.cache\Windows\SFX\CardboardImpact_EEC90E33.wem		\Actor-Mixer Hierarchy\Default Work Unit\ItemsScene\Cardboard\Impact\CardboardImpact_01		90320
-	25702114	ChainGate_06	Y:\Documents\UnityProject\Catflife\Catlife_WwiseProject\.cache\Windows\SFX\ChainGate_FE404D30.wem		\Actor-Mixer Hierarchy\Default Work Unit\ItemsScene\Gate\Chain\ChainGate_06		185204
+	25702114	ChainGate_06	Y:\Documents\UnityProject\Catflife\Catlife_WwiseProject\.cache\Windows\SFX\ChainGate_2D818225.wem		\Actor-Mixer Hierarchy\Default Work Unit\ItemsScene\Gate\Chain\ChainGate_06		185204
 	26091089	CharHurt_13	Y:\Documents\UnityProject\Catflife\Catlife_WwiseProject\.cache\Windows\SFX\CharHurt_6B9289FD.wem		\Actor-Mixer Hierarchy\Default Work Unit\Character\HurtDeath\Hurt\CharHurt_13		175944
 	27174265	SwordSwing_08	Y:\Documents\UnityProject\Catflife\Catlife_WwiseProject\.cache\Windows\SFX\SwordSwing_A8EEE66F.wem		\Actor-Mixer Hierarchy\Default Work Unit\Character\Sword\Swing\SwordSwing_08		49820
 	27783476	Footsteps_Wood_Walk_07	Y:\Documents\UnityProject\Catflife\Catlife_WwiseProject\.cache\Windows\SFX\Footsteps_Wood_Walk_07_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Character\Step\Wood\Footsteps_Wood_Walk_07		56972
@@ -68,14 +69,15 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	262470071	StatueShoot_03	Y:\Documents\UnityProject\Catflife\Catlife_WwiseProject\.cache\Windows\SFX\StatueShoot_C8E0291B.wem		\Actor-Mixer Hierarchy\Default Work Unit\ItemsScene\Statue\ShootStatue\Electric\StatueShoot_03		232812
 	268093903	Footsteps_Rock_Walk_05	Y:\Documents\UnityProject\Catflife\Catlife_WwiseProject\.cache\Windows\SFX\Footsteps_Rock_Walk_05_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Character\Step\Concrete\Stone\Footsteps_Rock_Walk_05		46960
 	274151979	Footsteps_Gravel_Walk_08	Y:\Documents\UnityProject\Catflife\Catlife_WwiseProject\.cache\Windows\SFX\Footsteps_Gravel_Walk_08_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Character\Step\Concrete\Gravel\Footsteps_Gravel_Walk_08		67118
+	310041421	WindDungeounAmb	Y:\Documents\UnityProject\Catflife\Catlife_WwiseProject\.cache\Windows\SFX\WindDungeounAmb_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ambiances\WindDungeon\WindDungeounAmb		48006120
 	318260061	SwordHit_01	Y:\Documents\UnityProject\Catflife\Catlife_WwiseProject\.cache\Windows\SFX\SwordHit_BE15939A.wem		\Actor-Mixer Hierarchy\Default Work Unit\Character\Sword\Hit\SwordHit_01		87344
-	335624386	Inflate_03	Y:\Documents\UnityProject\Catflife\Catlife_WwiseProject\.cache\Windows\SFX\Inflate_CBB10492.wem		\Actor-Mixer Hierarchy\Default Work Unit\ItemsScene\Cardboard\Inflate\Inflate_03		132304
-	338090221	ChainGate_01	Y:\Documents\UnityProject\Catflife\Catlife_WwiseProject\.cache\Windows\SFX\ChainGate_5FC35E29.wem		\Actor-Mixer Hierarchy\Default Work Unit\ItemsScene\Gate\Chain\ChainGate_01		264548
+	335624386	Inflate_03	Y:\Documents\UnityProject\Catflife\Catlife_WwiseProject\.cache\Windows\SFX\Inflate_D3333A0D.wem		\Actor-Mixer Hierarchy\Default Work Unit\ItemsScene\Cardboard\Inflate\Inflate_03		132304
+	338090221	ChainGate_01	Y:\Documents\UnityProject\Catflife\Catlife_WwiseProject\.cache\Windows\SFX\ChainGate_F11F3E7B.wem		\Actor-Mixer Hierarchy\Default Work Unit\ItemsScene\Gate\Chain\ChainGate_01		264548
 	341042815	Footsteps_Wood_Walk_05	Y:\Documents\UnityProject\Catflife\Catlife_WwiseProject\.cache\Windows\SFX\Footsteps_Wood_Walk_05_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Character\Step\Wood\Footsteps_Wood_Walk_05		48374
 	343653293	StatueLightUp_02	Y:\Documents\UnityProject\Catflife\Catlife_WwiseProject\.cache\Windows\SFX\StatueLightUp_78B2DDB1.wem		\Actor-Mixer Hierarchy\Default Work Unit\ItemsScene\Statue\LightUpStatue\StatueLightUp_02		439768
 	345272659	CharProjectileAmbience	Y:\Documents\UnityProject\Catflife\Catlife_WwiseProject\.cache\Windows\SFX\Fire_D79FB2B7.wem		\Actor-Mixer Hierarchy\Default Work Unit\Character\Projectile\Ambiance\CharProjectileAmbience		2462720
 	348566923	SwordHit_03	Y:\Documents\UnityProject\Catflife\Catlife_WwiseProject\.cache\Windows\SFX\SwordHit_5CC85433.wem		\Actor-Mixer Hierarchy\Default Work Unit\Character\Sword\Hit\SwordHit_03		72796
-	357667839	ChainGate_03	Y:\Documents\UnityProject\Catflife\Catlife_WwiseProject\.cache\Windows\SFX\ChainGate_A3B58410.wem		\Actor-Mixer Hierarchy\Default Work Unit\ItemsScene\Gate\Chain\ChainGate_03		230168
+	357667839	ChainGate_03	Y:\Documents\UnityProject\Catflife\Catlife_WwiseProject\.cache\Windows\SFX\ChainGate_4175E589.wem		\Actor-Mixer Hierarchy\Default Work Unit\ItemsScene\Gate\Chain\ChainGate_03		230168
 	365072858	HPJingle	Y:\Documents\UnityProject\Catflife\Catlife_WwiseProject\.cache\Windows\SFX\HPJingle_98F05687.wem		\Actor-Mixer Hierarchy\Default Work Unit\ItemsScene\Jingle\HPJingle		150156
 	377746266	StatueShoot_01	Y:\Documents\UnityProject\Catflife\Catlife_WwiseProject\.cache\Windows\SFX\StatueShoot_02B60996.wem		\Actor-Mixer Hierarchy\Default Work Unit\ItemsScene\Statue\ShootStatue\Electric\StatueShoot_01		178260
 	383558592	Footsteps_Gravel_Walk_03	Y:\Documents\UnityProject\Catflife\Catlife_WwiseProject\.cache\Windows\SFX\Footsteps_Gravel_Walk_03_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Character\Step\Concrete\Gravel\Footsteps_Gravel_Walk_03		46128
@@ -94,10 +96,10 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	482311064	SwordSwing_10	Y:\Documents\UnityProject\Catflife\Catlife_WwiseProject\.cache\Windows\SFX\SwordSwing_BF4C3CB8.wem		\Actor-Mixer Hierarchy\Default Work Unit\Character\Sword\Swing\SwordSwing_10		46264
 	487076313	Footsteps_Wood_Walk_03	Y:\Documents\UnityProject\Catflife\Catlife_WwiseProject\.cache\Windows\SFX\Footsteps_Wood_Walk_03_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Character\Step\Wood\Footsteps_Wood_Walk_03		49020
 	500629284	CharHurt_06	Y:\Documents\UnityProject\Catflife\Catlife_WwiseProject\.cache\Windows\SFX\CharHurt_B28F64C3.wem		\Actor-Mixer Hierarchy\Default Work Unit\Character\HurtDeath\Hurt\CharHurt_06		129664
-	506857444	Inflate_02	Y:\Documents\UnityProject\Catflife\Catlife_WwiseProject\.cache\Windows\SFX\Inflate_2C7B4C30.wem		\Actor-Mixer Hierarchy\Default Work Unit\ItemsScene\Cardboard\Inflate\Inflate_02		132304
+	506857444	Inflate_02	Y:\Documents\UnityProject\Catflife\Catlife_WwiseProject\.cache\Windows\SFX\Inflate_CD5014BA.wem		\Actor-Mixer Hierarchy\Default Work Unit\ItemsScene\Cardboard\Inflate\Inflate_02		132304
 	507177512	CharDeath_02	Y:\Documents\UnityProject\Catflife\Catlife_WwiseProject\.cache\Windows\SFX\CharDeath_9877822D.wem		\Actor-Mixer Hierarchy\Default Work Unit\Character\HurtDeath\Death\CharDeath_02		219916
 	514607162	Footsteps_Gravel_Walk_04	Y:\Documents\UnityProject\Catflife\Catlife_WwiseProject\.cache\Windows\SFX\Footsteps_Gravel_Walk_04_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Character\Step\Concrete\Gravel\Footsteps_Gravel_Walk_04		58506
-	524980596	Inflate_01	Y:\Documents\UnityProject\Catflife\Catlife_WwiseProject\.cache\Windows\SFX\Inflate_893F0229.wem		\Actor-Mixer Hierarchy\Default Work Unit\ItemsScene\Cardboard\Inflate\Inflate_01		141564
+	524980596	Inflate_01	Y:\Documents\UnityProject\Catflife\Catlife_WwiseProject\.cache\Windows\SFX\Inflate_FD40E3D7.wem		\Actor-Mixer Hierarchy\Default Work Unit\ItemsScene\Cardboard\Inflate\Inflate_01		141564
 	536830051	SoftWhooshDash_05	Y:\Documents\UnityProject\Catflife\Catlife_WwiseProject\.cache\Windows\SFX\SoftWhooshDash_124E63E0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Character\Spin\SoftWhooshDash_05		60072
 	546497670	StatueLightUp_03	Y:\Documents\UnityProject\Catflife\Catlife_WwiseProject\.cache\Windows\SFX\StatueLightUp_1EF3F483.wem		\Actor-Mixer Hierarchy\Default Work Unit\ItemsScene\Statue\LightUpStatue\StatueLightUp_03		495308
 	552528663	SqueakyDoor_02	Y:\Documents\UnityProject\Catflife\Catlife_WwiseProject\.cache\Windows\SFX\SqueakyDoor_BA87A6F8.wem		\Actor-Mixer Hierarchy\Default Work Unit\ItemsScene\DoorSqueaky\SqueakyDoor_02		232808
@@ -134,14 +136,14 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	896436639	DoorGate_01	Y:\Documents\UnityProject\Catflife\Catlife_WwiseProject\.cache\Windows\SFX\DoorGate_76BA0015.wem		\Actor-Mixer Hierarchy\Default Work Unit\ItemsScene\Gate\Door\DoorGate_01		178260
 	898289585	SwordHit_05	Y:\Documents\UnityProject\Catflife\Catlife_WwiseProject\.cache\Windows\SFX\SwordHit_30B1C2E6.wem		\Actor-Mixer Hierarchy\Default Work Unit\Character\Sword\Hit\SwordHit_05		106436
 	911625356	CharDeath_03	Y:\Documents\UnityProject\Catflife\Catlife_WwiseProject\.cache\Windows\SFX\CharDeath_5ACDFE68.wem		\Actor-Mixer Hierarchy\Default Work Unit\Character\HurtDeath\Death\CharDeath_03		261576
-	919899559	ChainGate_04	Y:\Documents\UnityProject\Catflife\Catlife_WwiseProject\.cache\Windows\SFX\ChainGate_1F08C913.wem		\Actor-Mixer Hierarchy\Default Work Unit\ItemsScene\Gate\Chain\ChainGate_04		259256
+	919899559	ChainGate_04	Y:\Documents\UnityProject\Catflife\Catlife_WwiseProject\.cache\Windows\SFX\ChainGate_10D85185.wem		\Actor-Mixer Hierarchy\Default Work Unit\ItemsScene\Gate\Chain\ChainGate_04		259256
 	934852199	CardboardPoof_01	Y:\Documents\UnityProject\Catflife\Catlife_WwiseProject\.cache\Windows\SFX\CardboardPoof_966C9491.wem		\Actor-Mixer Hierarchy\Default Work Unit\ItemsScene\Cardboard\Poof\CardboardPoof_01		168672
 	937864113	CharHurt_11	Y:\Documents\UnityProject\Catflife\Catlife_WwiseProject\.cache\Windows\SFX\CharHurt_EB38943C.wem		\Actor-Mixer Hierarchy\Default Work Unit\Character\HurtDeath\Hurt\CharHurt_11		236116
 	983664555	Footsteps_Rock_Walk_01	Y:\Documents\UnityProject\Catflife\Catlife_WwiseProject\.cache\Windows\SFX\Footsteps_Rock_Walk_01_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Character\Step\Concrete\Stone\Footsteps_Rock_Walk_01		41930
 	984304702	ProjectileThrow_03	Y:\Documents\UnityProject\Catflife\Catlife_WwiseProject\.cache\Windows\SFX\ProjectileThrow_CCB9D056.wem		\Actor-Mixer Hierarchy\Default Work Unit\Character\Projectile\Throw\CharProjectileThrow\ProjectileThrow_03		206032
 	984676907	ProjectileThrow_05	Y:\Documents\UnityProject\Catflife\Catlife_WwiseProject\.cache\Windows\SFX\ProjectileThrow_6FC0092E.wem		\Actor-Mixer Hierarchy\Default Work Unit\Character\Projectile\Throw\CharProjectileThrow\ProjectileThrow_05		169004
 	995914859	ProjectileExplode_08	Y:\Documents\UnityProject\Catflife\Catlife_WwiseProject\.cache\Windows\SFX\ProjectileExplode_33BD63AD.wem		\Actor-Mixer Hierarchy\Default Work Unit\Character\Projectile\Explosion\CharProjectileExplode\ProjectileExplode_08		328024
-	996249066	ChainGate_02	Y:\Documents\UnityProject\Catflife\Catlife_WwiseProject\.cache\Windows\SFX\ChainGate_D38AAB5D.wem		\Actor-Mixer Hierarchy\Default Work Unit\ItemsScene\Gate\Chain\ChainGate_02		367700
+	996249066	ChainGate_02	Y:\Documents\UnityProject\Catflife\Catlife_WwiseProject\.cache\Windows\SFX\ChainGate_26FD83FB.wem		\Actor-Mixer Hierarchy\Default Work Unit\ItemsScene\Gate\Chain\ChainGate_02		367700
 	997698416	ProjectileExplode_01	Y:\Documents\UnityProject\Catflife\Catlife_WwiseProject\.cache\Windows\SFX\ProjectileExplode_BFEFFFC6.wem		\Actor-Mixer Hierarchy\Default Work Unit\Character\Projectile\Explosion\CharProjectileExplode\ProjectileExplode_01		227520
 	997870370	CardboardImpact_07	Y:\Documents\UnityProject\Catflife\Catlife_WwiseProject\.cache\Windows\SFX\CardboardImpact_9083B01B.wem		\Actor-Mixer Hierarchy\Default Work Unit\ItemsScene\Cardboard\Impact\CardboardImpact_07		92468
 	1003332352	CharDeath_01	Y:\Documents\UnityProject\Catflife\Catlife_WwiseProject\.cache\Windows\SFX\CharDeath_43240916.wem		\Actor-Mixer Hierarchy\Default Work Unit\Character\HurtDeath\Death\CharDeath_01		208344

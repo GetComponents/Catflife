@@ -536,6 +536,21 @@
 						</Event>
 					</ChildrenList>
 				</Folder>
+				<Folder Name="Ambiances" ID="{9DDC361A-6820-4FFE-848B-5C4E636894B6}" ShortID="743129194">
+					<ChildrenList>
+						<Event Name="Play_DungeonAmb" ID="{56607C43-8843-4BFC-BC1B-F90A26712634}">
+							<ChildrenList>
+								<Action Name="" ID="{CC4116E0-0F82-4887-8033-C6CD70C64C22}" ShortID="309240288">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="WindDungeounAmb" ID="{409EB904-1133-4602-95F0-48E0AA627942}" WorkUnitID="{D02594BD-4199-499F-A2D9-CB65908B02DD}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

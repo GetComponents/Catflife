@@ -22,6 +22,7 @@ namespace AK
         static const AkUniqueID PLAY_CHARPROJECTILETHROW = 1017112217U;
         static const AkUniqueID PLAY_CHARSPIN = 25077814U;
         static const AkUniqueID PLAY_DOORSQUEAKY = 3020861821U;
+        static const AkUniqueID PLAY_DUNGEONAMB = 2200086212U;
         static const AkUniqueID PLAY_ENERGYJINGLE = 2028186725U;
         static const AkUniqueID PLAY_GRUNTELITEPROJECTILEEXPLODE = 1927856655U;
         static const AkUniqueID PLAY_GRUNTELITEPROJECTILETHROW = 3941375504U;
