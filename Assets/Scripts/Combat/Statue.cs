@@ -15,6 +15,7 @@ public class Statue : MonoBehaviour
 
     private void Start()
     {
+        //I dont use destroy GameObject because the logic of the statue is a child from the actual thing
         if (!PlayerController.Instance.UnlockedStatue)
         {
             Destroy(myMesh);
@@ -28,6 +29,7 @@ public class Statue : MonoBehaviour
             if (!activated)
             {
                 AkSoundEngine.PostEvent("Play_LightUpStatue", this.gameObject);
+                //depending of the Light the player currently posseses, the statue does different stuff
                 switch (PlayerController.Instance.LavalampColor)
                 {
                     case 0:
@@ -47,7 +49,10 @@ public class Statue : MonoBehaviour
         }
     }
 
-
+    /// <summary>
+    /// Shoots at enemies
+    /// </summary>
+    /// <returns></returns>
     IEnumerator shootEnemies()
     {
         while (true)
@@ -63,6 +68,9 @@ public class Statue : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Called once the current target is destroyed and finds the closest enemy
+    /// </summary>
     private void ChangeTarget()
     {
         float shortestDistance = Mathf.Infinity;

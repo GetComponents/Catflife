@@ -13,6 +13,23 @@ public class Lavalamp : MonoBehaviour
     [SerializeField]
     GameObject PlayerProjectileRed, PlayerProjectileBlue;
 
+    private void Start()
+    {
+        if (PlayerController.Instance.LavalampColor == 0)
+        {
+            PlayerController.Instance.LavalampColor = 0;
+            PlayerController.Instance.Projectile = PlayerProjectileRed;
+            lavalampBody.material.color = Color.red;
+        }
+        else
+        {
+            PlayerController.Instance.LavalampColor = 1;
+            PlayerController.Instance.Projectile = PlayerProjectileBlue;
+            lavalampBody.material.color = Color.blue;
+        }
+    }
+
+    //Changes the color of the Lamp and the fireball
     public void ChangeColor()
     {
         if (PlayerController.Instance.LavalampColor == 0)

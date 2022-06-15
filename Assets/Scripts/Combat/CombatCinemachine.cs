@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Cinemachine;
 
+//Script for the artists, so they dont have to connect the Player with the cinemachine
 public class CombatCinemachine : MonoBehaviour
 {
     public static CombatCinemachine Instance;

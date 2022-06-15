@@ -36,6 +36,11 @@ public class SceneTransition : MonoBehaviour
         DontDestroyOnLoad(dontDestroyCanvas);
     }
 
+    /// <summary>
+    /// Changes the current scene
+    /// </summary>
+    /// <param name="_sceneToLoad"></param>
+    /// <param name="_loadType">0:normal, 1:addative, 2:unload combat</param>
     public void ChangeScene(string _sceneToLoad, int _loadType)
     {
         sceneToLoad = _sceneToLoad;
@@ -89,6 +94,7 @@ public class SceneTransition : MonoBehaviour
 
     }
 
+    //Manages logic that happens depending on what scene was/is loaded
     public void EndTransition(Scene _previousScene, Scene _newScene)
     {
         string previousSceneName = _previousScene.name;
@@ -106,18 +112,7 @@ public class SceneTransition : MonoBehaviour
         }
         if (newSceneName == "EndScene")
         {
-            //GameObject[] tmp = SceneManager.GetSceneByName("DontDestroyOnLoad").GetRootGameObjects();
-            //Debug.Log("Objectamount in ddol: " + tmp.Length);
-            //foreach (GameObject _object in tmp)
-            //{
-            //    if (_object == dontDestroyCanvas)
-            //    {
-            //        continue;
-            //    }
-            //    Debug.Log(_object.name);
-            //    Destroy(_object);
-            //}
-            //Destroy(dontDestroyCanvas);
+           
         }
         if(newSceneName == "MainRoom")
         {

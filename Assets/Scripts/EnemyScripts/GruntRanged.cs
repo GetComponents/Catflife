@@ -34,34 +34,12 @@ public class GruntRanged : Enemy
     {
         if (isAggro)
         {
-            //Move();
             Attack();
         }
         Vector3 tmp = (PlayerInventory.Instance.transform.position - transform.position).normalized;
         transform.forward = new Vector3(tmp.x, 0, tmp.z);
         base.Update();
-    }
 
-    private void Move()
-    {
-        //if (moveCounter >= 0)
-        //{
-        //    enemyNavMesh.SetDestination(navmeshDestination);
-        //    moveCounter -= Time.deltaTime * slowedSpeed;
-        //}
-        //else if (stopCounter >= 0)
-        //{
-        //    enemyNavMesh.SetDestination(transform.position);
-        //    stopCounter -= Time.deltaTime * slowedSpeed;
-        //}
-        //else
-        //{
-        //    //PlaySound GruntJump
-        //    moveCounter = maxMoveCounter;
-        //    stopCounter = MaxStopCounter;
-        //    playerPosition = PlayerController.Instance.transform.GetChild(0).position;
-        //    navmeshDestination = ((-(playerPosition - transform.position).normalized * JumpingDistance) + transform.position);
-        //}
     }
 
     private void Attack()
@@ -78,6 +56,7 @@ public class GruntRanged : Enemy
         }
     }
 
+    //triggered via animation, shoots a projectile
     private void Shoot()
     {
         myAnimator.SetBool("attack", false);

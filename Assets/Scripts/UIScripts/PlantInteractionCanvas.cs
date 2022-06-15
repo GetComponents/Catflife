@@ -27,6 +27,11 @@ public class PlantInteractionCanvas : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Opens a Menu depending on what is supposed to get upgraded
+    /// </summary>
+    /// <param name="_interactionCost"></param>
+    /// <param name="_plantToWater"></param>
     public void OpenCanvas(int _interactionCost, Interactable _plantToWater)
     {
         costText.text = _interactionCost.ToString();

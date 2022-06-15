@@ -6,6 +6,7 @@ using TMPro;
 public class EnergyText : MonoBehaviour
 {
     TextMeshProUGUI text;
+
     void Start()
     {
         PlayerInventory.Instance.OnEnergyChange.AddListener(ChangeEnergyText);

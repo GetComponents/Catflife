@@ -5,6 +5,7 @@ using UnityEngine.AI;
 
 public class StatueLight : MonoBehaviour
 {
+    //slows enemies upon entering the radius
     private void OnTriggerEnter(Collider other)
     {
         if (other.tag == "Enemy" && other.GetComponent<Enemy>() != null)

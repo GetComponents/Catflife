@@ -65,7 +65,7 @@ public class DungeonGridGenerator : MonoBehaviour
         };
         click.Enable();
         GenerateGrid();
-        ConnectCells();
+        //ConnectCells();
         RotateMap();
     }
 
@@ -212,7 +212,8 @@ public class DungeonGridGenerator : MonoBehaviour
     {
         //
     }
-
+    //Old system for Slay the Spire like Dungeon generation 
+    #region oldReneration
     private void ConnectCells()
     {
         ConnectBottomToTop();
@@ -262,22 +263,9 @@ public class DungeonGridGenerator : MonoBehaviour
                     }
                     if (connectedCell.MyView.GetComponent<EncounterCell>() != null && currentCell.MyView.GetComponent<EncounterCell>() != null)
                     {
-
                         currentCell.MyView.GetComponent<EncounterCell>().NextCells.Add(connectedCell.MyView.GetComponent<EncounterCell>());
                         unonnectedCells.Remove(connectedCell);
                         connectedCell.MyView.GetComponent<EncounterCell>().IsConnected = true;
-
-                        //Instantiate(cellLinePrefab, currentCell.MyView.transform);
-                        //Transform tmp1 = currentCell.MyView.transform;
-                        //Transform tmp2 = connectedCell.MyView.transform;
-                        //cellLinePrefab.GetComponent<UILineRenderer>().points = new List<Vector2>
-                        //{
-                        //    new Vector2(0,0),
-                        //    new Vector2((tmp2.position.x / tmp2.localScale.x) - (tmp1.position.x / tmp1.localScale.x),
-                        //    (tmp2.position.y / tmp2.localScale.y) - (tmp1.position.y / tmp1.localScale.y)) * 0.1f
-                        //    //(connectedCell.MyView.transform.position / cellPrefab.transform.localScale) - currentCell.MyView.transform.position
-                        //};
-                        //Debug.Log(cellLinePrefab.GetComponent<UILineRenderer>().points[1]);
                     }
                     else if (y == GridHeight - 1 && currentCell.MyView.GetComponent<EncounterCell>() != null)
                     {
@@ -303,21 +291,6 @@ public class DungeonGridGenerator : MonoBehaviour
                         connectedCell.MyView.GetComponent<EncounterCell>().NextCells.Add(currentCell.MyView.GetComponent<EncounterCell>());
                     unonnectedCells.Remove(currentCell);
                     currentCell.MyView.GetComponent<EncounterCell>().IsConnected = true;
-
-                    //Instantiate(cellLinePrefab, currentCell.MyView.transform);
-                    //Transform tmp2 = currentCell.MyView.transform;
-                    //Transform tmp1 = null;
-                    //if (connectedCell.MyView != null)
-                    //{
-                    //    tmp1 = connectedCell.MyView.transform;
-                    //}
-                    //    cellLinePrefab.GetComponent<UILineRenderer>().points = new List<Vector2>
-                    //    {
-                    //        new Vector2(0,0),
-                    //        new Vector2((tmp2.position.x / tmp2.localScale.x) - (tmp1.position.x / tmp1.localScale.x),
-                    //        (tmp2.position.y / tmp2.localScale.y)- tmp1.position.y / tmp1.localScale.y) * 0.1f,
-                    //        //(connectedCell.MyView.transform.position / cellPrefab.transform.localScale) - currentCell.MyView.transform.position
-                    //    };
                 }
             }
         }
@@ -327,7 +300,7 @@ public class DungeonGridGenerator : MonoBehaviour
     {
         if (!(yPos + 1 < GridHeight))
         {
-            //NOT THE END SOLUTION §
+            //"fix" for a weird bug
             return DungeonGrid[0, 0];
         }
 
@@ -351,7 +324,6 @@ public class DungeonGridGenerator : MonoBehaviour
     {
         if (yPos == 0)
         {
-            //NOT THE END SOLUTION §
             return DungeonGrid[0, 0];
         }
 
@@ -390,4 +362,5 @@ public class DungeonGridGenerator : MonoBehaviour
                 }
             }
     }
+    #endregion
 }

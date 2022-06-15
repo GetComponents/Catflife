@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Sword : MonoBehaviour
 {
+    //Does stuff if hits an enemy or an enemy projectile
     private void OnTriggerEnter(Collider other)
     {
         if (other.tag == "Enemy" && PlayerController.Instance.IsSwinging)

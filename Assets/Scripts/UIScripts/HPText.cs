@@ -7,8 +7,6 @@ using UnityEngine.UI;
 
 public class HPText : MonoBehaviour
 {
-    //TextMeshProUGUI text;
-
     [SerializeField]
     List<Image> Hearts;
 
@@ -17,13 +15,13 @@ public class HPText : MonoBehaviour
 
     private void Start()
     {
-        //text = GetComponent<TextMeshProUGUI>();
-        //PlayerController.Instance.OnHealthChange.AddListener(ChangeHPText);
         PlayerController.Instance.OnHealthChange.AddListener(ChangeHPDisplay);
         ChangeHPDisplay();
-        //ChangeHPText();
     }
 
+    /// <summary>
+    /// Displays the HP as Sprites
+    /// </summary>
     private void ChangeHPDisplay()
     {
         float healthAmount = PlayerController.Instance.HealthPoints;
@@ -44,11 +42,6 @@ public class HPText : MonoBehaviour
             }
         }
     }
-
-    //private void ChangeHPText()
-    //{
-    //    text.text = $"Health: {PlayerController.Instance.HealthPoints} / {PlayerController.Instance.MaxHP}";
-    //}
 
     private void OnDestroy()
     {

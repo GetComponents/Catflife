@@ -2,6 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// relays all animations to the main script
+/// </summary>
 public class PAnimationRelay : MonoBehaviour
 {
 

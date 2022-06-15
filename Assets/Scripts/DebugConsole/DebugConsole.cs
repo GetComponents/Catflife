@@ -37,6 +37,10 @@ public class DebugConsole : MonoBehaviour
         myCanvas.SetActive(false);
     }
 
+    /// <summary>
+    /// Reads the Input and triggers a command if correct Input
+    /// </summary>
+    /// <param name="_input"></param>
     public void ReadInput(string _input)
     {
         string[] inputInfo = _input.Split(' ');

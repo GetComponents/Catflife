@@ -21,6 +21,8 @@ public class NavmeshBake : MonoBehaviour
 
     public void Bake()
     {
+        //We have to bake in runtime because the Dungeonarenas are spawned as Prefabs
+        //Navmesh can not be baked for prefabs in editor
         GetComponent<NavMeshSurface>().BuildNavMesh();
     }
 }
