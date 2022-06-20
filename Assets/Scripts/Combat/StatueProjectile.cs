@@ -18,6 +18,7 @@ public class StatueProjectile : MonoBehaviour
 
     private void FixedUpdate()
     {
+        //homes in on enemies
         rb.AddForce((target.transform.position - transform.position).normalized * speed, ForceMode.VelocityChange);
     }
 

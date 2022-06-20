@@ -48,10 +48,9 @@ public class ManaBar : MonoBehaviour
         }
         for (int i = 0; i < ManaBarAmount; i++)
         {
-            //4 ist Maxmana bei 0 Upgrades und jedes Upgrade gibt 4 extra Mana
+            //4 is the maxMana at 0 upgrades and always increases by 4
             barFillings[i].fillAmount = Mathf.Clamp((float)PlayerController.Instance.CurrentMana - (i * 4), 0, 4) / 4;
         }
-        //barFilling.fillAmount = (float)PlayerController.Instance.CurrentMana / (float)PlayerController.Instance.maxMana;
     }
 
     public void UnlockNewManabar()

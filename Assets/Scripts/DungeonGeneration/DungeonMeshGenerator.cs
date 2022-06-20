@@ -20,6 +20,7 @@ public class DungeonMeshGenerator : MonoBehaviour
 
     private void Start()
     {
+        //Generates Dungeonmesh
         AddMeshComponents();
         copyDungeonInformation();
         createVerticesAndIndices();

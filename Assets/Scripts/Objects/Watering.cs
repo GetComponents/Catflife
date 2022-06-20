@@ -16,11 +16,12 @@ public class Watering : MonoBehaviour
     GameObject EnterCanvas, ExitCanvas;
 
     [SerializeField]
-    CinemachineVirtualCamera plantCamera, plantCameraUI, playerCamera, playerCameraUI;
+    CinemachineVirtualCamera plantCamera, plantCameraUI;
+    CinemachineVirtualCamera playerCamera, playerCameraUI;
 
     Camera myUICamera;
 
-    public bool HoldsTheCan;
+    //public bool HoldsTheCan;
 
     [SerializeField]
     GameObject attackPlantCanvas, manaPlantCanvas, hpPlantCanvas, speedPlantCanvas;
@@ -43,26 +44,21 @@ public class Watering : MonoBehaviour
 
     private void Start()
     {
-        FindUICamera();
+        FindCameras();
     }
 
-    private void FindUICamera()
+    private void FindCameras()
     {
-        Camera[] tmp = FindObjectsOfType<Camera>();
-        for (int i = 0; i < tmp.Length; i++)
-        {
-            if (tmp[i].gameObject.name == "UICamera")
-            {
-                myUICamera = tmp[i];
-            }
-        }
+        playerCamera = PlayerCameras.Instance.mainCinCam;
+        playerCameraUI = PlayerCameras.Instance.uiCinCam;
+        myUICamera = PlayerCameras.Instance.uiCam;
     }
 
     public void EnableWatering()
     {
         if (myUICamera == null)
         {
-            FindUICamera();
+            FindCameras();
         }
         myUICamera.enabled = false;
         StartCoroutine(EnableUI());
@@ -71,7 +67,7 @@ public class Watering : MonoBehaviour
         PlayerController.Instance.gameObject.SetActive(false);
         plantCamera.Priority = 100;
         plantCameraUI.Priority = 100;
-        HoldsTheCan = true;
+        //HoldsTheCan = true;
         attackPlantCanvas.SetActive(true);
         manaPlantCanvas.SetActive(true);
         hpPlantCanvas.SetActive(true);
@@ -91,7 +87,7 @@ public class Watering : MonoBehaviour
         PlayerController.Instance.gameObject.SetActive(true);
         plantCamera.Priority = 0;
         plantCameraUI.Priority = 0;
-        HoldsTheCan = false;
+        //HoldsTheCan = false;
         attackPlantCanvas.SetActive(false);
         manaPlantCanvas.SetActive(false);
         hpPlantCanvas.SetActive(false);
@@ -101,6 +97,10 @@ public class Watering : MonoBehaviour
         StartCoroutine(test());
     }
 
+    /// <summary>
+    /// fixes bug
+    /// </summary>
+    /// <returns></returns>
     private IEnumerator test()
     {
         playerCameraUI.Priority--;

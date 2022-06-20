@@ -13,6 +13,7 @@ public class CombatSceneChange : MonoBehaviour
         get => m_enemyAmount;
         set
         {
+            //If there are no enemies, the combat ends
             if (value == 0)
             {
                 Debug.Log("The Gates Open");
@@ -44,6 +45,7 @@ public class CombatSceneChange : MonoBehaviour
     {
         while (true)
         {
+            //Waits until the combat scene is loaded (important for spawning the arenas in the correct scene)
             if (SceneManager.GetActiveScene() == SceneManager.GetSceneByName("Combat"))
             {
                 break;
@@ -86,6 +88,7 @@ public class CombatSceneChange : MonoBehaviour
 
     public void EndCombat()
     {
+        //Upon the comabt ending, the gates open
         AkSoundEngine.PostEvent("Play_OpenGate", this.gameObject);
         foreach (var _exit in FindObjectsOfType<PlayerExitZone>())
         {

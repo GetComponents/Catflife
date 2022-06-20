@@ -4,6 +4,9 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.AI;
 
+/// <summary>
+/// Script that all normal enemies inherit from
+/// </summary>
 public class Enemy : MonoBehaviour
 {
     public float HealthPoints
@@ -50,6 +53,8 @@ public class Enemy : MonoBehaviour
 
     public void Update()
     {
+        //System where the enemy tries to see the Player
+        //In a game with a bigger scale I wouldn't fo it this way
         RaycastHit hit;
         if (Physics.Raycast(transform.position, (PlayerInventory.Instance.transform.position - transform.position).normalized,
             out hit, Mathf.Infinity, raycastLayerMask) && (hit.transform.gameObject.tag == "Player"))
@@ -76,16 +81,8 @@ public class Enemy : MonoBehaviour
         PickupEnergy energyPickup = Instantiate(PickupEnergy,
             new Vector3(transform.position.x, PlayerInventory.Instance.transform.position.y, transform.position.z),
             Quaternion.identity).GetComponent<PickupEnergy>();
-        if (isElite)
-        {
-            //PlaySound EnemyDeath (Lower pitch)
-            energyPickup.EnergyGainAmount = BaseEnergyPickupAmount * 2;
-        }
-        else
-        {
-            //PlaySound EnemyDeath 
-            energyPickup.EnergyGainAmount = BaseEnergyPickupAmount;
-        }
+        energyPickup.EnergyGainAmount = BaseEnergyPickupAmount;
+        //Spawns HP-pickup
         Instantiate(PickupHP,
             new Vector3(transform.position.x, PlayerInventory.Instance.transform.position.y, transform.position.z),
             Quaternion.identity);

@@ -94,22 +94,16 @@ public class NewDungeonGridGenerator : MonoBehaviour
                     DungeonGrid[x, y].ContainsEncounter = false;
                 }
             }
+            //If no cell was spawned, the process repeats
             if (!cellSpawned)
             {
                 y--;
-                //for (int x = 0; x < GridWidth; x++)
-                //{
-                //    Destroy(DungeonGrid[x, y].MyView);
-                //}
             }
         }
         GenerateEnd();
     }
 
-    private void SpawnEncounterCell()
-    {
-    }
-
+    //Gives the Cell a reference for what stage is in there
     private void GenerateEncounterType(EncounterCell _cell, int _modifier)
     {
         float tmp = Random.Range(0f, 1f);
@@ -176,6 +170,7 @@ public class NewDungeonGridGenerator : MonoBehaviour
         }
     }
 
+    //Last Cell = boss cell
     private void GenerateEnd()
     {
         finalCell = new Cell();

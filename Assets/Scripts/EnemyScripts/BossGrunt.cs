@@ -3,6 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
+
+/// <summary>
+/// Basically a Copy of the normal Grunt, but does slightly different stuff
+/// </summary>
 public class BossGrunt : Enemy
 {
 

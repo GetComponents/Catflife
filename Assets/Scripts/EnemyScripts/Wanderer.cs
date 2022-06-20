@@ -34,7 +34,6 @@ public class Wanderer : Enemy
             myAnimator.SetBool("isAttacking", true);
             isAttacking = true;
         }
-        destinationChangeTimer -= Time.deltaTime * slowedSpeed;
         CreateNewDestination();
         if (isInRange)
         {
@@ -45,8 +44,11 @@ public class Wanderer : Enemy
 
     private void CreateNewDestination()
     {
+        //Spawns a random Point where the Enemy walks to
+        destinationChangeTimer -= Time.deltaTime * slowedSpeed;
         if (!isInRange && destinationChangeTimer < 0)
         {
+
             enemyNavMesh.SetDestination(transform.position + new Vector3(Random.Range(-1f, 1f), 0, Random.Range(-1f, 1f)).normalized * destinationDistance);
             destinationChangeTimer = timeToChangeDirection;
         }

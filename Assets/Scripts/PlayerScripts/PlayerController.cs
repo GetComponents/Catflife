@@ -26,8 +26,6 @@ public class PlayerController : MonoBehaviour
     [Space]
     [SerializeField]
     Camera mainCam;
-    //[SerializeField]
-    //MeshRenderer myMeshRenderer;
 
     [Header("Health And Collision")]
     [SerializeField]
@@ -66,9 +64,6 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     private int m_healthPoints;
     public int MaxHP;
-    //[SerializeField]
-    //Material hurtMaterial;
-    //Material normalMaterial;
     public bool isInvincible;
 
     [Space]
@@ -143,6 +138,8 @@ public class PlayerController : MonoBehaviour
         if (!gameIsPaused)
         {
             ReduceDashCooldown();
+
+            //Makes the player look to the mouse
             Ray cameraRay = mainCam.ScreenPointToRay(Mouse.current.position.ReadValue());
             RaycastHit hit;
 
@@ -181,17 +178,11 @@ public class PlayerController : MonoBehaviour
                     walkingDistance = 0;
                 }
             }
-
+            //Walking blend. It is rotatet 45° because of the Camera
             if (playerHitBox.eulerAngles.y <= 315)
             {
                 myAnimator.SetFloat("ForwardBlend", m_moveDir.y * ((Mathf.Abs(playerHitBox.eulerAngles.y - 135) - 90) / 90));
                 myAnimator.SetFloat("RightBlend", m_moveDir.x * ((Mathf.Abs(playerHitBox.eulerAngles.y - 225) - 90) / 90));
-                ////höchster wert ist -45 und niedrigstes ist 45/-135
-                ////+ 45 => 0 = max, 90/-90 = min
-                //// 90 - |wert| / 90 
-                //myAnimator.SetFloat("ForwardBlend", (90f - Mathf.Abs(playerHitBox.eulerAngles.y)) / 90f);
-
-                //höchster Wert ist 360 und niedrigstes ist 225/45
             }
             else
             {
@@ -199,6 +190,7 @@ public class PlayerController : MonoBehaviour
                 myAnimator.SetFloat("RightBlend", m_moveDir.x * ((playerHitBox.eulerAngles.y - 315) / 90));
             }
         }
+        //Starts the dash
         else if (DashStarted)
         {
             dashDirection = new Vector3((m_moveDir.y * -0.66f) + (m_moveDir.x * 0.66f), 0, (m_moveDir.y * 0.66f) + (m_moveDir.x * 0.66f)) * DashSpeed;
@@ -214,6 +206,7 @@ public class PlayerController : MonoBehaviour
         SceneTransition.Instance.ChangeScene("MainRoom", 0);
     }
 
+    //Called when going to Main Room
     public void Revive()
     {
         HealthPoints = MaxHP;
@@ -228,104 +221,6 @@ public class PlayerController : MonoBehaviour
         myAnimator.SetBool("isSwinging", false);
         myAnimator.SetBool("isCasting", false);
     }
-
-    #region InputMethods
-    public void Movement(InputAction.CallbackContext context)
-    {
-        m_moveDir = context.ReadValue<Vector2>();
-        //Debug.Log(m_moveDir);
-        //myAnimator.SetFloat("ForwardBlend", m_moveDir.y);
-        myAnimator.SetFloat("RightBlend", m_moveDir.x);
-    }
-
-    public void MouseDown(InputAction.CallbackContext context)
-    {
-        if (!gameIsPaused && IsInCombat)
-        {
-            mouseContext = context.ReadValue<float>();
-            if ((myAnimator.GetCurrentAnimatorStateInfo(0).IsName("Idle") || myAnimator.GetCurrentAnimatorStateInfo(0).IsName("Walking")) && context.started)
-            {
-                myAnimator.SetBool("isSwinging", true);
-            }
-            else if (mouseContext == 0 && myAnimator.GetBool("isCharging"))
-            {
-                SpinAttack();
-            }
-        }
-    }
-
-    public void Interact(InputAction.CallbackContext context)
-    {
-        if (context.started)
-        {
-            //ChangeScene(context);
-            if (DebugConsole.Instance != null)
-            {
-                if (!DebugConsole.Instance.myCanvas.activeInHierarchy)
-                {
-                    DebugConsole.Instance.OpenConsole();
-                }
-                else
-                {
-                    DebugInput.Instance.ConfirmInput();
-                }
-            }
-        }
-    }
-
-    public void Dash(InputAction.CallbackContext context)
-    {
-        if (currentDashCooldown < 0 && context.started
-            && (myAnimator.GetCurrentAnimatorStateInfo(0).IsName("Idle") || myAnimator.GetCurrentAnimatorStateInfo(0).IsName("Walking")))
-        {
-            IsDashing = true;
-            currentDashCooldown = dashCooldown;
-            isInvincible = true;
-            myAnimator.SetBool("isDashing", true);
-        }
-    }
-
-    public void Cast(InputAction.CallbackContext context)
-    {
-        if ((myAnimator.GetCurrentAnimatorStateInfo(0).IsName("Idle") || myAnimator.GetCurrentAnimatorStateInfo(0).IsName("Walking"))
-            && context.started && unlockedProjectile && CurrentMana >= projectileManaCost)
-        {
-            if (IsInCombat)
-            {
-
-                CurrentMana -= projectileManaCost;
-                myAnimator.SetBool("isCasting", true);
-            }
-        }
-    }
-
-    public void PauseGame(InputAction.CallbackContext context)
-    {
-        if (context.started)
-        {
-            bool pausescreenIsOpen = false;
-            for (int i = 0; i < SceneManager.sceneCount; i++)
-            {
-                if (SceneManager.GetSceneAt(i).name == "PauseScreen")
-                {
-                    pausescreenIsOpen = true;
-                }
-            }
-            if (!pausescreenIsOpen)
-            {
-                SceneManager.LoadSceneAsync("PauseScreen", LoadSceneMode.Additive);
-                gameIsPaused = true;
-                Time.timeScale = 0;
-            }
-            else
-            {
-                SceneManager.UnloadSceneAsync("PauseScreen");
-                gameIsPaused = false;
-                Time.timeScale = 1;
-            }
-        }
-    }
-    #endregion
 
     private void ReduceDashCooldown()
     {
@@ -364,6 +259,142 @@ public class PlayerController : MonoBehaviour
     {
         HealthPoints += _amount;
     }
+
+    /// <summary>
+    /// Called when the Sword hits an enemy projectile
+    /// </summary>
+    /// <param name="projectileTransform"></param>
+    /// <returns></returns>
+    public bool ReturnEnemyProjectile(Transform projectileTransform)
+    {
+        if (unlockedReflect)
+        {
+            GameObject tmp = Instantiate(Projectile, projectileTransform.position, Quaternion.identity);
+            tmp.transform.localScale = projectileTransform.localScale;
+            tmp.GetComponent<Rigidbody>().AddForce(transform.GetChild(0).forward.normalized * ProjectileSpeed, ForceMode.Impulse);
+            tmp.GetComponent<PlayerProjectile>().MyDamage = ProjectileDamage;
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+
+
+
+    #region InputMethods
+    public void Movement(InputAction.CallbackContext context)
+    {
+        m_moveDir = context.ReadValue<Vector2>();
+        myAnimator.SetFloat("RightBlend", m_moveDir.x);
+    }
+
+    /// <summary>
+    /// Swings the Sword. If mouse 1 is beig held, it charges
+    /// </summary>
+    /// <param name="context"></param>
+    public void MouseDown(InputAction.CallbackContext context)
+    {
+        if (!gameIsPaused && IsInCombat)
+        {
+            mouseContext = context.ReadValue<float>();
+            if ((myAnimator.GetCurrentAnimatorStateInfo(0).IsName("Idle") || myAnimator.GetCurrentAnimatorStateInfo(0).IsName("Walking")) && context.started)
+            {
+                myAnimator.SetBool("isSwinging", true);
+            }
+            else if (mouseContext == 0 && myAnimator.GetBool("isCharging"))
+            {
+                SpinAttack();
+            }
+        }
+    }
+
+    /// <summary>
+    /// Called for the cheat console
+    /// </summary>
+    /// <param name="context"></param>
+    public void Interact(InputAction.CallbackContext context)
+    {
+        if (context.started)
+        {
+            if (DebugConsole.Instance != null)
+            {
+                if (!DebugConsole.Instance.myCanvas.activeInHierarchy)
+                {
+                    DebugConsole.Instance.OpenConsole();
+                }
+                else
+                {
+                    DebugInput.Instance.ConfirmInput();
+                }
+            }
+        }
+    }
+
+    public void Dash(InputAction.CallbackContext context)
+    {
+        if (currentDashCooldown < 0 && context.started
+            && (myAnimator.GetCurrentAnimatorStateInfo(0).IsName("Idle") || myAnimator.GetCurrentAnimatorStateInfo(0).IsName("Walking")))
+        {
+            IsDashing = true;
+            currentDashCooldown = dashCooldown;
+            isInvincible = true;
+            myAnimator.SetBool("isDashing", true);
+        }
+    }
+
+    /// <summary>
+    /// Fireball attack
+    /// </summary>
+    /// <param name="context"></param>
+    public void Cast(InputAction.CallbackContext context)
+    {
+        if ((myAnimator.GetCurrentAnimatorStateInfo(0).IsName("Idle") || myAnimator.GetCurrentAnimatorStateInfo(0).IsName("Walking"))
+            && context.started && unlockedProjectile && CurrentMana >= projectileManaCost)
+        {
+            if (IsInCombat)
+            {
+
+                CurrentMana -= projectileManaCost;
+                myAnimator.SetBool("isCasting", true);
+            }
+        }
+    }
+
+    /// <summary>
+    /// Pauses the game
+    /// </summary>
+    /// <param name="context"></param>
+    public void PauseGame(InputAction.CallbackContext context)
+    {
+        if (context.started)
+        {
+            bool pausescreenIsOpen = false;
+            for (int i = 0; i < SceneManager.sceneCount; i++)
+            {
+                if (SceneManager.GetSceneAt(i).name == "PauseScreen")
+                {
+                    pausescreenIsOpen = true;
+                }
+            }
+            if (!pausescreenIsOpen)
+            {
+                SceneManager.LoadSceneAsync("PauseScreen", LoadSceneMode.Additive);
+                gameIsPaused = true;
+                Time.timeScale = 0;
+            }
+            else
+            {
+                SceneManager.UnloadSceneAsync("PauseScreen");
+                gameIsPaused = false;
+                Time.timeScale = 1;
+            }
+        }
+    }
+    #endregion
+
+    
 
     #region AnimatorMethods
     public void StartSwing()
@@ -419,25 +450,12 @@ public class PlayerController : MonoBehaviour
         AkSoundEngine.PostEvent("Play_CharProjectileThrow", this.gameObject);
     }
 
-    public bool ReturnEnemyProjectile(Transform projectileTransform)
-    {
-        if (unlockedReflect)
-        {
-            GameObject tmp = Instantiate(Projectile, projectileTransform.position, Quaternion.identity);
-            tmp.transform.localScale = projectileTransform.localScale;
-            tmp.GetComponent<Rigidbody>().AddForce(transform.GetChild(0).forward.normalized * ProjectileSpeed, ForceMode.Impulse);
-            tmp.GetComponent<PlayerProjectile>().MyDamage = ProjectileDamage;
-            return true;
-        }
-        else
-        {
-            return false;
-        }
-    }
-
     public void EndCast()
     {
         myAnimator.SetBool("isCasting", false);
     }
+
     #endregion
+
+   
 }

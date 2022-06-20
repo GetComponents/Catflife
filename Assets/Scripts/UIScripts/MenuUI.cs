@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+/// <summary>
+/// UI Script for Menu buttons
+/// </summary>
 public class MenuUI : MonoBehaviour
 {
     public void StartGame()

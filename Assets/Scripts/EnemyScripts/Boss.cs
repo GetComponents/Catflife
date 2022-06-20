@@ -167,6 +167,7 @@ public class Boss : MonoBehaviour
         }
     }
 
+    #region AnimMethods
     private void CastOnSelf()
     {
         Debug.Log("Casting on self");
@@ -226,6 +227,7 @@ public class Boss : MonoBehaviour
     {
         SceneTransition.Instance.ChangeScene("EndScene", 0);
     }
+    #endregion
 
     private void OnCollisionEnter(Collision collision)
     {

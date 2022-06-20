@@ -123,12 +123,12 @@ public class PlayerInventory : MonoBehaviour
             }
             m_manaUpgrades = value;
             PlayerController.Instance.CurrentMana = PlayerController.Instance.maxMana;
-            //ManaBar.Instance.UnlockNewManabar();
         }
     }
     [SerializeField]
     private int m_dashUpgrades, m_attackUpgrades, m_hpUpgrades, m_manaUpgrades;
 
+    //Vector 3 because you can ugrade your stats up to 3 times
     [SerializeField]
     Vector3 dashProgression, speedProgression, attackProgression, hpProgression, maxManaProgression, manaGainProgression;
     public int Energy
@@ -157,11 +157,6 @@ public class PlayerInventory : MonoBehaviour
             Destroy(gameObject);
         }
     }
-
-    //private void OnCollisionEnter(Collision collision)
-    //{
-    //    Debug.Log(collision.transform.name);
-    //}
 
     public void GainEnergy(int _amount)
     {

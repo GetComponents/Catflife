@@ -34,6 +34,10 @@ public class WateringCan : MonoBehaviour
         GetComponent<Animator>().SetBool("IsWatering", false);
     }
 
+    /// <summary>
+    /// Starts the watering interaction
+    /// </summary>
+    /// <param name="_plantPosition"></param>
     public void MoveWateringCan(Vector3 _plantPosition)
     {
         transform.position = _plantPosition + new Vector3(0, 1.8f, -2.8f);

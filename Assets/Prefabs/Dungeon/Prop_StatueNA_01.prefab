@@ -1,5 +1,35 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &486920345844428260
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2942005715742220353}
+  m_Layer: 0
+  m_Name: LightPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2942005715742220353
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 486920345844428260}
+  m_LocalRotation: {x: 0, y: 0, z: 1, w: 0}
+  m_LocalPosition: {x: 0.86, y: -0.1, z: -0.04}
+  m_LocalScale: {x: 2, y: 0.1, z: 2}
+  m_Children: []
+  m_Father: {fileID: 1659606458926680529}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
 --- !u!65 &1189691602075495992
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13,6 +43,23 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.9999998, y: 1.9999999, z: 0.09999999}
   m_Center: {x: 1.0000036, y: -1.0000001, z: -0.049999993}
+--- !u!114 &6461554656115784057
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2036695639063303019}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d290ee29a7add8b41b45884a81f4a53e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  projectile: {fileID: 3197289015864360084, guid: f9cdb67a1fef7d843b14f1e1c8dad34b, type: 3}
+  slowingHitbox: {fileID: 9219511954578549842, guid: 9369613e84f46814e9170bb8b6ca0a93, type: 3}
+  shootPoint: {fileID: 9178899084331537627}
+  lightPoint: {fileID: 486920345844428260}
+  myMesh: {fileID: 2036695639900082083}
 --- !u!1 &2036695639900082083
 GameObject:
   m_ObjectHideFlags: 0
@@ -95,6 +142,36 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!1 &9178899084331537627
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3860690843957745861}
+  m_Layer: 0
+  m_Name: StatueShootPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3860690843957745861
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9178899084331537627}
+  m_LocalRotation: {x: 0.7071068, y: 0.0000020862692, z: -0.7071068, w: -0.0000020862683}
+  m_LocalPosition: {x: 0.07, y: -2.143, z: -0.0857}
+  m_LocalScale: {x: 0.05361337, y: 0.4459623, z: 1.0069805}
+  m_Children: []
+  m_Father: {fileID: 1659606458926680529}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1189691602075495994
 PrefabInstance:
   m_ObjectHideFlags: 0

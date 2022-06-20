@@ -29,10 +29,12 @@ public class GruntElite : Enemy
     {
         if (isAggro)
         {
+            //Melee attack
             MoveTowardsPlayer();
         }
         else
         {
+            //Ranged attack
             Attack();
         }
         base.Update();
@@ -40,6 +42,7 @@ public class GruntElite : Enemy
 
     private void MoveTowardsPlayer()
     {
+        //Shouldve been a FSM, but I already had it finished when I noticed
         if (moveCounter >= 0)
         {
             enemyNavMesh.SetDestination(playerPosition);
@@ -65,6 +68,8 @@ public class GruntElite : Enemy
         if (currentShotCooldown < 0)
         {
             //PlaySound GruntShoot TODO isn't this already in GruntProjectile and GruntEliteProjectile?
+
+            //shoots a projectile
             playerPosition = PlayerController.Instance.transform.GetChild(0).position;
             GameObject tmp = Instantiate(Projectile, transform.position, Quaternion.identity);
             tmp.GetComponent<GruntEliteProjectile>().MyDamage = damage;

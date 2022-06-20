@@ -9,6 +9,8 @@ public class EnemySpawnpoint : MonoBehaviour
 
     private void Start()
     {
+        //There was a system before, where you could return to cleared arenas
+        //This is kindo of deprecated now
         if (!NewDungeonGridGenerator.Instance.ClearedArena)
         {
             if (Enemy != null)

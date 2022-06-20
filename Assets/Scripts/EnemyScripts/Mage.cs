@@ -61,6 +61,7 @@ public class Mage : Enemy
         isAttacking = true;
     }
 
+    //Runs away from Player
     private void Move()
     {
         myAnimator.SetBool("isAttacking", false);
@@ -75,6 +76,7 @@ public class Mage : Enemy
         }
     }
 
+    //Triggered by animat
     private void StartCast()
     {
         //PlaySound MageMumbling ?
@@ -90,6 +92,10 @@ public class Mage : Enemy
         isAttacking = false;
     }
 
+    /// <summary>
+    /// Casts in a radius around the Player
+    /// </summary>
+    /// <returns></returns>
     IEnumerator CastRandomly()
     {
         while (true)

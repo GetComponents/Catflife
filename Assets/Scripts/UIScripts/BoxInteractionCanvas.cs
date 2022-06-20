@@ -27,6 +27,11 @@ public class BoxInteractionCanvas : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Opens the Canvas over the Box
+    /// </summary>
+    /// <param name="_interactionCost"></param>
+    /// <param name="_boxToOpen"></param>
     public void OpenCanvas(int _interactionCost, Interactable _boxToOpen)
     {
         costText.text = _interactionCost.ToString();

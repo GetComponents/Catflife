@@ -3,6 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
+
+/// <summary>
+/// Unused Enemy that rolls towards the Player
+/// </summary>
 public class Bowler : Enemy
 {
     PlayerController player;

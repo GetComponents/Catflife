@@ -2,6 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
+/// <summary>
+/// On most Enemies to handle a behaviour that is proximity based
+/// </summary>
 public class EnemyAggroRange : MonoBehaviour
 {
     PlayerInventory player;

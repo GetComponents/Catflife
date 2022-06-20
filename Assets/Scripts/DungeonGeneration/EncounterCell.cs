@@ -53,24 +53,8 @@ public class EncounterCell : MonoBehaviour
     {
         if (Clickable == true)
         {
-            //DisableOtherCells();
             GenerateEncounter();
         }
-    }
-    private void DisableOtherCells()
-    {
-        //foreach (EncounterCell cell in DungeonGridGenerator.Instance.SelectableCells)
-        //{
-        //    cell.Clickable = false;
-        //}
-        //DungeonGridGenerator.Instance.SelectableCells.Clear();
-        //foreach (EncounterCell cell in NextCells)
-        //{
-        //    cell.Clickable = true;
-        //    DungeonGridGenerator.Instance.SelectableCells.Add(cell);
-        //}
-        //DungeonGridGenerator.Instance.MoveMap(gameObject.transform.localScale.y);
-        //MapManager.Instance.ChangeMapState(false);
     }
 
     public void GenerateEncounter()
@@ -81,15 +65,12 @@ public class EncounterCell : MonoBehaviour
                 break;
             case EEncounterType.FIGHTEASY:
                 SceneTransition.Instance.ChangeScene("Combat", 1);
-                //SceneManager.LoadScene("Combat", LoadSceneMode.Additive);
                 break;
             case EEncounterType.FIGHTMEDIUM:
                 SceneTransition.Instance.ChangeScene("Combat", 1);
-                //SceneManager.LoadScene("Combat", LoadSceneMode.Additive);
                 break;
             case EEncounterType.FIGHTHARD:
                 SceneTransition.Instance.ChangeScene("Combat", 1);
-                //SceneManager.LoadScene("Combat", LoadSceneMode.Additive);
                 break;
             case EEncounterType.BOSS:
                 if (true)
@@ -98,6 +79,7 @@ public class EncounterCell : MonoBehaviour
                 }
                 else
                 {
+                    //In case the Player hasnt unlocked the StoryItem to fight the boss
                     PlayerController.Instance.Die();
                 }
                 break;
@@ -106,7 +88,6 @@ public class EncounterCell : MonoBehaviour
             default:
                 break;
         }
-        //SceneTransition.Instance?.StartTransition();
         NewDungeonGridGenerator.Instance.CurrentEncounter = MyEncounter;
         NewDungeonGridGenerator.Instance.CurrentEncounterIndex = MyEncounterIndex;
         NewDungeonGridGenerator.Instance.ClearedArena = IsCleared;

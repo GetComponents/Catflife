@@ -50,6 +50,7 @@ public class MapManager : MonoBehaviour
                     + new Vector3(0,1,0);
                 return;
             }
+            //For the system, where the Player could re-enter stages 
             if (PlayerTookExit)
             {
                 PlayerInventory.Instance.transform.position = CurrentCell.ExitPos.position;

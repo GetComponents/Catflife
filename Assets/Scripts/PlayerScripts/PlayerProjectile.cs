@@ -18,6 +18,11 @@ public class PlayerProjectile : MonoBehaviour
         Destroy(gameObject, selfDestructTime);
         playingID = AkSoundEngine.PostEvent("Play_CharProjectileAmbience", this.gameObject);
     }
+
+    /// <summary>
+    /// Destroys itself upon impact
+    /// </summary>
+    /// <param name="other"></param>
     private void OnTriggerEnter(Collider other)
     {
         if (other.tag == "Enemy")

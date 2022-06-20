@@ -25,12 +25,13 @@ public class GruntEliteProjectile : MonoBehaviour
 
     private void FixedUpdate()
     {
+        //Homes in on Player
         rb.AddForce((playerCollision.position - transform.position).normalized * mySpeed, ForceMode.VelocityChange);
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "Player")
+        if (other.tag == "Player" && player.IsDashing == false)
         {
             PostImpactEvents();
             player.TakeDamage(MyDamage);
