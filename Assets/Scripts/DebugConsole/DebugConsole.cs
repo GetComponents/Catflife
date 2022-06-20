@@ -120,13 +120,27 @@ public class DebugConsole : MonoBehaviour
                 PlayerController.Instance.CurrentMana = PlayerController.Instance.maxMana;
                 setDebugText("You Have Gained Enough Wisdom For A Lifetime");
                 break;
+            case "openBoxes":
+                Interactable[] tmp = FindObjectsOfType<Interactable>();
+                if (tmp != null)
+                foreach (Interactable box in tmp)
+                {
+                    if (box.myAction == EActionType.UNPACK)
+                    {
+                        box.UnpackItem();
+                    }
+                }
+                PlayerInventory.Instance.Energy = 0;
+                setDebugText("Pandora is opening...");
+                break;
             case "help":
                 setDebugText(@"Possible Commands:
 giveEnergy *amount*
 killEnemies
 turnInvincible
 setUpgrade attack/health/mana/speed *upgrade level*
-infiniteMana");
+infiniteMana
+openBoxes");
                 break;
             default:
                 giveErrorMessage();

@@ -6,7 +6,7 @@ public class Statue : MonoBehaviour
 {
 
     [SerializeField]
-    GameObject projectile, slowingHitbox, shootPoint;
+    GameObject projectile, slowingHitbox, shootPoint, lightPoint;
 
     private bool activated = false;
     [SerializeField]
@@ -37,8 +37,7 @@ public class Statue : MonoBehaviour
                         StartCoroutine(shootEnemies());
                         break;
                     case 1:
-                        Instantiate(slowingHitbox, transform.position, Quaternion.identity);
-
+                        Instantiate(slowingHitbox, lightPoint.transform);
                         break;
                     default:
                         break;

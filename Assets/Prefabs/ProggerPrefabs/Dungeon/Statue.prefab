@@ -112,8 +112,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   projectile: {fileID: 3197289015864360084, guid: f9cdb67a1fef7d843b14f1e1c8dad34b, type: 3}
   slowingHitbox: {fileID: 2821587716635543183}
-  slowingVFX: {fileID: 8586038160816040281, guid: 4ca686c4011f18f43b83119f0ea29532, type: 3}
   shootPoint: {fileID: 1497260000725986076}
+  lightPoint: {fileID: 0}
+  myMesh: {fileID: 0}
 --- !u!1 &1497260000725986076
 GameObject:
   m_ObjectHideFlags: 0
@@ -155,6 +156,22 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3574773585934436841, guid: 9369613e84f46814e9170bb8b6ca0a93, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4007812906725712164, guid: 9369613e84f46814e9170bb8b6ca0a93, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4151084318870521025, guid: 9369613e84f46814e9170bb8b6ca0a93, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8665474993439049555, guid: 9369613e84f46814e9170bb8b6ca0a93, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 9016499402457804045, guid: 9369613e84f46814e9170bb8b6ca0a93, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -165,7 +182,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9016499402457804045, guid: 9369613e84f46814e9170bb8b6ca0a93, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.44
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 9016499402457804045, guid: 9369613e84f46814e9170bb8b6ca0a93, type: 3}
       propertyPath: m_LocalPosition.z

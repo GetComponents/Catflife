@@ -17,7 +17,7 @@ public class GruntProjectile : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "Player")
+        if (other.tag == "Player" && player.IsDashing == false)
         {
             PostImpactEvents();
             player.TakeDamage(MyDamage);
