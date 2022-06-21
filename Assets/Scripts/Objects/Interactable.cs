@@ -249,7 +249,10 @@ public class Interactable : MonoBehaviour
     {
         AkSoundEngine.PostEvent("Play_ImpactCardboard", this.gameObject);
         GameObject movingObject = Instantiate(objectToUnpack, transform.position, transform.rotation);
-        objectMoveUpPosition = Instantiate(new GameObject(), transform).transform;
+        objectMoveUpPosition = new GameObject().transform;
+        objectMoveUpPosition.position = transform.position;
+        objectMoveUpPosition.rotation = transform.rotation;
+        objectMoveUpPosition.localScale = transform.localScale;
         objectMoveUpPosition.position += new Vector3(0, 2, 0);
         objectMoveUpPosition.eulerAngles += new Vector3(0, 180, 0);
         objectMoveUpPosition.localScale *= 2;
