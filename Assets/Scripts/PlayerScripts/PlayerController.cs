@@ -111,7 +111,8 @@ public class PlayerController : MonoBehaviour
 
     [Space]
     public int LavalampColor;
-    private bool gameIsPaused;
+    [HideInInspector]
+    public bool GameIsPaused;
     public bool IsInCombat = true;
 
     [Header("Player Enviroment Aware")]
@@ -135,7 +136,7 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-        if (!gameIsPaused)
+        if (!GameIsPaused)
         {
             ReduceDashCooldown();
 
@@ -296,7 +297,7 @@ public class PlayerController : MonoBehaviour
     /// <param name="context"></param>
     public void MouseDown(InputAction.CallbackContext context)
     {
-        if (!gameIsPaused && IsInCombat)
+        if (!GameIsPaused && IsInCombat)
         {
             mouseContext = context.ReadValue<float>();
             if ((myAnimator.GetCurrentAnimatorStateInfo(0).IsName("Idle") || myAnimator.GetCurrentAnimatorStateInfo(0).IsName("Walking")) && context.started)
@@ -381,13 +382,13 @@ public class PlayerController : MonoBehaviour
             if (!pausescreenIsOpen)
             {
                 SceneManager.LoadSceneAsync("PauseScreen", LoadSceneMode.Additive);
-                gameIsPaused = true;
+                GameIsPaused = true;
                 Time.timeScale = 0;
             }
             else
             {
                 SceneManager.UnloadSceneAsync("PauseScreen");
-                gameIsPaused = false;
+                GameIsPaused = false;
                 Time.timeScale = 1;
             }
         }

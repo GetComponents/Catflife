@@ -21,6 +21,7 @@ public class MenuUI : MonoBehaviour
         {
             Time.timeScale = 1;
         }
+        PlayerController.Instance.GameIsPaused = false;
         SceneManager.UnloadSceneAsync("PauseScreen");
     }
 

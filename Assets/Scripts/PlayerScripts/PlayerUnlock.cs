@@ -16,6 +16,9 @@ public class PlayerUnlock : MonoBehaviour
     [SerializeField]
     EUnlockType myUnlock;
 
+    [SerializeField]
+    GameObject unlockCanvas;
+
     public void UnlockMyContent()
     {
         switch (myUnlock)
@@ -26,6 +29,7 @@ public class PlayerUnlock : MonoBehaviour
                 if (!PlayerController.Instance.unlockedSpinMove)
                 {
                     AkSoundEngine.PostEvent("Play_UnlockJingle", this.gameObject);
+                    Instantiate(unlockCanvas);
                     PlayerController.Instance.unlockedSpinMove = true;
                 }
                 break;
@@ -33,6 +37,7 @@ public class PlayerUnlock : MonoBehaviour
                 if (!PlayerController.Instance.unlockedProjectile)
                 {
                     AkSoundEngine.PostEvent("Play_UnlockJingle", this.gameObject);
+                    Instantiate(unlockCanvas);
                     PlayerController.Instance.unlockedProjectile = true;
                 }
                 break;
@@ -40,6 +45,7 @@ public class PlayerUnlock : MonoBehaviour
                 if (!PlayerController.Instance.unlockedReflect)
                 {
                     AkSoundEngine.PostEvent("Play_UnlockJingle", this.gameObject);
+                    Instantiate(unlockCanvas);
                     PlayerController.Instance.unlockedReflect = true;
                 }
                 break;
@@ -47,6 +53,7 @@ public class PlayerUnlock : MonoBehaviour
                 if (!PlayerController.Instance.UnlockedStatue)
                 {
                     AkSoundEngine.PostEvent("Play_UnlockJingle", this.gameObject);
+                    Instantiate(unlockCanvas);
                     PlayerController.Instance.UnlockedStatue = true;
                 }
                 break;

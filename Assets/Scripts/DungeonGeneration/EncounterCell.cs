@@ -44,15 +44,17 @@ public class EncounterCell : MonoBehaviour
     }
     [SerializeField]
     private EEncounterType m_myEncounter;
-    public bool Clickable;
+    private bool wasClicked;
 
     public Transform LeftWallPos, RightWallPos, EntrancePos, ExitPos;
 
 
     public void StartEncounter()
     {
-        if (Clickable == true)
+        Debug.Log("CLickable = " + wasClicked);
+        if (wasClicked == false)
         {
+            wasClicked = true;
             GenerateEncounter();
         }
     }

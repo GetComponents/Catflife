@@ -50,20 +50,20 @@ public class DungeonGridGenerator : MonoBehaviour
             return;
         }
         gameCamera = FindObjectOfType<Camera>();
-        click = new InputAction(binding: "<Mouse>/leftButton");
-        click.performed += ctx => {
-            RaycastHit hit;
-            Vector3 coor = Mouse.current.position.ReadValue();
-            if (Physics.Raycast(gameCamera.ScreenPointToRay(coor), out hit))
-            {
-                EncounterCell tmp = hit.transform.GetComponent<EncounterCell>();
-                if (tmp != null)
-                {
-                    tmp.StartEncounter();
-                }
-            }
-        };
-        click.Enable();
+        //click = new InputAction(binding: "<Mouse>/leftButton");
+        //click.performed += ctx => {
+        //    RaycastHit hit;
+        //    Vector3 coor = Mouse.current.position.ReadValue();
+        //    if (Physics.Raycast(gameCamera.ScreenPointToRay(coor), out hit))
+        //    {
+        //        EncounterCell tmp = hit.transform.GetComponent<EncounterCell>();
+        //        if (tmp != null && tmp.Clickable == true)
+        //        {
+        //            tmp.StartEncounter();
+        //        }
+        //    }
+        //};
+        //click.Enable();
         GenerateGrid();
         //ConnectCells();
         RotateMap();
@@ -231,13 +231,13 @@ public class DungeonGridGenerator : MonoBehaviour
                     if (y == 0)
                     {
                         //DungeonGrid[x, y].MyView.GetComponent<Image>().color = Color.white;
-                        DungeonGrid[x, y].MyView.GetComponent<EncounterCell>().Clickable = true;
+                        //DungeonGrid[x, y].MyView.GetComponent<EncounterCell>().wasClicked = true;
                         SelectableCells.Add(DungeonGrid[x, y].MyView.GetComponent<EncounterCell>());
                     }
                     else
                     {
                         //DungeonGrid[x, y].MyView.GetComponent<Image>().color = Color.red;
-                        DungeonGrid[x, y].MyView.GetComponent<EncounterCell>().Clickable = false;
+                        //DungeonGrid[x, y].MyView.GetComponent<EncounterCell>().wasClicked = false;
                     }
             }
         }
