@@ -38,6 +38,9 @@ public class Enemy : MonoBehaviour
     [HideInInspector]
     public float originalNavMeshSpeed, slowedSpeed = 1;
 
+    [SerializeField]
+    private GameObject deathVFX;
+
     public UnityEvent OnDeath;
 
     [SerializeField]
@@ -86,6 +89,7 @@ public class Enemy : MonoBehaviour
         Instantiate(PickupHP,
             new Vector3(transform.position.x, PlayerInventory.Instance.transform.position.y, transform.position.z),
             Quaternion.identity);
+        Destroy(Instantiate(deathVFX, transform.position, Quaternion.identity), 1);
         CombatSceneChange.Instance?.RemoveEnemy();
     }
 }

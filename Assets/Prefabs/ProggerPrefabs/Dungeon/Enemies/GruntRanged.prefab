@@ -1645,7 +1645,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &6206347383466913627
 Transform:
   m_ObjectHideFlags: 0
@@ -1908,7 +1908,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &8969429108669099839
 Transform:
   m_ObjectHideFlags: 0
@@ -2150,6 +2150,7 @@ MonoBehaviour:
   BaseEnergyPickupAmount: 10
   originalNavMeshSpeed: 0
   slowedSpeed: 1
+  deathVFX: {fileID: 5416478456430089832, guid: 9dc389215074a064da1b2b68cc5abe89, type: 3}
   OnDeath:
     m_PersistentCalls:
       m_Calls: []

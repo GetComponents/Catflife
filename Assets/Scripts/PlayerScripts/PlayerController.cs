@@ -19,6 +19,8 @@ public class PlayerController : MonoBehaviour
     [Header("Attacks")]
     [SerializeField]
     Sword mySword;
+    [SerializeField]
+    GameObject swordTrail;
     public float SwordDamage;
     public float SpinAttackDamageMultiplier;
 
@@ -395,12 +397,13 @@ public class PlayerController : MonoBehaviour
     }
     #endregion
 
-    
+
 
     #region AnimatorMethods
     public void StartSwing()
     {
         IsSwinging = true;
+        swordTrail.SetActive(true);
         AkSoundEngine.PostEvent("Play_SwordSwing", this.gameObject);
     }
 
@@ -413,6 +416,7 @@ public class PlayerController : MonoBehaviour
         }
         else
         {
+            swordTrail.SetActive(false);
             myAnimator.SetBool("isSwinging", false);
         }
     }
@@ -458,5 +462,5 @@ public class PlayerController : MonoBehaviour
 
     #endregion
 
-   
+
 }

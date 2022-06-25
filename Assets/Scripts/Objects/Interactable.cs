@@ -113,6 +113,9 @@ public class Interactable : MonoBehaviour
     private List<Interactable> FollowUpBoxes = new List<Interactable>();
 
     [SerializeField]
+    private GameObject poofVFX;
+
+    [SerializeField]
     private WateringCan wateringCan;
 
     private void Start()
@@ -275,9 +278,11 @@ public class Interactable : MonoBehaviour
         }
         Destroy(objectMoveUpPosition.gameObject);
         yield return new WaitForSeconds(1);
+        Destroy(Instantiate(poofVFX, movingObject.transform.position, Quaternion.identity), 2);
         Destroy(movingObject);
         AkSoundEngine.PostEvent("Play_PoofCardboard", this.gameObject);
         yield return new WaitForSeconds(1);
+        Destroy(Instantiate(poofVFX, objectPosition.position, Quaternion.identity), 2);
         AkSoundEngine.PostEvent("Play_PoofCardboard", this.gameObject);
 
         BoxManager.Instance.OpenedBoxesIndex.Add(BoxNumber);

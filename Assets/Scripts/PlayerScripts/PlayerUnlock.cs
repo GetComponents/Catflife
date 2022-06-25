@@ -53,7 +53,6 @@ public class PlayerUnlock : MonoBehaviour
                 if (!PlayerController.Instance.UnlockedStatue)
                 {
                     AkSoundEngine.PostEvent("Play_UnlockJingle", this.gameObject);
-                    Instantiate(unlockCanvas);
                     PlayerController.Instance.UnlockedStatue = true;
                 }
                 break;
