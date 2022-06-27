@@ -7,56 +7,17 @@
 					<PropertyList>
 						<Property Name="3DSpatialization" Type="int16" Value="1"/>
 						<Property Name="Color" Type="int16" Value="10"/>
+						<Property Name="GameAuxSendVolume" Type="Real64">
+							<ValueList>
+								<Value>-3</Value>
+							</ValueList>
+						</Property>
 						<Property Name="OverrideColor" Type="bool" Value="True"/>
 						<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
 					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Attenuation">
-							<Custom>
-								<Attenuation Name="Attenuation (Custom)" ID="{D05814FF-7435-4091-8CCD-442445339D2D}" ShortID="1021536035">
-									<CurveUsageInfoList>
-										<VolumeDryUsage>
-											<CurveUsageInfo Platform="Linked" CurveToUse="Custom">
-												<Curve Name="VolumeDry" ID="{BD5F6FE8-6337-4F2B-BB8A-07748EFE4949}">
-													<PropertyList>
-														<Property Name="Flags" Type="int32" Value="3"/>
-													</PropertyList>
-													<PointList>
-														<Point>
-															<XPos>0</XPos>
-															<YPos>0</YPos>
-															<Flags>5</Flags>
-														</Point>
-														<Point>
-															<XPos>100</XPos>
-															<YPos>-200</YPos>
-															<Flags>37</Flags>
-														</Point>
-													</PointList>
-												</Curve>
-											</CurveUsageInfo>
-										</VolumeDryUsage>
-										<VolumeWetGameUsage>
-											<CurveUsageInfo Platform="Linked" CurveToUse="UseVolumeDry"/>
-										</VolumeWetGameUsage>
-										<VolumeWetUserUsage>
-											<CurveUsageInfo Platform="Linked" CurveToUse="UseVolumeDry"/>
-										</VolumeWetUserUsage>
-										<LowPassFilterUsage>
-											<CurveUsageInfo Platform="Linked" CurveToUse="None"/>
-										</LowPassFilterUsage>
-										<HighPassFilterUsage>
-											<CurveUsageInfo Platform="Linked" CurveToUse="None"/>
-										</HighPassFilterUsage>
-										<SpreadUsage>
-											<CurveUsageInfo Platform="Linked" CurveToUse="None"/>
-										</SpreadUsage>
-										<FocusUsage>
-											<CurveUsageInfo Platform="Linked" CurveToUse="None"/>
-										</FocusUsage>
-									</CurveUsageInfoList>
-								</Attenuation>
-							</Custom>
+							<ObjectRef Name="AttenuationMain" ID="{543E2D6F-2997-4EDB-96E5-4C4D3DF33FFA}" WorkUnitID="{215833A2-3349-47DB-93BB-189F7164C6A6}"/>
 						</Reference>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DA489A64-FA6D-4EEE-B839-F6A4ADB4B7DC}"/>
@@ -2861,56 +2822,17 @@
 					<PropertyList>
 						<Property Name="3DSpatialization" Type="int16" Value="1"/>
 						<Property Name="Color" Type="int16" Value="1"/>
+						<Property Name="GameAuxSendVolume" Type="Real64">
+							<ValueList>
+								<Value>-3</Value>
+							</ValueList>
+						</Property>
 						<Property Name="OverrideColor" Type="bool" Value="True"/>
 						<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
 					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Attenuation">
-							<Custom>
-								<Attenuation Name="Attenuation (Custom)" ID="{EA53DBB2-458E-4E69-A900-C57CC7053870}" ShortID="862214275">
-									<CurveUsageInfoList>
-										<VolumeDryUsage>
-											<CurveUsageInfo Platform="Linked" CurveToUse="Custom">
-												<Curve Name="VolumeDry" ID="{7CC5969E-B6C0-434F-A12F-FD914D9F1D89}">
-													<PropertyList>
-														<Property Name="Flags" Type="int32" Value="3"/>
-													</PropertyList>
-													<PointList>
-														<Point>
-															<XPos>0</XPos>
-															<YPos>0</YPos>
-															<Flags>5</Flags>
-														</Point>
-														<Point>
-															<XPos>100</XPos>
-															<YPos>-200</YPos>
-															<Flags>37</Flags>
-														</Point>
-													</PointList>
-												</Curve>
-											</CurveUsageInfo>
-										</VolumeDryUsage>
-										<VolumeWetGameUsage>
-											<CurveUsageInfo Platform="Linked" CurveToUse="UseVolumeDry"/>
-										</VolumeWetGameUsage>
-										<VolumeWetUserUsage>
-											<CurveUsageInfo Platform="Linked" CurveToUse="UseVolumeDry"/>
-										</VolumeWetUserUsage>
-										<LowPassFilterUsage>
-											<CurveUsageInfo Platform="Linked" CurveToUse="None"/>
-										</LowPassFilterUsage>
-										<HighPassFilterUsage>
-											<CurveUsageInfo Platform="Linked" CurveToUse="None"/>
-										</HighPassFilterUsage>
-										<SpreadUsage>
-											<CurveUsageInfo Platform="Linked" CurveToUse="None"/>
-										</SpreadUsage>
-										<FocusUsage>
-											<CurveUsageInfo Platform="Linked" CurveToUse="None"/>
-										</FocusUsage>
-									</CurveUsageInfoList>
-								</Attenuation>
-							</Custom>
+							<ObjectRef Name="AttenuationMain" ID="{543E2D6F-2997-4EDB-96E5-4C4D3DF33FFA}" WorkUnitID="{215833A2-3349-47DB-93BB-189F7164C6A6}"/>
 						</Reference>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DA489A64-FA6D-4EEE-B839-F6A4ADB4B7DC}"/>
@@ -4947,62 +4869,23 @@
 					<PropertyList>
 						<Property Name="3DSpatialization" Type="int16" Value="1"/>
 						<Property Name="Color" Type="int16" Value="8"/>
+						<Property Name="GameAuxSendVolume" Type="Real64">
+							<ValueList>
+								<Value>-6</Value>
+							</ValueList>
+						</Property>
 						<Property Name="OverrideColor" Type="bool" Value="True"/>
 						<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
 					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Attenuation">
-							<Custom>
-								<Attenuation Name="Attenuation (Custom)" ID="{F021E5DA-23F7-46F3-A0BF-AD7716032EA9}" ShortID="415004673">
-									<CurveUsageInfoList>
-										<VolumeDryUsage>
-											<CurveUsageInfo Platform="Linked" CurveToUse="Custom">
-												<Curve Name="VolumeDry" ID="{8CCD6BDB-F598-4DAC-A70A-73C4EEE7EDE0}">
-													<PropertyList>
-														<Property Name="Flags" Type="int32" Value="3"/>
-													</PropertyList>
-													<PointList>
-														<Point>
-															<XPos>0</XPos>
-															<YPos>0</YPos>
-															<Flags>5</Flags>
-														</Point>
-														<Point>
-															<XPos>100</XPos>
-															<YPos>-200</YPos>
-															<Flags>37</Flags>
-														</Point>
-													</PointList>
-												</Curve>
-											</CurveUsageInfo>
-										</VolumeDryUsage>
-										<VolumeWetGameUsage>
-											<CurveUsageInfo Platform="Linked" CurveToUse="UseVolumeDry"/>
-										</VolumeWetGameUsage>
-										<VolumeWetUserUsage>
-											<CurveUsageInfo Platform="Linked" CurveToUse="UseVolumeDry"/>
-										</VolumeWetUserUsage>
-										<LowPassFilterUsage>
-											<CurveUsageInfo Platform="Linked" CurveToUse="None"/>
-										</LowPassFilterUsage>
-										<HighPassFilterUsage>
-											<CurveUsageInfo Platform="Linked" CurveToUse="None"/>
-										</HighPassFilterUsage>
-										<SpreadUsage>
-											<CurveUsageInfo Platform="Linked" CurveToUse="None"/>
-										</SpreadUsage>
-										<FocusUsage>
-											<CurveUsageInfo Platform="Linked" CurveToUse="None"/>
-										</FocusUsage>
-									</CurveUsageInfoList>
-								</Attenuation>
-							</Custom>
+							<ObjectRef Name="AttenuationMain" ID="{543E2D6F-2997-4EDB-96E5-4C4D3DF33FFA}" WorkUnitID="{215833A2-3349-47DB-93BB-189F7164C6A6}"/>
 						</Reference>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DA489A64-FA6D-4EEE-B839-F6A4ADB4B7DC}"/>
 						</Reference>
 						<Reference Name="OutputBus">
-							<ObjectRef Name="Secondary" ID="{FE8CCF91-1CB1-45CF-B668-9D5AD26F8DF0}" WorkUnitID="{27CE760E-D39C-41A2-A7AE-4FA0EBDD5634}"/>
+							<ObjectRef Name="Main" ID="{8B17C660-DB37-4E99-B168-E5F7712F1EF9}" WorkUnitID="{27CE760E-D39C-41A2-A7AE-4FA0EBDD5634}"/>
 						</Reference>
 					</ReferenceList>
 					<ChildrenList>
@@ -6345,6 +6228,13 @@
 													</ActiveSourceList>
 												</Sound>
 												<Sound Name="GruntHurt08" ID="{F66036C0-08F1-4A0B-9296-2137CDF59909}" ShortID="93552783">
+													<PropertyList>
+														<Property Name="Inclusion" Type="bool">
+															<ValueList>
+																<Value>False</Value>
+															</ValueList>
+														</Property>
+													</PropertyList>
 													<ReferenceList>
 														<Reference Name="Conversion">
 															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DA489A64-FA6D-4EEE-B839-F6A4ADB4B7DC}"/>
@@ -6368,6 +6258,13 @@
 													</ActiveSourceList>
 												</Sound>
 												<Sound Name="GruntHurt09" ID="{1F58DB20-0A62-495F-8B3D-F2DDB133FF95}" ShortID="25378812">
+													<PropertyList>
+														<Property Name="Inclusion" Type="bool">
+															<ValueList>
+																<Value>False</Value>
+															</ValueList>
+														</Property>
+													</PropertyList>
 													<ReferenceList>
 														<Reference Name="Conversion">
 															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DA489A64-FA6D-4EEE-B839-F6A4ADB4B7DC}"/>
@@ -6421,6 +6318,13 @@
 													</ActiveSourceList>
 												</Sound>
 												<Sound Name="GruntHurt11" ID="{37D66881-DEAF-41BA-BC0D-CD1A003A8901}" ShortID="631435227">
+													<PropertyList>
+														<Property Name="Inclusion" Type="bool">
+															<ValueList>
+																<Value>False</Value>
+															</ValueList>
+														</Property>
+													</PropertyList>
 													<ReferenceList>
 														<Reference Name="Conversion">
 															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DA489A64-FA6D-4EEE-B839-F6A4ADB4B7DC}"/>
@@ -6444,6 +6348,13 @@
 													</ActiveSourceList>
 												</Sound>
 												<Sound Name="GruntHurt12" ID="{ED67E059-6130-493E-8E09-CA7CB52BB340}" ShortID="88201238">
+													<PropertyList>
+														<Property Name="Inclusion" Type="bool">
+															<ValueList>
+																<Value>False</Value>
+															</ValueList>
+														</Property>
+													</PropertyList>
 													<ReferenceList>
 														<Reference Name="Conversion">
 															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DA489A64-FA6D-4EEE-B839-F6A4ADB4B7DC}"/>
@@ -6467,6 +6378,13 @@
 													</ActiveSourceList>
 												</Sound>
 												<Sound Name="GruntHurt13" ID="{35674428-F272-454E-9E87-5914C941FAB7}" ShortID="150514394">
+													<PropertyList>
+														<Property Name="Inclusion" Type="bool">
+															<ValueList>
+																<Value>False</Value>
+															</ValueList>
+														</Property>
+													</PropertyList>
 													<ReferenceList>
 														<Reference Name="Conversion">
 															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DA489A64-FA6D-4EEE-B839-F6A4ADB4B7DC}"/>
@@ -6573,7 +6491,17 @@
 									<ChildrenList>
 										<RandomSequenceContainer Name="SpitAttack" ID="{CD2E44F1-5B2E-459E-825D-2725B583491C}" ShortID="503447999">
 											<PropertyList>
+												<Property Name="Highpass" Type="int16">
+													<ValueList>
+														<Value>30</Value>
+													</ValueList>
+												</Property>
 												<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
+												<Property Name="Pitch" Type="int32">
+													<ValueList>
+														<Value>500</Value>
+													</ValueList>
+												</Property>
 											</PropertyList>
 											<ReferenceList>
 												<Reference Name="Conversion">
@@ -6584,7 +6512,7 @@
 												</Reference>
 											</ReferenceList>
 											<ChildrenList>
-												<Sound Name="GruntEliteAttack01" ID="{23EDACB9-582C-4206-A88B-DBC277B12F8A}" ShortID="317736473">
+												<Sound Name="GruntSpitAttack10" ID="{46B229F4-0192-421D-B6E4-0E3A694629F3}" ShortID="518182014">
 													<ReferenceList>
 														<Reference Name="Conversion">
 															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DA489A64-FA6D-4EEE-B839-F6A4ADB4B7DC}"/>
@@ -6594,20 +6522,20 @@
 														</Reference>
 													</ReferenceList>
 													<ChildrenList>
-														<AudioFileSource Name="GruntEliteAttack01" ID="{3BE0BD6C-B1E8-43E9-80BB-3799FD4BD44E}">
+														<AudioFileSource Name="GruntSpitAttack10" ID="{56E0473F-C2C4-47C6-BC96-F7BF74E26842}">
 															<Language>SFX</Language>
-															<AudioFile>GruntEliteAttack\GruntEliteAttack01.wav</AudioFile>
+															<AudioFile>GruntSpitAttack10.wav</AudioFile>
 															<MediaIDList>
-																<MediaID ID="871990087"/>
+																<MediaID ID="451219067"/>
 															</MediaIDList>
 														</AudioFileSource>
 													</ChildrenList>
 													<ObjectLists/>
 													<ActiveSourceList>
-														<ActiveSource Name="GruntEliteAttack01" ID="{3BE0BD6C-B1E8-43E9-80BB-3799FD4BD44E}" Platform="Linked"/>
+														<ActiveSource Name="GruntSpitAttack10" ID="{56E0473F-C2C4-47C6-BC96-F7BF74E26842}" Platform="Linked"/>
 													</ActiveSourceList>
 												</Sound>
-												<Sound Name="GruntEliteAttack02" ID="{EF44BFD6-F63E-4275-B258-47D6616429DC}" ShortID="424080991">
+												<Sound Name="GruntSpitAttack12" ID="{34172C1B-447E-40FA-95AC-87AD9E07A790}" ShortID="682615855">
 													<ReferenceList>
 														<Reference Name="Conversion">
 															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DA489A64-FA6D-4EEE-B839-F6A4ADB4B7DC}"/>
@@ -6617,20 +6545,20 @@
 														</Reference>
 													</ReferenceList>
 													<ChildrenList>
-														<AudioFileSource Name="GruntEliteAttack02" ID="{78FF238B-6FA8-4AC8-B03C-360BAF02AB7F}">
+														<AudioFileSource Name="GruntSpitAttack12" ID="{F18EF286-70C6-4831-9408-416FD662D8B9}">
 															<Language>SFX</Language>
-															<AudioFile>GruntEliteAttack\GruntEliteAttack02.wav</AudioFile>
+															<AudioFile>GruntSpitAttack12.wav</AudioFile>
 															<MediaIDList>
-																<MediaID ID="994641630"/>
+																<MediaID ID="142049858"/>
 															</MediaIDList>
 														</AudioFileSource>
 													</ChildrenList>
 													<ObjectLists/>
 													<ActiveSourceList>
-														<ActiveSource Name="GruntEliteAttack02" ID="{78FF238B-6FA8-4AC8-B03C-360BAF02AB7F}" Platform="Linked"/>
+														<ActiveSource Name="GruntSpitAttack12" ID="{F18EF286-70C6-4831-9408-416FD662D8B9}" Platform="Linked"/>
 													</ActiveSourceList>
 												</Sound>
-												<Sound Name="GruntEliteAttack023" ID="{4AC44707-ECC4-4E6B-8F2B-9D1C3A9B5C76}" ShortID="947047719">
+												<Sound Name="GruntSpitAttack11" ID="{94FE0ECE-070E-43A5-8826-6C9F4D84D687}" ShortID="38839174">
 													<ReferenceList>
 														<Reference Name="Conversion">
 															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DA489A64-FA6D-4EEE-B839-F6A4ADB4B7DC}"/>
@@ -6640,20 +6568,20 @@
 														</Reference>
 													</ReferenceList>
 													<ChildrenList>
-														<AudioFileSource Name="GruntEliteAttack023" ID="{886D20F0-7CC9-4E67-9A36-52C63F6B7AD8}">
+														<AudioFileSource Name="GruntSpitAttack11" ID="{016A1C4D-1948-48EE-B7FD-279025AE0E9C}">
 															<Language>SFX</Language>
-															<AudioFile>GruntEliteAttack\GruntEliteAttack023.wav</AudioFile>
+															<AudioFile>GruntSpitAttack11.wav</AudioFile>
 															<MediaIDList>
-																<MediaID ID="332879011"/>
+																<MediaID ID="903952357"/>
 															</MediaIDList>
 														</AudioFileSource>
 													</ChildrenList>
 													<ObjectLists/>
 													<ActiveSourceList>
-														<ActiveSource Name="GruntEliteAttack023" ID="{886D20F0-7CC9-4E67-9A36-52C63F6B7AD8}" Platform="Linked"/>
+														<ActiveSource Name="GruntSpitAttack11" ID="{016A1C4D-1948-48EE-B7FD-279025AE0E9C}" Platform="Linked"/>
 													</ActiveSourceList>
 												</Sound>
-												<Sound Name="GruntEliteAttack03" ID="{A794AECA-8182-4F1E-9A58-9FAE672B7380}" ShortID="660860087">
+												<Sound Name="GruntSpitAttack09" ID="{68CF5D5B-8C69-43B1-A67F-721F25CD5AED}" ShortID="721101980">
 													<ReferenceList>
 														<Reference Name="Conversion">
 															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DA489A64-FA6D-4EEE-B839-F6A4ADB4B7DC}"/>
@@ -6663,20 +6591,20 @@
 														</Reference>
 													</ReferenceList>
 													<ChildrenList>
-														<AudioFileSource Name="GruntEliteAttack03" ID="{42438E99-5E2B-48DA-A90E-55FCC3813845}">
+														<AudioFileSource Name="GruntSpitAttack09" ID="{76D4A29E-E761-4690-A052-2BEE38AB077F}">
 															<Language>SFX</Language>
-															<AudioFile>GruntEliteAttack\GruntEliteAttack03.wav</AudioFile>
+															<AudioFile>GruntSpitAttack09.wav</AudioFile>
 															<MediaIDList>
-																<MediaID ID="734485719"/>
+																<MediaID ID="368257701"/>
 															</MediaIDList>
 														</AudioFileSource>
 													</ChildrenList>
 													<ObjectLists/>
 													<ActiveSourceList>
-														<ActiveSource Name="GruntEliteAttack03" ID="{42438E99-5E2B-48DA-A90E-55FCC3813845}" Platform="Linked"/>
+														<ActiveSource Name="GruntSpitAttack09" ID="{76D4A29E-E761-4690-A052-2BEE38AB077F}" Platform="Linked"/>
 													</ActiveSourceList>
 												</Sound>
-												<Sound Name="GruntEliteAttack04" ID="{CD66552F-6211-43F2-82B7-9CC73B9288D7}" ShortID="1071096332">
+												<Sound Name="GruntSpitAttack08" ID="{DCF2C040-3A98-45B6-B137-B4AD1BFC9CC3}" ShortID="507920893">
 													<ReferenceList>
 														<Reference Name="Conversion">
 															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DA489A64-FA6D-4EEE-B839-F6A4ADB4B7DC}"/>
@@ -6686,20 +6614,20 @@
 														</Reference>
 													</ReferenceList>
 													<ChildrenList>
-														<AudioFileSource Name="GruntEliteAttack04" ID="{635033B7-4C63-4FF8-824B-8CF85D0FB7D7}">
+														<AudioFileSource Name="GruntSpitAttack08" ID="{95DC9600-9AEE-418E-8E65-6779F5915A38}">
 															<Language>SFX</Language>
-															<AudioFile>GruntEliteAttack\GruntEliteAttack04.wav</AudioFile>
+															<AudioFile>GruntSpitAttack08.wav</AudioFile>
 															<MediaIDList>
-																<MediaID ID="258308548"/>
+																<MediaID ID="199662110"/>
 															</MediaIDList>
 														</AudioFileSource>
 													</ChildrenList>
 													<ObjectLists/>
 													<ActiveSourceList>
-														<ActiveSource Name="GruntEliteAttack04" ID="{635033B7-4C63-4FF8-824B-8CF85D0FB7D7}" Platform="Linked"/>
+														<ActiveSource Name="GruntSpitAttack08" ID="{95DC9600-9AEE-418E-8E65-6779F5915A38}" Platform="Linked"/>
 													</ActiveSourceList>
 												</Sound>
-												<Sound Name="GruntEliteAttack05" ID="{0573FD80-E7CC-4295-9911-BC5BB1BE3498}" ShortID="40561073">
+												<Sound Name="GruntSpitAttack07" ID="{02BAA6C3-85E3-45DE-93C2-F23F39C0A016}" ShortID="150328214">
 													<ReferenceList>
 														<Reference Name="Conversion">
 															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DA489A64-FA6D-4EEE-B839-F6A4ADB4B7DC}"/>
@@ -6709,20 +6637,20 @@
 														</Reference>
 													</ReferenceList>
 													<ChildrenList>
-														<AudioFileSource Name="GruntEliteAttack05" ID="{7C98AE79-0B13-4104-9595-E12384B8DAFE}">
+														<AudioFileSource Name="GruntSpitAttack07" ID="{030B9CB3-24BF-4223-9774-7A0D66ACB828}">
 															<Language>SFX</Language>
-															<AudioFile>GruntEliteAttack\GruntEliteAttack05.wav</AudioFile>
+															<AudioFile>GruntSpitAttack07.wav</AudioFile>
 															<MediaIDList>
-																<MediaID ID="1054614601"/>
+																<MediaID ID="366521217"/>
 															</MediaIDList>
 														</AudioFileSource>
 													</ChildrenList>
 													<ObjectLists/>
 													<ActiveSourceList>
-														<ActiveSource Name="GruntEliteAttack05" ID="{7C98AE79-0B13-4104-9595-E12384B8DAFE}" Platform="Linked"/>
+														<ActiveSource Name="GruntSpitAttack07" ID="{030B9CB3-24BF-4223-9774-7A0D66ACB828}" Platform="Linked"/>
 													</ActiveSourceList>
 												</Sound>
-												<Sound Name="GruntEliteAttack06" ID="{008DED9E-CD73-4218-882F-30075ABC4B6D}" ShortID="590454722">
+												<Sound Name="GruntSpitAttack06" ID="{B5185BB5-2AE2-48F3-9E22-F934D377CED0}" ShortID="1039729537">
 													<ReferenceList>
 														<Reference Name="Conversion">
 															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DA489A64-FA6D-4EEE-B839-F6A4ADB4B7DC}"/>
@@ -6732,20 +6660,20 @@
 														</Reference>
 													</ReferenceList>
 													<ChildrenList>
-														<AudioFileSource Name="GruntEliteAttack06" ID="{49FE625C-4F7B-4723-8AF6-6E7C9107EC22}">
+														<AudioFileSource Name="GruntSpitAttack06" ID="{1DF81213-3F9A-478C-8E14-8557342EC6A3}">
 															<Language>SFX</Language>
-															<AudioFile>GruntEliteAttack\GruntEliteAttack06.wav</AudioFile>
+															<AudioFile>GruntSpitAttack06.wav</AudioFile>
 															<MediaIDList>
-																<MediaID ID="998188952"/>
+																<MediaID ID="588119722"/>
 															</MediaIDList>
 														</AudioFileSource>
 													</ChildrenList>
 													<ObjectLists/>
 													<ActiveSourceList>
-														<ActiveSource Name="GruntEliteAttack06" ID="{49FE625C-4F7B-4723-8AF6-6E7C9107EC22}" Platform="Linked"/>
+														<ActiveSource Name="GruntSpitAttack06" ID="{1DF81213-3F9A-478C-8E14-8557342EC6A3}" Platform="Linked"/>
 													</ActiveSourceList>
 												</Sound>
-												<Sound Name="GruntEliteAttack07" ID="{60525EE9-256F-446C-854B-877CEAE98BCC}" ShortID="571472055">
+												<Sound Name="GruntSpitAttack05" ID="{DA1A77C0-792C-4019-95DD-28B257CFA351}" ShortID="415452959">
 													<ReferenceList>
 														<Reference Name="Conversion">
 															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DA489A64-FA6D-4EEE-B839-F6A4ADB4B7DC}"/>
@@ -6755,20 +6683,20 @@
 														</Reference>
 													</ReferenceList>
 													<ChildrenList>
-														<AudioFileSource Name="GruntEliteAttack07" ID="{D0DEDB27-8643-4559-B3E1-B5071A9B166A}">
+														<AudioFileSource Name="GruntSpitAttack05" ID="{43782F80-B4FC-4843-9F23-90F58B303EFD}">
 															<Language>SFX</Language>
-															<AudioFile>GruntEliteAttack\GruntEliteAttack07.wav</AudioFile>
+															<AudioFile>GruntSpitAttack05.wav</AudioFile>
 															<MediaIDList>
-																<MediaID ID="208057962"/>
+																<MediaID ID="409949323"/>
 															</MediaIDList>
 														</AudioFileSource>
 													</ChildrenList>
 													<ObjectLists/>
 													<ActiveSourceList>
-														<ActiveSource Name="GruntEliteAttack07" ID="{D0DEDB27-8643-4559-B3E1-B5071A9B166A}" Platform="Linked"/>
+														<ActiveSource Name="GruntSpitAttack05" ID="{43782F80-B4FC-4843-9F23-90F58B303EFD}" Platform="Linked"/>
 													</ActiveSourceList>
 												</Sound>
-												<Sound Name="GruntEliteAttack08" ID="{E8CECE7A-6367-4BF7-888C-024F59C78472}" ShortID="832091862">
+												<Sound Name="GruntSpitAttack04" ID="{5B5FE7CA-5606-4A69-B723-7B6D8A7E1104}" ShortID="970439148">
 													<ReferenceList>
 														<Reference Name="Conversion">
 															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DA489A64-FA6D-4EEE-B839-F6A4ADB4B7DC}"/>
@@ -6778,20 +6706,20 @@
 														</Reference>
 													</ReferenceList>
 													<ChildrenList>
-														<AudioFileSource Name="GruntEliteAttack08" ID="{D78AE368-CD13-4D2C-9BE5-9753A6279E69}">
+														<AudioFileSource Name="GruntSpitAttack04" ID="{4981B4B5-9855-4106-A375-E9846304A3EC}">
 															<Language>SFX</Language>
-															<AudioFile>GruntEliteAttack\GruntEliteAttack08.wav</AudioFile>
+															<AudioFile>GruntSpitAttack04.wav</AudioFile>
 															<MediaIDList>
-																<MediaID ID="902111430"/>
+																<MediaID ID="457509638"/>
 															</MediaIDList>
 														</AudioFileSource>
 													</ChildrenList>
 													<ObjectLists/>
 													<ActiveSourceList>
-														<ActiveSource Name="GruntEliteAttack08" ID="{D78AE368-CD13-4D2C-9BE5-9753A6279E69}" Platform="Linked"/>
+														<ActiveSource Name="GruntSpitAttack04" ID="{4981B4B5-9855-4106-A375-E9846304A3EC}" Platform="Linked"/>
 													</ActiveSourceList>
 												</Sound>
-												<Sound Name="GruntEliteAttack09" ID="{731D56A9-1368-41B2-869D-D140DAFDBB09}" ShortID="853120115">
+												<Sound Name="GruntSpitAttack03" ID="{6FD0F45F-5D54-466F-8173-E246DA0D2334}" ShortID="995451209">
 													<ReferenceList>
 														<Reference Name="Conversion">
 															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DA489A64-FA6D-4EEE-B839-F6A4ADB4B7DC}"/>
@@ -6801,20 +6729,20 @@
 														</Reference>
 													</ReferenceList>
 													<ChildrenList>
-														<AudioFileSource Name="GruntEliteAttack09" ID="{5D53FF40-1B57-444D-B698-3D43158269BE}">
+														<AudioFileSource Name="GruntSpitAttack03" ID="{A401D36E-241F-465E-B738-74BFBC1586EE}">
 															<Language>SFX</Language>
-															<AudioFile>GruntEliteAttack\GruntEliteAttack09.wav</AudioFile>
+															<AudioFile>GruntSpitAttack03.wav</AudioFile>
 															<MediaIDList>
-																<MediaID ID="60763571"/>
+																<MediaID ID="903072207"/>
 															</MediaIDList>
 														</AudioFileSource>
 													</ChildrenList>
 													<ObjectLists/>
 													<ActiveSourceList>
-														<ActiveSource Name="GruntEliteAttack09" ID="{5D53FF40-1B57-444D-B698-3D43158269BE}" Platform="Linked"/>
+														<ActiveSource Name="GruntSpitAttack03" ID="{A401D36E-241F-465E-B738-74BFBC1586EE}" Platform="Linked"/>
 													</ActiveSourceList>
 												</Sound>
-												<Sound Name="GruntEliteAttack10" ID="{9E075EC5-82F4-4140-95DA-E946F98912C4}" ShortID="343815858">
+												<Sound Name="GruntSpitAttack02" ID="{E4020CEF-833F-4789-9DD8-C5EB77B13577}" ShortID="465909776">
 													<ReferenceList>
 														<Reference Name="Conversion">
 															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DA489A64-FA6D-4EEE-B839-F6A4ADB4B7DC}"/>
@@ -6824,20 +6752,20 @@
 														</Reference>
 													</ReferenceList>
 													<ChildrenList>
-														<AudioFileSource Name="GruntEliteAttack10" ID="{775B26AE-3DE7-49E9-AE51-3839EE4C1180}">
+														<AudioFileSource Name="GruntSpitAttack02" ID="{45F75365-AD47-4313-B356-B5A0C52E3D04}">
 															<Language>SFX</Language>
-															<AudioFile>GruntEliteAttack\GruntEliteAttack10.wav</AudioFile>
+															<AudioFile>GruntSpitAttack02.wav</AudioFile>
 															<MediaIDList>
-																<MediaID ID="549476988"/>
+																<MediaID ID="239596679"/>
 															</MediaIDList>
 														</AudioFileSource>
 													</ChildrenList>
 													<ObjectLists/>
 													<ActiveSourceList>
-														<ActiveSource Name="GruntEliteAttack10" ID="{775B26AE-3DE7-49E9-AE51-3839EE4C1180}" Platform="Linked"/>
+														<ActiveSource Name="GruntSpitAttack02" ID="{45F75365-AD47-4313-B356-B5A0C52E3D04}" Platform="Linked"/>
 													</ActiveSourceList>
 												</Sound>
-												<Sound Name="GruntEliteAttack11" ID="{0FB15A6B-C049-4A6A-8140-5FC7ADF65D9C}" ShortID="497895413">
+												<Sound Name="GruntSpitAttack01" ID="{55462B26-1FB9-48BE-975D-F592570AA02C}" ShortID="599453749">
 													<ReferenceList>
 														<Reference Name="Conversion">
 															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DA489A64-FA6D-4EEE-B839-F6A4ADB4B7DC}"/>
@@ -6847,40 +6775,17 @@
 														</Reference>
 													</ReferenceList>
 													<ChildrenList>
-														<AudioFileSource Name="GruntEliteAttack11" ID="{0D96733F-5FC8-4B07-9A6F-BF52E4D5F08B}">
+														<AudioFileSource Name="GruntSpitAttack01" ID="{EF69CB7D-5E79-4F7A-BDFF-3F05907EE693}">
 															<Language>SFX</Language>
-															<AudioFile>GruntEliteAttack\GruntEliteAttack11.wav</AudioFile>
+															<AudioFile>GruntSpitAttack01.wav</AudioFile>
 															<MediaIDList>
-																<MediaID ID="293702318"/>
+																<MediaID ID="154100162"/>
 															</MediaIDList>
 														</AudioFileSource>
 													</ChildrenList>
 													<ObjectLists/>
 													<ActiveSourceList>
-														<ActiveSource Name="GruntEliteAttack11" ID="{0D96733F-5FC8-4B07-9A6F-BF52E4D5F08B}" Platform="Linked"/>
-													</ActiveSourceList>
-												</Sound>
-												<Sound Name="GruntEliteAttack12" ID="{56FAFD9A-6567-4E46-8A6E-E8B56AC4407B}" ShortID="1011736586">
-													<ReferenceList>
-														<Reference Name="Conversion">
-															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DA489A64-FA6D-4EEE-B839-F6A4ADB4B7DC}"/>
-														</Reference>
-														<Reference Name="OutputBus">
-															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{27CE760E-D39C-41A2-A7AE-4FA0EBDD5634}"/>
-														</Reference>
-													</ReferenceList>
-													<ChildrenList>
-														<AudioFileSource Name="GruntEliteAttack12" ID="{449F690D-B1AB-4512-A334-1ACA56EB66AE}">
-															<Language>SFX</Language>
-															<AudioFile>GruntEliteAttack\GruntEliteAttack12.wav</AudioFile>
-															<MediaIDList>
-																<MediaID ID="677678886"/>
-															</MediaIDList>
-														</AudioFileSource>
-													</ChildrenList>
-													<ObjectLists/>
-													<ActiveSourceList>
-														<ActiveSource Name="GruntEliteAttack12" ID="{449F690D-B1AB-4512-A334-1ACA56EB66AE}" Platform="Linked"/>
+														<ActiveSource Name="GruntSpitAttack01" ID="{EF69CB7D-5E79-4F7A-BDFF-3F05907EE693}" Platform="Linked"/>
 													</ActiveSourceList>
 												</Sound>
 											</ChildrenList>
@@ -6888,7 +6793,17 @@
 										</RandomSequenceContainer>
 										<RandomSequenceContainer Name="JumpAttack" ID="{704E3EB5-452B-44F8-8310-40EDBAD69D11}" ShortID="34113605">
 											<PropertyList>
+												<Property Name="Highpass" Type="int16">
+													<ValueList>
+														<Value>30</Value>
+													</ValueList>
+												</Property>
 												<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
+												<Property Name="Pitch" Type="int32">
+													<ValueList>
+														<Value>500</Value>
+													</ValueList>
+												</Property>
 											</PropertyList>
 											<ReferenceList>
 												<Reference Name="Conversion">
@@ -6916,6 +6831,13 @@
 																<MediaID ID="204362782"/>
 															</MediaIDList>
 														</AudioFileSource>
+														<AudioFileSource Name="GruntAttack01_01" ID="{4A1A82A1-4110-418C-B11F-31BE7253E0BF}">
+															<Language>SFX</Language>
+															<AudioFile>GruntAttack01.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="153483517"/>
+															</MediaIDList>
+														</AudioFileSource>
 													</ChildrenList>
 													<ObjectLists/>
 													<ActiveSourceList>
@@ -6937,6 +6859,13 @@
 															<AudioFile>GruntAttack\GruntAttack02.wav</AudioFile>
 															<MediaIDList>
 																<MediaID ID="482872172"/>
+															</MediaIDList>
+														</AudioFileSource>
+														<AudioFileSource Name="GruntAttack02_01" ID="{B0356A04-E58F-4E73-AC59-5AD9FE80F1FD}">
+															<Language>SFX</Language>
+															<AudioFile>GruntAttack02.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="550951073"/>
 															</MediaIDList>
 														</AudioFileSource>
 													</ChildrenList>
@@ -6962,6 +6891,13 @@
 																<MediaID ID="469148661"/>
 															</MediaIDList>
 														</AudioFileSource>
+														<AudioFileSource Name="GruntAttack03_01" ID="{B9BC2119-FB8F-42C6-B2F1-84726B2DE3D9}">
+															<Language>SFX</Language>
+															<AudioFile>GruntAttack03.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="997519809"/>
+															</MediaIDList>
+														</AudioFileSource>
 													</ChildrenList>
 													<ObjectLists/>
 													<ActiveSourceList>
@@ -6983,6 +6919,13 @@
 															<AudioFile>GruntAttack\GruntAttack04.wav</AudioFile>
 															<MediaIDList>
 																<MediaID ID="654840654"/>
+															</MediaIDList>
+														</AudioFileSource>
+														<AudioFileSource Name="GruntAttack04_01" ID="{7D8F7814-C648-4EDA-8B77-5EEB2694FDCA}">
+															<Language>SFX</Language>
+															<AudioFile>GruntAttack04.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="998271803"/>
 															</MediaIDList>
 														</AudioFileSource>
 													</ChildrenList>
@@ -7008,6 +6951,13 @@
 																<MediaID ID="883218216"/>
 															</MediaIDList>
 														</AudioFileSource>
+														<AudioFileSource Name="GruntAttack05_01" ID="{C99FFE2E-441F-47EF-A348-140EEA8DC3E8}">
+															<Language>SFX</Language>
+															<AudioFile>GruntAttack05.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="945361349"/>
+															</MediaIDList>
+														</AudioFileSource>
 													</ChildrenList>
 													<ObjectLists/>
 													<ActiveSourceList>
@@ -7029,6 +6979,13 @@
 															<AudioFile>GruntAttack\GruntAttack06.wav</AudioFile>
 															<MediaIDList>
 																<MediaID ID="601435626"/>
+															</MediaIDList>
+														</AudioFileSource>
+														<AudioFileSource Name="GruntAttack06_01" ID="{684A96F6-0164-4D26-90FA-B4CD34C79491}">
+															<Language>SFX</Language>
+															<AudioFile>GruntAttack06.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="859163451"/>
 															</MediaIDList>
 														</AudioFileSource>
 													</ChildrenList>
@@ -7054,6 +7011,13 @@
 																<MediaID ID="50533854"/>
 															</MediaIDList>
 														</AudioFileSource>
+														<AudioFileSource Name="GruntAttack07_01" ID="{1339BACB-3403-4CBC-8AC7-70CD6C10C49F}">
+															<Language>SFX</Language>
+															<AudioFile>GruntAttack07.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="705926860"/>
+															</MediaIDList>
+														</AudioFileSource>
 													</ChildrenList>
 													<ObjectLists/>
 													<ActiveSourceList>
@@ -7075,6 +7039,13 @@
 															<AudioFile>GruntAttack\GruntAttack08.wav</AudioFile>
 															<MediaIDList>
 																<MediaID ID="298131927"/>
+															</MediaIDList>
+														</AudioFileSource>
+														<AudioFileSource Name="GruntAttack08_01" ID="{68ED1A6F-54A6-4E8E-8B3E-45A1C115D199}">
+															<Language>SFX</Language>
+															<AudioFile>GruntAttack08.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="50559095"/>
 															</MediaIDList>
 														</AudioFileSource>
 													</ChildrenList>
@@ -7100,6 +7071,13 @@
 																<MediaID ID="112832951"/>
 															</MediaIDList>
 														</AudioFileSource>
+														<AudioFileSource Name="GruntAttack09_01" ID="{F5F6B05B-63EB-4EC8-995D-2EF0A102EF0A}">
+															<Language>SFX</Language>
+															<AudioFile>GruntAttack09.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="1007593384"/>
+															</MediaIDList>
+														</AudioFileSource>
 													</ChildrenList>
 													<ObjectLists/>
 													<ActiveSourceList>
@@ -7123,13 +7101,85 @@
 																<MediaID ID="704268881"/>
 															</MediaIDList>
 														</AudioFileSource>
+														<AudioFileSource Name="GruntAttack10_01" ID="{08E1BD71-23EE-4AE1-88F2-285AFAFD17B4}">
+															<Language>SFX</Language>
+															<AudioFile>GruntAttack10.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="843838183"/>
+															</MediaIDList>
+														</AudioFileSource>
 													</ChildrenList>
 													<ObjectLists/>
 													<ActiveSourceList>
 														<ActiveSource Name="GruntAttack10" ID="{523EC23E-027F-4504-818C-116DC8800681}" Platform="Linked"/>
 													</ActiveSourceList>
 												</Sound>
-												<Sound Name="GruntHurt15" ID="{AF7E92F3-1461-4F81-BC99-BAB6AB04135C}" ShortID="487509378">
+											</ChildrenList>
+											<ObjectLists/>
+										</RandomSequenceContainer>
+										<RandomSequenceContainer Name="SpitAttackElite" ID="{0C91E47D-9020-42B1-892E-319BB5C22ADE}" ShortID="102445404">
+											<PropertyList>
+												<Property Name="3DSpatialization" Type="int16" Value="1"/>
+												<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
+												<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Attenuation">
+													<Custom>
+														<Attenuation Name="Attenuation (Custom)" ID="{7D4D27E3-7A23-4E1A-AE23-DF4B9C7E6F37}" ShortID="312921973">
+															<CurveUsageInfoList>
+																<VolumeDryUsage>
+																	<CurveUsageInfo Platform="Linked" CurveToUse="Custom">
+																		<Curve Name="VolumeDry" ID="{EDCB4994-32AE-4210-85F0-2021ED036716}">
+																			<PropertyList>
+																				<Property Name="Flags" Type="int32" Value="3"/>
+																			</PropertyList>
+																			<PointList>
+																				<Point>
+																					<XPos>0</XPos>
+																					<YPos>0</YPos>
+																					<Flags>5</Flags>
+																				</Point>
+																				<Point>
+																					<XPos>100</XPos>
+																					<YPos>-200</YPos>
+																					<Flags>37</Flags>
+																				</Point>
+																			</PointList>
+																		</Curve>
+																	</CurveUsageInfo>
+																</VolumeDryUsage>
+																<VolumeWetGameUsage>
+																	<CurveUsageInfo Platform="Linked" CurveToUse="UseVolumeDry"/>
+																</VolumeWetGameUsage>
+																<VolumeWetUserUsage>
+																	<CurveUsageInfo Platform="Linked" CurveToUse="UseVolumeDry"/>
+																</VolumeWetUserUsage>
+																<LowPassFilterUsage>
+																	<CurveUsageInfo Platform="Linked" CurveToUse="None"/>
+																</LowPassFilterUsage>
+																<HighPassFilterUsage>
+																	<CurveUsageInfo Platform="Linked" CurveToUse="None"/>
+																</HighPassFilterUsage>
+																<SpreadUsage>
+																	<CurveUsageInfo Platform="Linked" CurveToUse="None"/>
+																</SpreadUsage>
+																<FocusUsage>
+																	<CurveUsageInfo Platform="Linked" CurveToUse="None"/>
+																</FocusUsage>
+															</CurveUsageInfoList>
+														</Attenuation>
+													</Custom>
+												</Reference>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DA489A64-FA6D-4EEE-B839-F6A4ADB4B7DC}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Secondary" ID="{FE8CCF91-1CB1-45CF-B668-9D5AD26F8DF0}" WorkUnitID="{27CE760E-D39C-41A2-A7AE-4FA0EBDD5634}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<Sound Name="GruntSpitAttack10" ID="{3DB8BD3A-F76D-45DB-917E-031F19D0B189}" ShortID="337320825">
 													<ReferenceList>
 														<Reference Name="Conversion">
 															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DA489A64-FA6D-4EEE-B839-F6A4ADB4B7DC}"/>
@@ -7139,17 +7189,635 @@
 														</Reference>
 													</ReferenceList>
 													<ChildrenList>
-														<AudioFileSource Name="GruntHurt15" ID="{2AE561C6-65CC-40AA-86E4-D9758886F7EA}">
+														<AudioFileSource Name="GruntSpitAttack10" ID="{77E92BC4-653D-4DAE-9C9C-81CF740AE890}">
 															<Language>SFX</Language>
-															<AudioFile>GruntAttack\GruntHurt15.wav</AudioFile>
+															<AudioFile>GruntSpitAttack10.wav</AudioFile>
 															<MediaIDList>
-																<MediaID ID="647463180"/>
+																<MediaID ID="451219067"/>
 															</MediaIDList>
 														</AudioFileSource>
 													</ChildrenList>
 													<ObjectLists/>
 													<ActiveSourceList>
-														<ActiveSource Name="GruntHurt15" ID="{2AE561C6-65CC-40AA-86E4-D9758886F7EA}" Platform="Linked"/>
+														<ActiveSource Name="GruntSpitAttack10" ID="{77E92BC4-653D-4DAE-9C9C-81CF740AE890}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="GruntSpitAttack12" ID="{5296C816-E8E3-4AC6-A783-8046AE63704F}" ShortID="835693369">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DA489A64-FA6D-4EEE-B839-F6A4ADB4B7DC}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{27CE760E-D39C-41A2-A7AE-4FA0EBDD5634}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="GruntSpitAttack12" ID="{0BFB2AE8-4562-434C-A56E-C2D617090139}">
+															<Language>SFX</Language>
+															<AudioFile>GruntSpitAttack12.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="142049858"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ObjectLists/>
+													<ActiveSourceList>
+														<ActiveSource Name="GruntSpitAttack12" ID="{0BFB2AE8-4562-434C-A56E-C2D617090139}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="GruntSpitAttack11" ID="{31C14573-FFD4-469B-9CAB-7768F8FB94AF}" ShortID="775861360">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DA489A64-FA6D-4EEE-B839-F6A4ADB4B7DC}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{27CE760E-D39C-41A2-A7AE-4FA0EBDD5634}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="GruntSpitAttack11" ID="{C9FF7F6C-5268-488D-AB6E-40D08BA12367}">
+															<Language>SFX</Language>
+															<AudioFile>GruntSpitAttack11.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="903952357"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ObjectLists/>
+													<ActiveSourceList>
+														<ActiveSource Name="GruntSpitAttack11" ID="{C9FF7F6C-5268-488D-AB6E-40D08BA12367}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="GruntSpitAttack09" ID="{9BF73331-D822-40DC-BE6F-F3C78E68A3E2}" ShortID="234977325">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DA489A64-FA6D-4EEE-B839-F6A4ADB4B7DC}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{27CE760E-D39C-41A2-A7AE-4FA0EBDD5634}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="GruntSpitAttack09" ID="{9117C501-6DD9-40B5-95A5-19D2B51C1FD8}">
+															<Language>SFX</Language>
+															<AudioFile>GruntSpitAttack09.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="368257701"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ObjectLists/>
+													<ActiveSourceList>
+														<ActiveSource Name="GruntSpitAttack09" ID="{9117C501-6DD9-40B5-95A5-19D2B51C1FD8}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="GruntSpitAttack08" ID="{80C8CEE6-7D95-406C-9826-E41D948DD737}" ShortID="83175033">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DA489A64-FA6D-4EEE-B839-F6A4ADB4B7DC}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{27CE760E-D39C-41A2-A7AE-4FA0EBDD5634}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="GruntSpitAttack08" ID="{BB8E8BC1-385E-424E-99F4-F63B852AB49A}">
+															<Language>SFX</Language>
+															<AudioFile>GruntSpitAttack08.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="199662110"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ObjectLists/>
+													<ActiveSourceList>
+														<ActiveSource Name="GruntSpitAttack08" ID="{BB8E8BC1-385E-424E-99F4-F63B852AB49A}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="GruntSpitAttack07" ID="{BEB46288-AA2B-4F79-89E5-3DD05EBF2A7F}" ShortID="1016119504">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DA489A64-FA6D-4EEE-B839-F6A4ADB4B7DC}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{27CE760E-D39C-41A2-A7AE-4FA0EBDD5634}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="GruntSpitAttack07" ID="{6F027731-76AA-461A-A379-BC05E3E294CA}">
+															<Language>SFX</Language>
+															<AudioFile>GruntSpitAttack07.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="366521217"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ObjectLists/>
+													<ActiveSourceList>
+														<ActiveSource Name="GruntSpitAttack07" ID="{6F027731-76AA-461A-A379-BC05E3E294CA}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="GruntSpitAttack06" ID="{0A4EBFD6-7EA6-4DC9-81C1-D3DBF1488C59}" ShortID="688172458">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DA489A64-FA6D-4EEE-B839-F6A4ADB4B7DC}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{27CE760E-D39C-41A2-A7AE-4FA0EBDD5634}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="GruntSpitAttack06" ID="{5F9B2696-8577-42CB-ABEE-1C176C9EB10D}">
+															<Language>SFX</Language>
+															<AudioFile>GruntSpitAttack06.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="588119722"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ObjectLists/>
+													<ActiveSourceList>
+														<ActiveSource Name="GruntSpitAttack06" ID="{5F9B2696-8577-42CB-ABEE-1C176C9EB10D}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="GruntSpitAttack05" ID="{87CB7486-4630-4A92-906A-62F12F0D9F11}" ShortID="14631444">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DA489A64-FA6D-4EEE-B839-F6A4ADB4B7DC}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{27CE760E-D39C-41A2-A7AE-4FA0EBDD5634}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="GruntSpitAttack05" ID="{33B42C39-1B7E-4C7E-ADC2-FBE5C13517EA}">
+															<Language>SFX</Language>
+															<AudioFile>GruntSpitAttack05.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="409949323"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ObjectLists/>
+													<ActiveSourceList>
+														<ActiveSource Name="GruntSpitAttack05" ID="{33B42C39-1B7E-4C7E-ADC2-FBE5C13517EA}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="GruntSpitAttack04" ID="{7A62E391-B8FA-44CF-910B-EA22FE42166D}" ShortID="12880273">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DA489A64-FA6D-4EEE-B839-F6A4ADB4B7DC}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{27CE760E-D39C-41A2-A7AE-4FA0EBDD5634}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="GruntSpitAttack04" ID="{BDD5B255-F995-4098-8D3E-FBC838493527}">
+															<Language>SFX</Language>
+															<AudioFile>GruntSpitAttack04.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="457509638"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ObjectLists/>
+													<ActiveSourceList>
+														<ActiveSource Name="GruntSpitAttack04" ID="{BDD5B255-F995-4098-8D3E-FBC838493527}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="GruntSpitAttack03" ID="{5D908B43-F72A-4F8B-817F-93D9872A291E}" ShortID="829431532">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DA489A64-FA6D-4EEE-B839-F6A4ADB4B7DC}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{27CE760E-D39C-41A2-A7AE-4FA0EBDD5634}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="GruntSpitAttack03" ID="{45A3A8BA-1A66-477B-A4BE-091452B8920F}">
+															<Language>SFX</Language>
+															<AudioFile>GruntSpitAttack03.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="903072207"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ObjectLists/>
+													<ActiveSourceList>
+														<ActiveSource Name="GruntSpitAttack03" ID="{45A3A8BA-1A66-477B-A4BE-091452B8920F}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="GruntSpitAttack02" ID="{284A3359-1A6C-42C4-ADA2-1706700D8AA3}" ShortID="429393072">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DA489A64-FA6D-4EEE-B839-F6A4ADB4B7DC}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{27CE760E-D39C-41A2-A7AE-4FA0EBDD5634}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="GruntSpitAttack02" ID="{DF4C74D2-3D5C-4CE0-9932-E3CF4EBDE9C5}">
+															<Language>SFX</Language>
+															<AudioFile>GruntSpitAttack02.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="239596679"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ObjectLists/>
+													<ActiveSourceList>
+														<ActiveSource Name="GruntSpitAttack02" ID="{DF4C74D2-3D5C-4CE0-9932-E3CF4EBDE9C5}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="GruntSpitAttack01" ID="{F68BE60E-B07D-46E4-AA37-3DA8B8408D69}" ShortID="314729102">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DA489A64-FA6D-4EEE-B839-F6A4ADB4B7DC}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{27CE760E-D39C-41A2-A7AE-4FA0EBDD5634}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="GruntSpitAttack01" ID="{AE0A3B0D-BE4C-4F6E-9908-06176DB9031C}">
+															<Language>SFX</Language>
+															<AudioFile>GruntSpitAttack01.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="154100162"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ObjectLists/>
+													<ActiveSourceList>
+														<ActiveSource Name="GruntSpitAttack01" ID="{AE0A3B0D-BE4C-4F6E-9908-06176DB9031C}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+											</ChildrenList>
+											<ObjectLists/>
+										</RandomSequenceContainer>
+										<RandomSequenceContainer Name="JumpAttackElite" ID="{326F5F6B-F01F-4EAE-A5BB-827E257E0D4B}" ShortID="774572379">
+											<PropertyList>
+												<Property Name="3DSpatialization" Type="int16" Value="1"/>
+												<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
+												<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Attenuation">
+													<Custom>
+														<Attenuation Name="Attenuation (Custom)" ID="{68CB6A53-26B7-4554-84FE-693D8D0C3A8B}" ShortID="537415177">
+															<CurveUsageInfoList>
+																<VolumeDryUsage>
+																	<CurveUsageInfo Platform="Linked" CurveToUse="Custom">
+																		<Curve Name="VolumeDry" ID="{72D8CE43-16B8-429C-95AD-DB8FBAAC0328}">
+																			<PropertyList>
+																				<Property Name="Flags" Type="int32" Value="3"/>
+																			</PropertyList>
+																			<PointList>
+																				<Point>
+																					<XPos>0</XPos>
+																					<YPos>0</YPos>
+																					<Flags>5</Flags>
+																				</Point>
+																				<Point>
+																					<XPos>100</XPos>
+																					<YPos>-200</YPos>
+																					<Flags>37</Flags>
+																				</Point>
+																			</PointList>
+																		</Curve>
+																	</CurveUsageInfo>
+																</VolumeDryUsage>
+																<VolumeWetGameUsage>
+																	<CurveUsageInfo Platform="Linked" CurveToUse="UseVolumeDry"/>
+																</VolumeWetGameUsage>
+																<VolumeWetUserUsage>
+																	<CurveUsageInfo Platform="Linked" CurveToUse="UseVolumeDry"/>
+																</VolumeWetUserUsage>
+																<LowPassFilterUsage>
+																	<CurveUsageInfo Platform="Linked" CurveToUse="None"/>
+																</LowPassFilterUsage>
+																<HighPassFilterUsage>
+																	<CurveUsageInfo Platform="Linked" CurveToUse="None"/>
+																</HighPassFilterUsage>
+																<SpreadUsage>
+																	<CurveUsageInfo Platform="Linked" CurveToUse="None"/>
+																</SpreadUsage>
+																<FocusUsage>
+																	<CurveUsageInfo Platform="Linked" CurveToUse="None"/>
+																</FocusUsage>
+															</CurveUsageInfoList>
+														</Attenuation>
+													</Custom>
+												</Reference>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DA489A64-FA6D-4EEE-B839-F6A4ADB4B7DC}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Secondary" ID="{FE8CCF91-1CB1-45CF-B668-9D5AD26F8DF0}" WorkUnitID="{27CE760E-D39C-41A2-A7AE-4FA0EBDD5634}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<Sound Name="GruntAttack01" ID="{F7DD772B-1D0D-4E54-A152-0E03B49AFA8C}" ShortID="134391249">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DA489A64-FA6D-4EEE-B839-F6A4ADB4B7DC}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{27CE760E-D39C-41A2-A7AE-4FA0EBDD5634}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="GruntAttack01" ID="{F7FB309D-BBC6-4011-ADA4-26971CB435ED}">
+															<Language>SFX</Language>
+															<AudioFile>GruntAttack\GruntAttack01.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="204362782"/>
+															</MediaIDList>
+														</AudioFileSource>
+														<AudioFileSource Name="GruntAttack01_01" ID="{BE92B3B3-35F4-4AD7-A6F5-461C40528A3A}">
+															<Language>SFX</Language>
+															<AudioFile>GruntAttack01.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="153483517"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ObjectLists/>
+													<ActiveSourceList>
+														<ActiveSource Name="GruntAttack01" ID="{F7FB309D-BBC6-4011-ADA4-26971CB435ED}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="GruntAttack02" ID="{577AF14A-9254-4367-A153-9F5EE774A4DE}" ShortID="824652538">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DA489A64-FA6D-4EEE-B839-F6A4ADB4B7DC}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{27CE760E-D39C-41A2-A7AE-4FA0EBDD5634}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="GruntAttack02" ID="{972DD0C6-38F6-44FB-ADC1-A06637F49A2C}">
+															<Language>SFX</Language>
+															<AudioFile>GruntAttack\GruntAttack02.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="482872172"/>
+															</MediaIDList>
+														</AudioFileSource>
+														<AudioFileSource Name="GruntAttack02_01" ID="{0353720D-BF3B-47ED-856C-39EF7FAD2DC8}">
+															<Language>SFX</Language>
+															<AudioFile>GruntAttack02.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="550951073"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ObjectLists/>
+													<ActiveSourceList>
+														<ActiveSource Name="GruntAttack02" ID="{972DD0C6-38F6-44FB-ADC1-A06637F49A2C}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="GruntAttack03" ID="{2219B27D-8305-4D46-889B-C334B14281AA}" ShortID="328095198">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DA489A64-FA6D-4EEE-B839-F6A4ADB4B7DC}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{27CE760E-D39C-41A2-A7AE-4FA0EBDD5634}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="GruntAttack03" ID="{79EC851A-01C8-445B-AF9E-A8C95BB152D2}">
+															<Language>SFX</Language>
+															<AudioFile>GruntAttack\GruntAttack03.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="469148661"/>
+															</MediaIDList>
+														</AudioFileSource>
+														<AudioFileSource Name="GruntAttack03_01" ID="{FEFF6D34-8739-4F47-9DE2-58CCC992774A}">
+															<Language>SFX</Language>
+															<AudioFile>GruntAttack03.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="997519809"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ObjectLists/>
+													<ActiveSourceList>
+														<ActiveSource Name="GruntAttack03" ID="{79EC851A-01C8-445B-AF9E-A8C95BB152D2}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="GruntAttack04" ID="{6E3A55D3-60B0-44C2-8C48-89136DA226B3}" ShortID="5936384">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DA489A64-FA6D-4EEE-B839-F6A4ADB4B7DC}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{27CE760E-D39C-41A2-A7AE-4FA0EBDD5634}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="GruntAttack04" ID="{06D7EF56-58BC-4D98-8D3E-AC89DB4BAD66}">
+															<Language>SFX</Language>
+															<AudioFile>GruntAttack\GruntAttack04.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="654840654"/>
+															</MediaIDList>
+														</AudioFileSource>
+														<AudioFileSource Name="GruntAttack04_01" ID="{A0673E3F-4141-4DFA-8C03-049D334D3FC9}">
+															<Language>SFX</Language>
+															<AudioFile>GruntAttack04.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="998271803"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ObjectLists/>
+													<ActiveSourceList>
+														<ActiveSource Name="GruntAttack04" ID="{06D7EF56-58BC-4D98-8D3E-AC89DB4BAD66}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="GruntAttack05" ID="{6BDDA48F-1A62-4536-B373-9A5D6BF8DF5E}" ShortID="276528137">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DA489A64-FA6D-4EEE-B839-F6A4ADB4B7DC}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{27CE760E-D39C-41A2-A7AE-4FA0EBDD5634}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="GruntAttack05" ID="{9B2E5A49-BA6A-4BFA-B41B-DDF1A4EDA197}">
+															<Language>SFX</Language>
+															<AudioFile>GruntAttack\GruntAttack05.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="883218216"/>
+															</MediaIDList>
+														</AudioFileSource>
+														<AudioFileSource Name="GruntAttack05_01" ID="{44E56C49-6E4B-4A73-A0EE-3E254D978ADE}">
+															<Language>SFX</Language>
+															<AudioFile>GruntAttack05.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="945361349"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ObjectLists/>
+													<ActiveSourceList>
+														<ActiveSource Name="GruntAttack05" ID="{9B2E5A49-BA6A-4BFA-B41B-DDF1A4EDA197}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="GruntAttack06" ID="{FB650B69-36FA-436B-818D-95794F1B8EF6}" ShortID="73084323">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DA489A64-FA6D-4EEE-B839-F6A4ADB4B7DC}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{27CE760E-D39C-41A2-A7AE-4FA0EBDD5634}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="GruntAttack06" ID="{12B1009F-CE25-4913-A0EB-7EDCF4453E93}">
+															<Language>SFX</Language>
+															<AudioFile>GruntAttack\GruntAttack06.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="601435626"/>
+															</MediaIDList>
+														</AudioFileSource>
+														<AudioFileSource Name="GruntAttack06_01" ID="{EE6EDC76-3B97-43F9-B3AA-9BD6F63D06A8}">
+															<Language>SFX</Language>
+															<AudioFile>GruntAttack06.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="859163451"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ObjectLists/>
+													<ActiveSourceList>
+														<ActiveSource Name="GruntAttack06" ID="{12B1009F-CE25-4913-A0EB-7EDCF4453E93}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="GruntAttack07" ID="{734F7E65-A1E7-4D00-8E98-8E0FDF16EF2A}" ShortID="777642212">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DA489A64-FA6D-4EEE-B839-F6A4ADB4B7DC}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{27CE760E-D39C-41A2-A7AE-4FA0EBDD5634}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="GruntAttack07" ID="{6F8864CD-9C25-423D-9506-F9282214C118}">
+															<Language>SFX</Language>
+															<AudioFile>GruntAttack\GruntAttack07.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="50533854"/>
+															</MediaIDList>
+														</AudioFileSource>
+														<AudioFileSource Name="GruntAttack07_01" ID="{086E0D9D-4322-46C2-BA93-CF0513BC157B}">
+															<Language>SFX</Language>
+															<AudioFile>GruntAttack07.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="705926860"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ObjectLists/>
+													<ActiveSourceList>
+														<ActiveSource Name="GruntAttack07" ID="{6F8864CD-9C25-423D-9506-F9282214C118}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="GruntAttack08" ID="{16229877-C0D0-4EDA-B419-48BC4A203DE5}" ShortID="104778235">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DA489A64-FA6D-4EEE-B839-F6A4ADB4B7DC}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{27CE760E-D39C-41A2-A7AE-4FA0EBDD5634}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="GruntAttack08" ID="{7EE9FC58-8C45-40F7-ACBC-D3D111F9A576}">
+															<Language>SFX</Language>
+															<AudioFile>GruntAttack\GruntAttack08.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="298131927"/>
+															</MediaIDList>
+														</AudioFileSource>
+														<AudioFileSource Name="GruntAttack08_01" ID="{D240F47E-60E7-4A8A-AD3C-1223D0192151}">
+															<Language>SFX</Language>
+															<AudioFile>GruntAttack08.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="50559095"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ObjectLists/>
+													<ActiveSourceList>
+														<ActiveSource Name="GruntAttack08" ID="{7EE9FC58-8C45-40F7-ACBC-D3D111F9A576}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="GruntAttack09" ID="{8FE4C5A1-2C3D-4EEF-BDB7-4C95B9D58884}" ShortID="853353812">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DA489A64-FA6D-4EEE-B839-F6A4ADB4B7DC}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{27CE760E-D39C-41A2-A7AE-4FA0EBDD5634}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="GruntAttack09" ID="{606C6BED-E168-4D19-81A5-8F379CD0872F}">
+															<Language>SFX</Language>
+															<AudioFile>GruntAttack\GruntAttack09.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="112832951"/>
+															</MediaIDList>
+														</AudioFileSource>
+														<AudioFileSource Name="GruntAttack09_01" ID="{9376E9FA-AFB7-4F47-940F-FDEFAA7B6415}">
+															<Language>SFX</Language>
+															<AudioFile>GruntAttack09.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="1007593384"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ObjectLists/>
+													<ActiveSourceList>
+														<ActiveSource Name="GruntAttack09" ID="{606C6BED-E168-4D19-81A5-8F379CD0872F}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="GruntAttack10" ID="{4746A6D6-C1B0-4CCA-AA4D-48098C43FB8A}" ShortID="552918852">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DA489A64-FA6D-4EEE-B839-F6A4ADB4B7DC}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{27CE760E-D39C-41A2-A7AE-4FA0EBDD5634}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="GruntAttack10" ID="{C96088FB-16FD-4C79-95CB-5B7D757B7047}">
+															<Language>SFX</Language>
+															<AudioFile>GruntAttack\GruntAttack10.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="704268881"/>
+															</MediaIDList>
+														</AudioFileSource>
+														<AudioFileSource Name="GruntAttack10_01" ID="{FE763775-20B3-4A67-B258-704064913DAA}">
+															<Language>SFX</Language>
+															<AudioFile>GruntAttack10.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="843838183"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ObjectLists/>
+													<ActiveSourceList>
+														<ActiveSource Name="GruntAttack10" ID="{C96088FB-16FD-4C79-95CB-5B7D757B7047}" Platform="Linked"/>
 													</ActiveSourceList>
 												</Sound>
 											</ChildrenList>
@@ -7419,7 +8087,13 @@
 				<ActorMixer Name="Ambiances" ID="{467705ED-6176-4F66-B219-D1E2DD9BAC61}" ShortID="462688484">
 					<PropertyList>
 						<Property Name="Color" Type="int16" Value="4"/>
+						<Property Name="GameAuxSendVolume" Type="Real64">
+							<ValueList>
+								<Value>-18</Value>
+							</ValueList>
+						</Property>
 						<Property Name="OverrideColor" Type="bool" Value="True"/>
+						<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
 						<Property Name="Volume" Type="Real64">
 							<ValueList>
 								<Value>-3</Value>

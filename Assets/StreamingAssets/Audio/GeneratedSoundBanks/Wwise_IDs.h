@@ -28,6 +28,7 @@ namespace AK
         static const AkUniqueID PLAY_GRUNTELITEPROJECTILETHROW = 3941375504U;
         static const AkUniqueID PLAY_GRUNTHURT = 4049500187U;
         static const AkUniqueID PLAY_GRUNTJUMPATTACK = 2254476360U;
+        static const AkUniqueID PLAY_GRUNTJUMPATTACKELITE = 1782557585U;
         static const AkUniqueID PLAY_GRUNTPROJECTILEEXPLODE = 1423843544U;
         static const AkUniqueID PLAY_GRUNTPROJECTILETHROW = 4218963955U;
         static const AkUniqueID PLAY_GRUNTSPITATTACK = 3823849654U;
@@ -75,6 +76,9 @@ namespace AK
     namespace BUSSES
     {
         static const AkUniqueID AMBIANCES = 1404066300U;
+        static const AkUniqueID CHARACTER = 436743010U;
+        static const AkUniqueID ENEMIES = 2242381963U;
+        static const AkUniqueID ITEMS = 2151963051U;
         static const AkUniqueID MAIN = 3161908922U;
         static const AkUniqueID MASTER_AUDIO_BUS = 3803692087U;
         static const AkUniqueID SECONDARY = 1871372953U;

@@ -14,7 +14,19 @@
 							<PropertyList>
 								<Property Name="Color" Type="int16" Value="10"/>
 								<Property Name="OverrideColor" Type="bool" Value="True"/>
+								<Property Name="RecoveryTime" Type="Real64" Value="0.25"/>
 							</PropertyList>
+							<ChildrenList>
+								<Bus Name="Character" ID="{0F3C1AE8-1848-4699-BF49-AD0A1E15D853}">
+									<ObjectLists/>
+								</Bus>
+								<Bus Name="Enemies" ID="{2C75CE32-4815-483B-8340-B93C685821DB}">
+									<ObjectLists/>
+								</Bus>
+								<Bus Name="Items" ID="{A215F663-A486-465B-9C33-06EF3D0970A3}">
+									<ObjectLists/>
+								</Bus>
+							</ChildrenList>
 							<ObjectLists/>
 							<DuckingList>
 								<DuckItem>
@@ -23,7 +35,7 @@
 										<Volume>-6</Volume>
 										<FadeInTime>0.100000001490116</FadeInTime>
 										<FadeOutTime>0.100000001490116</FadeOutTime>
-										<FadeCurve>FadeLinear</FadeCurve>
+										<FadeCurve>FadeLog2</FadeCurve>
 									</DuckingParam>
 								</DuckItem>
 							</DuckingList>
@@ -33,6 +45,20 @@
 								<Property Name="Color" Type="int16" Value="19"/>
 								<Property Name="OverrideColor" Type="bool" Value="True"/>
 							</PropertyList>
+							<ChildrenList>
+								<Bus Name="Ambiances" ID="{31B6F5AB-5445-466F-9BA4-A2CCABBDA19B}">
+									<PropertyList>
+										<Property Name="BusVolume" Type="Real64">
+											<ValueList>
+												<Value>-6</Value>
+											</ValueList>
+										</Property>
+										<Property Name="Color" Type="int16" Value="4"/>
+										<Property Name="OverrideColor" Type="bool" Value="True"/>
+									</PropertyList>
+									<ObjectLists/>
+								</Bus>
+							</ChildrenList>
 							<ObjectLists/>
 						</Bus>
 						<AuxBus Name="SmallReverb" ID="{78CEBC2A-2C51-4F82-BD58-33BAE50675F8}">
@@ -46,23 +72,11 @@
 						<AuxBus Name="BigReverb" ID="{C6D18B3D-CCB7-44B2-8DE9-C45442E726C8}">
 							<ReferenceList>
 								<Reference Name="Effect0" PluginName="Wwise RoomVerb" CompanyID="0" PluginID="118" PluginType="3">
-									<ObjectRef Name="Hall_Medium" ID="{50286348-176A-4235-9E4C-CA5F73D87818}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
+									<ObjectRef Name="Hall_Medium_Dark" ID="{626B6E38-739B-4689-819F-F81AD3788BDE}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
 								</Reference>
 							</ReferenceList>
 							<ObjectLists/>
 						</AuxBus>
-						<Bus Name="Ambiances" ID="{31B6F5AB-5445-466F-9BA4-A2CCABBDA19B}">
-							<PropertyList>
-								<Property Name="BusVolume" Type="Real64">
-									<ValueList>
-										<Value>-6</Value>
-									</ValueList>
-								</Property>
-								<Property Name="Color" Type="int16" Value="4"/>
-								<Property Name="OverrideColor" Type="bool" Value="True"/>
-							</PropertyList>
-							<ObjectLists/>
-						</Bus>
 					</ChildrenList>
 					<ObjectLists/>
 				</Bus>

@@ -1,6 +1,9 @@
 Audio Bus	ID	Name			Wwise Object Path	Notes
-	1404066300	Ambiances			\Default Work Unit\Master Audio Bus\Ambiances	
+	436743010	Character			\Default Work Unit\Master Audio Bus\Main\Character	
+	1404066300	Ambiances			\Default Work Unit\Master Audio Bus\Secondary\Ambiances	
 	1871372953	Secondary			\Default Work Unit\Master Audio Bus\Secondary	
+	2151963051	Items			\Default Work Unit\Master Audio Bus\Main\Items	
+	2242381963	Enemies			\Default Work Unit\Master Audio Bus\Main\Enemies	
 	3161908922	Main			\Default Work Unit\Master Audio Bus\Main	
 	3803692087	Master Audio Bus			\Default Work Unit\Master Audio Bus	
 
@@ -9,8 +12,8 @@ Auxiliary Bus	ID	Name			Wwise Object Path	Notes
 	2134960294	SmallReverb			\Default Work Unit\Master Audio Bus\SmallReverb	
 
 Effect plug-ins	ID	Name	Type				Notes
+	2648499661	Hall_Medium_Dark	Wwise RoomVerb			
 	2891462749	Room_Medium_High_Absorbtion	Wwise RoomVerb			
-	3451596814	Hall_Medium	Wwise RoomVerb			
 
 Audio Devices	ID	Name	Type				Notes
 	2317455096	No_Output	No Output			

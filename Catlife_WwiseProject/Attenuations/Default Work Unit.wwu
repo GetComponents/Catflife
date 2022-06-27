@@ -1,6 +1,75 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{215833A2-3349-47DB-93BB-189F7164C6A6}" SchemaVersion="103">
 	<Attenuations>
-		<WorkUnit Name="Default Work Unit" ID="{215833A2-3349-47DB-93BB-189F7164C6A6}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{215833A2-3349-47DB-93BB-189F7164C6A6}" PersistMode="Standalone">
+			<ChildrenList>
+				<Attenuation Name="AttenuationMain" ID="{543E2D6F-2997-4EDB-96E5-4C4D3DF33FFA}" ShortID="381948683">
+					<PropertyList>
+						<Property Name="RadiusMax" Type="Real64" Value="50"/>
+					</PropertyList>
+					<CurveUsageInfoList>
+						<VolumeDryUsage>
+							<CurveUsageInfo Platform="Linked" CurveToUse="Custom">
+								<Curve Name="VolumeDry" ID="{6FD0A9B2-5734-4D33-9EE2-0AA918BA2881}">
+									<PropertyList>
+										<Property Name="Flags" Type="int32" Value="3"/>
+									</PropertyList>
+									<PointList>
+										<Point>
+											<XPos>0</XPos>
+											<YPos>0</YPos>
+											<Flags>5</Flags>
+											<SegmentShape>InvertedSCurve</SegmentShape>
+										</Point>
+										<Point>
+											<XPos>50</XPos>
+											<YPos>-200</YPos>
+											<Flags>37</Flags>
+										</Point>
+									</PointList>
+								</Curve>
+							</CurveUsageInfo>
+						</VolumeDryUsage>
+						<VolumeWetGameUsage>
+							<CurveUsageInfo Platform="Linked" CurveToUse="UseVolumeDry"/>
+						</VolumeWetGameUsage>
+						<VolumeWetUserUsage>
+							<CurveUsageInfo Platform="Linked" CurveToUse="UseVolumeDry"/>
+						</VolumeWetUserUsage>
+						<LowPassFilterUsage>
+							<CurveUsageInfo Platform="Linked" CurveToUse="None"/>
+						</LowPassFilterUsage>
+						<HighPassFilterUsage>
+							<CurveUsageInfo Platform="Linked" CurveToUse="Custom">
+								<Curve Name="HighPassFilter" ID="{C8FD8E77-3446-47B8-A191-ED9F969187DF}">
+									<PropertyList>
+										<Property Name="Flags" Type="int32" Value="65537"/>
+									</PropertyList>
+									<PointList>
+										<Point>
+											<XPos>0</XPos>
+											<YPos>0</YPos>
+											<Flags>5</Flags>
+											<SegmentShape>Log2</SegmentShape>
+										</Point>
+										<Point>
+											<XPos>50</XPos>
+											<YPos>27</YPos>
+											<Flags>37</Flags>
+										</Point>
+									</PointList>
+								</Curve>
+							</CurveUsageInfo>
+						</HighPassFilterUsage>
+						<SpreadUsage>
+							<CurveUsageInfo Platform="Linked" CurveToUse="None"/>
+						</SpreadUsage>
+						<FocusUsage>
+							<CurveUsageInfo Platform="Linked" CurveToUse="None"/>
+						</FocusUsage>
+					</CurveUsageInfoList>
+				</Attenuation>
+			</ChildrenList>
+		</WorkUnit>
 	</Attenuations>
 </WwiseDocument>
