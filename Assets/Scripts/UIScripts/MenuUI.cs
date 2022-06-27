@@ -12,6 +12,7 @@ public class MenuUI : MonoBehaviour
     {
         AkSoundEngine.PostEvent("Play_ButtonPress", this.gameObject);
         SceneManager.LoadScene("MainRoom");
+        AkSoundEngine.PostEvent("Play_HouseAmb", this.gameObject);
     }
 
     public void Continue()

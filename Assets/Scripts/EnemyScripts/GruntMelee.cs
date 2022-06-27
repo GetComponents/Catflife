@@ -46,6 +46,7 @@ namespace EnemyAI
             }
             else
             {
+                AkSoundEngine.PostEvent("Play_GruntJumpAttack", this.gameObject);
                 moveCounter = maxMoveCounter;
                 stopCounter = MaxStopCounter;
                 playerPosition = PlayerController.Instance.transform.GetChild(0).position;

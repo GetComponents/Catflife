@@ -55,7 +55,7 @@ public class GruntElite : Enemy
         }
         else
         {
-            //PlaySound GruntJump/Bite
+            AkSoundEngine.PostEvent("Play_GruntJumpAttack", this.gameObject);
             moveCounter = maxMoveCounter;
             stopCounter = MaxStopCounter;
             playerPosition = PlayerController.Instance.transform.GetChild(0).position;
@@ -67,8 +67,7 @@ public class GruntElite : Enemy
     {
         if (currentShotCooldown < 0)
         {
-            //PlaySound GruntShoot TODO isn't this already in GruntProjectile and GruntEliteProjectile?
-
+            AkSoundEngine.PostEvent("Play_GruntSpitAttack", this.gameObject);
             //shoots a projectile
             playerPosition = PlayerController.Instance.transform.GetChild(0).position;
             GameObject tmp = Instantiate(Projectile, transform.position, Quaternion.identity);

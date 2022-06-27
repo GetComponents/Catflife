@@ -79,7 +79,7 @@ public class Mage : Enemy
     //Triggered by animat
     private void StartCast()
     {
-        //PlaySound MageMumbling ?
+        AkSoundEngine.PostEvent("Play_MageMumble", this.gameObject);
         MageCast tmp = Instantiate(AOEAttack, PlayerController.Instance.transform.GetChild(0).position + new Vector3(0, 0.2f, 0), Quaternion.identity).GetComponent<MageCast>();
         tmp.MyDamage = damage;
         tmp.TimeUntilExplosion = AOEExplosionTime;

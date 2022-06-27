@@ -46,7 +46,6 @@ public class GruntRanged : Enemy
     {
         if (currentShotCooldown < 0)
         {
-            //PlaySound GruntSpit
             currentShotCooldown = timeForEachShot;
             myAnimator.SetBool("attack", true);
         }
@@ -59,6 +58,7 @@ public class GruntRanged : Enemy
     //triggered via animation, shoots a projectile
     private void Shoot()
     {
+        AkSoundEngine.PostEvent("Play_GruntSpitAttack", this.gameObject);
         myAnimator.SetBool("attack", false);
         playerPosition = PlayerInventory.Instance.transform.position;
         GameObject tmp = Instantiate(Projectile, transform.position, Quaternion.identity);

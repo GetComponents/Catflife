@@ -150,6 +150,9 @@
 						<Event Name="Play_SwordHit" ID="{1BE40F31-F579-4179-9A55-0FB7830C51ED}">
 							<ChildrenList>
 								<Action Name="" ID="{A4E581AE-EA2C-4CD2-B275-D02A888B3643}" ShortID="491810836">
+									<PropertyList>
+										<Property Name="Delay" Type="Real64" Value="0.15"/>
+									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Target">
 											<ObjectRef Name="Hit" ID="{57775CC3-267E-4F8E-AE0D-DE6D12C93B96}" WorkUnitID="{D02594BD-4199-499F-A2D9-CB65908B02DD}"/>
@@ -283,7 +286,7 @@
 								</Action>
 								<Action Name="" ID="{C2CF0A70-0931-45B6-BFF6-B66477758E9C}" ShortID="407100705">
 									<PropertyList>
-										<Property Name="Delay" Type="Real64" Value="0.8"/>
+										<Property Name="Delay" Type="Real64" Value="1"/>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Target">
@@ -495,6 +498,9 @@
 						<Event Name="Play_GruntProjectileThrow" ID="{86CF7DB1-9C22-4C17-B938-BE8E0361010A}">
 							<ChildrenList>
 								<Action Name="" ID="{963E2186-0151-4AA4-8C6F-4403C4E4BE93}" ShortID="278622080">
+									<PropertyList>
+										<Property Name="Delay" Type="Real64" Value="0.3"/>
+									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Target">
 											<ObjectRef Name="Throw" ID="{D5017290-682B-47B4-B4C1-F30763BDB4F5}" WorkUnitID="{D02594BD-4199-499F-A2D9-CB65908B02DD}"/>
@@ -503,7 +509,7 @@
 								</Action>
 								<Action Name="" ID="{F75C24CA-1786-4C6B-967A-B6D91C2BB6F0}" ShortID="1030036991">
 									<PropertyList>
-										<Property Name="Delay" Type="Real64" Value="0.2"/>
+										<Property Name="Delay" Type="Real64" Value="0.5"/>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Target">
@@ -534,6 +540,53 @@
 								</Action>
 							</ChildrenList>
 						</Event>
+						<Event Name="Play_GruntHurt" ID="{94209883-EAAA-4818-B84E-8BC2A8F50828}">
+							<ChildrenList>
+								<Action Name="" ID="{1B9CDB27-0D84-481E-9401-21881307C3FF}" ShortID="410348278">
+									<PropertyList>
+										<Property Name="Delay" Type="Real64" Value="0.25"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Hurt" ID="{AA0B3CD1-98FF-4FD0-B04D-6AAFF427EA04}" WorkUnitID="{D02594BD-4199-499F-A2D9-CB65908B02DD}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_GruntSpitAttack" ID="{B49A623B-6491-4125-A876-0FA2C5C533D8}">
+							<ChildrenList>
+								<Action Name="" ID="{E22AEF50-A947-4E80-AABF-A1385BA55A31}" ShortID="492735682">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="SpitAttack" ID="{CD2E44F1-5B2E-459E-825D-2725B583491C}" WorkUnitID="{D02594BD-4199-499F-A2D9-CB65908B02DD}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_GruntJumpAttack" ID="{78ED2AC1-AC52-44ED-81CC-2C674F9A67FE}">
+							<ChildrenList>
+								<Action Name="" ID="{BF1F912E-BBED-47FC-A09B-BD101C83E9E4}" ShortID="855939519">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="JumpAttack" ID="{704E3EB5-452B-44F8-8310-40EDBAD69D11}" WorkUnitID="{D02594BD-4199-499F-A2D9-CB65908B02DD}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_MageMumble" ID="{E9FE574A-B71E-489E-9D25-A23F6E41F9B1}">
+							<ChildrenList>
+								<Action Name="" ID="{1DD97B5F-9CD0-4D10-BFA2-DE1D6AB70259}" ShortID="433002706">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Mumble" ID="{F62A5E2D-74F7-4458-8FAE-8DAB6F42D3D5}" WorkUnitID="{D02594BD-4199-499F-A2D9-CB65908B02DD}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="Ambiances" ID="{9DDC361A-6820-4FFE-848B-5C4E636894B6}" ShortID="743129194">
@@ -541,6 +594,37 @@
 						<Event Name="Play_DungeonAmb" ID="{56607C43-8843-4BFC-BC1B-F90A26712634}">
 							<ChildrenList>
 								<Action Name="" ID="{CC4116E0-0F82-4887-8033-C6CD70C64C22}" ShortID="309240288">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="WindDungeounAmb" ID="{409EB904-1133-4602-95F0-48E0AA627942}" WorkUnitID="{D02594BD-4199-499F-A2D9-CB65908B02DD}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{C084360F-18E9-4139-901F-98B70DB439A3}" ShortID="240677083">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="HouseAmb" ID="{58D4E581-76FC-4389-83B9-F76DF9BEF259}" WorkUnitID="{D02594BD-4199-499F-A2D9-CB65908B02DD}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_HouseAmb" ID="{3134B0C3-C220-4065-9FBB-87C0F8D99DAA}">
+							<ChildrenList>
+								<Action Name="" ID="{CF26710C-559F-4B98-9190-CE9EDFAF9958}" ShortID="205957594">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="HouseAmb" ID="{58D4E581-76FC-4389-83B9-F76DF9BEF259}" WorkUnitID="{D02594BD-4199-499F-A2D9-CB65908B02DD}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{8843A6F7-F8AA-4149-A6F5-AB8FDEB8A246}" ShortID="1063357960">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Target">
 											<ObjectRef Name="WindDungeounAmb" ID="{409EB904-1133-4602-95F0-48E0AA627942}" WorkUnitID="{D02594BD-4199-499F-A2D9-CB65908B02DD}"/>

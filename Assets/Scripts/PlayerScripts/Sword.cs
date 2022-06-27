@@ -13,6 +13,7 @@ public class Sword : MonoBehaviour
         if (other.tag == "Enemy" && PlayerController.Instance.IsSwinging)
         {
             AkSoundEngine.PostEvent("Play_SwordHit", this.gameObject);
+            PlayEnemyHurtSound(other);
             Destroy(Instantiate(swordReflect, transform.position, Quaternion.identity), 2);
             other.GetComponent<Enemy>().TakeDamage(PlayerController.Instance.SwordDamage);
             PlayerController.Instance.CurrentMana += PlayerController.Instance.ManaGain;
@@ -44,6 +45,15 @@ public class Sword : MonoBehaviour
             AkSoundEngine.PostEvent("Play_SwordHit", this.gameObject);
             Destroy(Instantiate(swordReflect, transform.position, Quaternion.identity), 2);
             other.GetComponent<Boss>().TakeDamage(PlayerController.Instance.SwordDamage * PlayerController.Instance.SpinAttackDamageMultiplier);
+        }
+    }
+
+    private void PlayEnemyHurtSound(Collider other)
+    {
+        // TODO ADD TAG WITH SPECIFIC ENEMY (grunt) TO PLAY RIGHT OUND
+        if (other.tag == "Enemy")
+        {
+            AkSoundEngine.PostEvent("Play_GruntHurt", this.gameObject);
         }
     }
 }

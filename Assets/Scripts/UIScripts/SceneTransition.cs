@@ -45,7 +45,7 @@ public class SceneTransition : MonoBehaviour
     {
         sceneToLoad = _sceneToLoad;
         loadType = _loadType;
-        SetSceneMaterialSound(sceneToLoad);
+        SetSceneSounds(sceneToLoad);
         StartCoroutine(StartTransition());
     }
 
@@ -137,14 +137,16 @@ public class SceneTransition : MonoBehaviour
         TransitionImage.color = tempColor;
     }
     
-    private void SetSceneMaterialSound(string sceneToLoad)
+    private void SetSceneSounds(string sceneToLoad)
     {
         if (sceneToLoad.Equals("MainRoom"))
         {
+            AkSoundEngine.PostEvent("Play_HouseAmb", this.gameObject);
             AkSoundEngine.SetSwitch("Material", "Default", PlayerController.Instance._akGameObj.gameObject);
         }
         else
         {
+            AkSoundEngine.PostEvent("Play_DungeonAmb", this.gameObject);
             AkSoundEngine.SetSwitch("Material", "Stone", PlayerController.Instance._akGameObj.gameObject);
         }
     }
