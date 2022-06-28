@@ -167,38 +167,50 @@ public class PlayerController : MonoBehaviour
     {
         if (!IsDashing)
         {
-            rb.AddForce(new Vector3((m_moveDir.y * -0.66f) + (m_moveDir.x * 0.66f), 0, (m_moveDir.y * 0.66f) + (m_moveDir.x * 0.66f)) * Speed, ForceMode.VelocityChange);
-            if (m_moveDir != Vector2.zero)
-            {
-                walkingDistance += Time.deltaTime;
-                if (walkingDistance >= 0.3f)
-                {
-                    if (SceneTransition.Instance.SceneToLoad != actualScene)
-                    {
-                        actualScene = SceneTransition.Instance.SceneToLoad;
-                    }
-                    AkSoundEngine.PostEvent("Play_Step", _akGameObj.gameObject);
-                    walkingDistance = 0;
-                }
-            }
-            //Walking blend. It is rotatet 45° because of the Camera
-            if (playerHitBox.eulerAngles.y <= 315)
-            {
-                myAnimator.SetFloat("ForwardBlend", m_moveDir.y * ((Mathf.Abs(playerHitBox.eulerAngles.y - 135) - 90) / 90));
-                myAnimator.SetFloat("RightBlend", m_moveDir.x * ((Mathf.Abs(playerHitBox.eulerAngles.y - 225) - 90) / 90));
-            }
-            else
-            {
-                myAnimator.SetFloat("ForwardBlend", m_moveDir.y * ((405 - playerHitBox.eulerAngles.y) / 90));
-                myAnimator.SetFloat("RightBlend", m_moveDir.x * ((playerHitBox.eulerAngles.y - 315) / 90));
-            }
+            MovePlayer();           
         }
         //Starts the dash
         else if (DashStarted)
         {
+            rb.velocity = Vector3.zero;
             dashDirection = new Vector3((m_moveDir.y * -0.66f) + (m_moveDir.x * 0.66f), 0, (m_moveDir.y * 0.66f) + (m_moveDir.x * 0.66f)) * DashSpeed;
             rb.AddForce(dashDirection, ForceMode.VelocityChange);
             DashStarted = false;
+        }
+    }
+
+    private void MovePlayer()
+    {
+        rb.AddForce(new Vector3((m_moveDir.y * -0.66f) + (m_moveDir.x * 0.66f), 0, (m_moveDir.y * 0.66f) + (m_moveDir.x * 0.66f)) * Speed, ForceMode.VelocityChange);
+        //rb.AddForce(new Vector3((m_moveDir.y * -0.66f) + (m_moveDir.x * 0.66f), 0, (m_moveDir.y * 0.66f) + (m_moveDir.x * 0.66f)) * Speed, ForceMode.Force);
+        //rb.velocity = new Vector3(((m_moveDir.y * -0.66f) + (m_moveDir.x * 0.66f)) * Speed, rb.velocity.y, ((m_moveDir.y * 0.66f) + (m_moveDir.x * 0.66f)) * Speed);
+        if (m_moveDir != Vector2.zero)
+        {
+            walkingDistance += Time.deltaTime;
+            if (walkingDistance >= 0.3f)
+            {
+                //if (SceneTransition.Instance.SceneToLoad != actualScene)
+                //{
+                //    actualScene = SceneTransition.Instance.SceneToLoad;
+                //}
+                AkSoundEngine.PostEvent("Play_Step", _akGameObj.gameObject);
+                walkingDistance = 0;
+            }
+        }
+        //if (Mathf.Abs(rb.velocity.x) + Mathf.Abs(rb.velocity.z) > maxSpeed)
+        //{
+        //    rb.velocity = new Vector3(((m_moveDir.y * -0.66f) + (m_moveDir.x * 0.66f)) * maxSpeed, rb.velocity.y, ((m_moveDir.y * 0.66f) + (m_moveDir.x * 0.66f)) * maxSpeed);
+        //}
+        //Walking blend. It is rotatet 45° because of the Camera
+        if (playerHitBox.eulerAngles.y <= 315)
+        {
+            myAnimator.SetFloat("ForwardBlend", m_moveDir.y * ((Mathf.Abs(playerHitBox.eulerAngles.y - 135) - 90) / 90));
+            myAnimator.SetFloat("RightBlend", m_moveDir.x * ((Mathf.Abs(playerHitBox.eulerAngles.y - 225) - 90) / 90));
+        }
+        else
+        {
+            myAnimator.SetFloat("ForwardBlend", m_moveDir.y * ((405 - playerHitBox.eulerAngles.y) / 90));
+            myAnimator.SetFloat("RightBlend", m_moveDir.x * ((playerHitBox.eulerAngles.y - 315) / 90));
         }
     }
 
@@ -430,6 +442,7 @@ public class PlayerController : MonoBehaviour
     public void EndDash()
     {
         myAnimator.SetBool("isDashing", false);
+        rb.velocity = Vector3.zero;
         IsDashing = false;
         isInvincible = false;
     }

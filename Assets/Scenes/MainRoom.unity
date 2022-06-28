@@ -20475,6 +20475,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 146.91324
       objectReference: {fileID: 0}
+    - target: {fileID: 7888952104917232425, guid: 17738bf7cb440184baa2a50e6a6753cd, type: 3}
+      propertyPath: m_dashUpgrades
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7888952104931331818, guid: 17738bf7cb440184baa2a50e6a6753cd, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
       value: 0
@@ -20528,9 +20532,17 @@ PrefabInstance:
       value: 0.5220999
       objectReference: {fileID: 0}
     - target: {fileID: 7888952105189421729, guid: 17738bf7cb440184baa2a50e6a6753cd, type: 3}
+      propertyPath: Speed
+      value: 0.23
+      objectReference: {fileID: 0}
+    - target: {fileID: 7888952105189421729, guid: 17738bf7cb440184baa2a50e6a6753cd, type: 3}
       propertyPath: mainCam
       value: 
       objectReference: {fileID: 963194227}
+    - target: {fileID: 7888952105189421729, guid: 17738bf7cb440184baa2a50e6a6753cd, type: 3}
+      propertyPath: DashSpeed
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 7888952105189421729, guid: 17738bf7cb440184baa2a50e6a6753cd, type: 3}
       propertyPath: _akGameObj
       value: 
