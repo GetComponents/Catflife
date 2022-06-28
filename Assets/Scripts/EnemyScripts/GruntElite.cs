@@ -63,6 +63,12 @@ public class GruntElite : Enemy
         }
     }
 
+    public override void TakeDamage(float amount)
+    {
+        //PlaySound EliteGruntDamaged;
+        base.TakeDamage(amount);
+    }
+
     private void Attack()
     {
         if (currentShotCooldown < 0)

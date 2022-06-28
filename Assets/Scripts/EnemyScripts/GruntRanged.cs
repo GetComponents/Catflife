@@ -55,6 +55,12 @@ public class GruntRanged : Enemy
         }
     }
 
+    public override void TakeDamage(float amount)
+    {
+        //PlaySound GruntRangedDamaged
+        base.TakeDamage(amount);
+    }
+
     //triggered via animation, shoots a projectile
     private void Shoot()
     {

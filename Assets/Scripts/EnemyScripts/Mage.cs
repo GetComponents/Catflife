@@ -76,6 +76,12 @@ public class Mage : Enemy
         }
     }
 
+    public override void TakeDamage(float amount)
+    {
+        //PlaySound MageDamaged
+        base.TakeDamage(amount);
+    }
+
     //Triggered by animat
     private void StartCast()
     {

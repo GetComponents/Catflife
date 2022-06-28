@@ -54,6 +54,12 @@ public class Wanderer : Enemy
         }
     }
 
+    public override void TakeDamage(float amount)
+    {
+        //PlaySound WandererDamaged
+        base.TakeDamage(amount);
+    }
+
     private void StartAttack()
     {
         //PlaySound WandererSwing/Scream

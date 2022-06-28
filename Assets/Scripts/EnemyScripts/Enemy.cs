@@ -74,7 +74,7 @@ public class Enemy : MonoBehaviour
         }
     }
 
-    public void TakeDamage(float amount)
+    public virtual void TakeDamage(float amount)
     {
         HealthPoints -= amount;
     }

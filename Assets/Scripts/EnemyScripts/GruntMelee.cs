@@ -55,6 +55,12 @@ namespace EnemyAI
             }
         }
 
+        public override void TakeDamage(float _amount)
+        {
+            //PlaySound GruntMeleeDamaged
+            base.TakeDamage(_amount);
+        } 
+
         private void EndAttackAnim()
         {
             myAnimator.SetBool("attack", false);
