@@ -100,7 +100,6 @@ public class SceneTransition : MonoBehaviour
     {
         string previousSceneName = _previousScene.name;
         string newSceneName = _newScene.name;
-        Debug.Log("new scene name: " + newSceneName);
         if (newSceneName == "Combat" || "CombatDebug" == newSceneName || newSceneName == "BossStage")
         {
             PlayerController.Instance.IsInCombat = true;

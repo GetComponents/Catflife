@@ -51,7 +51,6 @@ public class EncounterCell : MonoBehaviour
 
     public void StartEncounter()
     {
-        Debug.Log("CLickable = " + wasClicked);
         if (wasClicked == false)
         {
             wasClicked = true;
@@ -75,7 +74,7 @@ public class EncounterCell : MonoBehaviour
                 SceneTransition.Instance.ChangeScene("Combat", 1);
                 break;
             case EEncounterType.BOSS:
-                if (true)
+                if (PlayerController.Instance.UnlockedStatue)
                 {
                     SceneTransition.Instance.ChangeScene("BossStage", 0);
                 }

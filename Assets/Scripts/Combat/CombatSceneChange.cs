@@ -16,7 +16,6 @@ public class CombatSceneChange : MonoBehaviour
             //If there are no enemies, the combat ends
             if (value == 0)
             {
-                Debug.Log("The Gates Open");
                 EndCombat();
             }
             m_enemyAmount = value;

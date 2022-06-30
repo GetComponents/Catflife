@@ -110,7 +110,6 @@ public class PlayerController : MonoBehaviour
     [HideInInspector]
     public UnityEvent OnManaChange, OnHealthChange;
 
-    float mouseContext;
     float walkingDistance;
 
     [Space]
@@ -122,12 +121,7 @@ public class PlayerController : MonoBehaviour
     [Header("Player Enviroment Aware")]
     [SerializeField]
     public AkGameObj _akGameObj;
-    private string actualScene;
 
-    [SerializeField]
-    CharacterController characterController;
-    [SerializeField]
-    float gravity;
 
     void Awake()
     {
@@ -174,7 +168,7 @@ public class PlayerController : MonoBehaviour
     {
         if (!IsDashing)
         {
-            MovePlayer();           
+            MovePlayer();
         }
         //Starts the dash
         else if (DashStarted)
@@ -237,14 +231,6 @@ public class PlayerController : MonoBehaviour
         myAnimator.SetBool("die", false);
     }
 
-    public void StartDamageAnim()
-    {
-        myAnimator.SetBool("takeDamage", false);
-        myAnimator.SetBool("isDashing", false);
-        myAnimator.SetBool("isSwinging", false);
-        myAnimator.SetBool("isCasting", false);
-    }
-
     private void ReduceDashCooldown()
     {
         currentDashCooldown -= Time.deltaTime;
@@ -269,7 +255,6 @@ public class PlayerController : MonoBehaviour
     private void SpinAttack()
     {
         CurrentMana -= spinMoveManaCost;
-        myAnimator.SetBool("isSpinAttacking", true);
         myAnimator.SetBool("isCharging", false);
     }
 
@@ -310,7 +295,6 @@ public class PlayerController : MonoBehaviour
     public void Movement(InputAction.CallbackContext context)
     {
         m_moveDir = context.ReadValue<Vector2>();
-        myAnimator.SetFloat("RightBlend", m_moveDir.x);
     }
 
     /// <summary>
@@ -321,12 +305,23 @@ public class PlayerController : MonoBehaviour
     {
         if (!GameIsPaused && IsInCombat)
         {
-            mouseContext = context.ReadValue<float>();
             if ((myAnimator.GetCurrentAnimatorStateInfo(0).IsName("Idle") || myAnimator.GetCurrentAnimatorStateInfo(0).IsName("Walking")) && context.started)
             {
                 myAnimator.SetBool("isSwinging", true);
             }
-            else if (mouseContext == 0 && myAnimator.GetBool("isCharging"))
+        }
+    }
+
+    public void SpinAttack(InputAction.CallbackContext context)
+    {
+        if (!GameIsPaused && IsInCombat)
+        {
+            if (context.ReadValue<float>() == 1 && unlockedSpinMove && CurrentMana >= spinMoveManaCost)
+            {
+                swordTrail.SetActive(true);
+                myAnimator.SetBool("isCharging", true);
+            }
+            else if (context.ReadValue<float>() == 0 && myAnimator.GetBool("isCharging"))
             {
                 SpinAttack();
             }
@@ -430,15 +425,8 @@ public class PlayerController : MonoBehaviour
     public void EndSwing()
     {
         IsSwinging = false;
-        if (mouseContext != 0 && unlockedSpinMove && CurrentMana >= spinMoveManaCost)
-        {
-            myAnimator.SetBool("isCharging", true);
-        }
-        else
-        {
-            swordTrail.SetActive(false);
-            myAnimator.SetBool("isSwinging", false);
-        }
+        swordTrail.SetActive(false);
+        myAnimator.SetBool("isSwinging", false);
     }
 
     public void StartDash()
@@ -464,6 +452,7 @@ public class PlayerController : MonoBehaviour
     public void EndSpinAttack()
     {
         IsSpinning = false;
+        swordTrail.SetActive(false);
         myAnimator.SetBool("isSwinging", false);
         myAnimator.SetBool("isSpinAttacking", false);
     }
@@ -481,6 +470,16 @@ public class PlayerController : MonoBehaviour
         myAnimator.SetBool("isCasting", false);
     }
 
+    public void StartDamageAnim()
+    {
+        IsSwinging = false;
+        swordTrail.SetActive(false);
+        myAnimator.SetBool("takeDamage", false);
+        myAnimator.SetBool("isDashing", false);
+        myAnimator.SetBool("isSwinging", false);
+        myAnimator.SetBool("isCasting", false);
+        myAnimator.SetBool("isCharging", false);
+    }
     #endregion
 
 

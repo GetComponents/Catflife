@@ -16,7 +16,7 @@ public class EnergyText : MonoBehaviour
 
     private void ChangeEnergyText()
     {
-        text.text = $"Energy: {PlayerInventory.Instance.Energy}";
+        text.text = $"{PlayerInventory.Instance.Energy}";
     }
 
     private void OnDestroy()

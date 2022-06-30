@@ -7,6 +7,8 @@ public class PickupHP : MonoBehaviour
     public float SelfDestructTime;
     public float mySpeed;
     public int HealAmount;
+    [SerializeField]
+    float rotationSpeed;
     PlayerController player;
     Transform playerCollision;
     Rigidbody rb;
@@ -22,6 +24,7 @@ public class PickupHP : MonoBehaviour
     private void FixedUpdate()
     {
         rb.AddForce((transform.position - playerCollision.position).normalized * mySpeed, ForceMode.VelocityChange);
+        transform.eulerAngles += new Vector3(0, Time.deltaTime * rotationSpeed, 0);
     }
 
     private void OnTriggerEnter(Collider other)

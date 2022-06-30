@@ -40,7 +40,7 @@ public class WateringCan : MonoBehaviour
     /// <param name="_plantPosition"></param>
     public void MoveWateringCan(Vector3 _plantPosition)
     {
-        transform.position = _plantPosition + new Vector3(0, 1.8f, -2.8f);
+        transform.position = _plantPosition + new Vector3(0, 1.2f, -2f);
         transform.eulerAngles = new Vector3(0, 0, 0);
         GetComponent<Animator>().SetBool("IsWatering", true);
     }

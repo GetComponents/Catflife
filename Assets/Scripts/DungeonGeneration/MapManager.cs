@@ -44,15 +44,10 @@ public class MapManager : MonoBehaviour
             directionalLight.enabled = true;
             if (CurrentCell == null)
             {
-                Debug.Log("first position:" + PlayerInventory.Instance.transform.position);
                 PlayerInventory.Instance.transform.position = NewDungeonGridGenerator.Instance.transform.position
                     + ((new Vector3(1, 0, 1) * NewDungeonGridGenerator.Instance.nodeSpacing.x) + (new Vector3(1, 0, 1) * NewDungeonGridGenerator.Instance.GridWidth * 0.5f))
                     + (new Vector3(1, 0, -1) * NewDungeonGridGenerator.Instance.nodeSpacing.y * 0.5f)
                     + new Vector3(0,1,0);
-                Debug.Log("second position:" + PlayerInventory.Instance.transform.position + " / " + NewDungeonGridGenerator.Instance.transform.position
-                    + ((new Vector3(1, 0, 1) * NewDungeonGridGenerator.Instance.nodeSpacing.x) + (new Vector3(1, 0, 1) * NewDungeonGridGenerator.Instance.GridWidth * 0.5f))
-                    + (new Vector3(1, 0, -1) * NewDungeonGridGenerator.Instance.nodeSpacing.y * 0.5f)
-                    + new Vector3(0, 1, 0));
                 return;
             }
             //For the system, where the Player could re-enter stages 
