@@ -2273,8 +2273,8 @@ MonoBehaviour:
     m_Bits: 128
   mySword: {fileID: 7888952105084536655}
   swordTrail: {fileID: 8763548134970762494}
-  SwordDamage: 10
-  SpinAttackDamageMultiplier: 2
+  SwordDamage: 1
+  SpinAttackDamageMultiplier: 3
   mainCam: {fileID: 0}
   rb: {fileID: 7888952104917232427}
   playerHitBox: {fileID: 7888952104917232426}
@@ -2288,10 +2288,10 @@ MonoBehaviour:
   unlockedReflect: 0
   unlockedProjectile: 0
   UnlockedStatue: 0
-  spinMoveManaCost: 4
+  spinMoveManaCost: 2
   projectileManaCost: 4
   Projectile: {fileID: 1669813210728635002, guid: 5e3afbfd0bffb1b4488d150700415bf3, type: 3}
-  ProjectileDamage: 20
+  ProjectileDamage: 2
   ProjectileSpeed: 30
   castHand: {fileID: 7888952104906005548}
   IsDashing: 0

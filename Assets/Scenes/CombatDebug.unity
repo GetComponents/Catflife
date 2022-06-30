@@ -356,6 +356,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 7888952104917232425, guid: 17738bf7cb440184baa2a50e6a6753cd, type: 3}
+      propertyPath: attackProgression.x
+      value: 1.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7888952104917232425, guid: 17738bf7cb440184baa2a50e6a6753cd, type: 3}
+      propertyPath: attackProgression.y
+      value: 1.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7888952104917232425, guid: 17738bf7cb440184baa2a50e6a6753cd, type: 3}
+      propertyPath: attackProgression.z
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 7888952105189421729, guid: 17738bf7cb440184baa2a50e6a6753cd, type: 3}
       propertyPath: mainCam
       value: 
@@ -364,30 +376,6 @@ PrefabInstance:
       propertyPath: _akGameObj
       value: 
       objectReference: {fileID: 590877244}
-    - target: {fileID: 7888952105189421729, guid: 17738bf7cb440184baa2a50e6a6753cd, type: 3}
-      propertyPath: UnlockedStatue
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7888952105189421729, guid: 17738bf7cb440184baa2a50e6a6753cd, type: 3}
-      propertyPath: unlockedReflect
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7888952105189421729, guid: 17738bf7cb440184baa2a50e6a6753cd, type: 3}
-      propertyPath: spinMoveManaCost
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7888952105189421729, guid: 17738bf7cb440184baa2a50e6a6753cd, type: 3}
-      propertyPath: unlockedSpinMove
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7888952105189421729, guid: 17738bf7cb440184baa2a50e6a6753cd, type: 3}
-      propertyPath: projectileManaCost
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7888952105189421729, guid: 17738bf7cb440184baa2a50e6a6753cd, type: 3}
-      propertyPath: unlockedProjectile
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 7888952105189421730, guid: 17738bf7cb440184baa2a50e6a6753cd, type: 3}
       propertyPath: m_RootOrder
       value: 1

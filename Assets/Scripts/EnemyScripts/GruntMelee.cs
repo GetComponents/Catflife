@@ -18,6 +18,7 @@ namespace EnemyAI
 
         void Start()
         {
+            stopCounter = Random.Range(0, 1f);
             playerPosition = PlayerController.Instance.transform.GetChild(0).position;
             enemyNavMesh = GetComponent<NavMeshAgent>();
         }

@@ -71,6 +71,8 @@ public class GruntElite : Enemy
 
     private void Attack()
     {
+        Vector3 temp = (PlayerInventory.Instance.transform.position - transform.position).normalized;
+        transform.forward = new Vector3(temp.x, 0, temp.z);
         if (currentShotCooldown < 0)
         {
             AkSoundEngine.PostEvent("Play_GruntSpitAttack", this.gameObject);

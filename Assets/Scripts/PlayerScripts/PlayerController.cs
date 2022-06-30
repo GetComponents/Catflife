@@ -43,11 +43,13 @@ public class PlayerController : MonoBehaviour
             {
                 myAnimator.SetBool("takeDamage", true);
                 Die();
+                isInvincible = true;
                 StartCoroutine(TurnInvincible());
                 m_healthPoints = 0;
             }
             else if (value < m_healthPoints)
             {
+                isInvincible = true;
                 StartCoroutine(TurnInvincible());
                 myAnimator.SetBool("takeDamage", true);
                 m_healthPoints = value;

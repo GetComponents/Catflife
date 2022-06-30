@@ -28,6 +28,7 @@ public class Mage : Enemy
 
     private void Start()
     {
+        timeUntilAttack = Random.Range(0f, 1f);
         enemyNavMesh = GetComponent<NavMeshAgent>();
         if (isElite)
             StartCoroutine(CastRandomly());

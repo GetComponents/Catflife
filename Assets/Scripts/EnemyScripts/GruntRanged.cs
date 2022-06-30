@@ -46,7 +46,7 @@ public class GruntRanged : Enemy
     {
         if (currentShotCooldown < 0)
         {
-            currentShotCooldown = timeForEachShot;
+            currentShotCooldown = Random.Range(timeForEachShot * 0.5f, timeForEachShot * 2f);
             myAnimator.SetBool("attack", true);
         }
         else
