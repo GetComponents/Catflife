@@ -58,7 +58,7 @@ namespace EnemyAI
 
         public override void TakeDamage(float _amount)
         {
-            //PlaySound GruntMeleeDamaged
+            AkSoundEngine.PostEvent("Play_GruntHurt", this.gameObject);
             base.TakeDamage(_amount);
         } 
 

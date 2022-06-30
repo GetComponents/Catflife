@@ -57,7 +57,7 @@ public class GruntRanged : Enemy
 
     public override void TakeDamage(float amount)
     {
-        //PlaySound GruntRangedDamaged
+        AkSoundEngine.PostEvent("Play_GruntHurt", this.gameObject);
         base.TakeDamage(amount);
     }
 

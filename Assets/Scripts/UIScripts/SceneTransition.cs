@@ -141,11 +141,14 @@ public class SceneTransition : MonoBehaviour
     {
         if (sceneToLoad.Equals("MainRoom"))
         {
+            AkSoundEngine.PostEvent("Stop_DungeonAmb", this.gameObject);
             AkSoundEngine.PostEvent("Play_HouseAmb", this.gameObject);
+
             AkSoundEngine.SetSwitch("Material", "Default", PlayerController.Instance._akGameObj.gameObject);
         }
         else
         {
+            AkSoundEngine.PostEvent("Stop_HouseAmb", this.gameObject);
             AkSoundEngine.PostEvent("Play_DungeonAmb", this.gameObject);
             AkSoundEngine.SetSwitch("Material", "Stone", PlayerController.Instance._akGameObj.gameObject);
         }

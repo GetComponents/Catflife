@@ -13,6 +13,14 @@ namespace AK
 {
     namespace EVENTS
     {
+        static const AkUniqueID PLAY_BOSSCHARGE = 569837389U;
+        static const AkUniqueID PLAY_BOSSDEATH = 694925737U;
+        static const AkUniqueID PLAY_BOSSHURT = 3965648330U;
+        static const AkUniqueID PLAY_BOSSSPIN = 4237060697U;
+        static const AkUniqueID PLAY_BOSSSWORDHIT = 3816352019U;
+        static const AkUniqueID PLAY_BOSSSWORDSWING = 2644377694U;
+        static const AkUniqueID PLAY_BOWLERATTACK = 1534840223U;
+        static const AkUniqueID PLAY_BOWLERHURT = 1629144248U;
         static const AkUniqueID PLAY_BUTTONPRESS = 2652178615U;
         static const AkUniqueID PLAY_CHARDASH = 4198908286U;
         static const AkUniqueID PLAY_CHARDEATH = 214494936U;
@@ -37,6 +45,7 @@ namespace AK
         static const AkUniqueID PLAY_IMPACTCARDBOARD = 3010145222U;
         static const AkUniqueID PLAY_LEAVINGFOOTSTEPS = 1438502543U;
         static const AkUniqueID PLAY_LIGHTUPSTATUE = 1622429165U;
+        static const AkUniqueID PLAY_MAGEEXPLOSION = 4044708333U;
         static const AkUniqueID PLAY_MAGEMUMBLE = 3431650202U;
         static const AkUniqueID PLAY_OPENGATE = 1929575027U;
         static const AkUniqueID PLAY_POOFCARDBOARD = 31596624U;
@@ -47,7 +56,12 @@ namespace AK
         static const AkUniqueID PLAY_SWORDSWING = 1746766985U;
         static const AkUniqueID PLAY_UNLOCKJINGLE = 10982625U;
         static const AkUniqueID PLAY_UPGRADEJINGLE = 383068205U;
+        static const AkUniqueID PLAY_WANDERERATTACK = 4112053668U;
+        static const AkUniqueID PLAY_WANDERERHURT = 2871984059U;
+        static const AkUniqueID PLAY_WANDERERWHISTLE = 209909718U;
         static const AkUniqueID PLAY_WATERING = 1126284757U;
+        static const AkUniqueID STOP_DUNGEONAMB = 4024112342U;
+        static const AkUniqueID STOP_HOUSEAMB = 237548316U;
         static const AkUniqueID STOP_WATERING = 3226714187U;
     } // namespace EVENTS
 

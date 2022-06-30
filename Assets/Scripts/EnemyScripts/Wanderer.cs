@@ -1,7 +1,9 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using Random = UnityEngine.Random;
 
 public class Wanderer : Enemy
 {
@@ -20,9 +22,11 @@ public class Wanderer : Enemy
     [SerializeField]
     Animator myAnimator;
 
+    private uint playingID;
+
     private void Start()
     {
-        //PlaySound whistle (loop)
+        playingID = AkSoundEngine.PostEvent("Play_WandererWhistle", this.gameObject);
         enemyNavMesh = GetComponent<NavMeshAgent>();
         myArm.GetComponent<WandererArm>().myDamage = damage;
     }
@@ -31,6 +35,7 @@ public class Wanderer : Enemy
     {
         if (isInRange && !isAttacking)
         {
+            AkSoundEngine.PostEvent("Play_WandererAttack", this.gameObject);
             myAnimator.SetBool("isAttacking", true);
             isAttacking = true;
         }
@@ -56,13 +61,12 @@ public class Wanderer : Enemy
 
     public override void TakeDamage(float amount)
     {
-        //PlaySound WandererDamaged
+        AkSoundEngine.PostEvent("Play_WandererHurt", this.gameObject);
         base.TakeDamage(amount);
     }
 
     private void StartAttack()
     {
-        //PlaySound WandererSwing/Scream
         //myArm.SetActive(true);
     }
 
@@ -77,5 +81,10 @@ public class Wanderer : Enemy
     {
         yield return new WaitForSeconds(attackCooldown / slowedSpeed);
         isAttacking = false;
+    }
+
+    private void OnDestroy()
+    {
+        AkSoundEngine.StopPlayingID(playingID, 200, AkCurveInterpolation.AkCurveInterpolation_Constant);
     }
 }

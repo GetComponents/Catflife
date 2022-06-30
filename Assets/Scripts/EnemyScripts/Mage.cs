@@ -79,7 +79,7 @@ public class Mage : Enemy
 
     public override void TakeDamage(float amount)
     {
-        //PlaySound MageDamaged
+        AkSoundEngine.PostEvent("Play_MageHurt", this.gameObject);
         base.TakeDamage(amount);
     }
 

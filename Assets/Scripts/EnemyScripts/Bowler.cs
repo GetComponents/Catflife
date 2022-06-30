@@ -9,6 +9,7 @@ using UnityEngine.AI;
 /// </summary>
 public class Bowler : Enemy
 {
+    // TODO ADD AkSoundEngine.PostEvent("Play_BowlerHurt", this.gameObject);
     PlayerController player;
     [SerializeField]
     float timeToAttack;
@@ -58,6 +59,7 @@ public class Bowler : Enemy
 
     private void StartAttack()
     {
+        AkSoundEngine.PostEvent("Play_BowlerAttack", this.gameObject);
         myAnimator.SetBool("isAttacking", true);
         isAttacking = true;
         timeUntilAttack = timeToAttack;
