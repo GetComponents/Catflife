@@ -44,22 +44,27 @@ public class MapManager : MonoBehaviour
             directionalLight.enabled = true;
             if (CurrentCell == null)
             {
+                Debug.Log("first position:" + PlayerInventory.Instance.transform.position);
                 PlayerInventory.Instance.transform.position = NewDungeonGridGenerator.Instance.transform.position
                     + ((new Vector3(1, 0, 1) * NewDungeonGridGenerator.Instance.nodeSpacing.x) + (new Vector3(1, 0, 1) * NewDungeonGridGenerator.Instance.GridWidth * 0.5f))
                     + (new Vector3(1, 0, -1) * NewDungeonGridGenerator.Instance.nodeSpacing.y * 0.5f)
                     + new Vector3(0,1,0);
+                Debug.Log("second position:" + PlayerInventory.Instance.transform.position + " / " + NewDungeonGridGenerator.Instance.transform.position
+                    + ((new Vector3(1, 0, 1) * NewDungeonGridGenerator.Instance.nodeSpacing.x) + (new Vector3(1, 0, 1) * NewDungeonGridGenerator.Instance.GridWidth * 0.5f))
+                    + (new Vector3(1, 0, -1) * NewDungeonGridGenerator.Instance.nodeSpacing.y * 0.5f)
+                    + new Vector3(0, 1, 0));
                 return;
             }
             //For the system, where the Player could re-enter stages 
             if (PlayerTookExit)
             {
                 PlayerInventory.Instance.transform.position = CurrentCell.ExitPos.position;
-                PlayerInventory.Instance.transform.GetComponent<Rigidbody>().velocity = Vector3.zero;
+                //PlayerInventory.Instance.transform.GetComponent<Rigidbody>().velocity = Vector3.zero;
             }
             else
             {
                 PlayerInventory.Instance.transform.position = CurrentCell.EntrancePos.position;
-                PlayerInventory.Instance.transform.GetComponent<Rigidbody>().velocity = Vector3.zero;
+                //PlayerInventory.Instance.transform.GetComponent<Rigidbody>().velocity = Vector3.zero;
             }
             Destroy(CurrentCell.gameObject);
             CurrentCell.IsCleared = true;

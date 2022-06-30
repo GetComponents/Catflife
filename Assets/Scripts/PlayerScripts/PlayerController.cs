@@ -124,6 +124,11 @@ public class PlayerController : MonoBehaviour
     public AkGameObj _akGameObj;
     private string actualScene;
 
+    [SerializeField]
+    CharacterController characterController;
+    [SerializeField]
+    float gravity;
+
     void Awake()
     {
         if (!Instance)
@@ -184,6 +189,7 @@ public class PlayerController : MonoBehaviour
     private void MovePlayer()
     {
         rb.AddForce(new Vector3((m_moveDir.y * -0.66f) + (m_moveDir.x * 0.66f), 0, (m_moveDir.y * 0.66f) + (m_moveDir.x * 0.66f)) * Speed, ForceMode.VelocityChange);
+        //characterController.Move(new Vector3((m_moveDir.y * -0.66f) + (m_moveDir.x * 0.66f), gravity, (m_moveDir.y * 0.66f) + (m_moveDir.x * 0.66f)) * 0.1f);
         //rb.AddForce(new Vector3((m_moveDir.y * -0.66f) + (m_moveDir.x * 0.66f), 0, (m_moveDir.y * 0.66f) + (m_moveDir.x * 0.66f)) * Speed, ForceMode.Force);
         //rb.velocity = new Vector3(((m_moveDir.y * -0.66f) + (m_moveDir.x * 0.66f)) * Speed, rb.velocity.y, ((m_moveDir.y * 0.66f) + (m_moveDir.x * 0.66f)) * Speed);
         if (m_moveDir != Vector2.zero)

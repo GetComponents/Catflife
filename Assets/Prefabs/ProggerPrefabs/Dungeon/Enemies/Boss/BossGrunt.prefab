@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ed98319a78ef524e8ec2d49f887c7bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_healthPoints: 10
+  m_healthPoints: 1
   isAggro: 0
   isInRange: 0
   damage: 1
@@ -23,6 +23,7 @@ MonoBehaviour:
   BaseEnergyPickupAmount: 0
   originalNavMeshSpeed: 0
   slowedSpeed: 1
+  deathVFX: {fileID: 0}
   OnDeath:
     m_PersistentCalls:
       m_Calls: []
