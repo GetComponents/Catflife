@@ -9,6 +9,9 @@ public class PlayerController : MonoBehaviour
 {
     public static PlayerController Instance;
 
+    [SerializeField]
+    bool enableCheatConsole;
+
     [Header("Movement")]
     public float currentDashCooldown;
     [SerializeField]
@@ -334,7 +337,7 @@ public class PlayerController : MonoBehaviour
     /// <param name="context"></param>
     public void Interact(InputAction.CallbackContext context)
     {
-        if (context.started)
+        if (context.started && enableCheatConsole)
         {
             if (DebugConsole.Instance != null)
             {

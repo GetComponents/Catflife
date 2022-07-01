@@ -20756,6 +20756,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 963194232}
     - target: {fileID: 7888952105189421729, guid: 17738bf7cb440184baa2a50e6a6753cd, type: 3}
+      propertyPath: enableCheatConsole
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7888952105189421729, guid: 17738bf7cb440184baa2a50e6a6753cd, type: 3}
       propertyPath: characterController
       value: 
       objectReference: {fileID: 0}
@@ -37152,6 +37156,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e577676798a3294a904a7938b5145a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enableCheatConsole: 0
   currentDashCooldown: 0
   maxSpeed: 10
   dashCooldown: 0

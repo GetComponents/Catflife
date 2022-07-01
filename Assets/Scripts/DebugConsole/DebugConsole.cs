@@ -28,7 +28,7 @@ public class DebugConsole : MonoBehaviour
 
     public void OpenConsole()
     {
-        debugText.text = "";
+        debugText.text = "type \"help\" for info about the commands";
         myCanvas.SetActive(true);
     }
 
